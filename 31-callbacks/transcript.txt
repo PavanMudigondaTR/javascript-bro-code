@@ -1,0 +1,353 @@
+introduction
+0:00
+hey welcome back everybody so today I
+0:02
+got to explain callbacks in JavaScript a
+0:05
+callback is a function that is passed as
+0:07
+an argument to another function they are
+0:09
+used to handle asynchronous operations
+0:12
+such as reading a file Network requests
+0:15
+or interacting with databases these
+0:17
+activities take some time to complete
+0:19
+now with JavaScript we don't necessarily
+0:21
+wait for a process to finish before
+0:23
+continuing with the rest of the program
+0:25
+for example if we were to read a file if
+0:27
+it takes a long time to read that file
+0:30
+JavaScript might continue on with the
+0:31
+rest of the program we might attempt to
+0:33
+display the contents of that file before
+0:35
+we're finished reading it that's where
+0:36
+callbacks come in we're telling
+0:38
+JavaScript hey when you're done call
+0:41
+this next when you're done reading the
+0:43
+file then display the contents only
+0:46
+after that process is complete I'll give
+0:48
+you a few examples of the syntax of a
+example 1
+0:50
+call back we'll start with something
+0:52
+really simple we'll create a function to
+0:54
+display the word hello this will be the
+0:57
+hello
+0:58
+function then I will
+1:01
+console.log the
+1:03
+word
+1:05
+hello so I can invoke this function
+1:08
+hello to execute
+1:11
+it hello what if we were to create a
+1:15
+function for goodbye
+1:18
+function goodbye we will
+1:22
+console.log
+1:24
+goodbye okay after hello let's invoke
+1:27
+goodbye we have hello then goodbye what
+1:31
+if my hello function takes a lot of time
+1:33
+to process well JavaScript isn't
+1:36
+necessarily going to wait around before
+1:38
+executing the goodbye function I'm going
+1:40
+to add a few lines of code you don't
+1:42
+need to copy this these few lines of
+1:44
+code are going to make us wait for 3
+1:46
+seconds you don't need to write this
+1:48
+down but do pay attention we will
+1:51
+execute the hello function followed by
+1:52
+the goodbye function but we're going to
+1:54
+pretend that our hello function takes a
+1:56
+little bit of time to
+1:58
+process so so now we have goodbye
+2:00
+already executed followed by hello but
+2:03
+it should be the other way around I
+2:05
+would like to guarantee that the goodby
+2:08
+function follows after the hello
+2:10
+function well I can do that by adding a
+2:13
+call back to the goodbye function after
+2:15
+the hello function is complete we'll get
+2:17
+rid of this goodbye function
+2:19
+invocation to use a call back you pass a
+2:22
+function as an argument to another
+2:24
+function we will pass the goodbye
+2:27
+function as an argument to the hello
+2:29
+function
+2:31
+So within the set of parentheses type
+2:32
+the name of the function goodbye now be
+2:35
+sure you don't add a set of parentheses
+2:36
+after the function name you'll call it
+2:38
+right away we are passing the name of
+2:40
+the function as an argument but we need
+2:43
+a matching parameter I will name this
+2:45
+parameter
+2:47
+callback after everything within this
+2:49
+function is
+2:50
+complete let's take our callback then
+2:53
+invoke it by adding a set of parentheses
+2:56
+invoke meaning call all right now let's
+2:59
+see what happens
+3:01
+we have our hello function followed by
+3:04
+the goodbye function in that order let's
+3:06
+create another
+3:07
+function what about a leave function
+3:10
+we'll tell somebody to
+3:12
+leave
+3:15
+console.log leave I will pass the name
+3:18
+of this function as an argument to the
+3:20
+hello function leave is now our call
+3:23
+back after executing the hello function
+3:26
+we will execute our call back and in
+3:28
+this case it's the leave function let's
+3:31
+create another function for weight
+3:33
+function
+3:36
+weight console.
+3:38
+log wait we'll pass the name of the
+3:41
+function as an argument to the hello
+3:43
+function weight is now our call back we
+3:46
+will execute the hello function followed
+3:48
+by the weight function so by using
+3:51
+callbacks we are guaranteeing that the
+3:53
+function passed in will execute next you
+3:56
+can pass callbacks as well as other
+3:58
+arguments to a function
+example 2
+4:00
+let's go over a second example I will
+4:03
+create a function to sum two numbers
+4:06
+together X comma y I'll also add a call
+4:11
+back callback X comma y we have three
+4:14
+parameters total within the sum function
+4:17
+we will create a local variable of
+4:20
+result add x +
+4:23
+y and then I will call my call back then
+4:27
+I'll pass the result as an argument to
+4:29
+the callback function then I will create
+4:32
+a function to display the result to my
+4:35
+console display console there is one
+4:39
+parameter we have a result argument
+4:41
+we're
+4:42
+receiving then
+4:45
+console.log my
+4:47
+result all right now we will invoke the
+4:50
+sum function but we have three arguments
+4:53
+that we need to pass in a call back a
+4:57
+value for x and a value for y let's
+4:59
+invoke the display console function as a
+5:01
+call back again be sure to not add a set
+5:04
+of parenthesis after the name because
+5:05
+then you'll invoke it right
+5:06
+away X will be 1 y will be two and let's
+5:11
+see the result the result is three So
+5:15
+within our sum function calculate the
+5:17
+result first then after that process is
+5:20
+finished then display the result to the
+5:22
+console let's create a separate function
+5:25
+to display the result to our document
+5:27
+object window our web page basically
+5:30
+uh let's pretend that this wasn't
+5:32
+here I'll create an H1 element with an
+5:36
+ID of my
+5:41
+H1 I will create a separate
+5:44
+function
+5:46
+display page to display on the web page
+5:50
+I think display Dom would be more
+5:52
+appropriate but I haven't explained with
+5:53
+the document object model is yet so
+5:56
+let's just work with display page
+6:00
+we will accept a result I will change
+6:03
+the text content of the my H1
+6:05
+element document. getet element by ID
+6:11
+the ID was my H1 we will change the text
+6:17
+content to equal our result that we
+6:20
+receive as a callback we will use the
+6:23
+display page function display
+6:26
+page there and the result is three after
+6:30
+this calculation processes execute the
+6:32
+call back and this time we are passing
+6:34
+it to the display page function that we
+6:36
+created all right everybody so that's a
+6:38
+call back it's a function that is passed
+6:40
+as an argument to another function
+6:42
+they're used to handle asynchronous
+6:44
+operations operations that may take a
+6:47
+variable amount of time such as reading
+6:49
+a file Network requests or interacting
+6:51
+with databases we're not exactly sure
+6:53
+when these processes are going to
+6:55
+complete by using a callback we can
+6:57
+ensure that a function executes after
+6:59
+these processes are complete and not
+7:01
+before accidentally all we're doing is
+7:03
+saying hey when you're done call this
+7:06
+next we'll have more practice with
+7:08
+callbacks especially in the upcoming
+7:10
+topics and well everybody those are
+7:12
+callbacks in
+7:15
+JavaScript

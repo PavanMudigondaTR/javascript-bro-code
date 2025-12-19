@@ -1,0 +1,535 @@
+intro
+0:00
+hey hello so uh today I'm going to
+0:02
+explain Getters and Setters in
+0:04
+JavaScript Getters are special methods
+0:07
+that make a property readable Setters
+0:10
+are special methods that make a property
+0:12
+writable we can use Getters and Setters
+0:15
+to validate and modify a value when
+0:17
+reading or writing a property it helps
+0:19
+with validation when creating an object
+0:21
+or updating one of its properties here's
+0:23
+an example we will create a class of
+0:28
+rectangle we need a con
+0:32
+structor we will have two parameters a
+0:35
+width and a
+0:38
+height we will assign this do width
+0:42
+equals
+0:43
+width this do
+0:46
+height equals
+0:49
+height now let's create a rectangle
+0:52
+object const rectangle equals a new
+0:58
+rectangle for the width let's say -1
+1:03
+million something
+1:04
+ridiculous and for the height I want the
+1:07
+height to be Pizza the word
+1:09
+pizza then let's
+1:13
+console.log our
+1:15
+rectangles width and the rectangle's
+1:21
+height we have created a rectangle
+1:24
+object with the width of 1 million and a
+1:27
+height of pizza which doesn't make any
+1:29
+sense
+1:30
+we could use some validation when
+1:31
+creating an object we don't want people
+1:33
+to enter in garbage values like negative
+1:35
+a million or string when we're expecting
+1:38
+a positive number for the width or
+1:40
+height that's where Getters and Setters
+example 1 setters
+1:42
+come in we'll begin with Setters when
+1:44
+setting one of these properties either
+1:46
+initially through a Constructor or
+1:49
+updating one of them later such as
+1:51
+setting the width or height equal to
+1:52
+some value we can go through a Setter
+1:56
+first outside of our Constructor we will
+1:59
+set a property we'll begin with
+2:03
+width this will be a special type of
+2:06
+method the parameter will be new withth
+2:11
+what do we want to check before
+2:12
+assigning this property using an if
+2:14
+statement let's check to see if the new
+2:17
+width that the user sends us is greater
+2:20
+than zero if it is we will assign this
+2:24
+doore
+2:27
+width using an underscore prefix it
+2:30
+tells other developers that this is a
+2:32
+private property you shouldn't touch it
+2:34
+at all you could say that this private
+2:36
+property of WID is different than our
+2:39
+standard width property we will assign
+2:42
+the private property of width equal to
+2:44
+the new width we
+2:47
+receive else let's
+2:50
+console. error not log we'll use error
+2:54
+this
+2:55
+time width must be a positive number
+3:01
+all right let's see what
+3:03
+happens width must be a positive number
+3:06
+and our width is currently undefined
+3:08
+which is good okay let's do this with
+3:10
+height let's copy our Setter for width
+3:14
+paste it but change every instance of
+3:16
+width to be height set height New
+3:22
+Height be sure to use that Camel case
+3:25
+naming
+3:26
+convention if new height is greater than
+3:28
+zero assign the private property of
+3:32
+height equal to the new height else
+3:36
+console.
+3:38
+error height must be a positive
+3:41
+number and there we go that worked width
+3:45
+must be a positive number and height
+3:47
+must be a positive number our width and
+3:49
+height are currently
+3:50
+undefined in order to set the width and
+3:53
+height we have to pass in a positive
+3:55
+number for the width I will say three
+3:59
+for the width four now when we access
+4:02
+width and height those numbers still
+4:04
+aren't showing up that's because these
+4:06
+properties are writable via Setters but
+4:09
+they're not readable that's where
+example 1 getters
+4:11
+Getters come
+4:12
+in we'll create two Getters one for
+4:16
+width we'll need to use the get keyword
+4:19
+get
+4:20
+width this will be another type of
+4:22
+method all we're going to do is return
+4:26
+this private
+4:28
+width
+4:30
+and that appeared to work we have three
+4:31
+for the
+4:32
+width let's do so with the
+4:36
+height we will return this private
+4:41
+height we have three and
+4:44
+four Now by using Setters we can even
+4:47
+update those values later let's take our
+4:51
+rectangles with set that equal to be
+4:54
+five take the
+4:57
+height set it equal to be six and that
+5:01
+also appears to work but again if I try
+5:03
+and update those values to some garbage
+5:05
+values like a million and the word
+5:10
+Pizza we get those errors again and our
+5:13
+object retains its initial values that
+5:15
+we previously assigned it three and four
+5:18
+with Getters we can even use the
+5:20
+property accessor that dot to access a
+5:23
+property that doesn't necessarily exist
+5:26
+for example we will get area
+5:30
+we'll perform a
+5:31
+calculation we will return this private
+5:36
+width times this private
+5:43
+height so now we can access area as if
+5:47
+it was a
+5:49
+property we have three for the width
+5:51
+height four our width times our height
+5:54
+gives us an area of 12 our area isn't a
+5:57
+property technically it's not found
+5:59
+within our
+6:00
+Constructor but we can access it as if
+6:02
+it was a property with a getter with
+6:04
+Getters you can even add additional
+6:06
+logic I would like to preserve the
+6:08
+initial values of our width and height
+6:10
+when I return their value I will use the
+6:13
+two fixed method to give each of these a
+6:16
+Precision of
+6:18
+one let's do that with the width the
+6:22
+height and the area but that's going to
+6:25
+be a little more complex we'll enclose
+6:28
+width time height then add to fixed
+6:31
+one and why stop there I'll add
+6:33
+centimeters to the end of each I'll use
+6:36
+a template
+6:37
+string add a
+6:40
+placeholder then add CM for
+6:43
+centimeters 3.0
+6:51
+cm and the
+6:57
+area 12. 0 CM let's make that centim
+7:02
+squared because it's area Technically
+7:04
+when you're assigning values even when
+7:06
+you're initially creating an object you
+7:08
+can go through the Setters for input
+7:10
+validation when you retrieve values and
+7:12
+try and read them you can add additional
+7:14
+logic too let's go over a second example
+example 2
+7:18
+we will create a class of person we need
+7:22
+a
+7:24
+Constructor we will accept a first
+7:28
+name last
+7:30
+name and an
+7:32
+age this. first
+7:35
+name equals first
+7:39
+name this. last name equals last
+7:44
+name this. AG equals
+7:49
+age let's construct a person
+7:52
+const person equals new
+7:56
+person let's enter in some values that
+7:58
+don't make sense sense the person's
+8:00
+first name will be the number 420 their
+8:03
+last name is the number 69 their age is
+8:06
+the word
+8:08
+Pizza let's
+8:11
+console.log our person objects first
+8:15
+name which is the number
+8:18
+420 their last name 69 and their
+8:24
+age the word Pizza we need to validate
+8:28
+this input before assigning the
+8:30
+properties that's why we need Setters we
+example 2 setters
+8:33
+will set the first name property this is
+8:36
+a special type of method the parameter
+8:39
+is going to be a new first name we need
+8:43
+to be sure that this value passed in is
+8:46
+a string and the length is greater than
+8:49
+zero we could write something like this
+8:51
+we need an if statement let's check the
+8:55
+type of our new first name is it
+8:58
+strictly equal to a
+9:01
+string and is our new first nam's length
+9:06
+property greater than
+9:08
+zero if all of that checks out we will
+9:12
+assign this private first name equal to
+9:17
+the new first name we
+9:20
+receive else let's console.
+9:27
+error first
+9:30
+name must be a
+9:34
+nonempty string let's see if this worked
+9:37
+I'm going to save first name must be a
+9:40
+non-empty string and currently our first
+9:42
+name is undefined okay that worked let's
+9:45
+copy our Setter for our first name paste
+9:48
+it change every instance of first name
+9:51
+to last
+9:53
+name new last
+9:57
+name check if the type of our last name
+10:01
+is equal to a string and if our new last
+10:04
+name the length of it is greater than
+10:06
+zero if it is assign the private last
+10:11
+name property equal to the new last name
+10:15
+else last name must be a non-empty
+10:17
+string that also worked our first name
+10:20
+and last name are
+10:21
+undefined let's do this with
+10:24
+age set our
+10:26
+age the parameter is going to be New
+10:31
+Age using an if statement is the type of
+10:36
+new age strictly equal to a data type of
+10:41
+number and is our new age greater than
+10:45
+or equal to zero if it is take this
+10:50
+private age equals our new
+10:55
+age else we're going to console do
+11:02
+error age must be a non negative number
+11:09
+we can no longer assign pizza for our
+11:11
+age
+11:12
+unfortunately all right we have our
+11:14
+setter set up now let's work on the
+example 2 getters
+11:16
+Getters let's assign some legitimate
+11:19
+values for the first name SpongeBob last
+11:22
+name
+11:24
+SquarePants age 30 we don't have those
+11:27
+errors anymore that means they're set
+11:30
+but those properties aren't readable
+11:32
+that's why we need Getters let's get the
+11:34
+first name get first
+11:38
+name return this private first
+11:43
+name there's SpongeBob his first
+11:47
+name get last
+11:50
+name return this private last name
+11:55
+there's his last name let's create a
+11:58
+getter for a full name
+11:59
+too let's
+12:02
+console.log a full name even though we
+12:04
+have no property for that that's
+12:06
+undefined we'll use a getter to mimic a
+12:09
+full name property by just combining the
+12:11
+first name and the last name
+12:13
+properties get full
+12:16
+name return I'm going to use some string
+12:20
+catnation this private first name
+12:25
+plus aace character this private last
+12:32
+name and there's his full name SpongeBob
+12:36
+SquarePants and the age get age return
+12:42
+this private
+12:45
+age and SpongeBob is
+12:47
+30 all right everybody those are Getters
+conclusion
+12:50
+and Setters Getters are special methods
+12:53
+that make a property readable Setters
+12:55
+are special methods that make a property
+12:58
+writable by using a combination of both
+13:00
+we can validate and modify a value when
+13:03
+reading or writing a property and well
+13:05
+everybody those are Getters and Setters
+13:08
+in
+13:12
+JavaScript

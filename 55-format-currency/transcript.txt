@@ -1,0 +1,246 @@
+0:00
+hey what's going on everybody so in
+0:01
+today's video I'm going to show you a
+0:03
+few ways in which we can format currency
+0:05
+in JavaScript it involves this pretty
+0:07
+sweet method the two local string method
+0:10
+basically what this method does is that
+0:11
+it returns a string with a language
+0:14
+sensitive representation of a number
+0:17
+depending on which country you're in you
+0:18
+format numbers a different way for
+0:20
+example I'm in the United States we
+0:22
+separate every thousand's place with a
+0:24
+comma then follow any decimal numbers on
+0:26
+the right hand side however if you were
+0:28
+in let's say Germany you would format it
+0:31
+this way personally I have no idea how
+0:33
+to read this number sorry Germany
+0:35
+representing numbers to a foreign
+0:37
+audience is fairly important because
+0:39
+honestly if I saw this number it would
+0:41
+confuse me now in today's video we're
+0:43
+going to be covering the two local
+0:45
+string method another way to format
+0:47
+currency is with international number
+0:49
+format but that's a little Advanced for
+0:51
+us once you're at the intermediate or
+0:53
+advanced level I would definitely take a
+0:55
+look at international number format but
+0:57
+that will be outside the scope of
+0:58
+today's lesson the two local string
+1:00
+method is a simple and beginner friendly
+1:02
+way to format currency and other numbers
+1:05
+so you have a number numbers have a
+1:07
+built-in two local string method the
+1:10
+first argument is a string
+1:11
+representation of a location a local it
+1:14
+specifies the language to use if you set
+1:17
+this to be undefined you'll use the
+1:19
+default set in the viewer's browser
+1:21
+that's a good option for the second
+1:23
+argument you can send an object an
+1:26
+object of formatting options I'll give
+1:29
+you an example
+1:31
+let's say we have a number let number
+1:34
+equal 1 2 3 4 5
+1:37
+6
+1:40
+789 to format this number I will take
+1:43
+our number reassign it equal to number
+1:47
+use the builtin to local string method
+1:53
+we have two arguments a string location
+1:56
+and an object let's start with the
+1:58
+string location for a United States
+2:01
+local that would be n for
+2:04
+english-us Capital then we should
+2:07
+display our number
+2:09
+console.log
+2:11
+number yep and there is United States
+2:14
+formatting let's pass in a string local
+2:17
+for
+2:17
+India again following the same
+2:21
+format we will change the location to be
+2:25
+hi for Hindi Das I in based on that
+2:30
+geographic location there's different
+2:32
+number
+2:33
+formatting let's cover
+2:37
+Germany
+2:38
+D- capital
+2:41
+de to use the viewer's default set for
+2:44
+the browser you're going to pass in
+2:49
+undefined so I will pass in
+2:52
+undefined for me personally that will
+2:54
+give me the United States
+2:56
+formatting now you can pass in options
+2:59
+we can can take this number with this
+3:00
+formatting and give it a unit of
+3:05
+currency so again we're going to
+3:07
+reassign our number number equals number
+3:10
+use the built-in to local string method
+3:15
+my location will be the United States
+3:17
+feel free to pick a different one if you
+3:19
+would like the second argument is going
+3:21
+to be an object we need to set a curly
+3:23
+braces to represent an object objects
+3:26
+can have properties properties that hold
+3:28
+values if you need currency you will set
+3:31
+the style property you'll set the style
+3:33
+property to have a string value of
+3:36
+currency the next property would
+3:39
+be
+3:41
+currency colon I'm going to zoom out a
+3:44
+little bit for United States dollars
+3:46
+that would be USD and let's see what we
+3:49
+have there we go we have American
+3:53
+dollars with United States number
+3:56
+formatting let's do this with Indian
+3:58
+rupees so again number equals number to
+4:04
+local
+4:07
+string the local will be hi- I comma for
+4:12
+the next argument we're passing in an
+4:14
+object I'm going to zoom in
+4:17
+again the style property will be
+4:22
+currency We'll add another
+4:24
+property this property will be currency
+4:28
+colon space
+4:31
+for rupes that would be I
+4:34
+NR and here is our new number with
+4:38
+different currency
+4:39
+formatting okay then I think Germany
+4:41
+uses
+4:43
+zos number equals number to local
+4:50
+string what's the location Germany that
+4:53
+would be
+4:55
+d-de Capital comma space the next
+4:59
+argument is an
+5:00
+object the style property will be
+5:05
+currency the next property will be
+5:11
+currency and the currency is going to be
+5:14
+EU for
+5:16
+euros and that has appeared to work all
+5:20
+right everybody so that is a beginner
+5:21
+friendly way in which you can format
+5:23
+currency in
+5:28
+JavaScript

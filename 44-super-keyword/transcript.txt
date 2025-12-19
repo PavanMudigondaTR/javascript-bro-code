@@ -1,0 +1,417 @@
+intro
+0:00
+yo what's going on everybody so in
+0:02
+today's video I'm going to explain the
+0:03
+super keyword in JavaScript super is a
+0:06
+keyword that's used in classes to call
+0:08
+the Constructor or access the properties
+0:11
+and methods of a parent the parent is
+0:13
+also known as the super class it's very
+0:16
+similar to the this keyword this refers
+0:18
+to this object super refers to the
+0:21
+parent of that object here's an example
+setup
+0:24
+we'll use inheritance to create a parent
+0:26
+class of animal class animal our animal
+0:30
+class will have three children also
+0:32
+known as sub classes class rabbit
+0:37
+extends
+0:41
+animal class fish extends animal class
+0:46
+Hawk extends
+0:48
+animal We'll add an empty Constructor
+0:50
+for now for the animal
+0:53
+class then we need a Constructor for the
+0:56
+rabbit
+0:58
+class
+1:02
+so rabbits they'll have a name property
+1:06
+age and a run speed we'll assign these
+1:09
+properties within the Constructor
+1:11
+this.name equals the name that we
+1:13
+receive this. AG equals age this.
+1:18
+runspeed
+1:19
+equals run
+1:22
+speed let's copy this Constructor now
+1:25
+with fish fish don't have a run speed
+1:28
+but they'll have a swim speed
+1:30
+let's replace run speed with swim speed
+1:34
+copy The Constructor again paste it
+1:36
+Hawks in this example won't have a swim
+1:38
+speed they'll have a fly speed though
+1:41
+replace swim speed with fly speed now
+1:44
+let's attempt to create some of these
+1:46
+objects const rabbit equals new rabbit
+1:52
+we need a name for this rabbit you could
+1:54
+just say rabbit or if you want to be
+1:55
+creative you could say something like
+1:57
+Bugs Bunny uh but let's just stick with
+2:01
+rabbit to keep it simple our rabbit will
+2:03
+be Oney old and has a run speed of 25 M
+2:07
+hour if you use kilometers feel free to
+2:09
+use kilometers let's do this with
+2:13
+fish const fish equals new
+2:17
+fish the name of our fish will be fish
+2:21
+our fish is 2 years old and has a swim
+2:23
+speed of 12
+2:25
+mph then with Hawk const Hawk equal
+2:29
+equals New Hawk our Hawk will have a
+2:32
+name of Hawk our Hawk will be 3 years
+2:35
+old and has a fly speed of 50 m hour so
+super constructor
+2:39
+when I run this program we have an
+2:41
+uncaught reference error must call Super
+2:43
+Constructor in derived class before
+2:46
+accessing the this keyword so what
+2:48
+JavaScript is telling us is that before
+2:50
+we can use the this keyword we have to
+2:53
+call the Constructor of the parent the
+2:55
+super class within each of these
+2:57
+respective Constructors we will invoke
+3:00
+The Constructor of the parent the super
+3:02
+class with the super keyword so let's do
+3:05
+that for each of these
+3:08
+Constructors now our program actually
+3:10
+runs now so one of the benefits of using
+3:12
+Constructors is that if there's any
+3:14
+properties that the children all share
+3:16
+in common we can send them to the
+3:18
+Constructor of the parent as you can see
+3:20
+we're repeating ourselves a lot each of
+3:22
+these children classes has a name and
+3:24
+age property that we're assigning to
+3:26
+each we would like to follow the drve
+3:28
+principle don't repeat yourself so why
+3:31
+don't we write this code once and reuse
+3:33
+it so within the Constructor of the
+3:35
+parent will accept a name and age
+3:40
+property we'll assign this.name equals
+3:43
+name and this. age equals age now we can
+3:47
+remove that within each of the child
+3:48
+classes so we don't repeat
+3:51
+ourselves there's less code to right now
+3:54
+but we do need to pass in these
+3:56
+arguments to the parent Constructor name
+3:59
+and age for
+4:05
+each and that's all there is to it in
+4:08
+this example when we construct an object
+4:10
+either a rabbit a fish or a hawk we'll
+4:12
+accept three arguments a name age and
+4:15
+either a run speed a swim speed or a fly
+4:18
+speed depending on the animal that we're
+4:19
+creating any properties they assure in
+4:22
+common we can send to the parent
+4:23
+Constructor it helps with code
+4:25
+reusability and there's a lot less to
+4:27
+write it's not that evident with three
+4:29
+children classes but imagine if you had
+4:31
+hundreds of different classes like what
+4:33
+if this was Pokémon there's like what a
+4:35
+thousand Pokémon now we would have to
+4:37
+copy and paste those properties like a
+4:39
+thousand times for each if we're
+4:40
+constructing individual Pokémon but
+4:43
+since all of them share those same
+4:44
+properties we can write it in one place
+4:47
+and make any changes only in one place
+4:50
+so let's test this to see if it works
+4:53
+let's
+4:55
+console.log our rabbit's name which is
+5:00
+named rabbit let's console.log the
+5:02
+rabbit's age the rabbit is Oney old and
+5:06
+let's see if the rabbit has a run speed
+5:09
+25 as in 25 mph let's do this with fish
+5:13
+fish. name fish. AG let's see if the
+5:15
+fish has a run
+5:17
+speed name is fish Age Two run speed is
+5:20
+undefined because fish can't run because
+5:22
+they don't have legs but they do have a
+5:23
+swim speed though swim speed 12 miles
+5:27
+hour then Hawk hawk. name hawk. AG hawk.
+5:32
+flyp speed name is Hawk age three the
+5:36
+hawk has a fly speed of 50
+5:38
+mph so that's how you can use the super
+5:40
+keyword in a class to call the
+5:42
+Constructor of the parent it helps with
+5:44
+code reusability any properties that the
+5:47
+children share in common in this case a
+5:49
+name and Age The Constructor of the
+5:51
+parent can take care of that we don't
+5:53
+have to repeat the set of code every
+5:55
+single time for each child we write it
+5:57
+in one place and reuse it another
+super methods
+5:59
+another thing you can do too with the
+6:00
+super keyword is extend a method from
+6:02
+the parent so what we're going to do
+6:04
+within the animal parent class is create
+6:06
+a move
+6:08
+method within this method we will
+6:11
+console.log the following
+6:13
+message the at a placeholder
+6:19
+this.name moves at a speed of add a
+6:25
+placeholder speed mph for miles per hour
+6:29
+hour or if you prefer you can use
+6:31
+kilometers our move method will have one
+6:34
+parameter a speed that we need to pass
+6:36
+in to use So within each of these
+6:38
+children classes we'll write a method
+6:41
+that also extends the move method of the
+6:44
+parent rabbits will have a run
+6:48
+method we'll output the following
+6:51
+message
+6:53
+console.log I'll use a template
+6:55
+string this add a
+6:58
+placeholder this.
+7:00
+name can
+7:03
+run let's copy our run method paste it
+7:06
+for fish but change swim to run because
+7:09
+fish can't run this this. name can
+7:14
+swim then with Hawks they'll have a fly
+7:18
+method fly this this. name can
+7:24
+fly with our rabbit object let's invoke
+7:27
+the run method
+7:31
+this rabbit can run let's do this with
+7:34
+fish fish. swim this fish can swim and
+7:39
+hawk. fly method this Hawk can fly
+7:43
+within each of these children classes
+7:45
+we're going to extend the move method of
+7:47
+the parent animal within the run method
+7:49
+of our rabbit class not only are we
+7:52
+going to Output this
+7:53
+message we'll also extend the move
+7:56
+method of the parent and display that
+7:58
+message as well
+7:59
+to refer to the parent class we use the
+8:01
+super keyword it's very similar to this
+8:04
+but it means the parent use the parents
+8:07
+move
+8:08
+method but we do have to send a speed
+8:11
+argument let's send the Run speed of the
+8:14
+Rabbit this. Run speed let's do this
+8:18
+with our fish class we'll extend the
+8:20
+move method super. move send in this.
+8:25
+swimp speed and Hawk super. move this do
+8:30
+fly
+8:31
+speed now let's take our rabbit use the
+8:34
+run method and we should extend the move
+8:36
+method this rabbit can run the rabbit
+8:40
+moves at a speed of 25
+8:42
+mph let's do this with fish fish. swim
+8:46
+the fish can swim the fish moves at a
+8:48
+speed of 12 mph and hawk hawk. fly
+8:53
+method this Hawk can fly the hawk moves
+8:56
+at a speed of 50
+8:57
+mph so that's how you can use the super
+9:00
+keyword to extend a method of a parent
+conclusion
+9:03
+all right everybody so that's the super
+9:04
+keyword it's a reference to a parent it
+9:07
+can be used to call the Constructor of a
+9:09
+parent and or access the properties and
+9:11
+methods of a parent and well everybody
+9:14
+that is the super keyword in
+9:20
+JavaScript

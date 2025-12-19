@@ -1,0 +1,605 @@
+introduction
+0:00
+so uh yeah I should probably talk about
+0:02
+node lists today a node list in
+0:04
+JavaScript is a static collection of
+0:06
+HTML elements they can be created by
+0:09
+using query selector all we can select
+0:11
+Elements by an ID a class or an element
+0:14
+type node lists are similar to an array
+0:17
+but they don't have a built-in map
+0:18
+filter or reduce method they do have a
+0:20
+for each method at least though an
+0:22
+important thing to note with node lists
+0:24
+is that they won't update automatically
+0:26
+to reflect changes to the Dom for
+0:28
+example if you were to remove an element
+0:30
+from the Dom and it's within a node list
+0:32
+you would also have to separately remove
+0:34
+that element from the node list so what
+setup
+0:36
+we'll do in this example is create four
+0:38
+buttons they'll all have the same
+0:40
+class we'll have button
+0:43
+one with a class of I don't know what's
+0:46
+a good name my buttons the class all
+0:50
+right let's copy this button paste it
+0:52
+three additional times we'll have button
+0:55
+two button three button four and I'm
+0:58
+going to add a little bit of CSS to
+1:00
+these buttons let's select the class of
+1:03
+my buttons I'll increase the font size
+1:06
+so you can see it font size for
+1:10
+RM add a little bit of margin 10
+1:14
+pixels remove the border border
+1:17
+none smooth the corners with border
+1:20
+radius 5
+1:22
+pixels add some padding 10 pixels by 15
+1:27
+pixels I'll change the background color
+1:30
+to something
+1:31
+blue background color blue but I'll
+1:34
+select hsl
+1:37
+values I'll turn the lightness to like
+1:41
+60 okay that's decent and the font color
+1:44
+will be
+1:46
+white okay that's good enough for now
+How to create a nodeList
+1:49
+one way in which we can create a node
+1:51
+list is by using query selector all
+1:53
+we've talked about this in a previous
+1:55
+video but I'll show you a few more
+1:56
+advanced things we can do with node
+1:58
+lists we can select ele Elements by an
+2:00
+ID a class or an element type we will
+2:03
+create a node list of let
+2:07
+buttons equals
+2:09
+document. query selector
+2:13
+all let's select all elements by a class
+2:16
+we need to use dot then the class name
+2:19
+my
+2:20
+buttons we could select Elements by an
+2:22
+element type if I would like to select
+2:24
+all buttons I would just type in button
+2:27
+the element type but I would like to
+2:29
+select only elements by this class now
+2:32
+that we have our node list I am going to
+2:35
+console.log my node list of buttons and
+2:38
+we'll take a look at
+2:41
+it here's my node list it contains four
+2:44
+elements button one button two button
+2:47
+three button four we do have a length
+2:50
+property a few methods entries for each
+2:54
+item Keys these are all different
+2:57
+methods for each is what we're going to
+2:59
+be using a lot here's how we can change
+Add HTML/CSS properties
+3:02
+the HTML and CSS properties of all
+3:04
+elements within a node list we can use
+3:07
+the for each method of a node list and
+3:09
+iterate through all of the elements so
+3:11
+we will take our node list of buttons
+3:14
+use the built-in for each method then
+3:16
+write an arrow function we are provided
+3:19
+with an element Arrow do something but
+3:22
+I'm going to rename element as button
+3:25
+just so it's more easily understandable
+3:27
+during each iteration we're provided
+3:29
+with the current button what would we
+3:31
+like to do to that button well let's
+3:33
+change the background color button do
+3:37
+style background
+3:39
+color I'll set it to be
+3:42
+green that should update the color of
+3:44
+all the buttons not just one of them
+3:47
+we're iterating through all of the
+3:48
+buttons within this no list change all
+3:51
+of their background colors to be green
+3:53
+let's change the text content too take
+3:56
+each button access the text content
+4:00
+I will set it equal to be I don't know
+4:02
+an emoji or
+4:03
+something let's do that the text content
+4:07
+and all the buttons is going to change
+4:09
+maybe let's aend an emoji not replace
+4:12
+the text
+4:13
+content that's better that is how you
+4:16
+can add and change HTML and CSS
+4:18
+properties with a node list use the for
+4:20
+each method then write an arrow function
+4:22
+to do something in a similar way we're
+CLICK event listener
+4:25
+going to add an event listener to each
+4:27
+button that will listen for a click so
+4:29
+again we're going to take our node list
+4:31
+of buttons use the built-in for each
+4:35
+method for each button Arrow do
+4:39
+this we need to add an event listener to
+4:41
+each button we will take the parameter
+4:44
+of button add an event
+4:48
+listener within our event listener we
+4:50
+have an event
+4:51
+type and a call back to do
+4:55
+something the event type is going to be
+4:58
+click instead of a call back we'll write
+5:01
+an arrow function we are provided with
+5:03
+an event Arrow do
+5:06
+this event is provided to us through the
+5:09
+web browser when something happens we
+5:11
+will access the event objects Target
+5:14
+meaning the button that we click on
+5:16
+that's going to be our
+5:18
+Target access the
+5:20
+style access the background color
+5:24
+property let's set it to be red or
+5:27
+better yet tomato because I like
+5:29
+tomatoes
+5:30
+each button has an event listener it
+5:33
+will listen for click events when we
+5:35
+click on a button the background color
+5:37
+is going to
+5:39
+change we're going to add an event
+MOUSEOVER + MOUSEOUT event listener
+5:41
+listener for Mouse over and mouse out
+5:44
+let's begin with mouse over again take
+5:46
+our node list of buttons use the for
+5:48
+each
+5:50
+method for each button Arrow do this
+5:56
+take that button add an event listener
+6:02
+with event listeners we have an event
+6:04
+type and a call back the event type is
+6:08
+going to be Mouse
+6:10
+over when we hover our cursor over
+6:13
+something what would we like to do we
+6:16
+will write an arrow function event Arrow
+6:19
+do this let's access the events Target
+6:23
+that should equal our button that we
+6:25
+click on access the style access the
+6:28
+background color
+6:31
+so with the current color I'm going to
+6:32
+go back to my CSS I will copy this color
+6:36
+paste it but make the lightness 10%
+6:40
+darker now when we hover over one of the
+6:42
+buttons the background color is going to
+6:45
+change I'll set the lightness to like
+6:47
+40% to make it much more apparent there
+6:50
+that's better now when I leave one of
+6:52
+these buttons I need to revert that
+6:54
+color back to the original really we can
+6:56
+just copy all this
+6:58
+code Place Mouse over with mouse
+7:01
+out and set the background color back to
+7:04
+the
+7:10
+original each button now has a mouse
+7:12
+over and mouse out event
+7:16
+listener here's how you can add an
+Add an element
+7:18
+element to a node list I will create a
+7:21
+new button const new button equals
+7:26
+document. create element
+7:29
+what element are we creating a
+7:33
+button so with creating and appending
+7:35
+HTML elements there's three steps this
+7:38
+is step one we need to create that
+7:40
+element
+7:43
+first step two is to add any necessary
+7:46
+attributes or css properties so let's
+7:49
+take our new button change the text
+7:53
+content of the button equal to be button
+7:58
+five I would like to give my new button
+8:01
+a class of my buttons we're going to
+8:04
+access the class list
+8:06
+property new button.
+8:10
+classlist when working with an elements
+8:12
+class we work with class list not
+8:15
+class so the class list equals the class
+8:19
+of my
+8:22
+buttons then we have step three now we
+8:25
+have to append this element to the Dom
+8:28
+what is the parent element of this new
+8:29
+button going to be well in this case
+8:32
+it's going to be the body of my
+8:34
+document we're going to be adding a new
+8:36
+button right here the parent the
+8:38
+enclosing element is the body in this
+8:40
+case access our document select the body
+8:44
+append Child new
+8:48
+button and there's button five since we
+8:52
+added our class of my buttons that's why
+8:54
+it has all these CSS properties if I
+8:56
+were to remove this line of code we we
+8:59
+get the default appearance for a
+9:01
+button I'll talk more about class lists
+9:03
+in the next video there's a lot you can
+9:04
+do with them now if I was to
+9:08
+console.log my node list of buttons
+9:11
+here's what we have we have five buttons
+9:13
+within our Dom but within our node list
+9:17
+we have four
+9:20
+buttons button one two 3 4 button five
+9:25
+isn't within this no
+9:27
+list node lists are a stat collection
+9:30
+they won't update automatically to
+9:32
+reflect changes to the Dom even though
+9:34
+button 5 is within the Dom we would need
+9:37
+to manually add it to our node list if
+9:39
+we want to work with it so to do that we
+9:42
+can just use Query selector again and
+9:44
+select all elements by the class so
+9:47
+let's reassign buttons since we're
+9:50
+reassigning buttons that's why I
+9:51
+declared buttons with let instead of
+9:53
+const so we're able to reassign it
+9:55
+because if this was a constant we
+9:57
+couldn't change the elements within it
+10:00
+so buttons equals
+10:03
+document. query selector all select all
+10:08
+elements by a class class my
+10:12
+buttons and then again let's
+10:15
+console.log my node list of
+10:18
+buttons inspect console and there we go
+10:23
+our node list has five elements button
+10:25
+one 2 3 four five
+10:30
+even if you were to add an element to
+10:31
+the Dom that same element isn't going to
+10:34
+be automatically added to your node list
+10:36
+I would recommend using query selector
+10:38
+all again just to update it here's how
+Remove an element
+10:40
+to remove an element from a node list
+10:42
+when you click on it we'll have to give
+10:44
+all of these buttons an event listener
+10:46
+they will listen for a click event when
+10:48
+we click on one of these elements remove
+10:50
+it from the Dom and the node list here's
+10:53
+how again we will take our node list of
+10:56
+buttons use the built-in for each method
+10:59
+for each button within our node list do
+11:03
+this take each button add an event
+11:08
+listener we are provided with an event
+11:10
+type and a call back to a
+11:12
+function the event type that we're
+11:14
+listening for is
+11:16
+click the call back is going to be an
+11:19
+arrow function we're provided with an
+11:21
+event Arrow do this to remove an element
+11:25
+from the Dom when you click on it we
+11:27
+will access our event object
+11:29
+access the target use the built-in
+11:32
+remove method to remove it so let's see
+11:35
+if this works currently let's remove
+11:37
+button 2 1 4 3 so those buttons are gone
+11:43
+but let me show you something I'm going
+11:45
+to
+11:46
+console.log my node list of buttons
+11:49
+after each
+11:55
+click even if I were to remove these
+11:57
+buttons from the Dom
+12:00
+they're still within the node list even
+12:02
+after all the buttons are gone our node
+12:04
+list still has four buttons so we do
+12:07
+have to update that manually here's an
+12:09
+easy way how to do
+12:11
+that we're going to use Query selector
+12:13
+all again we'll reassign
+12:16
+buttons equals
+12:18
+document. query selector
+12:22
+all select all elements from the Dom
+12:25
+that have a class of my buttons then
+12:29
+just to see if this works let's
+12:31
+console.log my node list of
+12:38
+buttons now when we click on a button it
+12:41
+should be removed from the Dom and the
+12:43
+node
+12:45
+list when I remove all the buttons our
+12:48
+node list is then
+12:49
+empty all right everybody so that is an
+conclusion
+12:51
+introduction to node lists they're a
+12:54
+static collection of HTML elements they
+12:57
+can be created by using query select all
+12:59
+we can select Elements by an ID a class
+13:02
+or an element type they're similar to an
+13:04
+array but there's no map filter or
+13:06
+reduce methods and do remember that nod
+13:09
+list won't update automatically to
+13:11
+reflect changes to the Dom and well
+13:13
+everybody that is an introduction to
+13:15
+node lists in
+13:20
+JavaScript

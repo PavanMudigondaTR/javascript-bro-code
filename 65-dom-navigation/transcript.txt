@@ -1,0 +1,650 @@
+introduction
+0:00
+yo what's going on people so today I got
+0:02
+to explain Dom navigation in JavaScript
+0:05
+Dom navigation is the process of
+0:07
+navigating through the structure of an
+0:09
+HTML document using JavaScript HTML
+0:13
+elements include but are not limited to
+0:16
+the following properties for Dom
+0:17
+navigation we can get the first child
+0:20
+the last child the next sibling the
+0:21
+previous sibling a parent or all the
+0:24
+children of an element so for this
+0:26
+exercise within our HTML document we're
+0:29
+going to create a few unordered lists of
+0:31
+course these unordered lists are going
+0:33
+to be for food because I like food the
+0:36
+first unordered list will have an ID of
+0:39
+fruits let's create a few list item
+0:42
+elements an
+0:45
+apple an
+0:47
+orange and a
+0:51
+banana we'll need a few unordered lists
+0:53
+to work with let's copy this unordered
+0:56
+list and paste it twice the second list
+0:59
+will be for
+1:01
+vegetables pick some vegetables I'll
+1:04
+pick
+1:05
+carrots
+1:07
+onions
+1:09
+potatoes the third unordered list will
+1:12
+be for
+1:14
+desserts I'll pick
+1:17
+cake
+1:19
+pie ice
+1:22
+cream that is good enough for now
+firstElementChild
+1:25
+heading back to our Javascript file I
+1:27
+will now discuss the property of first
+1:30
+element child our unordered lists are
+1:33
+elements they each have their own
+1:35
+children a child element is any element
+1:38
+found within this element our unordered
+1:41
+list of fruits has three children Apple
+1:45
+orange banana vegetables has three
+1:48
+children carrots onions potatoes
+1:50
+desserts has three children as well cake
+1:53
+pie and ice cream let's say that our
+1:55
+unordered list of fruits is a parent
+1:58
+well Apple which would be the firstborn
+2:01
+orange would be the middle child and
+2:03
+banana would be the last born if these
+2:05
+were actual children so think of it that
+2:08
+way so I'm going to create a constant of
+2:11
+element I'll be using this as a
+2:14
+reference document. getet element by ID
+2:18
+I will get that unordered list of
+2:21
+fruits I'm storing this unordered list
+2:24
+within this
+2:26
+element I will create a reference for
+2:28
+the first child equals take our element
+2:33
+access the first element
+2:37
+child if I was to take this element
+2:40
+change its style access its background
+2:44
+color set it to be
+2:47
+yellow which element is going to be
+2:50
+highlighted Apple if I selected a
+2:53
+different element like my ID of
+2:55
+vegetables the first child would be
+2:58
+carrots then dessert
+3:00
+s the first element child of desserts is
+3:04
+cake they are the firstborn children
+3:07
+they're at the top Within These
+3:09
+unordered lists if you used query
+3:11
+selector all I'll give you a
+3:13
+demonstration I will select all
+3:16
+unordered lists const UL
+3:20
+elements equals
+3:23
+document do query selector all select
+3:29
+all unordered
+3:32
+lists this will return a node list node
+3:35
+lists do have their own built-in for
+3:37
+each method take all UL elements use the
+3:41
+built-in for each method what do we want
+3:44
+to do iterate over every unordered list
+3:49
+element do this let's create a reference
+3:53
+to the first
+3:56
+child equals take our unordered list
+4:02
+element access its first element child
+4:07
+then store it as a
+4:08
+reference let's take our first
+4:11
+child access its style access its
+4:15
+background color property set it to be
+4:20
+yellow that will highlight all of the
+4:22
+first element children of all the
+4:25
+unordered lists so that's how you can
+4:27
+use Query selector all to select all of
+4:30
+the first children of all matching
+4:32
+elements now we're going to access last
+lastElementChild
+4:35
+element child with our unordered lists
+4:38
+if we're selecting our elements of
+4:40
+fruits vegetables and desserts this
+4:43
+would return the last child banana
+4:46
+potatoes or ice cream depending on what
+4:48
+we're selecting if these were actual
+4:50
+children these three elements are the
+4:53
+last born they're the youngest I'm going
+4:56
+to create a reference to an element
+4:59
+equals access the Dom get element by ID
+5:04
+I will get my ID of
+5:07
+fruits I will create a reference to the
+5:10
+last child
+5:13
+equals take our
+5:15
+element get the last element
+5:20
+child take our last child
+5:24
+element access its style access its
+5:27
+background color set it to
+5:30
+yellow so that will highlight banana if
+5:34
+I change the selected element to
+5:37
+vegetables that would select
+5:39
+potatoes if I selected desserts that
+5:42
+would select ice cream they are the last
+5:45
+element children found within each of
+5:48
+these elements if I were to use Query
+5:50
+selector all to select all unordered
+5:52
+lists let's create const UL
+5:56
+elements equals document do query
+6:02
+selector all select all unordered
+6:06
+elements this returns a node list they
+6:10
+have their own built-in for each
+6:12
+method take our node list of unordered
+6:15
+elements use the built-in for each
+6:18
+method take each unordered list
+6:22
+element use an arrow function to do this
+6:25
+I will create a reference to the last
+6:28
+child
+6:30
+equals take each unordered list element
+6:34
+access the last element
+6:37
+child take the last child during each
+6:41
+iteration access its style access its
+6:44
+background color set it to be yellow and
+6:47
+that will select banana potatoes and ice
+6:51
+cream select all unordered lists take
+6:54
+each of their last children change the
+6:57
+background color to be yellow so that is
+6:59
+the last element child property in this
+nextElementSibling
+7:02
+next example I'll demonstrate next
+7:05
+element sibling but we're going to make
+7:07
+a few changes going back to our HTML
+7:09
+file we will give each of these list
+7:11
+items a unique ID so let's start with
+7:14
+the first the ID will be Apple for the
+7:17
+first list item element I'll copy this
+7:19
+ID for each of these elements and then
+7:22
+change them in a
+7:27
+moment so we have apple followed by
+7:29
+orange banana carrots onions potatoes
+7:35
+cake pie then ice
+7:40
+cream if I'm selecting my unordered list
+7:43
+of fruits Apple orange banana or the
+7:45
+children they are all siblings to each
+7:48
+other if I were to select Apple then get
+7:50
+the next sibling that would be orange if
+7:53
+I select carrots the next sibling would
+7:55
+be onions if I selected cake the next
+7:58
+sibling would be pie
+8:00
+so let's create a
+8:01
+constant of element equals document.
+8:06
+getet element by ID the ID that I'm
+8:09
+going to select is
+8:12
+Apple I will create a reference to the
+8:14
+next sibling equals take our element
+8:19
+access its next element
+8:23
+sibling take our next
+8:26
+sibling access its Style access its
+8:29
+background
+8:31
+color set it to be
+8:34
+yellow if I'm selecting Apple the next
+8:37
+sibling to that would be orange if I
+8:39
+were to select orange the next sibling
+8:42
+would be banana if I were to select
+8:44
+banana well banana doesn't have a next
+8:46
+sibling it's the last in line we
+8:49
+wouldn't be selecting anything there is
+8:51
+no next sibling for banana if I were to
+8:54
+select carrots the next sibling is
+8:56
+onions if I selected onions the next
+8:59
+sibling is potatoes if I selected cake
+9:02
+the next sibling is pie if I selected
+9:05
+pie the next sibling is ice cream what
+9:08
+if I selected fruits vegetables or
+9:10
+desserts what would be highlighted I
+9:13
+will select the ID of fruits that would
+9:17
+highlight my unordered list of
+9:19
+fruits these three unordered lists of
+9:22
+fruits vegetables and desserts they're
+9:24
+all children of the body they're all
+9:28
+siblings to one another
+9:30
+it's kind of like if the list item
+9:32
+elements of Apple through ice cream are
+9:34
+all children the unordered lists of
+9:36
+fruits vegetables and desserts are the
+9:38
+parents and the body is the grandparent
+9:41
+if I select the unordered list of fruits
+9:44
+the next sibling would be
+9:46
+vegetables by accessing the next element
+9:49
+sibling of my unordered list of fruits
+9:52
+that selects my unordered list of
+9:55
+vegetables if I selected vegetables then
+9:58
+get its next sibling that would give me
+10:00
+this unordered list of
+10:02
+desserts all right then we have previous
+previousElementSibling
+10:05
+element sibling if I select an element
+10:08
+we'll get the previous element sibling
+10:10
+so if I were to select orange that would
+10:12
+give me Apple if I selected banana that
+10:15
+would give me orange if I selected
+10:16
+onions that would give me carrots I will
+10:19
+create a constant for element equals
+10:23
+document. getet element by ID I will
+10:27
+select Orange
+10:31
+const prev meaning previous sibling
+10:35
+equals take our element access the
+10:39
+previous element sibling if I were to
+10:43
+take my previous sibling access its
+10:46
+style access its background color set it
+10:49
+to be
+10:51
+yellow the previous sibling of orange is
+10:54
+Apple the previous sibling of banana is
+10:58
+orange
+11:00
+if I selected onions the previous
+11:02
+sibling is
+11:04
+carrots the previous sibling of
+11:09
+potatoes is
+11:11
+onions the previous sibling of pie is
+11:14
+cake the previous sibling of ice
+11:18
+cream is
+11:19
+pi if I selected the first sibling then
+11:22
+attempt to get the previous
+11:26
+sibling well we don't select anything
+11:28
+the previous sibling of a first child
+11:30
+doesn't exist if I selected the previous
+11:33
+sibling of my unordered list of
+11:37
+vegetables that would select my
+11:39
+unordered list of fruits if I selected
+11:43
+the unordered list of desserts that
+11:46
+would give me
+parentElement
+11:48
+vegetables now we have the parent
+11:50
+element property whichever element I
+11:52
+select we'll get the parent the parent
+11:55
+is the element that contains it
+11:59
+const element equals document. getet
+12:05
+element by ID I will select
+12:10
+Apple const
+12:12
+parent equals access our
+12:15
+element access the parent element let's
+12:21
+take our parent access its style access
+12:24
+its background color set it to be yellow
+12:28
+that will highlight
+12:29
+my unordered list of fruits if I
+12:32
+selected orange well that wouldn't
+12:34
+change the parent is still fruits same
+12:37
+thing goes with
+12:38
+banana if I selected carrots well the
+12:41
+parent is vegetables that unordered list
+12:45
+if I selected ice cream well the parent
+12:48
+is
+12:49
+desserts so that's how to get the parent
+12:51
+of an element you can access the parent
+12:54
+element
+children
+12:55
+property the last property we'll discuss
+12:57
+is children we we can return all of the
+13:00
+children of a selected element I will
+13:03
+create a const element equals
+13:06
+document. getet element by
+13:09
+ID I will select my ID of
+13:12
+roots I would like all children of this
+13:15
+element I'll create a reference to
+13:18
+Children equals take our element access
+13:22
+the children property if I was to
+13:26
+console.log
+13:27
+children this is what we're working
+13:31
+with by accessing the children of an
+13:33
+element that returns an HTML
+13:36
+collection this HTML collection has
+13:39
+three list item
+13:41
+elements HTML collections don't have a
+13:43
+built-in for each method I would need to
+13:46
+typ cast it as an array using the from
+13:48
+method of arrays let's take all of our
+13:51
+children convert it to an array then
+13:54
+method chain the for each
+13:57
+method let's let's take each child from
+14:02
+children then do this take each child
+14:05
+during each iteration access its style
+14:08
+access its background color set it to be
+14:13
+yellow so this will highlight all
+14:15
+children of a selected element Apple
+14:19
+orange then banana if I selected
+14:23
+vegetables that would highlight carrots
+14:25
+onions
+14:27
+potatoes if I select
+14:29
+desserts that would highlight cake pie
+14:32
+then ice cream you can even access these
+14:34
+children by an index
+14:39
+number let's say you would like to
+14:41
+highlight a middle sibling orange onions
+14:44
+or pie let's take our children it's an
+14:47
+HTML collection access it by an index
+14:50
+number so let's access children at index
+14:53
+one of desserts that would highlight
+14:56
+Pi let's select vegetables
+14:59
+that would highlight onions then fruits
+15:02
+would highlight
+15:03
+orange all right everybody so that is an
+conclusion
+15:06
+introduction to Dom navigation it's the
+15:08
+process of navigating through the
+15:10
+structure of an HTML document using
+15:12
+JavaScript there are several different
+15:14
+properties that you can use to navigate
+15:16
+through HTML elements and well everybody
+15:19
+that is an introduction to Dom
+15:20
+navigation in
+15:25
+JavaScript

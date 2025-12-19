@@ -1,0 +1,566 @@
+0:00
+what's going on everybody so in today's
+0:02
+video I got to talk about promises in
+0:03
+JavaScript A promise is an object an
+0:06
+object that manages asynchronous
+0:09
+operations such as querying a database
+0:11
+fetching a file Gathering resources
+0:14
+those you could consider asynchronous
+0:15
+operations they can take an
+0:17
+indeterminate amount of time you can
+0:19
+wrap a promise object around some
+0:21
+asynchronous code the promise object
+0:24
+promises to return a value that promise
+0:26
+object will be pending then either that
+0:29
+promise will be resolved D if the task
+0:31
+completed successfully or rejected if it
+0:33
+failed for some reason maybe the promise
+0:35
+couldn't fetch that file resolved if it
+0:37
+did A promise is an object we'll create
+0:39
+a new promise object with new promise
+0:42
+then pass in a function usually you see
+0:44
+this is an arrow function there's two
+0:46
+parameters resolve and reject Arrow then
+0:49
+do some asynchronous code so in this
+0:51
+demonstration we're going to be doing
+0:53
+some chores if you live with your
+0:55
+parents maybe your mom asked you to do
+0:57
+these chores or with the roommate these
+0:59
+are the tasks you need to do or your
+1:00
+significant other wants you to do these
+1:02
+tasks anyways we have some chores to do
+1:04
+we have to walk the dog clean the
+1:06
+kitchen and take out the trash I'll
+1:09
+create functions for each of these
+1:10
+chores first we'll start by using
+1:12
+callbacks then I'll demonstrate the use
+1:14
+of promises and how they're helpful so
+1:16
+let's create a function to walk dog to
+1:21
+make this asynchronous I'm going to add
+1:23
+a set timeout
+1:25
+function this takes a call back and an
+1:28
+amount of time in milliseconds to to
+1:30
+complete this code let's say walking the
+1:32
+dog takes 1,500 milliseconds what code
+1:36
+would we'd like to perform let's write
+1:38
+an arrow function to keep it
+1:40
+simple parameters Arrow do this let's
+1:44
+console.log after completing this chore
+1:47
+you walk the
+1:52
+dog okay that'll be the first function
+1:55
+let's create a function to clean the
+1:57
+kitchen function clean kitchen
+2:00
+this will take a long time 2,500
+2:04
+milliseconds let's say when we complete
+2:06
+this task we will print you clean the
+2:14
+kitchen and a third
+2:16
+function take out
+2:22
+trash you take out the
+2:28
+trash
+2:31
+taking out the trash it's really quick
+2:33
+it takes half a second 500
+2:36
+milliseconds if I need to do these
+2:38
+chores in order I would need to use some
+2:40
+callbacks after walking the dog we will
+2:43
+call a call back to clean kitchen after
+2:46
+we clean the kitchen we will take out
+2:48
+the trash we need to modify these
+2:49
+functions so that they accept some call
+2:52
+backs after our code is complete we will
+2:55
+invoke the call back call the call back
+2:58
+so let's add that par parameter to each
+3:00
+of these
+3:05
+functions now if we want to call all
+3:07
+these functions in order we would have
+3:09
+to start using call back hell which we
+3:11
+learned about in the last video so first
+3:13
+I would like to walk the dog I will call
+3:15
+that function pass in a call back but
+3:17
+we'll use an arrow
+3:18
+function then we will clean the kitchen
+3:22
+pass in a call back I'll use an arrow
+3:26
+function take out trash
+3:30
+and we'll pass in a call back to do this
+3:32
+when we complete all the
+3:33
+chores
+3:36
+console.log you finished all the
+3:41
+chores okay let's see if this
+3:44
+works you walk the
+3:46
+dog you clean the kitchen you take out
+3:48
+the trash you finished all the
+3:51
+chores if we have a lot of call backs to
+3:53
+work with we'll end up going to call
+3:55
+back hell you don't want to go to call
+3:57
+back hell so what we'll use instead are
+3:59
+promises with all of this asynchronous
+4:02
+code we'll wrap it within a promise by
+4:04
+using a promise we don't need callbacks
+4:07
+instead of using callbacks we'll use
+4:08
+method chaining we'll method chain our
+4:11
+promises here's how how we'll modify
+4:13
+these functions is that at the end of
+4:16
+each function we will return an object
+4:19
+return a new promise return a new
+4:22
+promise object and follow this formula
+4:25
+we have two parameters resolve and
+4:28
+reject resolve Sol
+4:31
+reject Arrow do this asynchronous code
+4:35
+within an arrow function take all of the
+4:37
+asynchronous code cut it place it within
+4:41
+the promise our promise promises to
+4:44
+return a value it's either going to be
+4:46
+resolved or rejected we're going to
+4:48
+modify this function we don't need to
+4:50
+work with call backs anymore we can get
+4:52
+rid of those get rid of the parameter
+4:54
+and the portion of the code where we
+4:55
+call the call back if we would like to
+4:58
+display a message when the pr promise
+4:59
+resolves when it finishes successfully
+5:02
+we will instead call the resolve
+5:04
+parameter it's a function this message
+5:08
+is the value the argument that we're
+5:10
+passing in after you finish walking the
+5:12
+dog here's your completion message when
+5:15
+the promise resolves let's modify the
+5:17
+rest of the functions so that they use
+5:19
+promises we will return a new
+5:22
+promise two parameters
+5:26
+resolve
+5:27
+reject Arrow do this asynchronous code
+5:32
+let's cut our current asynchronous
+5:34
+code paste it remove the call back
+5:37
+parameter we don't need it anymore and
+5:39
+we don't need to call the call back when
+5:42
+this promise
+5:43
+resolves pass along this message you
+5:46
+clean the
+5:47
+kitchen let's do this with take out
+5:49
+trash we will return a new
+5:53
+promise two parameters resolve reject
+5:58
+Arrow do this
+6:00
+cut the asynchronous code paste it
+6:03
+within the promise remove the call back
+6:06
+and where we call the
+6:07
+Callback when we resolve this promise
+6:10
+pass along this message we no longer
+6:13
+need to use callback hell instead we're
+6:15
+going to use method chaining first we're
+6:18
+going to walk the dog clean the kitchen
+6:20
+and then take out the trash in that
+6:21
+order we will call the walk dog
+6:26
+function and then we're going to Method
+6:28
+chain follow this with the then
+6:31
+method walk the dog then what is what
+6:34
+we're saying the walk dog function does
+6:36
+provide a value parameter this message
+6:39
+we can use that message for something
+6:42
+that's going to be stored within value
+6:44
+that's going to be the parameter that's
+6:45
+provided to us take the value let's
+6:48
+print it console.log my value so when I
+6:52
+run this program we should only be
+6:54
+walking the
+6:56
+dog you walk the dog and nothing else
+7:00
+looks like I misspelled resolve as
+7:02
+resolves there after walking the dog I
+7:05
+would like to clean the kitchen so I
+7:07
+need to call that function next within
+7:09
+our Arrow function we'll write more than
+7:12
+one statement we need to enclose this
+7:14
+within a set of curly braces print our
+7:16
+value and then do this
+7:18
+function
+7:20
+return clean kitchen and then call
+7:24
+it we'll add another then
+7:27
+method then take the value provided by
+7:31
+clean
+7:31
+kitchen that will be this
+7:34
+one take that value
+7:37
+arrow
+7:39
+console.log that
+7:44
+value you walk the
+7:46
+dog you clean the kitchen then we'll
+7:49
+take out the trash at the
+7:51
+end We'll add another statement to this
+7:53
+then
+7:55
+method we will return take out
+8:00
+trash invoke this
+8:03
+method then we will take the value
+8:06
+provided to us when it resolves this
+8:10
+value do this
+8:12
+code
+8:14
+console.log that
+8:19
+value you walk the
+8:21
+dog you clean the kitchen you take out
+8:24
+the trash so after taking out the trash
+8:27
+that's our last chore let's add another
+8:30
+line of
+8:32
+code after displaying you take out the
+8:35
+trash let's
+8:38
+console.log you finished all the
+8:45
+chores you walk the dog you clean the
+8:49
+kitchen you take out the trash you
+8:51
+finished all the
+8:52
+chores by Method chaining then methods
+8:55
+it's a lot easier to write than nesting
+8:57
+call backs now sometimes times with
+8:59
+asynchronous functions depending on the
+9:01
+task the task May Fail let's say we're
+9:03
+trying to locate a resource a file if we
+9:06
+can't locate that file and we're using
+9:08
+promises we don't want to resolve that
+9:10
+promise because we couldn't locate that
+9:12
+file instead we want to reject that's
+9:15
+what happens when an asynchronous
+9:16
+function fails to do something when
+9:18
+inside a promise so let's change our
+9:20
+functions around within set timeout
+9:23
+let's create a
+9:24
+variable const dog walked did we
+9:28
+accomplish this this will be true or
+9:31
+false we'll use an if statement if dog
+9:35
+walked then we will resolve it if we
+9:39
+walk to the
+9:41
+dog else we will
+9:44
+reject we'll pass in a different
+9:46
+value you didn't walk the
+9:52
+dog okay let's do this with the other
+9:55
+functions let's create a constant of
+9:59
+kitchen cleaned equals
+10:04
+true if our kitchen is cleaned if that
+10:08
+is true we will resolve this
+10:11
+promise you clean the
+10:14
+kitchen else let's reject pass along
+10:18
+this
+10:19
+message you
+10:21
+didn't clean the
+10:24
+kitchen and lastly take out
+10:28
+trash
+10:30
+const trash taken out let's set that to
+10:35
+be
+10:38
+true if the trash is taken
+10:41
+out resolve the
+10:46
+promise else we will
+10:51
+reject you
+10:54
+didn't take out the
+10:57
+trash if a promise might reject there's
+11:00
+one more method we need to add to the
+11:02
+end of this chain we need to add a catch
+11:05
+method to catch any
+11:07
+errors this will catch any rejects this
+11:10
+is similar to error handling we'll be
+11:13
+provided with one value an error Arrow
+11:16
+do this let's
+11:18
+console.log or even console.
+11:22
+error the message provided to us with
+11:25
+reject that's what the error is going to
+11:27
+be will successfully walk the dog that
+11:31
+will be true and cleaning the kitchen
+11:33
+will be true but taking the trash out
+11:36
+will be false we weren't able to
+11:38
+complete this chore these are the
+11:41
+results you walk the
+11:44
+dog you clean the kitchen you didn't
+11:47
+take out the trash how dare you we'll
+11:49
+keep on completing these tasks until we
+11:51
+fail at one of
+11:53
+them so if walking the dog was false
+11:56
+that was our first
+11:57
+task
+12:02
+this first promise was rejected we don't
+12:04
+even attempt to resolve these other
+12:06
+promises all right everybody so those
+12:08
+are promises they're an object that
+12:10
+manages asynchronous operations you can
+12:13
+wrap a promise object around some
+12:15
+asynchronous code these promise objects
+12:17
+promis to return a value they will be
+12:20
+pending until they complete then they'll
+12:22
+either be resolved if that task
+12:24
+completed successfully or rejected if it
+12:27
+failed for some reason and well
+12:29
+everybody those are promises in
+12:35
+JavaScript

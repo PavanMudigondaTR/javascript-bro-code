@@ -1,0 +1,320 @@
+0:00
+hey what's going on everybody in today's
+0:01
+video I'm going to discuss objects in
+0:03
+JavaScript an object is a collection of
+0:06
+related properties and or methods
+0:09
+properties are things that an object has
+0:12
+such as a first name or an age a method
+0:15
+is a function that belongs to an object
+0:18
+for example I have a person object our
+0:20
+person can say hello and they can say by
+0:23
+methods are just functions that belong
+0:25
+to an object what can this object do
+0:28
+objects can represent Real World objects
+0:31
+such as people products or places in
+0:33
+this example we'll be creating some
+0:35
+people objects people from the show
+0:37
+SpongeBob we'll start from scratch
+0:40
+though we'll create a person object I'll
+0:42
+use a constant although it's not
+0:44
+necessary const person equals then add a
+0:49
+set of curly
+0:50
+braces we'll start with any properties
+0:53
+you can add as many properties as you
+0:54
+would like they're in key value pairs
+0:57
+this person will have a first name key
+0:59
+key colon then some value this person's
+1:03
+first name will be SpongeBob separate
+1:06
+each key value pair with a comma let's
+1:09
+include a last name property last name
+1:12
+colon space will be Square Pants add a
+1:16
+comma when you're done with this key
+1:17
+value pair We'll add an age property of
+1:21
+30 age has a different data type it's a
+1:24
+number the first two in my example were
+1:26
+both strings SpongeBob and Square Pants
+1:30
+let's add a Boolean is
+1:33
+employed colon space I will set that to
+1:36
+be true he has a job at the K crusty
+1:38
+crab okay that's good enough for now I
+1:41
+would like to access these properties
+1:43
+let's
+1:44
+console. log if I need one of these
+1:47
+properties take the object you're
+1:49
+referring to in this case person dot the
+1:52
+name of the property let's do first name
+1:55
+person. first name property that would
+1:58
+give me SpongeBob let's do this with
+2:00
+last name take the object name dot the
+2:03
+name of the
+2:04
+property person. last name is
+2:08
+SquarePants let's do this with age
+2:11
+person. AG is
+2:14
+30 person do is
+2:17
+employed is set to true all right let's
+2:20
+create another object we'll create an
+2:22
+object for
+2:24
+Patrick const person now objects can't
+2:28
+have the same name objects need
+2:30
+different names for example I can't have
+2:32
+two person objects they can't have the
+2:35
+same name syntax error identifier person
+2:37
+has already been declared I will rename
+2:40
+our first person as person one our
+2:43
+second person will be person two then
+2:46
+any place in which I'm referencing
+2:47
+person will now need to be person
+2:51
+one let's reuse these same key value
+2:54
+pairs person two's first name will be
+2:58
+Patrick his last last name will be star
+3:02
+Patrick will be I don't know how old he
+3:04
+is according to the TV series let's say
+3:06
+he's
+3:07
+42 is Patrick employed no he just
+3:11
+watches TV all day now I would like to
+3:14
+access person 2's
+3:16
+properties okay well
+3:18
+console.log person 2's first name Person
+3:22
+2's last name Person two is age person
+3:25
+two is
+3:27
+employed okay for person two we have
+3:29
+Patrick
+3:30
+star 42
+3:32
+false so those are properties of an
+3:35
+object they key value pairs add as many
+3:38
+as you would like in this example these
+3:40
+properties mimic real world attributes
+3:42
+that a person might have like a first
+3:44
+name last name age whatever you can
+3:47
+think of but not only that objects can
+3:49
+have dedicated functions that we refer
+3:51
+to as methods what sorts of actions can
+3:54
+these objects perform for example a
+3:56
+person could eat they could drink they
+3:59
+could sleep what sorts of things do
+4:01
+people do so just to keep this simple I
+4:03
+am going to create a function to say
+4:06
+hello we'll start with person
+4:08
+one say
+4:11
+hello colon space this will be a
+4:14
+function
+4:15
+expression what are we going to do when
+4:19
+we invoke this function let's
+4:23
+console.log what would SpongeBob say if
+4:25
+he's greeting somebody hi I'm
+4:28
+SpongeBob
+4:31
+be sure you're not including a semicolon
+4:33
+at the end that should work let's test
+4:37
+it I'm going to have person one invoke
+4:42
+their say hello
+4:44
+method hi I'm SpongeBob let's add a say
+4:48
+hello method to Patrick person
+4:52
+two we'll change the output of say hello
+4:55
+what would Patrick
+4:56
+say
+4:58
+hey
+5:01
+I'm Patrick dot dot dot now we'll have
+5:04
+person two use their say hello method
+5:07
+hey I'm Patrick you can add as many
+5:10
+methods as you would like so with these
+5:12
+functions we're using a function
+5:14
+expression if you prefer you could even
+5:16
+use an arrow
+5:17
+function list your
+5:19
+arguments Arrow then the code you would
+5:22
+like to
+5:23
+perform this would work
+5:25
+too let's add an eat method eat
+5:31
+function we'll use a function expression
+5:33
+for
+5:35
+SpongeBob let's
+5:38
+console.log what is SpongeBob eating I
+5:42
+am eating a crabby
+5:45
+patty we'll include a neat function for
+5:48
+Patrick as
+5:49
+well what's Patrick going to eat Patrick
+5:52
+is
+5:53
+eating I am
+5:56
+eating roast beef chicken
+6:00
+and
+6:01
+pizza and if you would like you can use
+6:03
+an arrow function for this
+6:05
+example list your parameters Arrow then
+6:09
+the code you would like to
+6:11
+perform it's not necessary but I do like
+6:14
+Arrow functions person one SpongeBob
+6:17
+will use his eat method same thing goes
+6:20
+with Patrick person two so SpongeBob is
+6:23
+eating a crabby patty Patrick is eating
+6:26
+roast beef chicken and Pizza all right
+6:29
+everybody so JavaScript objects are a
+6:32
+collection of related properties and or
+6:35
+methods properties are what an object
+6:37
+has methods are functions that an object
+6:40
+can perform they can represent Real
+6:43
+World objects such as people products or
+6:46
+places properties are key value pairs
+6:49
+methods are functions that belong to an
+6:51
+object and well everybody that is an
+6:53
+introduction to object-oriented
+6:55
+programming in
+6:58
+JavaScript

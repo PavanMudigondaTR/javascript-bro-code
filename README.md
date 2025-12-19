@@ -13,6 +13,13 @@
 
 ---
 
+## 🎓 More Courses to Check Out
+
+- [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code) - Learn Python from scratch
+- [Zero to AI](https://github.com/PavanMudigonda/zero-to-ai) - AI/ML learning path
+
+---
+
 [Bro Code JavaScript YouTube Playlist](https://www.youtube.com/playlist?list=PLZPZq0r_RZOO1zkgO4bIdfuLpizCeHYKv)
 
 JavaScript tutorial for beginners 🌐  

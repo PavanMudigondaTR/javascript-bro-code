@@ -1,0 +1,631 @@
+setup
+0:00
+hey everybody in today's video I'm going
+0:01
+to show you how we can add and change
+0:03
+HTML elements using JavaScript so sit
+0:06
+back relax and enjoy the show I'll break
+0:10
+down creating and appending elements to
+0:11
+the Dom in three simple steps we'll
+0:13
+create the element add any necessary
+0:16
+attributes or properties and then append
+0:18
+the element to the Dom will be the final
+0:20
+step but before we do begin within our
+0:22
+HTML file we'll create a few boxes for
+0:25
+this exercise these will be
+0:28
+developments with an inner paragraph the
+0:31
+first will have text of box one with
+0:34
+this development I will give it an ID of
+0:36
+box one and a class of
+0:41
+box let's copy this developement paste
+0:44
+it three times for a total of four boxes
+0:47
+we'll create box
+0:48
+two box
+0:51
+three and box
+0:55
+four I'll apply the following CSS
+0:58
+properties we're selecting the Box class
+1:01
+add a border of 3 pixel solid set a
+1:03
+width to be 100% and a height of 125
+1:08
+pixels and we are ready to begin step
+h1 element
+1:11
+one we need to create the element in
+1:13
+order to work with it right I will
+1:15
+create a constant of new H1 H1 equals we
+1:19
+will select our document use the create
+1:23
+element method then as a string pass in
+1:27
+the type of the element we would like to
+1:29
+create
+1:30
+we'll create an H1 element we now have
+1:32
+an H1 element to work with which we're
+1:35
+referencing as new H1 let's add some
+1:38
+attributes and CSS properties let's do
+1:40
+one for now I will take my new H1
+1:44
+element access its text content set it
+1:49
+equal to I like
+1:53
+pizza and then we just have to append
+1:56
+this element to the Dom to do that we
+1:59
+will access our Dom with
+2:01
+document what element would we like to
+2:04
+select let's select the body element of
+2:06
+our
+2:07
+document and then we will use the append
+2:10
+method pass in our HTML element as an
+2:13
+argument and there we go there's our H1
+2:16
+element when you append an element to a
+2:19
+parent this new element is the last
+2:22
+child you could prepend if you would
+2:24
+like it to be the first child so let's
+2:27
+use the prepend method change aend to
+2:32
+prepend and it's now at the
+2:34
+beginning let's add an additional
+2:36
+attribute we will take our new H1
+2:38
+element set the ID attribute equal to my
+2:44
+H1 and let's see if that worked I will
+2:47
+right click on this element inspect
+2:50
+it here's our H1 element it's the first
+2:53
+child because we're prepending it this
+2:56
+H1 element has an ID attribute set to my
+2:59
+H1
+3:01
+let's change the CSS properties of this
+3:03
+element I will access new H1 access its
+3:08
+style access its color the font
+3:11
+color let's set it to be red but better
+3:15
+yet let's set the color to be tomato
+3:17
+because I like tomatoes I think that's a
+3:20
+better looking shade of red let's also
+3:22
+Center the text new H1 access its style
+3:27
+access the text align property set it to
+3:31
+be
+3:32
+Center and the text is now centered when
+3:36
+I append this element I would like to
+3:38
+append it to within box one I will
+3:40
+select box one as the parent rather than
+3:43
+the
+3:45
+body we will access our document we need
+3:48
+to select an element we will select box
+3:51
+one we could use document. getet element
+3:56
+by ID the ID that I'm going to select
+4:00
+is box
+4:02
+one I will then follow this with append
+4:06
+append our new H1
+4:09
+element so our H1 element is now within
+4:12
+box one and not outside of it like it
+4:14
+was previously I could append this H1
+4:17
+element to box two but I would have to
+4:19
+select it we will get element by ID
+4:23
+select box two to put it within box two
+4:26
+box three and box four
+4:30
+when I'm appending this element to box
+4:32
+one it is the last child of box one if
+4:35
+there are any child elements within this
+4:37
+box which there is we have a paragraph
+4:40
+element that H1 element will come after
+4:43
+and not
+4:44
+before so if you would like this H1
+4:47
+element to be the first child we can
+4:49
+prepend it I'm going to copy this
+4:51
+because I don't want to rewrite
+4:55
+it we will
+4:57
+prepend prepend my new H1 element take
+5:01
+box one prepend the new H1 element so my
+5:05
+H1 element is now at the top it's the
+5:07
+first child the paragraph element comes
+5:10
+after let's do this with box two box
+5:14
+three and box 4 what if we would like to
+5:17
+take our H1 element and sandwich it
+5:19
+between box one and box two I could
+5:22
+select box two and insert that new H1
+5:25
+element before it here's how I will
+5:28
+create a reference to Box
+5:31
+2
+5:33
+equals
+5:35
+document. get element by
+5:39
+ID we will select the ID of box two
+5:43
+access our document access the body
+5:47
+because box two is a child element of
+5:49
+the body use the insert before method
+5:54
+there's two arguments the new
+5:57
+element and the current element
+6:00
+element the new element is going to be
+6:03
+new H1 that's what we're trying to add
+6:06
+the current element is the target we're
+6:08
+selecting box two insert the new H1
+6:12
+element before box two and this is what
+6:15
+that looks like this H1 element is now
+6:18
+between box one and box two take the new
+6:20
+H1 element insert it before Box 2 if we
+6:24
+were to do this with box one well then
+6:26
+it's going to be before box one let's
+6:29
+try this with box
+6:32
+3 our H1 element is before box 3 and box
+6:40
+4 what if these elements don't have
+6:46
+IDs how do we select them then here's
+6:49
+how we will use Query selector all to
+6:52
+select everything that has the Box class
+6:55
+I will create a constant of boxes this
+6:58
+will be a node the list access our
+7:01
+document use Query selector all select
+7:06
+everything that has a box class we will
+7:10
+use the insert before method access our
+7:13
+document access the
+7:16
+body insert
+7:19
+before we have the new element to add
+7:23
+and the current element the new element
+7:26
+is new H1 the current element is our
+7:30
+node list of boxes we can access a
+7:33
+specific element from this node list
+7:35
+with an index if I accessed boxes at
+7:38
+index zero that would give me box one
+7:42
+boxes at index one that's referring to
+7:44
+box
+7:45
+two box three and box four so you could
+7:50
+use Query selector to select many
+7:52
+elements store it within a node list
+7:55
+then select those specific elements with
+7:57
+an index number
+8:00
+this is optional but at any time if you
+8:02
+need to remove an HTML element here's
+8:04
+how let's append our new H1 element we
+8:08
+need to select the location in which we
+8:10
+can find that element it's within the
+8:12
+body of our
+8:14
+document document dot body use the
+8:20
+remove child method we will remove our
+8:23
+new H1
+8:25
+element and it's gone what if this H1
+8:28
+element was within box one all right I
+8:32
+will append our new H1 element to box
+8:34
+one and we need to add the IDS back to
+8:36
+these boxes because I forgot to do that
+8:39
+we're pending our new H1 element to box
+8:41
+one when I try and remove it it doesn't
+8:44
+work it's still there we need to select
+8:48
+box one and not the body of our document
+8:50
+because box one is the direct parent of
+8:53
+our H1 element not the body the body in
+8:55
+this case could be like the
+8:57
+grandparent instead of selecting our
+8:59
+body we will get the ID of box one or
+9:03
+some other element selector to get box
+9:05
+one I'll use get element by ID because
+9:08
+it's
+9:09
+easy get element by ID the ID that I'm
+9:14
+selecting is box one remove the new H1
+9:17
+element that's found within it and it's
+9:20
+gone if at any time you need to remove
+9:22
+an element select the parent of that
+9:25
+element then follow it with the remove
+9:27
+child method pass in the element you're
+9:29
+trying to remove as an
+9:31
+argument in this last example we're
+list items
+9:33
+going to work with ordered lists so
+9:36
+going to our HTML file we will create an
+9:39
+ordered list with a pair of O tags I
+9:42
+will give this ordered list an ID of
+9:45
+fruits We'll add a few list items the
+9:48
+first list item will be for an
+9:51
+apple the ID will be
+9:55
+apple we'll create a list item element
+9:58
+for an or orange ID will be
+10:01
+orange and a
+10:05
+banana ID
+10:08
+banana I'll add a little bit of CSS
+10:10
+styling going to the CSS stylesheet I
+10:13
+will select the ID of fruits I'll add a
+10:18
+border of three pixel solid for this
+10:22
+demonstration and increase the font
+10:25
+size to 2
+10:28
+RM all right and that's what we need to
+10:30
+work
+10:31
+with we'll now be creating a list item
+10:34
+element I will create a constant of new
+10:38
+list item equals
+10:42
+document. create
+10:45
+element what is the type of element
+10:47
+we're trying to create a list item
+10:50
+element let's set any attributes or
+10:52
+properties that's step two let's take
+10:55
+our new list item set the text content
+10:59
+to equal
+11:03
+coconut we'll append this element if I
+11:06
+were to append this new list item to the
+11:09
+body of my document it's the last child
+11:12
+of the body we're not adding it to this
+11:14
+ordered list now that we can see it I'm
+11:17
+going to add a few more attributes and
+11:19
+properties let's take our new list item
+11:22
+access its ID attribute set it to be
+11:27
+coconut let's change the font
+11:30
+weight new list item access the
+11:34
+style access the font
+11:37
+weight set it to be
+11:40
+bold and the background color access the
+11:44
+style access the background
+11:48
+color I'll set the background color to
+11:50
+be light
+11:54
+green we have our list item element if I
+11:58
+append it to the bot body it's now the
+12:00
+last child of the body of my document
+12:02
+not this ordered list found within the
+12:05
+body if I were to prepend it this is
+12:08
+what would happen prepend the new list
+12:11
+item it's now the first
+12:15
+child now we'll select our ordered list
+12:18
+of
+12:19
+fruits get element by ID fruits append
+12:23
+the new list item and it's now at the
+12:26
+end at number four let's let prepend to
+12:29
+the ordered
+12:32
+list get element by ID fruits prepend
+12:36
+our new list item our coconut is now at
+12:39
+number
+12:41
+one how can we insert our coconut
+12:43
+between Apple and Orange here's how
+12:46
+since these list item elements have an
+12:48
+ID I could use
+12:51
+that let's get the ID of orange const
+12:56
+orange get element by ID
+13:00
+orange instead of selecting the body
+13:02
+we're going to select the ordered list
+13:05
+that has an ID of fruits document. getet
+13:09
+element by ID the ID that I'm selecting
+13:13
+is fruits select the ordered list of
+13:16
+fruits insert the new list item before
+13:20
+the orange our coconut is now at number
+13:23
+two let's insert the coconut before the
+13:27
+banana the ID was
+13:29
+banana const banana insert the new list
+13:34
+item before the
+13:35
+banana our coconut is now at number
+13:38
+three you could insert before Apple too
+13:42
+I will get the ID of apple const
+13:46
+apple insert the new list item before
+13:48
+the
+13:49
+apple and it's back at the
+13:52
+beginning what if these list items don't
+13:54
+have ideas let's eliminate
+13:57
+those
+14:01
+we would need to use Query selector to
+14:03
+select all list items from the ordered
+14:05
+list of
+14:10
+roots so I'm going to use Query selector
+14:13
+all select the ID of fruits then select
+14:18
+any list item descendants within this ID
+14:22
+this will return a node list that stores
+14:24
+all of the current list items within
+14:27
+this ordered list
+14:29
+we need to select our ordered list of
+14:31
+fruits not the body document. getet
+14:35
+element by ID I will
+14:38
+select our ordered list of
+14:41
+fruits insert the new list item before
+14:45
+list items at index
+14:48
+zero now will'll insert the coconut
+14:51
+before the Apple let's increment our
+14:53
+index to one our coconut is now before
+14:57
+the
+14:57
+orange
+14:59
+now it's before the banana and now it's
+15:02
+after the banana if I need to remove
+15:04
+this list item I would need to select it
+15:06
+first so let's append the new list item
+15:09
+to
+15:10
+fruits I will get the ID of the ordered
+15:14
+list of fruits remove the child of new
+15:18
+list item and it's now
+15:21
+gone all right everybody so that is how
+15:23
+we can add change and remove HTML
+15:26
+elements using JavaScript

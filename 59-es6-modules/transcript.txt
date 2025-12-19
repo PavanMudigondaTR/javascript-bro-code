@@ -1,0 +1,250 @@
+0:00
+hey what's going on everybody so today
+0:01
+I'm going to explain es6 modules in
+0:04
+JavaScript a module is an external file
+0:07
+that contains reusable code that can be
+0:10
+imported into other JavaScript files
+0:13
+let's say you write a really difficult
+0:14
+program well any part of that program
+0:17
+you can import into a different
+0:18
+application if you don't feel like
+0:20
+rewriting it modules can contain
+0:22
+variables classes functions and more es6
+0:25
+modules were introduced as part of the
+0:27
+ecmascript 2015 update using modules we
+0:30
+can create some reusable code that can
+0:32
+be used in different programs different
+0:34
+JavaScript files so what we'll do in
+0:37
+this example we will create a new
+0:40
+file I'll create a module for some math
+0:43
+utility functions this file will be math
+0:47
+u. JS it's a separate Javascript
+0:51
+file from our index file we will import
+0:55
+this module math
+0:57
+u.j but in order to do so within our
+1:00
+HTML file we have to set the type
+1:04
+attribute equal to
+1:07
+module we'll now treat our index file as
+1:09
+a module we can Import and Export other
+1:12
+modules freely but we have to be sure to
+1:14
+include this attribute and set it equal
+1:16
+to
+1:18
+module So within our math util module we
+1:21
+can write some reusable code for other
+1:24
+programs so let's define what Pi is Pi =
+1:28
+3.14
+1:31
+4159 we'll create a function to get
+1:34
+circumference you have to pass in a
+1:36
+radius though that's going to be the
+1:38
+parameter function get
+1:43
+circumference we need a
+1:46
+radius we will
+1:49
+return 2 * pi *
+1:55
+radius then we'll create a function to
+1:57
+get
+1:58
+area
+2:00
+get area we still need a
+2:04
+radius we will return Pi * radius time
+2:11
+radius then get volume to get the volume
+2:14
+of a
+2:15
+sphere function get
+2:18
+volume again we need a
+2:21
+radius we will
+2:23
+return 4 * PK * radius * radius
+2:31
+I can reuse these variables and
+2:32
+functions for any JavaScript program
+2:34
+that I have I can import them in order
+2:37
+to do so though we need to be sure that
+2:38
+we prefix each variable function or
+2:41
+class or anything else with the export
+2:44
+keyword so that we can import it
+2:46
+elsewhere so let's be sure we do
+2:51
+that all right be sure to save
+2:53
+everything we can close out of this
+2:55
+module then from our index CSS file I
+2:59
+will import then we're going to use
+3:02
+object destructuring we need a set of
+3:03
+curly
+3:05
+braces from the location of that module
+3:09
+so these files are right next to each
+3:11
+other relatively speaking they're right
+3:13
+next to each other I would need slash
+3:17
+the name of that file math util and this
+3:21
+is a Javascript
+3:23
+file now anything I would like to import
+3:26
+I'll place within the set of curly
+3:27
+braces we're going to be using object
+3:29
+structuring from this JavaScript module
+3:32
+I would like Pi comma separate each
+3:36
+entity then I would like get
+3:41
+circumference get area get
+3:46
+volume I can now use these variables and
+3:49
+functions as if they were already part
+3:51
+of my Javascript file for example I'm
+3:54
+going to
+3:56
+console.log Pi and pi does have a value
+4:00
+because we imported it let's get the
+4:03
+circumference but we do need to pass in
+4:05
+a radius this is a function that we have
+4:08
+imported from that mathutils module I
+4:11
+will store the result within a
+4:17
+variable const circumference equals
+4:21
+we'll invoke the get circumference
+4:23
+function from that module I'll pass in
+4:25
+10 then we're going to display the
+4:27
+circumference I'll use console
+4:30
+log I'll use a template string include a
+4:33
+placeholder display their circumference
+4:36
+plus a unit of measurement like
+4:38
+centimet 62. 8318 CM this isn't
+4:43
+necessary but I'm going to round this
+4:44
+number to two decimal places using the
+4:47
+two fixed method of numbers let's round
+4:50
+to two decimal places let's create an
+4:53
+area variable const area equals get area
+4:59
+I'll pass in 10 for the
+5:01
+radius let's copy this line and paste it
+5:04
+because I'm lazy let's display our area
+5:07
+variable with cm
+5:10
+cubed
+5:12
+31416 cm cubed then we'll create a
+5:16
+volume variable const volume equals get
+5:21
+volume I will pass in
+5:24
+10 and then we will display the
+5:28
+volume
+5:30
+volume cm cubed and our volume if we
+5:34
+pass in a radius of 10 would be
+5:37
+1,256 64 cm cubed all right everybody so
+5:41
+those are modules they're external files
+5:44
+that contain reusable code that can be
+5:47
+imported into other JavaScript files you
+5:49
+can write variables classes functions
+5:51
+and more that can be reused in other
+5:53
+programs you just have to be sure to
+5:55
+import them and well everybody those are
+5:58
+es6 modules in
+6:03
+JavaScript

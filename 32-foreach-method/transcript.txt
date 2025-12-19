@@ -1,0 +1,358 @@
+introduction
+0:00
+hey it's me again today I'm going to
+0:01
+explain the for each method in
+0:03
+JavaScript the for each method is used
+0:05
+to iterate meaning Loop through the
+0:07
+elements of an array and apply a
+0:09
+specified function to each element you
+0:11
+have an array we can use the built-in
+0:13
+for each method of arrays and send each
+0:16
+element through a call back to a
+example 1
+0:18
+function here's an example I'll create
+0:20
+an array of numbers let numbers equals 1
+0:24
+through
+0:28
+5 then I'm going to create a function to
+0:31
+display each
+0:32
+element function
+0:35
+display there will be one
+0:38
+parameter an element we will
+0:41
+individually display each element within
+0:43
+this array
+0:46
+console.log each
+0:49
+element I can display each element of
+0:52
+this array by using the for each
+0:54
+method we will take our
+0:58
+array Dot use the built-in for each
+1:01
+method then pass a call back as an
+1:04
+argument we will pass our display
+1:06
+function as an argument so this should
+1:09
+display all of the elements in my array
+1:11
+to the console 1 2 3 4 5 believe it or
+1:14
+not the element argument is provided for
+1:17
+us with the for each method behind the
+1:19
+scenes the for each method will provide
+1:21
+to a callback an element index and array
+1:24
+argument an element for the current
+1:26
+element that we're on when looping
+1:28
+through this array an index that keeps
+1:31
+track of the current index number and
+1:33
+the location of the array itself in this
+1:35
+case it would be numbers that's why when
+1:37
+we pass the display function as a
+1:38
+callback we're already provided with an
+1:40
+element argument behind the scenes so
+1:42
+we're using the for each method to
+1:44
+display all of the elements of this
+1:46
+array let's use the for each method
+1:48
+again to double each element before
+1:50
+displaying it I will create a new
+1:52
+function function double to double the
+1:56
+value of each
+1:57
+element element index and array are
+2:00
+provided for us
+2:02
+automatically for each element what are
+2:04
+we going to do let's take our array at
+2:08
+index of index index keeps track of the
+2:12
+current index number so during each
+2:14
+iteration it's going to increment by one
+2:17
+starting with zero we will take our
+2:20
+element multiply it by
+2:23
+two all right so let's take our numbers
+2:26
+array use the for each method then pass
+2:30
+a call back to our double
+2:32
+function so now all of these elements
+2:34
+should be doubled let's triple them now
+2:37
+we'll create a function for triple
+2:40
+function triple we will set the
+2:42
+parameters to be the same but we will
+2:45
+multiply each element by three then pass
+2:48
+in a call back for
+2:50
+triple so now we have 3 6 9 12 15
+2:54
+they're all tripled let's Square each
+2:56
+element function Square
+3:00
+again the element index and array
+3:02
+arguments are provided for us take our
+3:05
+array that we receive at index of the
+3:09
+current index number set the equal to to
+3:12
+square a number we can use the power
+3:14
+method of math then raise a base to a
+3:18
+given power we are raising our base of
+3:21
+element to the power of two if I pass
+3:24
+our Square function as a call back to
+3:26
+for each we will now Square each number
+3:29
+before playing it 1
+3:32
+49625 then this time let's create a cube
+3:37
+function function
+3:40
+Cube raise our element to the power of
+3:43
+three pass our Cube function as a call
+3:46
+back to the for each
+3:48
+method and now each number is cubed 1 8
+3:52
+27
+3:53
+6415 let's create a more practical
+3:57
+example I will create an array of fruits
+example 2
+4:02
+let fruits equals some fruit we have an
+4:05
+apple we have an
+4:07
+orange a
+4:09
+banana and a coconut we'll create a
+4:13
+function to display each
+4:15
+element function display it's kind of
+4:18
+like what we did
+4:21
+before an element argument is going to
+4:23
+be provided to us during each
+4:26
+iteration let's console.log each
+4:31
+element and then we will use the buil-in
+4:34
+for each method of our array fruits
+4:37
+fruits. for each we will pass our
+4:40
+function as a callback to display each
+4:43
+element of this array Apple orange
+4:45
+banana coconut let's create a function
+4:47
+to make all of these strings
+4:51
+uppercase
+4:53
+function
+4:56
+uppercase we'll need an element index
+4:58
+and array
+5:00
+element index array during each
+5:03
+iteration let's take our array that we
+5:07
+receive add the index of our index
+5:11
+equals take the element that we receive
+5:15
+use the two uppercase method so we have
+5:20
+an uppercase function that utilizes the
+5:23
+two uppercase method remember that a
+5:25
+method usually belongs to something this
+5:28
+method belongs to the element that we
+5:30
+receive functions are Standalone before
+5:33
+displaying each element within my array
+5:35
+of fruits let's take our fruits array
+5:38
+use the for each method then apply a
+5:41
+call back to uppercase to make all of
+5:43
+the elements uppercase before displaying
+5:45
+them what I'm going to do is copy all of
+5:48
+these elements so they will begin
+5:54
+uppercase I'll create a lowercase
+5:57
+function function
+6:00
+lowercase we have our element index and
+6:02
+array with this line of code we will use
+6:05
+the two lowercase method within the for
+6:09
+each method we will pass our lowercase
+6:12
+function as a callback to make all of
+6:14
+the elements
+6:16
+lowercase let's set the elements of our
+6:18
+array to be all lowercase
+6:20
+again this will be a challenge
+6:23
+round we will capitalize the first
+6:25
+letter in each element of this
+6:28
+array we will create a
+6:32
+function
+6:37
+capitalize the element index and array
+6:39
+arguments are going to be provided to us
+6:42
+take our array that we receive at the
+6:45
+current index set this equal to we're
+6:48
+going to get the first character in each
+6:50
+element we will take our
+6:53
+element get the first character Char at
+6:58
+index of zero
+7:00
+method chain
+7:01
+2
+7:03
+uppercase to make this letter
+7:06
+uppercase then we will string
+7:08
+concatenate our
+7:10
+element use the slice
+7:13
+method we'll create a substring begin at
+7:16
+index one this portion is going to
+7:19
+create a substring of every character
+7:22
+besides the first the first character
+7:24
+we're going to make
+7:26
+uppercase so now this should work so
+7:28
+let's take our capital I function pass
+7:31
+it to the for each method and now the
+7:33
+first character in each element is all
+7:36
+uppercase all right everybody so that is
+conclusion
+7:38
+the for each method it's used to iterate
+7:41
+over the elements of an array and apply
+7:43
+a specified function as a call back to
+7:46
+each element you take your array use the
+7:48
+for each method then pass a call back as
+7:50
+an argument it's really useful if you
+7:52
+need to apply a function to each element
+7:54
+of this array and well everybody that is
+7:56
+the for each method in JavaScript

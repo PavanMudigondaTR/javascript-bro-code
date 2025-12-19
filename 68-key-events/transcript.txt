@@ -1,0 +1,484 @@
+0:01
+video I'm going to give you an
+0:02
+introduction to key events in JavaScript
+0:05
+so sit back relax and enjoy the show so
+0:09
+what we've discussed in the previous
+0:10
+topic is event listeners an event
+0:12
+listener can be added to an HTML element
+0:15
+they will listen for specific events to
+0:17
+create interactive web pages we'll be
+0:20
+discussing key down and key up there is
+0:22
+a third type of key event called key
+0:25
+press however according to the official
+0:27
+documentation this event is incompatible
+0:30
+with all web browsers so you should
+0:31
+avoid using key press a key down event
+0:34
+occurs when you press down on a key a
+0:36
+key up event occurs when you release a
+0:38
+key by adding an event listener to the
+0:40
+Dom document we can detect when we press
+0:43
+down or release a key here's how we will
+0:46
+access our Dom then add an event
+0:49
+listener add event
+0:52
+listener we have two arguments the event
+0:55
+type and a call back when we press down
+0:58
+on a key let's do something
+1:01
+doesn't matter what key it is any key
+1:03
+for this next argument I can either pass
+1:05
+in a call back an anonymous function or
+1:07
+an arrow function I like Arrow functions
+1:09
+so I'm going to use an arrow function
+1:11
+we're provided with an event parameter
+1:13
+when something happens within our web
+1:15
+browser an event object is created we
+1:18
+can access it so I'm going to
+1:21
+console.log this event object and we'll
+1:23
+see the details of it be sure to select
+1:25
+your web browser I'm going to press the
+1:28
+q key
+1:30
+then let's go to
+1:31
+inspect
+1:33
+console and here's that
+1:36
+event the web browser provided us with a
+1:39
+keyboard
+1:40
+event the key pressed was Q there's a
+1:44
+relevant key code of 81 and there's
+1:46
+other properties too like was the ALT
+1:49
+key being held down at the time it
+1:51
+wasn't same thing with the shift key and
+1:53
+the target which is the body of our
+1:56
+document I'm going to Output the key
+1:59
+prop property of the event we'll press a
+2:02
+different
+2:05
+key I'm going to hold down the F
+2:07
+key I'm not releasing it I'm holding it
+2:10
+down we're going to consistently fire
+2:13
+key down
+2:14
+events I would like to detect when I
+2:16
+release a key I will use the key up
+2:18
+event so let's copy this paste it the
+2:21
+event is going to be key up I'll display
+2:25
+something else I'm going to use a
+2:27
+template
+2:27
+string I will display key down equals
+2:32
+then I will display this events key
+2:35
+let's do this with key up too I'll just
+2:38
+copy
+2:39
+this key up equals event.
+2:43
+key let's go back to our
+2:46
+console I'm going to hold down the S
+2:49
+key then when I release it we'll have a
+2:53
+key up event key up equals
+2:56
+s oh one more important thing the arrow
+3:00
+keys we have Arrow up arrow down arrow
+3:04
+left and arrow right if you ever would
+3:07
+like to make some sort of game the arrow
+3:09
+keys are also accessible now what we'll
+3:12
+do on key down and key up is change an
+3:14
+HTML element so to make this simple
+3:17
+within our HTML document I'm going to
+3:19
+create a div element this div element
+3:21
+will have an ID of my box I'll add some
+3:25
+text an
+3:28
+emoji all right all right let's add a
+3:30
+little bit of
+3:31
+CSS we will select my
+3:35
+box I will set the background
+3:38
+color to be light blue we haven't picked
+3:41
+light blue
+3:43
+yet I will set a width of 200
+3:47
+pixels a height of 200
+3:50
+pixels a font
+3:52
+size of 7.5
+3:56
+RM I'll use flex box display Flex
+4:01
+justify content
+4:06
+Center aine item
+4:11
+Center this part is important for the
+4:13
+next exercise we are going to set the
+4:15
+position to
+4:18
+relative for relative positioning I'll
+4:21
+set the body of my document to have no
+4:23
+margin margin zero all right we are
+4:28
+ready we are going to select the ID of
+4:31
+my
+4:32
+box const my box equals document. getet
+4:38
+element by ID the ID that I'm going to
+4:41
+select is my
+4:45
+box when I press a key down I'm going to
+4:49
+change the text content of my box mybox
+4:53
+do text content equals I'll pick a
+4:56
+different
+4:57
+Emoji let's do that one
+5:00
+and I'll change the
+5:02
+CSS my box.
+5:05
+style do background color equals
+5:10
+tomato or some other color of you're
+5:13
+choosing so when I press down on any key
+5:16
+the HTML and CSS is going to change I'm
+5:19
+going to release that key but we don't
+5:21
+revert back to normal our HTML element
+5:24
+stays that way what we'll do is that
+5:25
+when we release a key we'll revert these
+5:27
+changes by going back to the origin
+5:30
+so let's take my box change the text
+5:34
+content to equal an emoji because I like
+5:38
+emojis we'll use the original
+5:40
+one then I will set the background color
+5:43
+to be light
+5:45
+blue now if I were to hold down a button
+5:48
+the HTML and CSS is going to change
+5:51
+until I release that button which I am
+5:53
+about to now in 3 2 1 go I'm going to
+5:58
+try and press the space bars fast fast
+5:59
+as I can seizure
+6:01
+warning let's
+6:04
+go okay it's about time we move on what
+6:07
+we're going to do now is using the arrow
+6:09
+keys move this element we're going to
+6:12
+create a const of move amount when
+6:16
+pressing an arrow key how far do we want
+6:18
+to move this element let's say 10 for 10
+6:22
+pixels I will create a variable for X
+6:25
+think of these as coordinates I will set
+6:27
+that to be zero and y y will also be
+6:31
+zero X for any horizontal movement and Y
+6:35
+for any vertical movement document.
+6:39
+addevent
+6:41
+listener when we have a key down event I
+6:45
+would like to do something I'll write an
+6:47
+arrow function we're provided with an
+6:49
+event do all this code I only want to do
+6:52
+something if a user uses an arrow key so
+6:56
+if I was to console.log my event
+7:00
+then access the key property let's go to
+7:03
+inspect console select your document I
+7:07
+would like to do something only if the
+7:09
+key pressed is Arrow up arrow down arrow
+7:12
+left or Arrow right I don't want any of
+7:14
+the other keys I can write this if
+7:18
+statement if access our event access its
+7:23
+key follow this with the starts with
+7:26
+method does this key start with arrow
+7:31
+we'll only enter the SI statement if the
+7:34
+key of the event is Arrow up arrow down
+7:36
+arrow left or Arrow right then we'll
+7:39
+write a switch we haven't written any
+7:41
+switches for a while we will examine the
+7:45
+key of our event with switches we
+7:48
+examine a value against matching cases
+7:52
+if we have a case of Arrow
+7:55
+up if the key of our event matches the
+7:58
+case of of Arrow up then do this we'll
+8:02
+take our
+8:03
+y-coordinate subtract our movement
+8:05
+amount which is
+8:06
+10 Yus equals the movement amount and
+8:11
+then be sure to break to break out of
+8:13
+the switch then we need a case for arrow
+8:18
+down arrow
+8:21
+down y + equals our movement amount
+8:25
+Arrow
+8:28
+left
+8:31
+Arrow
+8:32
+left X for the horizontal axis minus
+8:36
+equals the movement
+8:38
+amount and then Arrow
+8:41
+right arrow
+8:44
+right X plus equals the movement
+8:48
+amount then outside of the switch but
+8:50
+within our if statement we're going to
+8:53
+access my
+8:55
+box access the
+8:57
+style access the top property set it
+9:00
+equal to a template
+9:03
+string we're going to take our variable
+9:05
+of Y for the y coordinate then add
+9:09
+pixels take the top property of my box
+9:12
+set it equal to the y-coordinate we're
+9:15
+going to copy this and do this with the
+9:17
+left
+9:18
+property set it equal to X in pixels be
+9:23
+sure to select the body of your document
+9:25
+we can move right with the right arrow
+9:27
+key down
+9:32
+left and
+9:34
+up or diagonal if I hit two keys at
+9:39
+once the arrow keys have a default
+9:41
+Behavior to scroll you can see that if
+9:43
+we go down too far we have a scroll bar
+9:45
+on the right hand
+9:46
+side we can prevent the default behavior
+9:49
+of a key we just have to add this line
+9:51
+of code take our event then follow it
+9:54
+with the prevent default method
+9:59
+so when my element Scrolls off
+10:02
+screen it'll disappear we're not going
+10:04
+to scroll with
+10:08
+it to increase the distance in which
+10:10
+this element moves we can increase the
+10:12
+move amount let's set it to be 100 now
+10:15
+we're moving a lot further with each key
+10:19
+press hey this is bro from the future
+10:22
+there's one more thing I would like to
+10:23
+add to this project when pressing down
+10:25
+on a key let's change the text content
+10:27
+and the background color much like what
+10:29
+we did with the first exercise then when
+10:32
+we release a key we'll revert the HTML
+10:34
+and the CSS back to normal we're
+10:36
+combining the first exercise and the
+10:38
+second one and this is the result when I
+10:40
+move the arrow keys this guy is going to
+10:42
+freak out until I Let
+10:48
+Go pretty exciting all right everybody
+10:51
+so that is an introduction to key events
+10:53
+in JavaScript you're going to add an
+10:55
+event listener to the document when you
+10:58
+select your document and press a key
+11:00
+when the key is pressed down that will
+11:02
+create a key down event when you release
+11:04
+a key that creates a key up event and
+11:07
+well everybody that is an introduction
+11:09
+to key events in
+11:14
+JavaScript

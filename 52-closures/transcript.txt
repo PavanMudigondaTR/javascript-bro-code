@@ -1,0 +1,469 @@
+intro
+0:00
+hey what's going on everybody so in
+0:01
+today's video I got to explain closures
+0:03
+in JavaScript a closure is a function
+0:06
+defined inside of another function the
+0:09
+inner function has access to the
+0:11
+variables and scope of the outer
+0:13
+function by using closures they allow
+0:16
+for private variables and state
+0:18
+maintenance JS libraries and Frameworks
+0:21
+such as react View and angular use
+0:24
+closures all of the time you'll see
+0:26
+closures fairly often with
+0:27
+function-based components you have
+0:29
+function inside of other functions let
+example 1
+0:32
+me give you a very basic example we'll
+0:34
+have an outer function named
+0:38
+outer within the outer function we'll
+0:41
+have a function named
+0:45
+inner the inner function has access to
+0:48
+everything within the outer function
+0:50
+this scope if I was to create a variable
+0:53
+let message equal the word
+0:58
+hello with this in my inner function I
+1:01
+can use this message
+1:03
+variable
+1:05
+console.log my message now if I invoke
+1:09
+the outer function nothing appears to
+1:11
+happen when we call the outer function
+1:14
+we're now within the scope but then what
+1:17
+there's one of a few things we could do
+1:19
+if I would like to call the inner
+1:21
+function from within the outer function
+1:24
+I would need to call it somewhere here
+1:26
+let's call the inner function at the end
+1:29
+there we go we have displayed the word
+1:31
+hello everything within the outer
+1:33
+function is part of a closure we have a
+1:36
+function defined inside of a function
+1:39
+this inner function has access to
+1:40
+everything within that scope including
+1:43
+this message variable one benefit using
+1:45
+closures is that any variables are
+1:48
+considered private outside of the outer
+1:51
+function I will attempt to update our
+1:53
+message message equals goodbye now this
+1:57
+doesn't work as you can see this message
+2:00
+variable is in a different scope it's
+2:02
+kind of like it's in another dimension
+2:05
+what we've done here is we have created
+2:07
+a different message variable in a
+2:09
+different scope outside of the outer
+2:11
+scope I have no way of accessing the
+2:13
+message variable so that's one of the
+2:15
+benefits of closures you can encapsulate
+2:17
+variables and make them private let me
+example 2
+2:20
+give you another example a closure can
+2:22
+maintain the state of a variable we'll
+2:25
+create a counter program so I'm going to
+2:27
+create a function to increment
+2:32
+within the increment function I will set
+2:35
+a count variable equal to zero I will
+2:38
+increment our count by one then
+2:43
+console.log I'll use a template
+2:45
+string count increased to I'll add a
+2:50
+placeholder we'll display our count
+2:53
+variable now anytime I attempt to call
+2:56
+the increment function it'll increase
+2:58
+our count by one
+3:00
+but if I was to execute this function
+3:02
+again well we're redeclaring this
+3:04
+variable of count we're resetting it
+3:07
+every time we call this
+3:08
+function I can't get the count to go
+3:11
+past one because we keep on resetting it
+3:15
+but by using a closure we can have state
+3:17
+maintenance we can maintain the state of
+3:20
+this variable and remember where this
+3:22
+variable was previously I mean I could
+3:24
+take this variable and declare it
+3:27
+outside of the function but then we
+3:29
+don't have any security for that
+3:30
+variable I will set the count equal to a
+3:34
+million we're maintaining the state of
+3:36
+that variable but it's not private
+3:39
+anybody and anything can access and
+3:40
+change that variable a closure maintains
+3:43
+the state of a variable and makes a
+3:45
+private what we'll do is enclose all of
+3:48
+this code within another
+3:51
+function we'll create a function to
+3:55
+create a
+3:58
+counter
+4:05
+how do we access the scope within the
+4:06
+create counter function here's another
+4:10
+possibility we will return an object we
+4:14
+will need a set of curly
+4:15
+braces our object will have a property
+4:19
+of increment and its Associated value
+4:22
+will be a reference to increment there
+4:25
+is a shorthand version of this you can
+4:28
+just use the function name as a property
+4:30
+we're returning an object with the
+4:33
+method of
+4:34
+increment so now I'm going to create an
+4:36
+object named counter counter equals
+4:41
+invoke the create counter function this
+4:44
+will return an object that has an
+4:46
+increment
+4:48
+method so I'm going to take our counter
+4:51
+object use the increment
+4:54
+method count increase to one not only do
+4:57
+we have an increment method we have a
+4:59
+count variable as well you could say
+5:01
+that what we've done with this outer
+5:02
+function it's very similar to creating a
+5:05
+class we can use classes to instantiate
+5:08
+objects in this case we used a function
+5:11
+to return an object so if I was to take
+5:13
+my counter and increment it again our
+5:17
+closure should maintain the state of
+5:19
+that variable count count increase to
+5:21
+two it's not resetting every time we
+5:23
+call the method count increase to
+5:26
+three let's attempt to access our count
+5:30
+variable counter. count equals
+5:35
+0 then I will console. log R
+5:41
+count reference error count is not
+5:45
+defined let's attempt to display our
+5:47
+count
+5:48
+variable
+5:51
+console.log take our counter object
+5:54
+access the account
+5:56
+variable it is undefined we don't know
+5:58
+what it is it's hidden your closure can
+6:02
+have more than one
+6:04
+function so what we'll do is create a
+6:07
+get count function we'll use the get
+6:09
+count function to return our count if we
+6:11
+need access to it function get
+6:16
+count we will return our count
+6:20
+variable within the return statement
+6:23
+where returning an object we will add
+6:25
+another property of a reference to the
+6:28
+get count function
+6:31
+so now within our counter we have a
+6:33
+method to get the count variable let's
+6:38
+console.log I'll use a template string
+6:41
+the current count is I'll add a
+6:45
+placeholder take our counter object use
+6:49
+the get count method the current count
+6:54
+is three if I was to increment our
+6:57
+counter again well that increased to
+6:59
+four all right last
+example 3
+7:02
+example we're going to create a closure
+7:04
+for a game where we keep track of points
+7:07
+we have a score let score equals zero
+7:11
+we'll Define the
+7:13
+functions
+7:15
+function increase
+7:17
+score we'll have one parameter points in
+7:21
+order to score some points we have to
+7:23
+pass in some points as an
+7:26
+argument take our score Plus equals R
+7:31
+Points then let's
+7:34
+console.log I'll use a template string
+7:37
+plus add a placeholder R
+7:41
+Points then I'll add pts meaning points
+7:44
+it
+7:45
+shortened let's create a function for
+7:48
+decrease
+7:49
+score change increase to
+7:52
+decrease score minus equals
+7:56
+points minus points and then let's get
+7:59
+our
+8:00
+score function get
+8:05
+score
+8:07
+return the
+8:10
+score if I need to increase the score I
+8:13
+will invoke The increased score function
+8:16
+but I have to pass in points we scored
+8:18
+five points let's do this
+8:21
+again we scored six points let's
+8:25
+decrease the
+8:27
+score I will subtract three
+8:32
+points minus three points let's get the
+8:35
+current
+8:36
+score
+8:39
+console.log I'll use a template string
+8:42
+the final score is add a
+8:46
+placeholder get
+8:50
+score the final score is eight I'm going
+8:53
+to add points after that eight points
+8:57
+all right problem with this is that we
+8:59
+can take our score and set it to
+9:02
+anything you scored like a kajillion
+9:05
+points so for some security let's
+9:08
+enclose all of this code within a
+9:11
+closure I'll create an outer function
+9:15
+function create game this will return an
+9:19
+object let's cut all of this
+9:22
+code paste it within the outer function
+9:25
+of create
+9:26
+game and then at the end
+9:29
+we will return an object that has
+9:32
+references to these
+9:34
+functions return an object we need curly
+9:37
+braces for that a reference to increase
+9:42
+score decrease
+9:45
+score and get
+9:48
+score so now I will use the create game
+9:53
+function to return an
+9:56
+object const game game will be our
+10:00
+object we will invoke the create game
+10:03
+function and return an
+10:06
+object so now if I want to increase the
+conclusion
+10:09
+score decrease it or get the score I
+10:12
+have to use the methods of this object
+10:15
+game. increase
+10:17
+score game. decrease score and game.get
+10:23
+score we have five points six points
+10:27
+minus three points and then we have the
+10:29
+final score of eight points well
+10:31
+everybody those are closures think of
+10:33
+them as a function defined inside of
+10:35
+another function the inner function has
+10:38
+access to the variables and scope of the
+10:40
+outer function these are used frequently
+10:43
+with JS libraries and Frameworks such as
+10:45
+react View and angular especially when
+10:48
+you work with function-based components
+10:50
+and well everybody those are closures in
+10:56
+JavaScript

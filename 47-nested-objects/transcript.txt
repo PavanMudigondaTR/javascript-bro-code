@@ -1,0 +1,386 @@
+example 1
+0:00
+so uh yeah we're doing a thing today
+0:02
+today I got to explain nested objects in
+0:04
+JavaScript nested objects are objects
+0:07
+inside of other objects they allow you
+0:09
+to represent more complex data
+0:11
+structures a child object is enclosed by
+0:15
+a parent object by using nested objects
+0:17
+we have the capability of creating some
+0:19
+very complex data structures for example
+0:22
+a person object could contain an address
+0:25
+object as well as a contact info object
+0:28
+or a shopping cart object each item in
+0:30
+your shopping cart is an individual
+0:32
+object such as a keyboard a mouse or a
+0:34
+monitor each of these child objects
+0:37
+would have their own properties and
+0:38
+methods for example a price a name
+0:41
+specifications on the item a shipping
+0:44
+method nested objects are just objects
+0:46
+inside of other objects let me give you
+0:48
+a basic example we'll create a person
+0:51
+object const person equals an object we
+0:55
+need a set of curly braces a person
+0:57
+might have a full name property
+1:00
+I will set that to be SpongeBob in this
+1:02
+example SpongeBob
+1:06
+SquarePants and age of
+1:09
+30 is SpongeBob a student is student
+1:14
+he's in boating school so let's say
+1:15
+that's true objects can also contain
+1:18
+arrays we'll create an array of
+1:20
+hobbies to declare an array you need to
+1:23
+set a straight brackets what sorts of
+1:25
+hobbies does SpongeBob have he knows
+1:28
+karate he does
+1:32
+jellyfishing I need one more uh let's
+1:35
+say that he enjoys
+1:38
+cooking now we're going to create a
+1:40
+nested object this person object will
+1:43
+have an address
+1:45
+object so we need a set of curly braces
+1:49
+a few of the properties of the inner
+1:51
+address object could be a street
+1:54
+SpongeBob has an address of 124 con
+1:58
+Street
+2:00
+his City will be bikini
+2:04
+bottom and a country we won't do a full
+2:07
+address but I think this is good enough
+2:09
+for this example so SpongeBob lives in
+2:11
+the ocean let's say that his country is
+2:13
+international waters I'll just
+2:16
+abbreviate International our person
+2:18
+object has a nested address object
+2:21
+inside of it taxes some of these
+2:23
+properties of our person
+2:24
+object we would type the name of the
+2:27
+object use the property accessor which
+2:29
+is dot then the name of the property
+2:32
+full name SpongeBob
+2:35
+SquarePants let's print his
+2:39
+age
+2:41
+30 is SpongeBob a student that is true
+2:45
+I'm going to display the array of
+2:48
+hobbies person. Hobbies this will give
+2:51
+you an array but if you need individual
+2:54
+elements you have to list an index
+2:56
+number so Hobbies at index zero would be
+2:58
+karate
+3:00
+one is
+3:01
+jellyfishing index two is cooking let's
+3:06
+console.log our person
+3:09
+object dot the address
+3:13
+object this would return an entire
+3:15
+object if you need one of the properties
+3:18
+within this object that's within the
+3:20
+person object you would have to follow
+3:22
+the inner object with the property
+3:24
+accessor again that dot person. address.
+3:28
+Street which would give you 124 con
+3:33
+Street the city person. address. city
+3:36
+Bikini
+3:37
+Bottom person. address. country
+3:41
+international waters so when accessing a
+3:44
+property within a nested object you have
+3:46
+to use the property accessor twice that
+3:49
+dot if you would like to Loop through
+3:51
+the properties of a nested object you
+3:53
+can write a for Loop like
+3:56
+this
+3:57
+for const
+4:00
+property in person.
+4:05
+address
+4:08
+console.log take our person object
+4:11
+access the nested object address then
+4:14
+use the index of operator the straight
+4:17
+brackets give me the current
+4:21
+property and there we are all right
+example 2
+4:24
+let's make something a little more
+4:25
+complicated we're going to create a
+4:27
+class that utilizes objects so we will
+4:31
+begin with
+4:32
+class
+4:35
+address our class will have a
+4:39
+Constructor for an address we need these
+4:42
+three things feel free to add more if
+4:44
+you would like a street City and
+4:51
+Country then we'll assign these
+4:53
+properties this. Street equals
+4:56
+Street this. City equals
+5:01
+City this. Country equals
+5:06
+country now we'll create a person
+5:09
+class class
+5:12
+person our person class will also have a
+5:18
+Constructor we'll need a name age and an
+5:22
+address for the address I'm going to use
+5:25
+rest
+5:26
+parameters we can pass in different
+5:28
+parts of an ADD address and store it
+5:30
+within an array when we create a person
+5:32
+object we will assign this.name equals
+5:36
+name this. AG equals age now for the
+5:40
+address we're going to construct an
+5:42
+address
+5:43
+object this. address equals a new
+5:48
+address we're going to call the
+5:50
+Constructor of our address class and
+5:53
+pass in our
+5:54
+address I'm going to utilize the spread
+5:57
+operator to spread our address
+6:01
+we'll send our address object a street
+6:04
+City and
+6:05
+Country all right let's construct some
+6:07
+of these person
+6:08
+objects const person one equals a new
+6:13
+person this will call the Constructor
+6:15
+but we have to pass in arguments to
+6:17
+match the
+6:18
+parameters a name we'll just do a first
+6:20
+name to keep it short and age SpongeBob
+6:23
+will be 30 we also need an address a
+6:27
+street City and Country
+6:32
+124 con
+6:34
+Street City will be Bikini
+6:38
+Bottom his country will be international
+6:44
+waters and just for readability I'm
+6:46
+going to put the address on a new
+6:51
+line let's create person
+6:56
+two person two will be Patrick
+7:00
+Patrick age
+7:03
+37 Patrick will live on 128 con Street
+7:08
+you'll have the same city and the same
+7:10
+country then let's make person
+7:16
+three person three will be
+7:20
+Squidward age
+7:23
+45 Squidward will live on 126 con Street
+7:31
+all right let's see if this all
+7:33
+worked
+7:35
+console.log let's start with person one
+7:38
+person one. name which is
+7:41
+SpongeBob age 30 let's get his
+7:44
+address address and this returns an
+7:47
+object which is good that's what we
+7:49
+wanted we have a nested object an
+7:51
+address object for some of the
+7:53
+properties within that address object we
+7:55
+have a street City and Country we use
+7:58
+the property accessor again
+7:59
+of dot give me the street 124 con Street
+8:05
+the city bikini bottom and the
+8:08
+country international waters all right
+8:11
+let's confirm this with person three
+8:13
+just to be sure it all works person
+8:15
+three give me the name
+8:19
+Squidward age
+8:22
+45 address gives me an object we'll use
+8:25
+the property accessor again give me the
+8:28
+street
+8:30
+126 con Street the city bikini
+8:34
+bottom and the country international
+8:37
+waters this will also all work for
+8:40
+person two if it worked with person one
+8:42
+and three all right everybody so those
+8:44
+are nested objects they're objects
+8:46
+inside of other objects they allow you
+8:48
+to represent more complex data
+8:51
+structures a child object is enclosed by
+8:54
+a parent object in this example our
+8:57
+address is the child object of the
+9:00
+person object we're creating a new
+9:02
+object within our person object and well
+9:06
+everybody those are nested objects in
+9:12
+JavaScript

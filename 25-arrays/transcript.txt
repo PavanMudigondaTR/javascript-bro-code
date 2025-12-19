@@ -1,0 +1,414 @@
+arrays
+0:00
+hey what's going on everybody so today
+0:01
+I'm going to explain arrays in
+0:03
+JavaScript think of an array as a
+0:05
+variable like structure that can hold
+0:07
+more than one value for example let's
+0:10
+say we had a variable named fruit
+0:12
+go ahead and pick a fruit I'll pick an
+0:14
+apple
+0:15
+our variable can store one value but we
+0:18
+can turn a variable into an array and it
+0:21
+can store more than one value and we can
+0:23
+do so by enclosing all values with a set
+0:25
+of straight brackets now my variable of
+0:28
+fruit is now an array it can store more
+0:31
+than one value just be sure that each
+0:33
+value is comma separated this time I'll
+0:35
+add an orange
+0:37
+and a banana
+0:39
+just to make it more obvious that this
+0:41
+is an array I'm going to add an S so
+0:44
+that my variable name is plural it's not
+0:46
+mandatory but it helps with readability
+0:48
+I now have an array of fruits but let me
+0:51
+show you something if I were to
+0:53
+console.log my array of fruits
+0:58
+well JavaScript is going to print out
+1:00
+all of the elements in this array each
+1:02
+item each value is known as an element
+1:04
+we have three elements if you need to
+index
+1:07
+access an individual element following
+1:09
+the array you have to add an index
+1:11
+number in closed and straight brackets
+1:13
+if I would like the element at the first
+1:15
+position that would have an index of
+1:17
+zero that would give me an Apple fruits
+1:21
+at index of one would be orange
+1:24
+fruits at index of two
+1:27
+is banana
+1:28
+if I were to attempt to access the
+1:30
+element at index 3
+1:33
+well it's undefined we only have three
+1:35
+elements within our array zero one two
+1:38
+arrays always begin with zero you can
+1:40
+even change one of these elements by
+1:42
+accessing that array at a given element
+1:46
+let's access our array fruits at index
+1:49
+zero I will set the sequel to be a
+1:53
+coconut
+1:55
+so now we have coconut orange banana
+1:58
+let's change fruits at index one to be a
+2:00
+coconut Apple coconut banana
+2:03
+index two will be a coconut Apple orange
+2:06
+coconut if I set fruits at index three
+2:08
+to be a coconut let me console.log that
+2:11
+too
+2:12
+fruits at index three
+2:14
+we can add a new element to that array
+array methods
+2:16
+otherwise to add an element there's a
+2:18
+built-in method of arrays
+2:20
+fruits dot push
+2:22
+to push an element to the end
+2:25
+I will add a coconut to the end of my
+2:27
+array Apple orange banana coconut
+2:30
+then we have pop
+2:33
+is going to remove the last element
+2:39
+Apple orange undefined the unshift
+2:42
+method will add an element to the
+2:44
+beginning
+2:45
+take our array use the on shift method
+2:48
+on shift I will add a mango to the
+2:52
+beginning of my array
+2:54
+mango Apple orange banana
+2:57
+then we have shift to remove an element
+2:59
+from the beginning fruits.shift
+3:03
+now we have an orange banana and my last
+3:06
+two elements are undefined to get the
+length
+3:08
+length of an array there is a length
+3:10
+property let's create a new variable let
+3:13
+num of fruits to store the number of
+3:17
+fruits that we have
+3:19
+type the array name
+3:21
+dot length
+3:24
+then let's console.log
+3:27
+the number of fruits we have
+3:29
+we have three fruits I'll add another
+3:31
+I'll add a coconut to the end
+3:33
+and we have four
+3:35
+so that's how to get the length of an
+3:37
+array there's a length property
+3:39
+type the array name dot length we can
+indexOf
+3:42
+find the index of an element if there's
+3:44
+a match
+3:45
+let index equals let's search for an
+3:50
+apple
+3:51
+fruits dot index of method what are we
+3:55
+searching for let's search for an apple
+3:58
+then I will display the index
+4:00
+so our apple is located at index 0.
+4:04
+let's search for an orange
+4:06
+that's index one
+4:08
+banana
+4:09
+that's two coconut three what if we
+4:13
+search for an element that doesn't exist
+4:14
+like a mango
+4:17
+well this method will return negative
+4:19
+one that could be helpful within an if
+4:21
+statement you can check to see if this
+4:22
+method returns negative one then if it
+4:25
+does that means the element wasn't found
+4:26
+and you can let the user know if index
+4:29
+equals negative one display that element
+4:32
+wasn't found now if you would like to
+iterate an array
+4:34
+Loop through the elements and display
+4:35
+them there's an easier way to do that
+4:37
+you can use a for Loop
+4:40
+so four
+4:42
+there's up to three statements we'll
+4:43
+need a counter or some sort of index
+4:46
+let I equal zero that's the first
+4:49
+statement
+4:50
+we'll continue this as long as I is less
+4:53
+than
+4:54
+our fruits array dot length property
+4:58
+then we will increment I by One if we
+5:01
+have four elements we should execute
+5:03
+this Loop four times during each
+5:05
+iteration I will console.log
+5:09
+our fruits array
+5:10
+but the index instead of being like 0 1
+5:14
+2 3 a hard number we'll use our counter
+5:17
+our index of I
+5:20
+and let's get rid of that line now we
+5:22
+should Loop through all of the elements
+5:23
+of this array and print them out
+5:25
+individually using a for Loop we can
+5:27
+even increment by a different number
+5:29
+like two I plus equals two
+5:32
+so here we're only displaying the apple
+5:34
+and the banana
+5:36
+if I set index to be 1 then increment by
+5:39
+2 will display orange then coconut
+5:42
+so using a for Loop there's a few
+5:44
+different ways in which you can display
+5:45
+the elements of an array if you need to
+5:48
+display the order of this array in
+5:49
+Reverse we can change this around
+5:52
+we will set our counter I to be the
+5:54
+length of our array
+5:56
+then we'll continue as long as I is
+5:58
+greater than or equal to zero then I
+6:02
+minus minus there's one change I'm going
+6:04
+to make
+6:05
+we have undefined coconut banana orange
+6:08
+Apple so the length of my array is four
+6:11
+but if I were to access our array fruits
+6:14
+at index 4 where would that be zero one
+6:18
+two three that's out of bounds I'm going
+6:20
+to set our index to be fruits.length
+6:23
+minus one zero one two three our length
+6:26
+is four minus one is a total of three
+6:29
+now we're printing our array in Reverse
+6:31
+coconut banana orange Apple
+enhanced for loop
+6:34
+there's also an enhanced for loop it's a
+6:36
+shortcut to displaying the elements of
+6:38
+an array you can write something like
+6:40
+this
+6:41
+let fruit
+6:43
+of array fruits
+6:46
+really this variable can be anything but
+6:49
+I like to write a singular version of my
+6:51
+array name
+6:52
+then during each iteration I will
+6:54
+display each fruit
+6:57
+Apple orange banana coconut this is an
+7:00
+enhanced for loop it's kind of like a
+7:01
+shortcut to displaying the elements of
+7:03
+an array if this array name were I don't
+7:05
+know like meets you could say let meat
+7:08
+of meats
+7:11
+and then display each meat
+7:14
+but of course they're still fruit that's
+7:16
+a shortcut you can use now to sort an
+sort
+7:19
+array you can use the sort method
+7:21
+fruits dot sort
+7:24
+and that should sort the elements in
+7:26
+alphabetical order
+7:27
+apple banana coconut orange
+reverse sort
+7:30
+to sort them in reverse order you can
+7:32
+tack on the reverse method to the end
+7:36
+fruits.sortmethod.reverse method
+7:38
+now they're all backwards in Reverse
+7:40
+alphabetical order orange coconut banana
+7:43
+apple
+conclusion
+7:44
+all right everybody so that's an
+7:46
+introduction to arrays we'll have a lot
+7:48
+of practice with this in the future so
+7:49
+if you don't remember everything that's
+7:51
+okay an array is a variable like
+7:53
+structure that can hold more than one
+7:55
+value a variable can hold one value an
+7:58
+array can hold many and well everybody
+8:00
+those are arrays in JavaScript

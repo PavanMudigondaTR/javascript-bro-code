@@ -1,0 +1,270 @@
+0:00
+all right before we begin everybody just
+0:01
+so you know this is an optional lesson
+0:04
+if you're ever interested in making any
+0:05
+sort of games in JavaScript I would
+0:08
+recommend learning about 2D arrays but
+0:10
+there are a few other uses too a 2d
+0:12
+array also known as a multi-dimensional
+0:15
+array stores a matrix of data in rows
+0:18
+and columns it's useful for games such
+0:21
+as tic-tac-toe chess Sudoku or any game
+0:24
+where you need a matrix or grid of data
+0:27
+to keep track of spaces mostly it can
+0:29
+also be us used in spreadsheets think of
+0:31
+excel Excel has rows and columns or
+0:34
+representing images an image is a matrix
+0:37
+of pixels our 2D array is going to look
+0:39
+something like this each row is an
+0:42
+individual array we're going to end up
+0:44
+storing all of these rows within an
+0:49
+array let's create one let's name our
+0:52
+grid this will be a constant but it
+0:55
+doesn't need to be Matrix we'll create a
+0:58
+matrix of data our 2D array is going to
+1:01
+store individual arrays in each
+1:04
+element our first array let's say we
+1:06
+have the numbers 1 through
+1:09
+three each row should be comma separated
+1:13
+the next row will be four five and
+1:16
+six then 78
+1:21
+9 so what we got to do is store all of
+1:23
+these rows within an
+1:26
+array and there's our 2D array to give
+1:30
+you a better visualization I'm going to
+1:32
+place each of these rows on a new
+1:36
+line there hopefully that makes sense
+1:39
+our Matrix is a 2d array each inner
+1:42
+array represents a row each element
+1:45
+within the inner arrays represent a
+1:47
+column 1 147 would be the first 2 58
+1:51
+would be the second 3 69 would be the
+1:53
+third if we need to print the elements
+1:55
+of this array here's one way in which we
+1:57
+can do that let's use a for Loop this
+2:00
+will be an enhanced for Loop let we need
+2:04
+some sort of counter our counter is
+2:05
+going to be Row for every row of our
+2:10
+Matrix let's begin by
+2:13
+console.log each row to see what we're
+2:15
+working with each element in the 2D
+2:18
+array is an array
+2:20
+itself however I would like to print the
+2:23
+individual
+2:25
+values we're going to create a row
+2:28
+string like let's use const row
+2:32
+string we will join all of the elements
+2:35
+together in each
+2:37
+row row doj
+2:41
+jooin join each element but separate
+2:44
+them with a space
+2:45
+character then console.log each row
+2:49
+string there's our grid we have 1 2 3 4
+2:52
+5 6 7 8 N9 all arranged in rows and
+2:56
+columns if you need to access an
+2:58
+individual element within this Matrix
+3:00
+you have to use two indices for example
+3:04
+let's take our 2D array of
+3:08
+Matrix the first index is for the row
+3:12
+the second index is for the column you
+3:14
+would think that Row one column one
+3:16
+would be 1 one but arrays they start
+3:19
+with zero the element at the first row
+3:22
+at the First Column would have indices
+3:25
+of 0
+3:26
+0 let's change that to be an X like
+3:29
+we're playing Tic-Tac
+3:31
+toe now we have x 2 3 so on and so forth
+3:36
+for the element at Row one column
+3:39
+2 that would be again our Matrix with
+3:43
+two
+3:44
+indices row 0 column
+3:48
+1 let's set that to be an
+3:51
+O there we are again our arrays start
+3:54
+with zero Row one column 2 would
+3:58
+translate to 0 1
+4:00
+let's do this with the others I think we
+4:02
+see a pattern now
+4:05
+02 Matrix at row 0 column 2 let's set
+4:09
+that to be an
+4:10
+X would be three now to move on to a
+4:13
+different row we have to increment our
+4:16
+first
+4:17
+index Matrix Matrix at row two would be
+4:22
+one column one would be zero let's set
+4:26
+that to be an
+4:28
+o that did change we're now within the
+4:31
+second
+4:34
+row 1 one would be row two column
+4:40
+2 row two column 3 would be 1
+4:44
+two okay last row again to move down to
+4:48
+the next row you got to increment the
+4:49
+first
+4:51
+index
+4:53
+Matrix Row three would be
+4:55
+two column 1 would be
+4:58
+zero we'll set seven to be an
+5:05
+X row three column 2 would be 2 1 that
+5:09
+will be an
+5:14
+O Row 3 column 3 would be 22 we'll set
+5:18
+that to be X there we are with the
+5:22
+length of your rows they don't
+5:23
+necessarily need to be all uniform for
+5:26
+example with my first row I'll add Z to
+5:29
+the
+5:30
+beginning so now we have 0 1 2
+5:35
+3 maybe I'll remove the last element in
+5:38
+the last
+5:39
+row where we just have
+5:43
+78 you can also mix and match data types
+5:46
+let's add a new row our Matrix will
+5:49
+represent a telephone number
+5:52
+pad we need a new row I'll add an
+5:56
+asterisk
+5:58
+zero and a a pound
+6:01
+sign there our Matrix represents a
+6:04
+telephone number pad all right everybody
+6:06
+so that's a 2d array it's a
+6:09
+multi-dimensional array that stores a
+6:11
+matrix of data in rows and columns it's
+6:14
+useful for games spreadsheets or
+6:16
+representing images we won't be using
+6:18
+these again until we start making some
+6:20
+games later on in the series and well
+6:22
+everybody that is an introduction to 2D
+6:24
+arrays and
+6:28
+JavaScript

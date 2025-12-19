@@ -1,0 +1,256 @@
+introduction
+0:00
+hey what's going on people so in today's
+0:02
+video I'm going to explain the set
+0:03
+timeout function in JavaScript the set
+0:06
+timeout function allows you to schedule
+0:08
+the execution of a function after an
+0:10
+amount of time in milliseconds the times
+0:13
+are approximate they vary based on the
+0:15
+workload of your JavaScript runtime
+0:17
+environment I wouldn't recommend using
+0:19
+set timeout for anything precise like a
+0:21
+stopwatch it's an approximation to use
+0:24
+the set timeout function you pass in a
+0:26
+call back to a function and a delay in
+0:28
+milliseconds here's an example Le I will
+setTimeout w/ callback
+0:31
+create a function to say
+0:34
+hello all we're going to do is window.
+0:38
+alert the word
+0:43
+hello I will use the set timeout
+0:47
+function pass in a call
+0:49
+back we'll pass in a call back to say
+0:52
+hello then execute it after 3,000
+0:55
+milliseconds so 3 seconds let's see if
+0:58
+this works 1 2 3 hello an anonymous
+setTimeout w/ anonymous functions
+1:05
+function works too so instead of a
+1:07
+callback we'll use an anonymous
+1:09
+function function parenthesis curly
+1:14
+braces window.
+1:17
+alert the word
+1:20
+hello 1 1000 2 1000 3 1000 hello or even
+setTimeout w/ arrow funcitons
+1:26
+an arrow function we have parameters
+1:30
+Arrow what are we going to do window.
+1:34
+alert the word
+1:38
+hello 1 1000 2 1000 3 1,000 hello you
+clearTimeout()
+1:44
+can use the clear timeout function to
+1:46
+cancel a timeout before it triggers but
+1:49
+we have to pass in a Timeout ID so what
+1:53
+we'll do with this set timeout function
+1:56
+is assign it to an ID stored within a
+1:58
+variable or constant
+2:01
+const time out
+2:05
+ID equals our set timeout function
+2:09
+that'll display the word hello I can
+2:11
+clear this timeout with the clear
+2:14
+timeout function but I have to pass in
+2:16
+that ID as an
+2:18
+argument immediately after calling the
+2:20
+set timeout function we will cancel it
+2:24
+let's try it 1 1000 2 1000 3 1000 yeah
+2:30
+nothing's happening we canceled it all
+start button
+2:32
+right what we'll do this time is create
+2:34
+a button using HTML when we click on the
+2:37
+button we'll set a timeout to display
+2:39
+the word
+2:40
+hello
+2:43
+so let's clear all of this go to our
+2:46
+HTML file we'll create a
+2:50
+button the button will have text of
+2:54
+start and I'm going to zoom
+2:57
+in I will set the onclick attribute to
+3:02
+equal a function we will start a timer
+3:06
+then add a set of
+3:08
+parentheses when we click on the button
+3:10
+do this function So within our
+3:13
+Javascript file we will create a start
+3:16
+timer
+3:18
+function function start
+3:22
+timer we will set time
+3:26
+out I'll use an arrow function
+3:31
+let's
+3:32
+window. alert the word we will display
+3:36
+the word hello after 3,000
+3:39
+milliseconds all right so nothing's
+3:41
+going to happen until I click the button
+3:44
+I'm going to click it now 1 1,000 2
+3:47
+1,000 3 1,000
+3:50
+hello let's create a second button to
+clear button
+3:53
+clear the timeout if we need to stop it
+3:56
+let's copy our first button paste it
+4:01
+change the text of the button to be
+4:03
+clear we will clear the timeout but
+4:05
+we'll need another
+4:07
+function clear
+4:12
+timer so there's our second button we'll
+4:15
+need a timeout ID so outside of this
+4:18
+function I will declare a variable of
+4:21
+let time out
+4:25
+ID when we start our timer we will
+4:28
+assign the set time out function an ID
+4:32
+of timeout
+4:33
+ID then we can stop it using this
+4:36
+ID we will create a function to clear
+4:40
+the
+4:42
+timer we're going to use the clear
+4:44
+timeout function clear time
+4:48
+out we need to pass out a timeout ID as
+4:51
+an argument which we will do and then
+4:55
+just to be sure that everything works
+4:56
+within both these functions let's
+4:58
+console.log something let's say the word
+5:02
+started within our start timer and
+5:05
+within our clear timer let's display the
+5:07
+word cleared just so we know that these
+5:10
+functions were called so I'm going to
+5:13
+save
+5:14
+everything I'm going to start the timer
+5:16
+but not clear it let's start now 1 1000
+5:21
+2 1000 3 1000 hello let's go to our
+5:26
+console and it says that we started well
+5:29
+starter I clearly can't spell today
+5:32
+started we're going to start then
+5:36
+cancel start 1 1000 2 1000
+5:40
+clear and nothing happened let's go to
+5:43
+our console inspect console we started
+5:46
+set timeout and then we cleared
+conclusion
+5:49
+it all right everybody that is the set
+5:51
+timeout function it's a function in
+5:53
+JavaScript that allows you to schedule
+5:56
+the execution of a function after an
+5:58
+amount of time in milliseconds
+6:00
+execution time may vary based on the
+6:01
+workload of the JavaScript runtime
+6:03
+environment and well everybody that is
+6:06
+the set timeout function in
+6:11
+JavaScript

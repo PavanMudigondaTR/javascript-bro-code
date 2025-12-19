@@ -1,0 +1,202 @@
+0:00
+hey everybody so today I got to talk
+0:01
+about a sync and a weight in JavaScript
+0:04
+a sync and a weight are two keywords by
+0:06
+using these two keywords together they
+0:08
+allow you to write asynchronous code in
+0:10
+a synchronous manner a sync makes a
+0:13
+function return a promise a wait makes
+0:16
+an async function wait for a promise
+0:18
+we'll discuss async first in this sample
+0:21
+program from the last topic we have some
+0:23
+chores to do we have to walk the dog
+0:25
+clean the kitchen and take out the trash
+0:28
+each of these functions returns a
+0:29
+promise
+0:30
+a promise that can either resolve or
+0:32
+reject based on the code that's written
+0:34
+if the dog is walked if that's true
+0:37
+resolve if it's false reject a function
+0:40
+can be declared with a sync a function
+0:42
+declared with a sync will return a
+0:44
+promise however that promise that's
+0:47
+returned doesn't resolve or reject in a
+0:50
+way you could say it's an empty promise
+0:52
+if I were to run this code this is what
+0:56
+happens uncaught reference error resolve
+0:59
+is not to find if an asynchronous
+1:01
+function returns a promise that either
+1:03
+needs to resolve or reject adding a sync
+1:06
+to it really doesn't benefit us a sync
+1:09
+works together with a weight by using
+1:11
+these two keywords together when calling
+1:13
+all of these asynchronous functions in
+1:15
+order we don't need to Method chain then
+1:17
+statements there's a more synchronous
+1:19
+manner in which we can write the same
+1:21
+code but we'll need to contain it all
+1:23
+within an async function async function
+1:28
+we'll create a function to do
+1:31
+chores then we will need to call this
+1:33
+function somewhere let's do so right
+1:36
+here first we need to walk the dog walk
+1:39
+the dog returns a
+1:41
+promise that's where the await keyword
+1:43
+comes in await makes an async function
+1:46
+wait for a promise before continuing
+1:49
+we're going to create a constant of walk
+1:52
+dog result equals use the await
+1:57
+keyword await walk Dot
+2:01
+then we will
+2:04
+console.log the walk dog
+2:07
+result you walk the dog now let's do
+2:11
+this with clean kitchen we're going to
+2:13
+be writing this code in a synchronous
+2:14
+manner line by line
+2:17
+linearly we will create a constant for
+2:19
+clean kitchen result equals await the
+2:23
+next promise await clean
+2:26
+kitchen then
+2:28
+console.log
+2:30
+clean kitchen result let me close
+2:34
+this you walk the
+2:36
+dog you clean the
+2:38
+kitchen and last we have takeout
+2:41
+trash const takeout trash result equals
+2:46
+a wait take out the
+2:49
+trash then
+2:53
+console.log the
+2:56
+result you walk the
+2:58
+dog you clean the kitchen you take out
+3:00
+the trash let's add one more line when
+3:03
+we finish everything one more line of
+3:05
+code you finished all the chores you
+3:09
+walk the dog you clean the kitchen you
+3:12
+take out the trash you finished all the
+3:14
+chores let me show you what happens if
+3:16
+we attempt to use a weight within a
+3:18
+function not declared with
+3:20
+async uncaught syntax error a weight is
+3:24
+only valid in async functions that's why
+3:27
+a weight depends on async a weight makes
+3:29
+an async function wait for a promise
+3:32
+before continuing now if your promises
+3:35
+can reject let's say that dog walked is
+3:42
+false uncaught in promise you didn't
+3:46
+walk the dog we'll surround all of this
+3:48
+code within a tri block then catch any
+3:58
+errors catch one parameter of
+4:01
+error we can
+4:04
+console.log or console.
+4:07
+error the
+4:09
+error you didn't walk the
+4:11
+dog all right everybody so that is a
+4:14
+sync and a wait a sync makes a function
+4:18
+return a promise a wait makes an async
+4:21
+function wait for a promise by using
+4:24
+these two keywords together we can write
+4:26
+asynchronous code in a synchronous
+4:29
+manner
+4:30
+and well everybody that is a sync and a
+4:32
+wait in
+4:37
+JavaScript

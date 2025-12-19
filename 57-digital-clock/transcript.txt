@@ -1,0 +1,463 @@
+HTML
+0:00
+hey what's going on people so in today's
+0:01
+video we're going to create a digital
+0:03
+clock using JavaScript HTML and CSS so
+0:07
+let's get started the HTML for this
+0:10
+project is going to be very minimal I
+0:12
+will create a development the ID of the
+0:15
+develop will be clock Das container
+0:19
+within this development we'll have a
+0:21
+nested development with an ID of clock
+0:25
+we have a clock within a clock container
+0:28
+as a placeholder temporar ly the text on
+0:31
+the clock will be 0 0 colon 0 0 colon 0
+0:36
+0
+0:38
+00000000 and I'm just going to zoom in
+0:41
+temporarily and that is all the HTML
+0:43
+that we need let's head to our CSS
+CSS
+0:47
+stylesheet let's begin with the
+0:50
+body I will set all margin to be zero
+0:54
+originally let's select our clock
+0:57
+container ID clock
+1:01
+container I'll use flex box for the
+1:03
+clock
+1:04
+container display
+1:07
+Flex I will justify content in the
+1:11
+center justify content
+1:16
+Center if you would also like to
+1:18
+vertically align you'll need to add the
+1:20
+following two lines of code I will
+1:23
+align items
+1:26
+Center this CSS property will vertically
+1:29
+align elements but the clock container
+1:31
+itself is kind of small for example I'll
+1:34
+add a border of two pixel
+1:38
+solid the elements within the clock
+1:40
+container are aligned both horizontally
+1:42
+and vertically but the container itself
+1:44
+is kind of small to vertically align
+1:46
+this element within the window itself
+1:48
+we'll have to increase the height of the
+1:49
+clock container I will add height of 100
+1:55
+VH for the viewport height and we can
+1:58
+remove the Border
+2:00
+yep the clock is now within the middle
+2:02
+of the container both horizontally and
+2:04
+vertically but if you prefer to be at
+2:06
+the top you can eliminate these last two
+2:08
+lines it's up to you let's style the
+2:11
+clock itself we are selecting the ID of
+2:16
+clock I will change the font family to
+2:20
+be
+2:23
+monospace this is the normal size when
+2:25
+I'm zoomed in to 100% I will set the
+2:29
+font size to be
+2:31
+6.5
+2:33
+R then set the font weight to be
+2:39
+bold and text align
+2:43
+Center if you would like a background
+2:45
+image for the body of your document I
+2:48
+just so happen to have one right here
+2:50
+it's a picture of Central Park in New
+2:51
+York this is optional but if you would
+2:53
+like to include a background image of
+2:55
+this project within your CSS stylesheet
+2:58
+you'll add the following CSS
+3:01
+properties I will set the background
+3:04
+image property to be a
+3:07
+URL so what is the name of that image
+3:11
+I'm going to copy the name of it and
+3:14
+paste it within this URL
+3:16
+function I'll set the background
+3:18
+position to be the center right now
+3:20
+we're seeing the top left of the image
+3:23
+instead of the
+3:24
+center
+3:26
+background Position will be
+3:32
+Center if you're using a small image
+3:35
+your image might be repeating itself to
+3:37
+take up all the available space to
+3:39
+prevent that you can set the
+3:41
+background repeat
+3:45
+property to be no
+3:49
+repeat mine already wasn't repeating
+3:52
+though but yours might be then we'll set
+3:55
+the
+3:57
+background size to
+4:00
+cover by adding this property this image
+4:04
+will cover the entire window and
+4:06
+maintain its aspect ratio if you do have
+4:09
+additional content besides this clock
+4:11
+you can keep the background in place
+4:13
+when you scroll down by adding this
+4:16
+property
+4:17
+background
+4:20
+attachment to be
+4:23
+fixed this property isn't going to be
+4:26
+apparent because we don't have a scroll
+4:27
+bar but if you did have a scroll bar the
+4:30
+background will stay in place at least
+4:32
+let's head back to our clock element I
+4:34
+will change the color the font color to
+4:37
+be
+4:38
+white if you would like a background
+4:40
+blur effect you'll add this property
+4:43
+we'll set the backdrop filter property
+4:47
+to be a blur
+4:49
+function the greater the number the more
+4:52
+blur effect you're going to
+4:53
+have so this is 5 pixels if I were to
+4:57
+increase this to 50 well well there's a
+4:59
+lot of blur then I'll set my blur to be
+5:02
+five I would just like a little bit as
+5:04
+if we're looking through glass I'll
+5:06
+increase the width to be 100% to take up
+5:09
+100% of the width of the web
+5:11
+browser width
+5:15
+100% to give this glass look a foggy
+5:18
+appearance we can add a background color
+5:20
+that's slightly
+5:22
+gray background-
+5:26
+color let's select gray but I like using
+5:29
+us hsl values so for the lightness I'll
+5:32
+set it to be
+5:34
+100% but I'm going to lower the alpha
+5:37
+down to like
+5:41
+10% now the background has a foggy glass
+5:44
+appearance if you were to increase the
+5:46
+amount of
+5:47
+alpha that'll increase the
+5:50
+lightness I'll keep mine as 10% 0.1 for
+5:53
+the
+5:54
+alpha all right now we just need to get
+5:57
+this clock to run so let's save
+5:59
+everything go to our Javascript
+6:02
+file we will create a function to update
+JavaScript
+6:06
+our
+6:09
+clock immediately when we begin this
+6:11
+program we will update our clock once
+6:14
+immediately now we need to get the
+6:16
+current time let's declare a constant of
+6:20
+now what is the time right now this will
+6:23
+be a new date
+6:25
+object to get the hour we will say const
+6:29
+hours equals use the
+6:33
+builtin get hours method then let's do
+6:37
+this with minutes const minutes equals
+6:41
+now. getet minutes
+6:44
+method and seconds const seconds equals
+6:50
+now. get
+6:53
+seconds I'm going to change the text
+6:56
+content of the clock to be a time string
+6:59
+it will be a template string how do we
+7:01
+want to arrange our
+7:03
+numbers const time string equals a
+7:08
+template
+7:10
+string first we'll add a placeholder for
+7:13
+our hours
+7:15
+colon
+7:17
+minutes
+7:19
+colon
+7:21
+seconds then we will select the ID of
+7:25
+clock document. getet element by ID the
+7:30
+ID that we're getting is our
+7:33
+clock change the text content to equal
+7:38
+our time string when we save the time on
+7:42
+the clock should update currently for me
+7:44
+it's 8:00 for each of these placeholders
+7:47
+for hours minutes and seconds I would
+7:50
+like each to take up two digits We'll
+7:53
+add some zeros for padding for example
+7:55
+this time will be 08
+7:58
+006
+7:59
+there's a built-in string method for
+8:01
+that so with hours minutes and seconds
+8:04
+we will convert these to
+8:06
+Strings we'll use method chaining then
+8:08
+add to string do this for hours minutes
+8:12
+and
+8:13
+seconds with strings there's a pad start
+8:19
+method for the first two
+8:21
+characters pad them with a
+8:24
+zero let's copy this method and paste it
+8:27
+for minutes and seconds now when I save
+8:30
+and update the time we have zero padding
+8:33
+08 01 54 in this case to get this clock
+8:37
+to update every second we'll follow
+8:40
+update clock with the set interval
+8:44
+function set interval works like set
+8:47
+timeout except it will call a function
+8:49
+repeatedly not just once but we need a
+8:52
+call back the Callback will be update
+8:54
+clock call this function after every
+8:57
+1,000 milliseconds
+9:00
+and now our clock should
+9:02
+run currently this clock is in military
+9:05
+time although I'm recording this at 8:00
+9:08
+in the morning if you would like this
+9:10
+clock to be a 12-hour clock then at a.m
+9:12
+or p.m. here's the following changes
+9:14
+we're going to make we'll declare ours
+9:17
+with let instead of const so we can
+9:19
+change it and reassign it we'll create a
+9:21
+new constant of
+9:23
+meridium 4 a.m. or
+9:27
+p.m. this will equal
+9:29
+hours is hours greater than or equal to
+9:32
+12 we'll use the erary operator to check
+9:35
+this if ours is greater than or equal to
+9:38
+12 meridium will be PM otherwise it will
+9:43
+be
+9:45
+am then after our
+9:48
+meridium we'll reassign hours hours
+9:52
+equals
+9:53
+hours modulus modulus gives you the
+9:56
+remainder of any division ours modul 12
+10:00
+if this is zero we'll use the or logical
+10:03
+operator or 12 after seconds we'll add a
+10:07
+placeholder for our
+10:11
+meridium currently we lost our padding
+10:13
+for the hours so we're going to cut this
+10:16
+part of our code to convert ours to a
+10:19
+string and Pad
+10:21
+it we'll take hours equals hours to
+10:25
+reassign it follow hours with converting
+10:28
+it to a string using the two string
+10:29
+method and Pad it before displaying
+10:33
+it all right and that has appeared to
+10:35
+work all right everybody so that is a
+10:38
+digital clock program you can make using
+10:40
+HTML CSS and
+10:46
+JavaScript

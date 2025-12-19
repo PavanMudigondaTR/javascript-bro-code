@@ -1,0 +1,421 @@
+array of objects
+0:00
+hey what's up everybody so in today's
+0:02
+video I'm going to show you how we can
+0:03
+work with an array of objects in
+0:04
+JavaScript what we'll do is create an
+0:07
+array of fruit objects we'll create five
+0:10
+fruit objects to create an object you
+0:12
+need a set of curly braces each object
+0:15
+will be comma
+0:17
+separated just for my own readability
+0:20
+I'm going to place each object on a new
+0:23
+line objects can have their own unique
+0:26
+properties and methods our first fruit
+0:28
+object will have a name name of
+0:32
+Apple a
+0:34
+color of red and calories meaning
+0:39
+calories per serving of
+0:42
+95 this is our first object let's copy
+0:46
+these properties paste them for object
+0:47
+two change name to be orange color will
+0:51
+also be
+0:54
+orange calories
+0:56
+45 object three name will be banana
+1:00
+color yellow calories
+1:05
+105 object
+1:07
+4 coconut color white calories
+1:13
+159 then our last object will be
+1:18
+pineapple color yellow calories
+1:23
+37 all right and here is our array of
+1:26
+objects there's a lot we can do with
+1:28
+this if you ever need a property within
+access object properties
+1:30
+one of these objects of your array you
+1:32
+would take the array in this case fruits
+1:35
+add an index number dot the name of the
+1:38
+property for example name I need the
+1:41
+name property of the first object which
+1:44
+would be Apple so let's test that
+1:48
+console.log what is the name property of
+1:52
+our array fruits at index zero that
+1:54
+would be apple one is orange two is
+1:58
+banana three is is coconut for pineapple
+2:03
+let's select a different property let's
+2:05
+go with the
+2:07
+calories
+2:09
+95
+2:11
+45 105
+2:14
+159 37 that's how to access a property
+2:18
+within an array of objects to add a new
+push()
+2:20
+object you can use the push method let's
+2:23
+take our array of fruits use the push
+2:26
+method we will push a new object into
+2:29
+our array
+2:31
+the name will be
+2:34
+grapes
+2:36
+Color
+2:39
+Purple
+2:40
+calories
+2:43
+62 then let's console.log
+2:48
+rray console.log fruits so we have six
+2:53
+Apple orange banana coconut pineapple
+2:55
+and grapes uh which I misspelled
+2:58
+grap you can use the pop method to
+pop()
+3:01
+remove an
+3:02
+element fruits. pop this should remove
+3:08
+pineapple Apple orange banana coconut no
+splice()
+3:11
+pineapple or splice splice will remove
+3:14
+elements at certain indices fruits.
+3:20
+splice let's select indices 1 through
+3:23
+two all we're left with is Apple coconut
+3:27
+pineapple you can use the four method to
+forEach()
+3:30
+Loop through the elements of your array
+3:32
+let's display each object's name
+3:35
+fruits. for each we need a call back a
+3:39
+function expression or an arrow function
+3:42
+let's use an arrow function for every
+3:44
+fruit do this
+3:47
+console.log each fruit this will return
+3:51
+entire
+3:52
+objects for one of the properties we'll
+3:55
+select dot the property name we have
+3:59
+have all the fruit
+4:01
+names let's go with the
+4:03
+colors and the
+4:06
+calories there we
+map()
+4:08
+are there's also the map method the map
+4:11
+method will run each element through a
+4:13
+function and return a new array let's
+4:15
+create an array of fruit names const
+4:18
+fruit names equals take our array of
+4:21
+fruits use the built-in map method we'll
+4:25
+use an arrow function for every
+4:28
+fruit Arrow
+4:30
+return the fruits
+4:32
+name then we will
+4:37
+console.log our array of fruit
+4:40
+names and here's our array of fruit
+4:43
+names let's do this with
+4:45
+colors fruit
+4:49
+colors return every color property of
+4:53
+each
+4:53
+fruit then console.log are fruit
+4:58
+colors red orange yellow white yellow
+5:01
+let's do this with
+5:03
+calories fruit
+5:06
+calories return each calories
+5:10
+property
+5:11
+console.log our fruit calories
+5:14
+array so the map method will return a
+5:17
+new array let's cover filter filter will
+filter()
+5:21
+return a new array after using each
+5:23
+element and checking a condition let's
+5:26
+return a new array where the color of
+5:28
+each fruit is yellow there's two const
+5:32
+yellow
+5:33
+fruits equals take our array of
+5:37
+fruits use the filter method we have one
+5:40
+parameter a fruit Arrow then a condition
+5:45
+we'll return this fruit if the fruit's
+5:48
+color property is strictly equal to
+5:54
+Yellow then
+5:56
+console.log array of yellow fruit
+6:00
+and there's two bananas and pineapples
+6:03
+their colors are both yellow let's
+6:06
+create a new array of any fruits that
+6:08
+are low in calories where the calories
+6:10
+are below
+6:12
+100 const low cal fruits take our array
+6:17
+of fruits use the built-in filter method
+6:20
+for every
+6:22
+fruit Arrow check the calories of each
+6:26
+fruit is it less than 100 if it is put
+6:30
+it within this new
+6:31
+array and here we are we have three
+6:34
+fruits that are low in
+6:35
+calories Apple orange pineapple the
+6:39
+calories are 95 45 37 they're all less
+6:42
+than
+6:44
+100 let's find any high calorie
+6:48
+fruits change our Ray to be high Cal
+6:52
+fruits where the calories of each fruit
+6:54
+is greater than or equal to 100
+6:57
+console.log Ray of High Cal fruits there
+7:01
+are
+7:02
+two bananas and coconuts the calories
+7:05
+are 105 and
+7:08
+159 let's use the reduce method now I'll
+reduce()
+7:11
+admit this is going to be a little
+7:12
+tricky but I'll try my best to walk you
+7:14
+through it the reduceed method will
+7:16
+return a single value in this case an
+7:19
+object one of these objects let's return
+7:22
+the object with the greatest amount of
+7:25
+calories we'll store that within a
+7:27
+constant const Max X
+7:30
+fruit equals take our array of fruits
+7:34
+use the reduce method there's going to
+7:37
+be two
+7:38
+parameters an
+7:41
+accumulator which keeps track of the
+7:43
+greatest value during each iteration and
+7:45
+the next element but I think we should
+7:48
+rename these let's rename our
+7:50
+accumulator as Max it's going to be the
+7:54
+current record holder of the object with
+7:56
+the greatest amount of calories element
+7:59
+will be fruit meaning the next fruit
+8:02
+here are the two
+8:03
+parameters Arrow what are we going to
+8:06
+check is our fruit the next fruit in
+8:10
+line are the calories
+8:13
+greater than our current record holders
+8:16
+calories max.
+8:19
+calories just for readability I'm going
+8:21
+to put this on a new
+8:24
+line we're going to use the trary
+8:26
+operator is this true does the next
+8:29
+fruit have more calories than our record
+8:31
+holder if it does will return our fruit
+8:36
+meaning the next fruit colon meaning
+8:39
+otherwise return the max again let's see
+8:42
+if this works let's
+8:45
+console. log our fruit with the maximum
+8:48
+amount of calories which is our coconut
+8:52
+with 159 calories if you just need the
+8:55
+calories you would type dot calories
+8:59
+that will just give you the calories but
+9:01
+in this case we're returning an entire
+9:03
+object let's find the fruit with the
+9:06
+least amount of calories let's copy our
+9:09
+code paste
+9:12
+it and make a few
+9:15
+changes Min
+9:17
+fruit change Max to be
+9:22
+Min the condition will be is the
+9:25
+calories of the next fruit less than the
+9:28
+Cal iies of the minimum record
+9:32
+holder then console.log are Min fruit
+9:36
+which is our pineapple with 37
+9:40
+calories all right everybody so those
+9:42
+are a few ways in which you can work
+9:43
+with an array of objects there's a lot
+9:45
+you can do with them you can map you can
+9:47
+filter you can reduce you can splice you
+9:50
+can pop you can push all sorts of things
+9:52
+and well that is an example of an array
+9:54
+of objects in
+9:58
+JavaScript

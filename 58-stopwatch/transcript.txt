@@ -1,0 +1,735 @@
+HTML
+0:00
+hey what's going on everybody in today's
+0:01
+video I'm going to show you how we can
+0:02
+create a stopwatch program using
+0:04
+JavaScript HTML and CSS so sit back
+0:08
+relax and enjoy the show all right let's
+0:11
+get started everybody we will create an
+0:13
+H1 heading with text of stopwatch and I
+0:17
+will give this H1 element a unique ID of
+0:20
+my
+0:21
+H1 then we'll create a container for our
+0:24
+stopwatch this will be a
+0:27
+development this development will have
+0:29
+an ID of container to contain everything
+0:33
+our container is going to have two
+0:34
+sections two div
+0:41
+elopements the first div element is
+0:44
+going to be for our display ID
+0:47
+display I'll give this development some
+0:49
+initial text as a placeholder we'll have
+0:52
+zeros for hours minutes seconds and
+0:56
+milliseconds then our next development
+0:58
+will have an ID of controls for all the
+1:02
+control buttons within this development
+1:04
+of controls we'll create three
+1:07
+buttons the first button will be start
+1:11
+the ID of this button will be start
+1:14
+button BTN short for button then I will
+1:17
+set the onclick event handler equal to a
+1:20
+JavaScript function we will eventually
+1:23
+create a start function we still need to
+1:25
+Define it let's copy this button paste
+1:28
+it twice
+1:30
+the second button will be for stop the
+1:33
+ID will be stop button the onclick
+1:36
+attribute will be for a stop function
+1:39
+the text on the button will be
+1:42
+stop and then we have a reset
+1:44
+button the ID is reset
+1:47
+button the onclick attribute will be for
+1:50
+a reset function the text on the button
+1:53
+will be
+1:55
+reset all right and that is all the HTML
+1:58
+that we need let's go to our CSS
+CSS
+2:01
+stylesheet I will first select the body
+2:03
+of our document we'll use flexbox to
+2:06
+display everything because I like
+2:08
+flexbox display Flex the flex direction
+2:13
+will be a
+2:15
+column then I will align items
+2:21
+Center I'll set the background color of
+2:23
+this
+2:25
+application
+2:28
+background-color pick a color again I
+2:30
+like using hsl
+2:32
+values I'll set the lightness to
+2:35
+90% our container is going to be a
+2:37
+lighter color we will select the ID of
+2:41
+my H1 that's going to be the heading I
+2:44
+will set the font
+2:45
+size to be before
+2:48
+RM the font
+2:50
+family I will pick
+2:54
+aiel with a backup of s's
+2:58
+serif for the the font color I will set
+3:01
+the color property to be pick a
+3:05
+color I'll pick black but set the
+3:07
+lightness to
+3:10
+25% all right now we are going to select
+3:12
+the container that contains everything
+3:14
+besides the
+3:16
+heading this
+3:17
+area we will select the ID of
+3:22
+container I will use flex box within the
+3:24
+container display
+3:27
+Flex the flex direction will be
+3:33
+column and aligned item
+3:39
+Center let's add a border a border
+3:42
+around the container 5 pixel
+3:47
+solid and I will round the corners
+3:50
+border
+3:52
+radius let's do 50
+3:55
+pixels and I'll add a little bit of
+3:58
+padding
+4:00
+padding 30
+4:02
+pixels and I will set the background
+4:05
+color to be white background color
+4:10
+white we'll work on the time display
+4:14
+next select the ID of
+4:18
+display I will set the font
+4:20
+size to be 5
+4:24
+RM for the font
+4:26
+family I'm going to set it to be
+4:28
+monospace
+4:32
+and the font weight I will set to be
+4:36
+bold I'll change the
+4:41
+color I'll set the lightness to
+4:43
+30% I'll give a text Shadow to the
+4:46
+display so it looks like it's somewhat
+4:48
+3D like it's popping out so text
+4:52
+Shadow 2 pixels and two pixels for the
+4:55
+vertical and horizontal offset and a
+4:58
+blur of two pixels
+5:01
+now for the color I'm going to lower the
+5:05
+alpha to 75% or
+5:11
+so that's not bad then I'll add a little
+5:14
+bit of margin to the bottom margin
+5:17
+bottom 25
+5:19
+pixels now we have to style the buttons
+5:23
+we will select the ID of controls but I
+5:26
+would like the button elements within
+5:27
+the controls after after selecting the
+5:30
+ID of controls select any buttons within
+5:33
+that element we'll increase the font
+5:36
+size of the buttons font size 1.5 RM I
+5:41
+will set the font weight of the buttons
+5:44
+to be
+5:46
+bold I'll add a little bit of padding 10
+5:49
+pixels by 20
+5:52
+pixels I'll add some margin around the
+5:54
+buttons 5
+5:57
+pixels I'll set a minimum width of the
+6:01
+buttons to be 125
+6:04
+pixels let me scroll
+6:06
+down I'll remove the border border
+6:11
+none set the Border radius of the
+6:14
+buttons to be 10
+6:16
+pixels change our cursor to be a pointer
+6:21
+when we hover over the buttons let's see
+6:23
+if that works yes it
+6:25
+does then set the font color of the
+6:28
+buttons to be white
+6:30
+now let's color the start button we will
+6:32
+select the ID of start
+6:35
+button set the background
+6:38
+color pick a color I'll start with
+6:40
+something
+6:44
+green pick whichever color you would
+6:51
+like I'll pick this shade of green here
+6:53
+are the values when we hover over the
+6:56
+start button we will access the hover
+6:59
+suit class of our start
+7:01
+button I'll decrease the lightness by
+7:05
+10% let's copy the markup that we have
+7:07
+for the start button paste it
+7:10
+twice we'll add color to the stop
+7:15
+button and the reset
+7:20
+button I'll set the stop button to be
+7:25
+red here are the hsl values that I
+7:28
+picked
+7:30
+when I hover over this button I'll set
+7:32
+the lightness to be 10%
+7:35
+darker for the reset button I'll set
+7:37
+that to be
+7:40
+blue when we hover our cursor over the
+7:43
+reset button I will set the lightness to
+7:46
+be 10%
+7:48
+darker not bad for all of the buttons
+7:51
+I'm going to add a transition
+7:54
+effect
+7:56
+transition select the background color
+8:00
+we will create an ease
+8:02
+transition after 0.5 seconds we will
+8:08
+ease so when you hover your cursor over
+8:10
+the buttons there's going to be a slow
+8:13
+transition when we
+JavaScript
+8:17
+hover okay and that is all the CSS that
+8:19
+we need we will now go to the Javascript
+8:22
+file to add some functionality let's
+8:24
+declare all the variables we'll need
+8:26
+we'll get the ID of the display and
+8:28
+store a reference to it const display
+8:33
+equals document. getet element by ID the
+8:37
+ID that I'm selecting is
+8:41
+display this
+8:44
+ID we will create a timer let timer
+8:47
+equals
+8:49
+null timer is going to hold the ID of
+8:53
+set interval so we can keep track of it
+8:55
+and stop it if we need to then we need
+8:58
+to start time let start time equal
+9:01
+0 let elapsed
+9:04
+time equal
+9:07
+0 let is running this will be a Boolean
+9:12
+which I will set to be
+9:13
+false if the stopwatch is currently
+9:15
+running we will flip this to be true and
+9:18
+flip it to be false to stop it what are
+9:21
+the functions that we need we have a
+9:24
+start stop and reset
+9:28
+function function
+9:32
+start function
+9:37
+stop function
+9:40
+reset we'll add one more function of
+9:42
+update to update the
+9:45
+display function
+9:48
+update we'll begin with the start method
+9:51
+we'll enclose everything within our
+9:52
+function within an if statement we need
+9:55
+to check to see if our stopwatch isn't
+9:58
+running if our stopwatch isn't currently
+10:00
+running if not running then start the
+10:04
+stopwatch we need to set the start time
+10:07
+the start time equals we will get the
+10:10
+current date date.now
+10:13
+minus the elapse time which will be zero
+10:18
+initially so just to demonstrate what
+10:21
+the start time is I'm going to
+10:23
+console.log my start
+10:28
+time
+10:30
+so the start time is going to be in
+10:32
+milliseconds since epic epic basically
+10:35
+speaking is when your computer thinks
+10:36
+time
+10:42
+begin we will set our timer equal to the
+10:46
+set interval
+10:48
+function we will call the update
+10:50
+function every 10
+10:54
+millisec so if I was to display my timer
+10:58
+console.log Tim
+11:00
+timer this is what it
+11:04
+is our timer stores a unique ID to work
+11:07
+with this function if we ever need to
+11:09
+stop
+11:13
+it we'll take the Boolean variable of is
+11:16
+running set it to be true because our
+11:18
+stopwatch is not running now we need to
+11:21
+go to the update function to actually
+11:22
+get it
+11:23
+working we need to get the current
+11:26
+time const
+11:29
+current time equals access our date use
+11:35
+the now method what is the date right
+11:38
+now we will calculate the elapse
+11:41
+time equals the current time minus our
+11:47
+start
+11:48
+time whatever that was when we initially
+11:50
+pressed the start
+11:52
+button so the current time minus our
+11:55
+original start time gives us the elapse
+11:58
+time and this is going to be in
+12:00
+milliseconds we need to convert the
+12:02
+elapse time into a readable format using
+12:05
+hours minutes seconds and milliseconds
+12:08
+we'll begin with
+12:09
+hours let hours
+12:12
+equals take our lapse time divided by to
+12:17
+convert milliseconds to hours we can
+12:19
+follow this formula elapse time divided
+12:22
+by 1,000 milliseconds * 60 seconds * 6
+12:29
+minutes we don't want any decimal
+12:32
+portions with our hours we will enclose
+12:34
+all of this with the floor method of
+12:39
+math now we're going to do something
+12:41
+similar with minutes let minutes equals
+12:46
+take our lapse
+12:47
+time we need to convert milliseconds to
+12:51
+minutes divided by 1,000 milliseconds in
+12:55
+a
+12:56
+second times 6 60 seconds in a minute
+13:00
+then modulus
+13:02
+60 modulus gives you the remainder of
+13:04
+any division we don't want our minutes
+13:06
+display to hit 60 or go above 60 once we
+13:10
+hit 60 it'll reset back to zero enclose
+13:13
+this formula with math. floor to round
+13:16
+it math.
+13:19
+floor okay then we have to take care of
+13:21
+seconds let seconds equals take our
+13:26
+lapse
+13:27
+time
+13:29
+divided 1,000 to convert milliseconds to
+13:33
+seconds modulus
+13:36
+60 en close all of this with math. floor
+13:38
+to round
+13:43
+it now for milliseconds let
+13:47
+milliseconds equals take the elapse time
+13:51
+which is already in
+13:52
+milliseconds modulus 1,00 milliseconds
+13:56
+is normally four digits we're going
+13:58
+going to divide it by 10 we only want
+14:00
+the first two
+14:02
+digits divided by 10 enclose all of this
+14:06
+with math.
+14:07
+floor math.
+14:11
+floor then let's change the
+14:14
+display we'll access our
+14:18
+display access the text content of the
+14:21
+display set it equal to a template
+14:24
+string if you would like to display the
+14:26
+hours it's optional we will add a
+14:29
+placeholder for hours colon placeholder
+14:34
+minutes colon placeholder seconds if you
+14:39
+would like to display the milliseconds
+14:40
+we can add a placeholder for that colon
+14:43
+placeholder
+14:46
+milliseconds let's see what we have so
+14:48
+far I'm going to hit the start button
+14:51
+and here's what we
+14:53
+got so the stopwatch is running but we
+14:56
+should add some zeros for padding so I'm
+14:59
+going to refresh to stop
+15:00
+it we'll convert hours minutes seconds
+15:03
+and milliseconds into a string then add
+15:05
+some padding of zeros to it if the
+15:08
+number is only one digit not two we will
+15:11
+convert hours minutes seconds and
+15:12
+milliseconds into a string before
+15:14
+displaying it so let's take hours equals
+15:19
+hours I will typ cast it as a
+15:23
+string follow this with the pad start
+15:27
+method
+15:30
+for the first two
+15:32
+digits add a zero let's do this for
+15:35
+minutes seconds and
+15:37
+milliseconds
+15:39
+minutes
+15:41
+seconds and
+15:44
+milliseconds we should have some zeros
+15:46
+for padding to make each display two
+15:49
+digits and that does appear to work
+15:52
+nice now we just need to get the
+15:54
+stopwatch to actually stop right now
+15:57
+there's no functionality
+15:59
+going to our stop function we need to
+16:01
+check to see if our program is running
+16:03
+is this variable is running
+16:08
+true if is running if that's true then
+16:13
+stop the
+16:14
+stopwatch we will use the clear interval
+16:17
+function we need to pass in that unique
+16:19
+ID for the
+16:22
+timer this will stop the stopwatch from
+16:24
+running then we will calculate the
+16:26
+elapse time csed time equals the date
+16:32
+right now date. now method minus the
+16:36
+original start
+16:38
+time then set is
+16:41
+running equal to false because the
+16:44
+stopwatch is stopped it's not running
+16:47
+anymore now we can start the
+16:50
+stopwatch and we can stop it we can
+16:53
+start it and we can stop it the last
+16:56
+thing we need to do is reset the stop
+16:58
+watch we can really just copy everything
+17:00
+that we have when we initially assign
+17:02
+these
+17:04
+variables we need to clear the timer
+17:08
+clear interval pass in our variable
+17:12
+timer that contains the ID of the set
+17:14
+interval
+17:16
+function the start time will be zero the
+17:19
+elapse time will be
+17:21
+zero is running will be
+17:24
+false change the text content equal to
+17:30
+all
+17:32
+zeros this is for the hours minutes
+17:36
+seconds and
+17:38
+milliseconds all right let's see if
+17:40
+everything works just fine we can
+17:43
+start we can
+17:45
+stop we can start we can stop we can
+17:50
+reset we can start and we can stop all
+17:54
+right everybody so that is how you can
+17:56
+create a stopwatch program using
+17:58
+JavaScript HTML and
+18:04
+CSS

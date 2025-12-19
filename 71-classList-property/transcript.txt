@@ -1,0 +1,698 @@
+introduction
+0:00
+hey everybody so in today's video I got
+0:02
+to explain class lists in JavaScript
+0:04
+class list is an element property it's
+0:07
+used to interact with an elements list
+0:09
+of classes meaning CSS classes by
+0:12
+accessing the class list property of an
+0:13
+element we can make reusable classes for
+0:16
+many elements across your web page if I
+0:19
+have a CSS class I can dynamically add
+0:22
+remove toggle replace or check to see if
+0:25
+an element contains a certain class so
+setup
+0:28
+what we'll do in this example in our h
+0:29
+HTML document is create a button the
+0:32
+button will have text of my button the
+0:35
+ID of this button will be my button
+0:39
+we'll apply a little bit of CSS
+0:42
+initially let's select the ID of my
+0:45
+button we'll be applying just a few
+0:47
+properties let's increase the font
+0:50
+size to for
+0:53
+RM oh not 43 for go back go back go back
+0:58
+I'll add a little bit of margin of 10
+1:00
+pixels remove the border with border
+1:03
+none border radius to smooth the corners
+1:07
+5
+1:09
+pixels and add a little bit of
+1:12
+padding 10 pixels by 15 pixels that's
+1:16
+good enough for now we're going to
+1:18
+create a CSS class of
+1:21
+enabled we won't apply it right away
+1:23
+though we'll apply this class to this
+1:25
+button using JavaScript if an element is
+1:28
+enabled let's change the background
+1:30
+color to be something
+1:33
+blue I'm going to use hsl values
+1:38
+though and I will set the font color to
+1:41
+be
+1:42
+white so this button doesn't have this
+1:46
+class yet we'll add that in dynamically
+1:48
+using JavaScript we'll create a
+add()
+1:50
+reference to this button const my button
+1:54
+will be the name then we need to select
+1:56
+it document. getet element by
+2:00
+ID the ID that I'm selecting is my
+2:04
+button to add a class to an element take
+2:07
+that element my button access the class
+2:11
+list property follow this with the add
+2:13
+method we will add the name of the class
+2:17
+enabled and now my button is enabled we
+2:20
+have appended the CSS properties
+2:23
+dynamically so if I were to inspect this
+2:25
+element I'll right click
+2:28
+inspect
+2:30
+we have added that class of enabled to
+2:33
+the element so my button has an ID and a
+2:36
+class of enabled to remove a class again
+remove()
+2:39
+take that element of my button access
+2:42
+the class list we will use the remove
+2:45
+method we will remove the class of
+2:48
+enabled and it's gone let's right click
+2:51
+on the element
+2:53
+inspect so our class list is empty we
+2:57
+have added and then removed that class
+2:58
+of enabled we're going to create a new
+3:01
+class now of hover when we hover over an
+3:04
+element apply these CSS properties it's
+3:07
+kind of like we're using the hover sudo
+3:10
+class but we're using it a little bit
+3:12
+different we can add or remove this
+3:13
+class dynamically at will if we apply
+3:16
+this class let's set a box Shadow to
+3:19
+give the element a 3D pop effect for a
+3:22
+horizontal and vertical offset let's set
+3:24
+those to be zero each let's add 10
+3:26
+pixels for the blur effect and I will
+3:28
+set the color to be I don't know let's
+3:31
+set it to be black but set the alpha
+3:34
+down to like
+3:37
+20% and then when I hover I would also
+3:39
+like to set the font weight of that
+3:41
+element to be
+3:45
+bold let's add the hover
+3:49
+class so the appearance of this button
+3:51
+changed I would like to apply this class
+3:53
+of hover only when I hover my cursor
+3:55
+over the element We'll add a mouse over
+3:58
+event listener we will take my
+4:01
+button add event
+4:05
+listener we have an event type and a
+4:08
+call back to a function the event type
+4:11
+will be Mouse over when we Mouse over
+4:14
+this
+4:15
+element we are provided with an element
+4:18
+object event Arrow do this we will
+4:22
+access our event objects Target meaning
+4:24
+the button take our class
+4:27
+list and add
+4:30
+the class of
+4:32
+hover and let's see if this works if I
+4:35
+hover my cursor over the button we apply
+4:37
+the hover class now when I leave the
+4:39
+button I would like to remove it really
+4:42
+we can just copy the code for the event
+4:43
+listener paste it replace Mouse over
+4:46
+with mouse out then we will remove that
+4:51
+class so now we can apply that class and
+4:54
+then remove it with mouse over and mouse
+4:57
+out there's also toggle
+toggle()
+5:00
+if we toggle a class we'll remove it if
+5:03
+that class is present add that class if
+5:05
+it's not so let's replace add with
+5:09
+toggle do this for both Mouse over and
+5:12
+mouse out and that should work the same
+5:14
+when we hover our cursor over the button
+5:16
+we will toggle the class of hover if we
+5:18
+have a mouse out event we will toggle it
+5:21
+again to remove
+replace()
+5:25
+it now we're going to use the replace
+5:27
+method to replace one class with another
+5:30
+we'll create a new class of
+5:33
+disabled we'll be replacing the enabled
+5:36
+class with the disabled class when we
+5:38
+click on the button so with the
+5:40
+background color of the disabled class
+5:43
+let's set the background color to be
+5:45
+gray again I like using hsl for the
+5:48
+colors I'll set the lightness to be like
+5:51
+60% I'm trying to get a faded
+5:53
+appearance and for the
+5:56
+color let's pick a light shade of gray
+5:59
+using hsl
+6:02
+values I'll set the lightness to be
+6:06
+80% going back to our Javascript file
+6:09
+let's add the class of
+6:11
+enabled my button access the class list
+6:15
+use the add method we will add the class
+6:17
+of
+6:19
+enabled then we'll add an event listener
+6:21
+to the button we will take my button add
+6:24
+an event
+6:26
+listener we have an event and a call
+6:30
+back the event is going to be click I
+6:33
+would like to do something when we click
+6:34
+on the button we will receive an event
+6:37
+Arrow do this take our events
+6:41
+Target access the class list we will use
+6:45
+the replace method replace the old class
+6:48
+with the new class replace the enabled
+6:51
+class with the disabled class there's
+6:54
+two arguments the old class and the new
+6:57
+class replace the old class with the new
+7:00
+class then when we click on this button
+7:02
+we'll replace the enabled class with the
+7:05
+disabled
+contains()
+7:06
+class then we have the contains method
+7:09
+if an element contains a class this will
+7:11
+return true and if it doesn't it returns
+7:13
+false So within our event listener let's
+7:17
+add an if
+7:18
+statement and an else
+7:22
+statement we'll check to see if our
+7:25
+events Target access the class list
+7:30
+we will use the contains
+7:32
+method if we click on the button and the
+7:35
+class contains disabled what do we want
+7:37
+to
+7:39
+do does the class list contain disabled
+7:42
+let's change the text content take our
+7:45
+events Target access the text content
+7:49
+all appended
+7:53
+Emoji what's a good one that
+7:57
+one else replace enable AED with
+8:02
+disabled let's click on the button we'll
+8:05
+replace the enabled class with the
+8:06
+disabled class our button is now
+8:08
+disabled if I were to inspect this
+8:11
+element the class is now
+8:13
+disabled if I were to click on this
+8:15
+button again well our class contains
+8:18
+disabled that was true so we end up
+8:21
+doing this code where we appended the
+8:23
+text content of the button now the nice
+H1
+8:25
+thing about using class lists HTML
+8:28
+elements have a class list property we
+8:30
+can reuse CSS classes amongst many HTML
+8:33
+elements we'll create an H1 element
+8:38
+now the text of this element will be
+8:41
+hello I will give this element a unique
+8:44
+ID of my H1 I'll increase the font size
+8:48
+so we can see
+8:50
+it select the ID of my H1 I'll increase
+8:54
+the font size let's try 5
+8:58
+RM
+9:01
+let's create a reference to
+9:03
+myh1 const myh1 equals document. getet
+9:08
+element by
+9:10
+ID the ID that I'm selecting is my
+9:13
+H1 We'll add the enabled class to myh1
+9:17
+myh1 do
+9:19
+classlist do add not ass
+9:24
+add
+9:27
+enabled and there we go
+9:29
+we have added these CSS properties to
+9:32
+this
+9:33
+element and because I'm lazy I'm going
+9:35
+to copy all this code where we add an
+9:37
+event listener to my
+9:39
+H1 so let's replace my button with my
+9:44
+H1 now when we click on this H1 element
+9:48
+we can disable it we'll replace the
+9:50
+enabled class with the disabled class
+9:52
+and if you don't believe me let's take a
+9:54
+look the class of my H1 is now disabled
+9:59
+if I were to click on this element again
+10:01
+well the class list contains disabled so
+10:04
+we execute this if statement where we
+10:06
+change the text content of that
+NodeLists
+10:08
+Target now here's a challenge round
+10:10
+we're going to create four buttons and
+10:13
+store all of those buttons within a node
+10:15
+list so let's create a button with the
+10:18
+text of the first button being button
+10:20
+one I will give this button a class of
+10:24
+my
+10:25
+buttons let's copy this button paste it
+10:28
+three times
+10:31
+button one button two button three
+10:33
+button
+10:35
+four let's remove the CSS for my H1
+10:38
+select the class of my
+10:42
+buttons keep these three classes of
+10:44
+enabled hover and
+10:48
+disabled okay let's eliminate all this
+10:51
+code we'll create a node list to contain
+10:54
+all these buttons we can use const if we
+10:56
+don't plan on adding or removing buttons
+10:59
+or let if we do let buttons equals
+11:04
+document. query selector
+11:08
+all select all elements that have a
+11:10
+class of my buttons we'll apply our
+11:13
+enabled class to all the buttons so we
+11:17
+will take our node list of buttons use
+11:20
+the for each method for each button
+11:23
+within our node list do
+11:27
+this take each button
+11:29
+access each button's class list property
+11:32
+I will add a
+11:34
+class of
+11:36
+enabled and we have applied that class
+11:38
+to all the buttons If you need to remove
+11:41
+a class you can do the same but replace
+11:43
+add with
+11:47
+remove now when we hover our cursor over
+11:50
+one of these buttons we will toggle the
+11:52
+hover class we need to iterate through
+11:55
+our node list of buttons take buttons
+11:58
+use the build built in for each
+12:00
+method for each button within our node
+12:03
+list do
+12:05
+this take each button add an event
+12:10
+listener the event listener has an event
+12:12
+type and a call back to a
+12:14
+function the event type will be Mouse
+12:17
+over when we hover a cursor over
+12:20
+it we will be provided with an event
+12:24
+argument Arrow do this access the event
+12:27
+object access access the target meaning
+12:30
+the button that we hover over access the
+12:32
+class list property we will
+12:36
+toggle the hover class so when we hover
+12:40
+our cursor over one of these elements we
+12:42
+will apply the hover
+12:46
+class now when our cursor leaves one of
+12:48
+these elements we would like to toggle
+12:50
+that class again let's copy everything
+12:53
+we have here paste it replace Mouse over
+12:56
+with mouse out when we leave one of
+13:00
+these elements toggle the hover class
+13:02
+again to remove that
+13:06
+class now when we click on one of the
+13:08
+buttons we're going to replace the
+13:10
+enabled class with the disabled
+13:14
+class take our node list of buttons use
+13:18
+the for each
+13:20
+method with each button Arrow do this
+13:24
+take each button add an event
+13:27
+listener
+13:30
+we need to select the event type and a
+13:33
+call back to a function the event type
+13:35
+is going to be
+13:37
+click the parameter is event Arrow do
+13:41
+this when we click on one of these
+13:44
+buttons we'll replace the enabled class
+13:46
+with the disabled class take our event
+13:49
+object access its Target access the
+13:52
+class list
+13:53
+property we will
+13:56
+replace replace the old class with the
+13:58
+new class replace the enabled
+14:02
+class with the disabled
+14:06
+class and let's see if this works when I
+14:09
+click on a button we'll replace the
+14:11
+enabled class with the disabled
+14:15
+class the last thing we'll do is that
+14:18
+when we click on a button that's
+14:19
+disabled we'll change the text content
+14:22
+we'll have to use the contains method So
+14:24
+within our event listener I'll add an if
+14:27
+statement if
+14:29
+access our event access its Target
+14:32
+access the class list property use the
+14:35
+contains
+14:37
+method does the class list contain the
+14:40
+class of disabled if it does we'll
+14:43
+access our event access the target of
+14:45
+that event change the text content of
+14:49
+that element all append an
+14:52
+emoji that one I like that emoji if the
+14:55
+class list of that element isn't
+14:57
+disabled it doesn't contain M the class
+14:59
+of disabled we'll execute an El
+15:01
+statement where we disable it by
+15:04
+replacing the enabled class with the
+15:06
+disabled class we have three event
+15:08
+listeners Mouse over Mouse out and click
+15:12
+we're utilizing all three of these
+15:14
+custom classes enabled hover and
+15:17
+disabled we can hover over these
+15:19
+elements then we'll have Mouse over and
+15:21
+mouse out events then when I click on
+15:23
+one of these buttons we can apply that
+15:25
+disabled class within our click event
+15:28
+listener we have an if statement if we
+15:31
+click on an element that's already
+15:32
+disabled append the text
+15:37
+content all right everybody so that is
+conclusion
+15:40
+the class list property it's used to
+15:42
+interact with an element's list of
+15:43
+classes their CSS classes they allow you
+15:47
+to make reusable classes for many
+15:49
+elements across your web page and well
+15:51
+everybody that is the class list
+15:53
+property in
+15:57
+JavaScript

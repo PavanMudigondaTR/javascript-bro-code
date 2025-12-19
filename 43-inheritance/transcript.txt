@@ -1,0 +1,314 @@
+0:00
+hey what's up everybody so in today's
+0:02
+video I got to explain inheritance
+0:04
+inheritance allows a new class to
+0:06
+inherit properties and methods from an
+0:08
+existing class these two classes have a
+0:11
+parent child relationship a child will
+0:13
+inherit properties and methods from a
+0:15
+parent it's kind of like a family tree a
+0:18
+child will inherit genes from a parent
+0:20
+inheritance helps with code reusability
+0:22
+because we don't need to keep on
+0:24
+repeating the same properties and
+0:25
+methods if all the children share them
+0:27
+here's an example we'll create an animal
+0:29
+class
+0:31
+class animal will have a property of
+0:35
+alive if you're an animal you start off
+0:37
+being alive all animals should be able
+0:40
+to eat and sleep we'll create methods
+0:42
+for
+0:43
+those we'll have an eat method all we're
+0:46
+going to do is
+0:48
+console.log I'll use a template
+0:51
+string this now I'll add a
+0:55
+placeholder
+0:58
+this.name is
+1:01
+eating and a Sleep
+1:05
+Method
+1:07
+sleep this this. name is
+1:12
+sleeping animal will be the parent class
+1:15
+we'll create children classes that
+1:16
+inherit these properties and methods
+1:19
+let's create a few children classes
+1:21
+class rabbit our rabbit class will
+1:25
+inherit all the properties and methods
+1:26
+of the animal class to declare a parent
+1:29
+child relationship ship the child will
+1:32
+extends the parent
+1:35
+animal for the rabbit I'm going to give
+1:38
+this class a name name equals rabbit
+1:42
+this will be a property if you're
+1:44
+familiar with the static keyword you can
+1:46
+make the static now we'll create a fish
+1:49
+class that also extends animal class
+1:53
+fish extends
+1:56
+animal fish will have one property name
+2:00
+equals
+2:01
+fish and a hawk class class Hawk
+2:07
+extends
+2:09
+animal will have one name
+2:13
+property
+2:15
+Hawk all right let's see if this works
+2:17
+if we create a rabbit fish and Hawk
+2:19
+object they should have access to these
+2:21
+properties and
+2:25
+methods let's create const rabbit equals
+2:29
+new
+2:32
+rabbit
+2:33
+const fish equals new
+2:40
+Fish const Hawk equals New
+2:45
+Hawk all right let's see if our rabbit
+2:48
+has an A Life
+2:50
+Property
+2:53
+console.log take the name of the object
+2:56
+rabbit do access a property or method
+2:59
+aot Al that's our property the rabbit is
+3:02
+alive but what if the hawk swoops in and
+3:05
+kills the rabbit let's change the alive
+3:08
+property of the
+3:09
+rabbit rabbit. alive equals false the
+3:13
+rabbit is no longer
+3:15
+alive now let's see if our rabbit has
+3:18
+access to a eat and Sleep
+3:22
+Method rabbit.
+3:26
+eat this rabbit is eating and sleep
+3:30
+rabbit.
+3:33
+sleep the rabbit is sleeping Let's test
+3:36
+this with
+3:37
+fish fish. alive fish. eat method fish.
+3:41
+Sleep
+3:42
+Method the fish is alive the fish is
+3:44
+eating the fish is
+3:46
+sleeping and Hawk hawk. alive hawk. eat
+3:50
+method hawk. Sleep Method the hawk Is
+3:54
+Alive the hawk is eating the hawk is
+3:56
+sleeping our children classes of rabbit
+3:59
+fish and ha all inherited the properties
+4:01
+and methods of the parent animal class
+4:04
+this helps with code reusability because
+4:06
+I don't need to declare all of these
+4:08
+properties and methods within each of
+4:10
+the children classes like
+4:14
+this we're saving a lot of lines of code
+4:17
+it's not that apparent with just a few
+4:19
+child classes but imagine if you had
+4:21
+hundreds of different child classes well
+4:23
+by using inheritance you would be saving
+4:25
+a lot of time but not only that the
+4:28
+children can have their own unique
+4:29
+properties and methods too for example
+4:32
+rabbits will be able to run but fish and
+4:35
+Hawks can't run that's a method that
+4:38
+only belongs to rabbits within our
+4:40
+rabbit class let's create a new method a
+4:42
+run
+4:45
+method will
+4:48
+console.log I'll use a template
+4:50
+string
+4:52
+this add a
+4:54
+placeholder
+4:56
+this.name is
+4:58
+running
+5:00
+within our fish class let's create a
+5:02
+swim
+5:04
+method
+5:05
+swim this this do name is
+5:10
+swimming and Hawks will be able to
+5:14
+fly we'll create a fly method this this.
+5:18
+name is
+5:20
+flying let's minimize these
+5:24
+classes let's take our rabbit object
+5:27
+display the alive property the eat
+5:30
+method the Sleep Method and the run
+5:32
+method rabbit. run method the rabbit is
+5:36
+eating the rabbit is sleeping the rabbit
+5:38
+is running now let's do this with fish
+5:41
+fish. alive fish. eat method fish. Sleep
+5:45
+Method now does the fish have a run
+5:47
+method it does not fish. run is not a
+5:51
+function run is a method that belongs to
+5:54
+the rabbit class fish can't run because
+5:56
+well they don't have legs we did not
+5:58
+give our fish class a run method they
+6:00
+can swim though but they can't run fish.
+6:04
+swim
+6:05
+method the fish is swimming let's do
+6:08
+this with
+6:12
+Hawk our Hawk cannot swim but it can fly
+6:16
+we'll use the fly
+6:18
+method the hawk is eating the hawk is
+6:20
+sleeping the hawk is flying and of
+6:22
+course our rabbit can't fly or
+6:26
+Swim does our rabbit have a fly method
+6:29
+it does not rabbit. fly is not a
+6:31
+function all right everybody so that's
+6:33
+inheritance it allows a new class to
+6:36
+inherit properties and methods from an
+6:38
+existing Class A Child inherits
+6:40
+properties and methods from a parent it
+6:42
+helps with code reusability I don't need
+6:45
+to declare all of these properties and
+6:46
+methods for each of these classes I can
+6:48
+simply reuse it that helps us follow the
+6:51
+dry principle don't repeat
+6:53
+yourself and well everybody that is an
+6:56
+introduction to inheritance in
+6:58
+JavaScript

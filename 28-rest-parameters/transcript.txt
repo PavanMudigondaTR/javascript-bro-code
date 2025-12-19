@@ -1,0 +1,359 @@
+example 1
+0:00
+hey hey hey what's going on everybody
+0:01
+today I'm going to explain rest
+0:02
+parameters in JavaScript rest parameters
+0:05
+is a parameter prefixed with three dots
+0:08
+they allow a function to work with a
+0:10
+variable number of arguments by bundling
+0:13
+them into an array it's very similar to
+0:16
+the spread operator which we talked
+0:17
+about in the last video the spread
+0:19
+operator expands an array into separate
+0:21
+elements rest parameters do the opposite
+0:24
+they bundle separate elements into an
+0:26
+array spread will spread an array into
+0:28
+separate elements rest parameters will
+0:30
+bundle separate elements into an array
+0:32
+it effectively does the opposite how
+0:34
+could rest parameters be useful let me
+0:36
+give you an example say we have a bunch
+0:38
+of different
+0:40
+food const food one food one equals
+0:44
+Pizza we'll create a few different food
+0:48
+variables let's start with four food one
+0:51
+food two food three food four we have
+0:54
+pizza
+0:57
+hamburger hot dog and sushi
+1:00
+I'm going to create a function that uses
+1:02
+rest parameters it's going to Output all
+1:04
+food that I send
+1:06
+it we'll pretend that we're opening a
+1:09
+fridge imagine that all of this food is
+1:11
+in a fridge open fridge fridge short for
+1:16
+refrigerator to use rest parameters I
+1:18
+need three dots we're going to stick all
+1:20
+of this food into an array but what
+1:22
+should the array name be let's say Foods
+1:25
+that's descriptive then I'm going to
+1:28
+console.log
+1:30
+my array of
+1:32
+foods now I'm going to call this
+1:34
+function open fridge I will send this
+1:38
+function a variable number of arguments
+1:41
+this method is going to display an
+1:43
+array we have food one
+1:46
+pizza food 2 hamburger hamburger is also
+1:51
+within our array food three hot dog food
+1:55
+for sushi let me add one more food let's
+1:59
+add Ramen food five will be
+2:02
+Ramen then I will add food
+2:07
+five you can see that I can send this
+2:09
+function any number of arguments that I
+2:11
+would like this function is designed to
+2:13
+accept any number of arguments I could
+2:16
+combine this function with the spread
+2:17
+operator when I'm displaying my Foods
+2:20
+array all of these elements are in an
+2:21
+array but I could separate them back
+2:23
+into separate Elements by using the
+2:25
+spread operator which is the same three
+2:28
+dots as the rest print parameters rest
+2:30
+parameters are used as parameters the
+2:33
+spread operator is used whenever you
+2:34
+have an array or any sort of collection
+2:36
+of something so now when I combine the
+2:39
+rest parameters and the spread
+2:41
+operator I can display all of my
+2:43
+separate
+2:44
+elements you can even use rest
+2:46
+parameters to stick all elements within
+2:49
+an array so this time I'm going to
+2:51
+create a separate
+2:52
+function to get
+2:57
+food we will use rest parameters
+3:00
+our array name will be Foods all we're
+3:04
+going to do is return
+3:07
+Foods take all of these separate
+3:09
+elements stick them within an array then
+3:12
+return that
+3:13
+array so I'm going to create a new array
+3:16
+const
+3:18
+Foods
+3:20
+equals call our get food method pass in
+3:24
+a variable amount of arguments let's
+3:26
+pass in food
+3:27
+one food two
+3:30
+food three food four and food
+3:35
+five and then we got to display
+3:38
+it
+3:40
+console.log my array
+3:42
+Foods so that's how the rest parameters
+3:44
+can be used to combine elements and
+3:46
+bundle them into an array then if you
+3:49
+want you can return the array or do
+3:50
+whatever you want with it let's go over
+example 2
+3:52
+a second example we'll create a method
+3:55
+to sum a bunch of numbers together
+3:58
+function sum
+4:00
+sum we will use rest parameter so we can
+4:03
+accept any number of arguments our array
+4:06
+name will be numbers what we'll do
+4:08
+within this method is have a result
+4:11
+result equals z we'll keep track of the
+4:15
+current sum within our result I'll
+4:17
+create a for Loop to iterate over our
+4:19
+array for every let number of
+4:26
+numbers take our result Plus plus equals
+4:31
+the current
+4:32
+number and then we are going to return
+4:35
+our
+4:36
+result now we'll have const total equals
+4:42
+invoke our sum function pass in as many
+4:45
+numbers as we would
+4:46
+like let's start with one oh then I
+4:49
+should probably display the total
+4:52
+console.log I'll use a template literal
+4:55
+your total is I'll add a place
+5:00
+holder
+5:02
+total your total is $1 let's add a few
+5:05
+more
+5:06
+arguments two the total is now $3 three
+5:12
+$6 four is 10 5 is
+5:16
+15 let's create a function to calculate
+5:19
+an
+5:20
+average let's copy our sum
+5:25
+function let's name this function get
+5:28
+Average all we have to do when returning
+5:31
+our result to get the average is divide
+5:33
+our result by the length of our numbers
+5:36
+array divided by numbers. length
+5:39
+property that will give you the average
+5:42
+so now const total equals get the
+5:47
+average maybe these are test scores one
+5:50
+student got a 75 another got 100 another
+5:54
+student has
+5:56
+85 90 and a 50
+6:00
+let's
+6:02
+console.log the
+6:04
+total the average is
+example 3
+6:07
+80 let's go over example three you can
+6:10
+use the rest parameters to combine
+6:12
+strings together we will create a
+6:14
+function to combine
+6:18
+strings we'll send in a title like Mis a
+6:21
+first name such as
+6:24
+SpongeBob a last
+6:27
+name Square Pants
+6:31
+he's the
+6:33
+third we still need to make this
+6:35
+function though but const full name
+6:39
+equals whatever string is
+6:42
+returned all right let's work on this
+6:44
+function function combine string let's
+6:49
+make this plural
+6:54
+strings we need to use rest parameters
+6:58
+let's name our array
+7:00
+strings an easy way to do this is to
+7:03
+return our array of strings and use the
+7:07
+built-in join method to join all of the
+7:10
+strings
+7:11
+together but we'll add a space between
+7:13
+each string all right we should now have
+7:17
+a full name variable that's all of the
+7:19
+strings combined so let's
+7:22
+console.log our full
+7:27
+name Mr sponge Bob SquarePants the third
+7:31
+that's one way in which you could use
+7:33
+the rest parameters to combine a bunch
+7:35
+of strings into one such as if you're
+7:37
+creating a full name all right everybody
+7:40
+so those are rest parameters they allow
+7:42
+a function to work with a variable
+7:44
+number of arguments by bundling them
+7:47
+into an array it's the opposite of the
+7:49
+spread operator the spread operator
+7:51
+expands an array into separate elements
+7:53
+the rest parameters bundle separate
+7:55
+elements into an array and well
+7:58
+everybody those are rest parameters in
+8:04
+JavaScript

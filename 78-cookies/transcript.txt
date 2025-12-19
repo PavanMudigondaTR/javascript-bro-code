@@ -1,0 +1,744 @@
+0:01
+hey guys in this video i'm going to
+0:03
+explain cookies a cookie is a small text
+0:06
+file that is stored on your computer
+0:08
+it's used to remember information about
+0:10
+a user data within a cookie is saved in
+0:13
+name value pairs in order to check to
+0:15
+see if we have cookies enabled within
+0:18
+console.log i can type
+0:20
+navigator dot
+0:22
+cookie
+0:23
+enabled
+0:25
+for me that's true i have cookies
+0:26
+enabled to add a cookie we would type
+0:29
+document.cookie
+0:32
+we will set the sql to a string but the
+0:34
+string has certain components first is a
+0:37
+name value pair i would like to create a
+0:39
+cookie to store a user's first name the
+0:42
+name of this pair will be let's say
+0:44
+first name set the sequel to some value
+0:47
+the value that i will pick is spongebob
+0:50
+then end it with a semicolon now you can
+0:52
+add an expiration date when the current
+0:55
+time is past a certain expiration date
+0:57
+well then this cookie will be deleted to
+0:59
+set an expiration date set expires equal
+1:02
+to then pick a date i'll pick sunday
+1:06
+1st
+1:08
+january
+1:09
+maybe a date that's really far out like
+1:11
+20 30
+1:13
+at midnight
+1:16
+utc
+1:17
+then semicolon we're also able to set a
+1:20
+path for this cookie i'll use the
+1:21
+default path that would be path equals
+1:24
+forward slash okay let's take a look at
+1:26
+this cookie
+1:27
+console.log
+1:29
+document dot cookie even though this
+1:33
+appears to be a string it's actually an
+1:35
+object the expiration date and the path
+1:37
+aren't displayed all that's displayed is
+1:39
+the name and the value you can add more
+1:41
+than one cookie so again we will type
+1:44
+document.cookie
+1:46
+let's copy this text paste it
+1:50
+last name
+1:51
+last name equals square
+1:55
+pants
+1:57
+then let's take a look at our cookie
+1:58
+again
+1:59
+the cookie property of our document can
+2:02
+hold more than one cookie but to access
+2:04
+it you would just type cookie to
+2:06
+overwrite a cookie you would just change
+2:08
+the value of a name value pair if i
+2:10
+overwrite the first name and the last
+2:12
+name they'll change this time let's set
+2:14
+first name to patrick
+2:16
+last name star
+2:18
+there we go first name patrick last name
+2:20
+star if we change the expiration date to
+2:23
+a date that has already passed that will
+2:25
+delete this cookie it'll expire so maybe
+2:28
+the last name expired in the year 2000
+2:32
+that last name portion of my cookie is
+2:34
+no longer there so that's how to expire
+2:36
+a cookie at this point we're going to
+2:38
+create a function to create a cookie
+2:40
+instead of doing so manually
+2:42
+function set cookie
+2:46
+we'll need a few things
+2:47
+a name because these are a name value
+2:50
+pairs
+2:51
+a value and an expiration date although
+2:54
+that's optional for the third argument
+2:56
+let's name this parameter days to live
+3:00
+as an argument you'll pass a number of
+3:02
+days that you would like this cookie to
+3:03
+be set to expire 365 would be one year
+3:06
+let's create a date object
+3:08
+const
+3:10
+date
+3:10
+equals new
+3:12
+date i will set the time of this date
+3:14
+date dot set
+3:17
+time method within the parentheses we
+3:19
+will take date dot get time
+3:22
+this will return the current time in
+3:24
+milliseconds then add the amount of days
+3:27
+to live converted to milliseconds
+3:30
+days to live times 24 hours
+3:34
+times
+3:35
+60 minutes
+3:37
+times 60 seconds
+3:40
+times 1000 for 1000 milliseconds our
+3:44
+future date is currently in milliseconds
+3:47
+we'll convert that to utc string date
+3:50
+to
+3:51
+utc
+3:53
+string method i'll assign this to a
+3:55
+variable
+3:56
+let
+3:58
+expires
+3:59
+equals
+4:01
+and then we'll use some string
+4:02
+concatenation we'll need to set this
+4:04
+expires value
+4:06
+so within quotes expires
+4:08
+equals
+4:10
+plus
+4:11
+our future date converted to a utc
+4:13
+string then we can assign our cookie
+4:16
+document.cookie
+4:18
+equals i'll use a template literal
+4:21
+we're inserting our name that we pass in
+4:24
+equals
+4:26
+our
+4:26
+value
+4:28
+add a semicolon to finish this section
+4:31
+then the expire section
+4:34
+expires
+4:36
+then you could also add a path if you
+4:37
+would like
+4:38
+path equals forward slash that's the
+4:41
+default path okay now let's create some
+4:43
+cookies i will invoke our set cookie
+4:46
+function
+4:48
+pass in a name value pair and the amount
+4:50
+of days i would like this cookie active
+4:52
+what about an email address
+4:55
+email
+4:56
+make up some email address
+4:59
+sponge
+5:00
+gmail.com
+5:02
+i would like this cookie to live for 365
+5:05
+days
+5:06
+then let's display our cookies
+5:08
+console.log
+5:10
+document dot
+5:12
+cookie
+5:15
+and here's our cookies we still have our
+5:17
+first name and last name because we
+5:19
+never deleted them but we do have an
+5:21
+email now email equals sponge at
+5:24
+gmail.com how can we delete a cookie all
+5:26
+we have to do is set the expiration date
+5:28
+to a pass date here's one easy way to do
+5:31
+that let's create function
+5:34
+delete
+5:35
+cookie
+5:36
+all we'll need is a name
+5:39
+what we'll do is invoke set cookie
+5:42
+pass our name as an argument
+5:45
+null for the value and null for the days
+5:47
+to live if i was to invoke the delete
+5:50
+cookie method and pass in the name email
+5:52
+well that email cookie is no longer in
+5:54
+here so it's gone let's delete the other
+5:56
+cookies too
+5:58
+delete
+5:59
+first name
+6:00
+delete
+6:02
+last name
+6:04
+and those three cookies are cleared
+6:06
+let's create a function to get the value
+6:08
+of a cookie by a name let's declare this
+6:10
+function function
+6:12
+get
+6:13
+cookie
+6:15
+we'll accept a name as an argument what
+6:18
+we'll need to do is decode our cookie
+6:20
+i'll store this within a constant
+6:22
+constant
+6:24
+c for cookie
+6:25
+decoded
+6:27
+equals
+6:29
+decode
+6:30
+uri
+6:32
+component
+6:35
+then pass in
+6:36
+document.cookie
+6:39
+let's take a look at this
+6:40
+console.log
+6:45
+c decoded let's make sure we have at
+6:47
+least two cookies
+6:48
+set cookie
+6:51
+first name
+6:55
+spongebob
+6:57
+365 days to live
+7:01
+set cookie last name
+7:05
+squarepants
+7:08
+then i will invoke the getcookie method
+7:13
+then pass in a name first name is fine
+7:16
+okay let's see what we have this is
+7:17
+what's stored within c decoded we have
+7:20
+our name value pairs what we'll need to
+7:22
+do is split each of these name value
+7:24
+pairs at each of these semicolons that's
+7:26
+how to separate them so after this first
+7:29
+statement we'll take
+7:31
+c decoded
+7:32
+and split at each semicolon semicolon
+7:36
+space
+7:37
+this will return an array we'll store
+7:39
+that within const c
+7:42
+array
+7:43
+cookie array
+7:44
+let's display cookie array
+7:47
+console.log cookie array each of those
+7:50
+name value pairs is now within separate
+7:52
+elements what we're going to do is for
+7:54
+each element we'll check to see if
+7:56
+there's a match between each of these
+7:58
+element names and the name that we're
+8:00
+looking for let's take our cookie array
+8:02
+c array
+8:04
+and use the for
+8:05
+each method
+8:07
+i'll use an arrow function expression
+8:09
+there is one parameter element arrow
+8:12
+what would we like to do for each
+8:14
+element
+8:15
+i'll use an if statement
+8:17
+let's check to see if
+8:19
+our element
+8:20
+at index of
+8:23
+the name that we're looking for is equal
+8:26
+to zero say that we're looking for last
+8:29
+name we'll iterate over each element of
+8:31
+our array and see if there's a match we
+8:34
+check the first element these don't
+8:36
+match but this one does if there's a
+8:38
+match then let's return the result
+8:41
+results
+8:42
+equals
+8:43
+and we'll create a substring
+8:45
+element dot substring
+8:50
+name dot length plus one the length of
+8:54
+the name plus one will create a
+8:56
+substring and return this text so let's
+8:59
+declare
+9:00
+let result
+9:02
+at the end
+9:04
+return
+9:05
+result
+9:06
+actually i'm going to set result to null
+9:09
+okay let's see if this works
+9:11
+so we have two cookies
+9:13
+and i'm going to console.log
+9:16
+getcookie pass in my first name
+9:19
+and that first name is spongebob
+9:23
+let's get last name
+9:25
+last name
+9:26
+spongebob and squarepants okay yeah
+9:29
+that's how to set delete and get cookies
+9:32
+let's take this a step further let's
+9:34
+create some text fields a submit button
+9:36
+and a get cookies button heading to our
+9:38
+html file let's create some text fields
+9:41
+and some labels
+9:43
+label
+9:44
+for
+9:46
+equals
+9:47
+first text
+9:51
+first
+9:52
+name colon
+9:54
+close the label
+9:57
+input
+9:58
+id equals first text
+10:02
+i'll add a line break
+10:05
+let's do the same thing with last name
+10:09
+last text
+10:11
+last name
+10:13
+id is last text
+10:17
+i'll create a submit button
+10:19
+button id equals
+10:22
+submit
+10:23
+now let's name this btn for short submit
+10:26
+button
+10:28
+text will be
+10:31
+submit
+10:34
+then a get cookies button
+10:38
+cookies btn for button
+10:40
+the text will be
+10:42
+get
+10:43
+cookies
+10:46
+okay heading back to our javascript file
+10:49
+let's select these elements
+10:51
+const
+10:52
+first text
+10:54
+equals document
+10:56
+dot
+10:58
+query
+10:58
+selector
+11:00
+we're selecting the id of first text
+11:08
+let's do the same thing with last text
+11:17
+our submit button
+11:19
+submit button
+11:26
+then cookie button
+11:29
+cookie
+11:30
+button
+11:35
+i'm going to add an event listener to
+11:37
+our submit button
+11:38
+submit button dot add
+11:41
+event
+11:42
+listener
+11:45
+the event attribute will be click
+11:48
+when we click we're going to perform an
+11:51
+arrow function expression
+11:53
+we will set the cookies according to
+11:55
+what these values are within these text
+11:57
+boxes we will invoke the set cookie
+12:00
+function
+12:02
+the name will be first name
+12:05
+the value will be whatever's within our
+12:08
+text boxes
+12:09
+first text
+12:11
+dot value
+12:13
+and days to live i'll set this to be a
+12:15
+year
+12:16
+365 days
+12:18
+let's do the same thing with our last
+12:21
+name
+12:22
+set cookie last name
+12:26
+last text.value
+12:28
+let's add an event listener to our
+12:29
+cookie button that will populate the
+12:32
+fields that function will search for any
+12:34
+cookies and return a value okay we have
+12:36
+cookie button add event listener
+12:39
+click
+12:43
+first text
+12:44
+dot value
+12:46
+equals
+12:47
+get
+12:49
+cookie
+12:51
+then the name of the cookie first name
+12:55
+do the same thing with last text
+12:57
+last text value gut cookie
+13:01
+last name
+13:07
+whoops looks like i misspelt this id
+13:10
+cookie button now before we run this i'm
+13:11
+just going to delete our cookies
+13:15
+delete cookie
+13:17
+first
+13:18
+name delete cookie last name
+13:25
+then save and run it
+13:27
+so when i press get cookies well we
+13:29
+don't have any first name or last name
+13:31
+cookies there's nothing to populate
+13:33
+these text fields so i'm going to type
+13:35
+in a first name and a last name
+13:37
+spongebob
+13:40
+squarepants
+13:42
+press submit
+13:43
+this first name and last name are stored
+13:45
+as cookies now so i'm going to refresh
+13:47
+this page press that get cookies button
+13:50
+again that will populate these text
+13:52
+fields with the cookies i have so yeah
+13:54
+everybody that's an introduction to
+13:56
+cookies they're small text files stored
+13:58
+on your computer they're used to
+14:00
+remember information about the user and
+14:02
+they're saved in name value pairs if you
+14:04
+would like a copy of all this code i
+14:06
+know there's a lot here i'll post all of
+14:08
+this in the comments section down below
+14:10
+and well yeah that's an introduction to
+14:12
+cookies using javascript

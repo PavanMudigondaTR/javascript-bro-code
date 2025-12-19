@@ -1,0 +1,334 @@
+current date
+0:00
+what's up everybody so in today's video
+0:02
+I'm going to explain date objects in
+0:04
+JavaScript date objects are objects that
+0:07
+contain values that represent dates and
+0:09
+times these date objects can be changed
+0:12
+and formatted to suit our needs here's
+0:14
+an example we will create a date object
+0:17
+that contains the current date and time
+0:20
+to do so let's create a constant named
+0:22
+date date will be an object we will call
+0:25
+the date Constructor with the new
+0:27
+keyword date then C in no arguments for
+0:31
+the current date and time so I'm going
+0:33
+to
+0:35
+console.log my date object which gives
+0:38
+me my current date and time as of right
+0:41
+now I'm filming this video on a Thursday
+0:43
+November 9th the year 2023 at about 7:
+0:47
+in the morning so depending on when
+0:49
+you're watching this video the date and
+0:51
+time is going to be different if you
+datetime arguments
+0:53
+would like to create your own custom
+0:54
+date and time object you'll have to pass
+0:56
+in some arguments you can follow this
+0:58
+order for the date Constructor
+1:00
+the first argument corresponds to a year
+1:03
+then month day hour minute second and
+1:06
+milliseconds even so for the year let's
+1:08
+say
+1:09
+2024 the month zero corresponds to
+1:13
+January one is February then that means
+1:16
+a month of 11 is December let's say
+1:19
+January so that will be zero for the day
+1:22
+one for the 1 for the hour uh 2 2 in the
+1:26
+morning this isn't military time by the
+1:28
+way for the minute 3 minutes after the
+1:30
+hour for the seconds 4 seconds after the
+1:34
+minute we can even add milliseconds if
+1:36
+we would like so for the milliseconds
+1:38
+let's say five and here's my new date
+1:41
+object Monday January 1st 2024 about 2:
+1:45
+in the morning passing in a string
+datetime strings
+1:48
+representation of time to the date
+1:49
+Constructor is also valid let's say the
+1:52
+year is
+1:53
+2024 January 2nd for the time you're
+1:56
+going to type t for
+1:58
+time 12 12 noon then add Z for UTC time
+2:04
+and there's my new date again Tuesday
+2:06
+January 2nd 2024 6:00 in the morning
+milliseconds since epoch
+2:10
+another format you can use is within the
+2:12
+date Constructor pass in a given amount
+2:14
+of time in Mill seconds since epic if I
+2:17
+could describe epic I would describe it
+2:19
+as when the date your computer thinks
+2:21
+time began if you were to pass in zero
+2:23
+to the date Constructor you'll be given
+2:26
+a date and time around December 31st 196
+2:29
+9 So within the DAT Constructor you can
+2:32
+pass in a given amount of milliseconds
+2:35
+since this date so if I was to pass in
+2:38
+1.7 billion
+2:45
+milliseconds what I'm telling the day
+2:47
+Constructor is give me the date and time
+2:50
+that's 1.7 billion milliseconds since
+2:53
+that epic date when I pass in 1.7
+2:57
+billion milliseconds the date that I'm
+2:59
+given is Tuesday November 14th 2023
+3:03
+about 400 p.m. passing in milliseconds
+3:05
+would be good for some sort of timer now
+get methods
+3:08
+let's use the current date and time I
+3:10
+will pass in no arguments you can
+3:12
+extract individual values from a date
+3:14
+object I would like the year const year
+3:18
+equals take our date object I will use
+3:21
+the get full year method to get the year
+3:25
+then I will
+3:28
+console.log the year and this will be a
+3:30
+number
+3:32
+2023 let's get the
+3:35
+month const month equals our date object
+3:40
+use the built-in get month method then I
+3:44
+will
+3:45
+console.log the
+3:47
+month currently for me it's November not
+3:50
+October so remember January is zero
+3:53
+December is 11 let's get the day const
+3:59
+day equals date get date not day if you
+4:04
+get the day that will give you the day
+4:06
+of the week like Sunday Monday Tuesday
+4:08
+that sort of thing let's
+4:11
+console.log the
+4:13
+day so for me it's the
+4:15
+9th let's get the hour const hour equals
+4:21
+date get hours
+4:24
+plural
+4:26
+console.log the
+4:28
+hour for me at 7:00 in the
+4:31
+morning let's get
+4:33
+minutes const minutes equals get
+4:40
+minutes console.log the
+4:44
+minutes it is 7:45 in the
+4:48
+morning get
+4:53
+seconds get
+4:58
+seconds
+5:00
+console.log the
+5:02
+seconds so
+5:04
+745 21 seconds after the minute now if
+5:08
+you need the day of the week here's what
+5:10
+you can do const day of week equals date
+5:16
+get day that will give you the day of
+5:19
+the
+5:20
+week
+5:22
+console.log day of week for me that is
+5:25
+for Sunday is zero Monday is one so that
+5:29
+means it is Thursday now with a date
+set methods
+5:32
+object you can even set the date with a
+5:34
+method let's
+5:37
+console.log the
+5:41
+date I'm going to set the Year date set
+5:46
+full year I will set the year to be
+5:50
+2024 yep Saturday November 9th
+5:53
+2024 let's set the
+5:56
+month set month
+6:00
+I will set the month to be January so I
+6:02
+will pass in zero Tuesday January 9th
+6:07
+let's set the
+6:09
+day that would be with set date not day
+6:13
+I will set it to be the 1 January
+6:17
+1 the hours with set
+6:20
+hours let's go with two for 2: in the
+6:24
+morning set
+6:27
+minutes 3 minutes P the
+6:31
+hour set
+6:35
+seconds 4 seconds past the minute you
+compare datetime
+6:39
+can even compare dates as well let's
+6:42
+create two date objects const date one
+6:45
+equals a new date I'll pass in a string
+6:48
+representation of a date we won't
+6:50
+include the time though for the year
+6:52
+let's say
+6:54
+2023 December that would be 12 31st New
+6:58
+Year's Eve basically
+7:00
+and for date
+7:02
+2 let's say date 2 is New Year's Day
+7:06
+2024 January
+7:10
+1st using an if statement let's compare
+7:13
+to see if date 2 is greater than date
+7:19
+1 if it is then let's
+7:23
+console.log happy New
+7:26
+Year so date 2 is greater than date 1
+7:30
+will print happy New Year let's change
+7:33
+date two to be
+7:35
+2023 December
+7:38
+30th well nothing happens then but
+7:41
+that's to be
+7:42
+expected all right everybody so those
+conclusion
+7:44
+are date objects they're objects that
+7:47
+contain values that represent dates and
+7:49
+times these date objects can be changed
+7:51
+and formatted to suit our needs and well
+7:54
+everybody those are date objects in
+7:58
+JavaScript

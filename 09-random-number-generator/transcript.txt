@@ -1,0 +1,391 @@
+Math.random()
+0:00
+hey what's going on everybody so in
+0:01
+today's video we're going to create a
+0:03
+random number generator but first I need
+0:05
+to explain how to create a random number
+0:07
+in JavaScript let's store a random
+0:09
+number within a variable which we will
+0:11
+name random num
+0:14
+to create a random number in JavaScript
+0:16
+we can use the random method of math
+0:19
+math dot random method this will
+0:22
+generate a random number between 0 and
+0:25
+1. but it looks like we forgot to Output
+0:28
+our random number so let's do that with
+0:31
+console.log
+0:32
+console.log randomnum this will generate
+0:35
+a random number between 0 and 1. it will
+0:38
+give us a number with a long decimal
+0:40
+portion most likely let's say we would
+0:43
+like to roll a six-sided dice I need a
+0:45
+random number between one and six not
+0:48
+including the decimal portion so the
+0:50
+first step is that we will multiply
+0:53
+math.random times six
+0:56
+what this will do is give us a random
+0:58
+number between 0 and 6 exclusive now I
+1:01
+don't want the decimal portion I would
+1:03
+like a whole integer we'll enclose this
+1:05
+equation with the floor method of math
+1:09
+dot floor then we will enclose our
+1:12
+equation
+1:14
+so now we have
+1:15
+oops it looks like I misspelled math it
+1:17
+should be Capital there so far a random
+1:20
+number is going to be between zero and
+1:22
+five so they're zero
+1:25
+and there's five
+1:28
+but I need one through six well we can
+1:30
+increase the minimum by adding plus one
+1:32
+or whatever you want the minimum to be
+1:34
+so now that should give us a random
+1:37
+number between one and six
+1:40
+there's six
+1:43
+and there's one
+1:44
+for a random number between 1 and 100 I
+1:47
+can set the maximum to be 100
+1:49
+math.random times one hundred plus one
+1:53
+so now the number is going to be between
+1:55
+1 and 100.
+1:57
+if you're looking for a random number
+1:59
+between a certain range let's say 50 and
+2:01
+100
+2:03
+well we're going to change our equation
+2:05
+just to make this easier to read I'm
+2:07
+going to set two constants const Min
+2:10
+what's the minimum let's say 50. and the
+2:13
+max const max will be 100.
+2:17
+let's replace 100 with our maximum and
+2:21
+one with our minimum there's one
+2:23
+additional change we need to make for
+2:25
+example our random number is 139
+2:29
+we're multiplying math.random times 100
+2:33
+our maximum then adding an additional 50
+2:36
+to it
+2:37
+so one change we're going to make is
+2:39
+that we will subtract our minimum from
+2:42
+our maximum then I will surround this
+2:44
+portion of our equation with the set of
+2:46
+parentheses just to force operator
+2:47
+precedence now the random number should
+2:50
+be between 50 and 100 so depending on
+2:53
+the range of numbers you're looking for
+2:54
+you can change the minimum and the
+2:56
+maximum all right now with that out of
+random number generator
+2:58
+the way let's create our random number
+3:00
+generator
+3:01
+let's go to our HTML file I will create
+3:04
+a button
+3:07
+the ID will be my button the text on the
+3:11
+button will be roll we will roll a
+3:14
+six-sided dice
+3:15
+within our CSS style sheet
+3:18
+I will set the text of the body of our
+3:21
+document
+3:22
+the font family I will set to be verdana
+3:26
+because I like that font
+3:29
+to Center align everything to make this
+3:31
+easy I will set text aligned Center
+3:35
+all right we're getting somewhere
+3:37
+let's work on the button I will select
+3:39
+the ID of my button
+3:42
+I will change the font size of the
+3:44
+button to be 3 em meaning 300 percent
+3:48
+I'll add a little bit of padding within
+3:50
+our button 5 pixels by 25 pixels
+3:54
+and I will set the Border radius to be 5
+3:59
+pixels
+4:01
+just to smooth the corners
+4:03
+we're also going to need a label so
+4:05
+let's go back to our HTML file
+4:07
+I will add a label
+4:10
+with an ID of my label
+4:15
+within our CSS style sheet I will select
+4:18
+the ID of my label then change the font
+4:22
+size to be 3 em
+4:24
+so be sure to save your CSS file
+4:27
+save your HTML file
+4:30
+then within our JavaScript file
+4:33
+we will need to get our button and the
+4:35
+label we'll store those within some
+4:37
+constants
+4:39
+const my button equals document dot get
+4:44
+element by ID the ID of the element
+4:48
+we're getting is my button
+4:54
+then we will need to get my label
+4:57
+my
+4:59
+label the ID is my label
+5:04
+let's set a minimum
+5:06
+const Min equals I'll set that to be one
+5:10
+as if we're rolling a six-sided dice
+5:12
+const Max equals six
+5:16
+then let random num will declare a
+5:20
+random number variable but not assign it
+5:22
+quite yet
+5:23
+okay when we click on the button
+5:26
+we'll execute a function
+5:27
+we will take my button
+5:30
+with the on click attribute I will set
+5:33
+the SQL to a function what's the
+5:36
+function going to do it's going to roll
+5:38
+a random number
+5:39
+random num equals math dot random times
+5:45
+our maximum
+5:49
+we'll enclose this equation with
+5:51
+math.floor to round it math dot floor
+5:56
+then add our minimum
+5:59
+then we will change the text content of
+6:02
+my label to display it my label dot text
+6:06
+content equals our randomnum
+6:10
+when we click on the button it should
+6:12
+roll a random number
+6:14
+uh what are we missing not a number
+6:17
+oh okay it looks like I made a mistake I
+6:19
+forgot to add a set of parentheses after
+6:21
+random
+6:22
+there we go
+6:24
+I'm going to put the number on a new
+6:25
+line so within our HTML file I'm just
+6:27
+going to add a Break Tag
+6:30
+there we go let's save everything roll
+6:32
+again so I rolled a six three one two
+6:35
+five three
+multiple random numbers
+6:37
+let's say we would like to roll three
+6:39
+dice not just one we'll make a few
+6:41
+changes
+6:43
+I will replace my label with label one
+6:46
+for the ID
+6:48
+then I'm going to add a break after okay
+6:51
+let's copy our label paste it two times
+6:54
+we'll need labels two and three
+6:58
+I'll also give these labels a class of
+7:01
+my labels
+7:04
+we can apply CSS styling to an entire
+7:06
+class to make it easy
+7:08
+all right within our CSS style sheet
+7:11
+let's replace the ID of my label with
+7:13
+the class of my labels
+7:18
+be sure to save all of your files
+7:20
+than within our Javascript file let's
+7:24
+replace my label with label one
+7:27
+the ID is label one
+7:30
+copy this line of code
+7:32
+then we need labels two and three
+7:34
+label two
+7:36
+label three
+7:39
+let's rename randomnum as random num1
+7:44
+copy it paste it two times then we need
+7:47
+random number two random number three
+7:51
+within our function for our button
+7:53
+change random num to be random num1 copy
+7:56
+this line paste it two times
+7:59
+then we need random number two random
+8:01
+number three
+8:03
+we'll change the text content of my
+8:05
+label to be label one
+8:08
+equals random num1 copy this line paste
+8:12
+it two times change one to B2
+8:15
+then for the third line change one to be
+8:18
+three
+8:19
+what we'll do now is generate three
+8:21
+random numbers between one and six as if
+8:24
+we're rolling three dice
+8:25
+two three two three six one two two five
+8:29
+all right everybody that's how to create
+8:30
+a random number generator in JavaScript

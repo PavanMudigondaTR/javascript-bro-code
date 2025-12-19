@@ -1,0 +1,352 @@
+0:00
+hey everyone so today I'm going to
+0:01
+explain function expressions in
+0:03
+JavaScript a function expression is a
+0:05
+way to define functions as a value or a
+0:09
+variable not to be confused with
+0:11
+function declarations where you define a
+0:13
+block of reusable code that performs a
+0:15
+specific task we're already familiar
+0:17
+with function declarations such as this
+0:21
+function then you create a function name
+0:23
+such as hello in this example let's
+0:27
+console.log the word
+0:30
+hello with the function expression we
+0:32
+can assign a function to a variable or
+0:35
+pass it as a value to another function
+0:37
+so this time we're going to write a
+0:39
+function expression I will create a
+0:41
+constant named
+0:43
+hello equals a function parentheses
+0:47
+curly braces we'll do the same thing we
+0:50
+will console.log hello and if I were to
+0:54
+run this the identifier hello has
+0:56
+already been declared so for now I'm
+0:58
+just going to remove this function
+1:00
+declaration all we're doing is assigning
+1:02
+a function to a variable to use the
+1:04
+function that's stored within we have to
+1:06
+take our variable name and add a set of
+1:08
+parentheses to invoke it kind of like
+1:10
+it's a pair of telephones talking to
+1:12
+each other hello using JavaScript we
+1:15
+also have the capability of passing a
+1:17
+function as a value I will introduce the
+1:21
+set timeout function there's going to be
+1:25
+two parameters a call back to a function
+1:29
+and an of time we're going to wait then
+1:31
+execute this function this will be in
+1:34
+milliseconds 3,000 milliseconds
+1:36
+translates to 3 seconds let me put this
+1:39
+function back after 3,000 milliseconds I
+1:43
+will execute the hello
+1:45
+function 1 2 3 hello instead of using a
+1:51
+function declaration we are going to
+1:53
+pass a function expression as an
+1:55
+argument to the set timeout function
+1:57
+instead of a call back we will create a
+1:59
+fun function we will pass an entire
+2:02
+function as an argument what are we
+2:04
+going to do we will after 3 seconds
+2:08
+console.log the word hello and let's see
+2:12
+if this works just to prove that I'm not
+2:14
+a
+2:15
+liar 1 2 3 hello in JavaScript it is
+2:21
+legal to pass an entire function as an
+2:23
+argument or treat it as a value we'll
+2:27
+use previous examples of the map filter
+2:29
+anded methods of arrays I will create an
+2:32
+array const
+2:35
+numbers equals the numbers 1 through six
+2:38
+1 2 3 4 5
+2:41
+6 I would like to square each of these
+2:44
+numbers what we've done in a previous
+2:46
+lesson is declare a function function
+2:50
+Square we had one parameter in that
+2:52
+example we had an
+2:54
+element what we did is we
+2:57
+returned math. poop
+3:00
+to raise a base to a given power we're
+3:03
+raising our element to the power of two
+3:06
+the map method will return a new
+3:09
+array const squares
+3:13
+equals
+3:15
+numbers map we're passing in a
+3:18
+callback to
+3:20
+square then
+3:23
+console. log
+3:26
+squares this works we are using a
+3:29
+function
+3:30
+declaration but this time we will now
+3:32
+use a function
+3:34
+expression we will treat this function
+3:36
+as a value let's cut this
+3:39
+function replace the call
+3:42
+back then paste it within the map method
+3:45
+then we just need to remove the name we
+3:47
+don't need a name and this is still
+3:49
+going to
+3:51
+work yeah it still does we don't
+3:54
+necessarily need to think of a function
+3:56
+name one of the benefits of doing this
+3:58
+is that we're not polluting the global
+3:59
+name space with function names we're
+4:01
+only going to be using this function
+4:03
+once there's no need to declare a
+4:04
+function let's create a function
+4:06
+expression to cube these numbers now as
+4:09
+a beginner it might be helpful to write
+4:10
+out your functions as a declaration
+4:12
+first then transform it into a function
+4:15
+expression function
+4:18
+Cube we have our element as a
+4:21
+parameter I'm going to copy this return
+4:25
+math.pow element to the power of three
+4:29
+we will create a new array const cubes
+4:34
+equals
+4:36
+numbers. map we don't need to pass in a
+4:39
+call back we will cut this entire
+4:42
+function paste it within the map method
+4:45
+then we don't need the
+4:46
+name then console.log cubes there are
+4:50
+all the original numbers cubed all right
+4:53
+I think we're starting to get the hang
+4:54
+of this let's quickly use the filter
+4:56
+method to filter out any even or odd
+4:59
+numbers
+5:00
+I will create const even nums equals
+5:04
+take our array numbers we will use the
+5:07
+filter
+5:08
+method then we will pass a function
+5:11
+expression as an
+5:13
+argument there's one parameter an
+5:17
+element we are going to
+5:19
+return element modulus 2 to see if it's
+5:23
+divisible by
+5:24
+0 is the result strictly equal to 0o let
+5:29
+let's see if this works console.log even
+5:32
+nums there they are we have 2
+5:35
+46 let's do this with odd
+5:38
+numbers odd nums use the filter method
+5:42
+again all we're going to change is
+5:45
+strictly not equal to
+5:47
+zero return any odd
+5:49
+numbers
+5:51
+135 then lastly reduce we will sum all
+5:54
+of the elements of this
+5:58
+array con
+6:00
+total equals our
+6:03
+numbers do
+6:06
+reduce passing a function
+6:10
+expression we have two parameters an
+6:14
+accumulator and an
+6:16
+element we will
+6:18
+return
+6:20
+accumulator plus our
+6:23
+element return the
+6:25
+total which is
+6:27
+21 we already do have some practice with
+6:30
+map filter and reduce instead of using
+6:33
+function declarations then passing a
+6:34
+call back we can pass an entire function
+6:37
+expression as an argument to these
+6:39
+methods in the next topic I'll discuss
+6:41
+Arrow functions which shortens the
+6:43
+syntax even further you'll like Arrow
+6:45
+functions all right everybody so those
+6:47
+are function Expressions they are a way
+6:50
+to define functions as a value or a
+6:52
+variable we've both defined a function
+6:55
+expression as a variable we stored that
+6:57
+within this hello variable we've also
+6:59
+also passed entire functions as an
+7:01
+argument which you can do with
+7:02
+JavaScript there's a few benefits of
+7:04
+function Expressions one of which is you
+7:06
+don't need to keep on thinking of
+7:08
+function names you can perform a
+7:09
+function once then just forget about it
+7:11
+they're also used in callbacks and
+7:14
+asynchronous operations higher order
+7:16
+functions closures and event listeners
+7:18
+these are topics we still need to
+7:20
+discuss but we will be using function
+7:22
+Expressions a lot don't worry we will
+7:24
+have more practice and well everybody
+7:26
+those are function expressions in
+7:28
+JavaScript

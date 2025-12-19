@@ -1,0 +1,278 @@
+0:00
+hey everybody in today's video I got to
+0:01
+introduce to you the wonderful world of
+0:03
+callback hell callback hell is a
+0:06
+situation in JavaScript where callbacks
+0:08
+are nested within other callbacks to the
+0:11
+degree where the code is difficult to
+0:13
+read if you Nest too many callbacks
+0:15
+within other callbacks your code starts
+0:17
+to form a pyramid and it's really
+0:19
+difficult to work with callback hell is
+0:21
+an old pattern to handle asynchronous
+0:23
+functions in JavaScript nowadays we have
+0:25
+promises as well as a sync and a wait to
+0:27
+avoid callback hell which we'll discuss
+0:29
+pretty soon to help us avoid callback
+0:31
+hell we should be familiar with what it
+0:33
+is I'm going to create four tasks these
+0:36
+will be functions function task
+0:40
+one these will be synchronous functions
+0:43
+we don't need to use callbacks for
+0:44
+synchronous functions then we'll change
+0:46
+these to be asyrus functions within task
+0:49
+one we will
+0:51
+console.log task one
+0:53
+complete okay let's copy task one paste
+0:56
+it three times for a total of four
+0:58
+tasks we'll have task
+1:02
+two task three and task
+1:06
+four in order from the top down we will
+1:09
+execute task one followed by task
+1:13
+two task
+1:16
+three and task four when all four tasks
+1:20
+are complete we will
+1:24
+console.log all tasks
+1:27
+complete these functions work
+1:29
+synchronously they're all in order task
+1:31
+one is complete then two three then four
+1:35
+then we get the final message of all
+1:36
+tasks complete but what if these were
+1:38
+asynchronous functions they're not going
+1:40
+to follow this order from the top down
+1:42
+so to make these functions asynchronous
+1:44
+one thing we could do we can enclose
+1:46
+this code within the set timeout
+1:48
+function set
+1:50
+timeout set timeout takes two arguments
+1:54
+a call back and a time in milliseconds
+1:56
+in which to complete this code for the
+1:58
+call back this could be a call back an
+2:00
+anonymous function or an arrow function
+2:02
+I'll write an arrow function parameters
+2:05
+Arrow do
+2:06
+this say the task is complete after
+2:11
+2,000 milliseconds let's do this with
+2:13
+the other tasks
+2:17
+too so task two will be complete after 1
+2:21
+second 1,000
+2:23
+milliseconds task three will be complete
+2:26
+after 3,000
+2:28
+milliseconds now task 4 4 task 4 will be
+2:31
+complete after
+2:33
+1,500 milliseconds okay let's try this
+2:36
+again I need these tasks to be completed
+2:39
+in order starting from one all the way
+2:41
+to
+2:42
+four it says that the tasks are already
+2:45
+complete then the tasks are completed in
+2:47
+this order task 2 task 4 task one and
+2:50
+task three so that's the problem with
+2:52
+asynchronous code asynchronous functions
+2:55
+can complete at any time the rest of our
+2:57
+program doesn't wait around for them to
+2:59
+finish if I absolutely need these tasks
+3:02
+to complete an order starting with 1
+3:04
+then 2 3 4 each of these functions can
+3:07
+accept a call back so we need to set up
+3:09
+that
+3:10
+parameter after we say that that task is
+3:13
+complete we will execute the call back
+3:15
+to the next function so let's do this
+3:17
+with the rest of the
+3:28
+tasks
+3:34
+if we need these tasks to complete an
+3:36
+order starting with one we would take
+3:38
+one and there's one parameter a call
+3:41
+back we'll pass in a call back to task
+3:43
+two we can pass in a call back in a
+3:45
+nonos function or an arrow function I
+3:47
+like Arrow functions though parameters
+3:50
+Arrow do this what are we going to do
+3:53
+when task one is complete we'll call
+3:55
+task two task two also accepts a call
+3:58
+back again again this can be a callback
+4:00
+an anonymous function or an arrow
+4:02
+function this will be an arrow function
+4:05
+parameters Arrow do this what do we want
+4:07
+to do when task two is complete call
+4:10
+task three task three also accepts a
+4:12
+call back we'll use an arrow function
+4:15
+parameters Arrow do this now when task
+4:18
+three is complete guess what we're going
+4:19
+to do call task
+4:22
+four task four task four accepts a call
+4:25
+back we'll do this parameters Arrow then
+4:29
+I would like to
+4:31
+console.log all tasks complete all tasks
+4:37
+complete this should work
+4:41
+now task one complete task two
+4:44
+complete task three complete task four
+4:47
+complete all tasks complete so what
+4:50
+we've done is use callback hell it's
+4:52
+where you're nesting callbacks inside of
+4:54
+other callbacks if you have a lot of
+4:56
+tasks to complete an order it can become
+4:58
+very unmanageable
+5:00
+hey this is bro from the future one
+5:02
+thing that I wanted to mention is that
+5:04
+four levels of callbacks isn't too
+5:06
+unreasonable but when you add additional
+5:08
+levels on top of that that's when you're
+5:10
+starting to approach the levels of
+5:11
+callback hell where the code can become
+5:13
+unmanageable and really difficult to
+5:15
+read what I've written in this video
+5:17
+isn't too unreasonable but hopefully you
+5:19
+can see how we've come to start that
+5:20
+pyramid pattern that is all all right
+5:23
+everybody so that is callback hell it's
+5:25
+a situation in JavaScript where
+5:27
+callbacks are nested within other
+5:28
+callbacks where the code is difficult to
+5:30
+read it's an old pattern to handle
+5:32
+asynchronous functions in some upcoming
+5:35
+videos we'll be discussing promises as
+5:37
+well as a sync and a wait to avoid
+5:38
+callback hell and well everybody that is
+5:41
+callback hell and why you should avoid
+5:42
+it in
+5:47
+JavaScript
