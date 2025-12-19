@@ -26,8 +26,8 @@ Learn about constants in JavaScript - variables that cannot be changed once assi
 
 ```javascript
 // Using let (can be changed)
-let pi = 3.14159;
-pi = 420.69;  // This works but is wrong!
+let PI = 3.14159;
+PI = 420.69;  // This works but is wrong!
 
 // Using const (cannot be changed)
 const PI = 3.14159;
@@ -36,36 +36,45 @@ PI = 420.69;  // TypeError: Assignment to constant variable
 
 ### Circle Circumference Calculator
 
-```javascript
-// Define constants
-const PI = 3.14159;
-
-// Get user input
-let radius = window.prompt("Enter the radius of a circle:");
-radius = Number(radius);
-
-// Calculate circumference
-let circumference = 2 * PI * radius;
-
-console.log(`Circumference: ${circumference}`);
+**HTML:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="myH1">Enter the radius of the circle</h1>
+    <label for="radiusInput">Radius:</label>
+    <input type="text" id="radiusInput">
+    <button type="button" id="submitButton">Submit</button>
+    <h4 id="myH3">Circumference: </h4>
+    <script src="index.js"></script>
+</body>
+</html>
 ```
 
-### Complete Working Example
-
+**JavaScript:**
 ```javascript
-const PI = 3.14159;
-let radius;
 let circumference;
+let PI = 3.14159;
 
-// Get radius from user
-radius = window.prompt("Enter the radius of a circle:");
-radius = Number(radius);
-
-// Calculate circumference (2 * π * r)
-circumference = 2 * PI * radius;
-
-console.log(`The circumference is: ${circumference}`);
+document.getElementById("submitButton").onclick = function() {
+    radius = document.getElementById("radiusInput").value;
+    console.log(`radius: ${radius}`);
+    
+    radius = Number(radius);  // Convert to number
+    circumference = 2 * PI * radius;
+    
+    console.log(`circumference: ${circumference}`);
+    document.getElementById("myH3").textContent = "Circumference: " + circumference + "cm";
+}
 ```
+
+**Note:** In this example, PI should be declared as `const PI = 3.14159` to prevent accidental changes!
 
 ## 📋 Naming Conventions
 
@@ -97,18 +106,50 @@ const DAYS_IN_WEEK = 7;
 ### 2. **Self-Documenting Code**
 ```javascript
 // ❌ Hard to understand
-let x = price * 0.07;
+let radius = 5;
+let result = 2 * 3.14159 * radius;
 
 // ✅ Clear and readable
-const TAX_RATE = 0.07;
-let tax = price * TAX_RATE;
+const PI = 3.14159;
+let radius = 5;
+let circumference = 2 * PI * radius;
 ```
 
-### 3. **Security**
+### 3. **The Problem with Using let**
 ```javascript
-// Prevents malicious code from changing critical values
-const API_KEY = "abc123xyz";
-const MAX_LOGIN_ATTEMPTS = 3;
+// Current implementation (not ideal)
+let PI = 3.14159;
+let circumference;
+let radius;
+
+document.getElementById("submitButton").onclick = function() {
+    radius = document.getElementById("radiusInput").value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById("myH3").textContent = "Circumference: " + circumference + "cm";
+}
+
+// Problem: PI can be accidentally changed!
+PI = 100;  // No error, but mathematically wrong!
+```
+
+// ✅ Good naming
+const PI = 3.14159;
+```
+
+### 3. **Using let Instead of const for Fixed Values**
+```javascript
+// ❌ Current example uses let (can be changed)
+let PI = 3.14159;
+PI = 100;  // Oops! No error, but wrong
+
+// ✅ Should use const (cannot be changed)
+const PI = 3.14159;
+// PI = 100;  // TypeError: Assignment to constant variabl PI * radius;
+    document.getElementById("myH3").textContent = "Circumference: " + circumference + "cm";
+}
+
+// PI = 100;  // TypeError: Assignment to constant variable
 ```
 
 ## 🚨 Common Mistakes
@@ -146,17 +187,46 @@ age = 26;  // Works fine
 | Block scoped | ✅ Yes | ✅ Yes |
 | Best for | Changing values | Fixed values |
 
-## 📋 Practice Exercises
+## 📋 Practice EFix the Example Code
+Update the current code to use `const` for PI instead of `let`:
+```javascript
+// Change this:
+let PI = 3.14159;
 
-### Exercise 1: Temperature Converter
-Create a program that converts Fahrenheit to Celsius using the conversion formula as a constant.
+// To this:
+const PI = 3.14159;
+```
 
 ### Exercise 2: Area Calculator
 Calculate the area of a circle using PI as a constant. Formula: π * r²
+```javascript
+const PI = 3.14159;
+let radius;
+let area;
 
-### Exercise 3: Sales Tax Calculator
+document.getElementById("submitButton").onclick = function() {
+    radius = document.getElementById("radiusInput").value;
+    radius = Number(radius);
+    area = PI * radius * radius;  // or PI * radius ** 2
+    console.log(`Area: ${area}`);
+}
+```
+
+### Exercise 3: Multiple Mathematical Constants
+```javascript
+const PI = 3.14159;
+const E = 2.71828;  // Euler's number
+const GOLDEN_RATIO = 1.61803;
+```
+
+### Exercise 4: Sales Tax Calculator
 Calculate total price with tax using TAX_RATE as a constant.
-
+```javascript
+const TAX_RATE = 0.07;
+let price = 100;
+let total = price + (price * TAX_RATE);
+console.log(`Total with tax: $${total}`);
+```
 ### Exercise 4: Time Converter
 Convert hours to seconds using constants for MINUTES_PER_HOUR and SECONDS_PER_MINUTE.
 
