@@ -1,0 +1,727 @@
+HTML
+0:00
+hey what's going on everybody so in
+0:01
+today's video we're going to create a
+0:03
+compound interest calculator using
+0:05
+JavaScript HTML and CSS this will be
+0:08
+more of an exercise for beginners so why
+0:10
+don't you go ahead and sit back relax
+0:13
+and enjoy the show all right let's get
+0:15
+started everybody we will add all of our
+0:17
+HTML elements first followed by CSS
+0:19
+styling then add JavaScript
+0:21
+functionality at the end so within our
+0:23
+HTML file let's begin with an H1
+0:28
+heading my heading will will be
+0:31
+interest
+0:34
+calculator after this H1 element I will
+0:36
+create a form
+0:38
+element the form element will consist of
+0:41
+three labels and three input elements so
+0:44
+let's create a
+0:45
+label this label will be for the
+0:48
+principal amount how much are we
+0:51
+depositing initially or borrowing if
+0:54
+it's alone I think I spelled principal
+0:56
+right sometimes mix up principle with
+0:58
+principal then we will need an input
+1:01
+element to enter in a number I will set
+1:04
+the type equal to be
+1:08
+number the ID will be
+1:14
+principal with this label we will set
+1:16
+the four attribute to be
+1:19
+principal we're doing this so that if we
+1:22
+click on this label we'll select the
+1:23
+input element we should only be able to
+1:26
+enter in numbers we can't normally type
+1:28
+in any text
+1:30
+all right let's copy this label and this
+1:32
+input element paste it two additional
+1:35
+times the second label will have text of
+1:40
+interest
+1:42
+rate the four attribute will be rate the
+1:46
+ID will be
+1:49
+rate the third label will have text of
+1:52
+years after how many years has interest
+1:55
+accured the four attribute will be years
+1:59
+the ID will be
+2:03
+years then we'll add a
+2:05
+button we need a button
+2:08
+element the button will say
+2:12
+submit this button will have an onclick
+2:14
+attribute not on lick on
+2:18
+click equal to a JavaScript function
+2:22
+which we still need to declare we will
+2:24
+create a calculate function within
+2:26
+JavaScript we'll do that later though
+2:31
+at the bottom we'll display a total I
+2:34
+will use a paragraph element to do this
+2:36
+the IDE of this paragraph element will
+2:38
+be
+2:40
+total I will add the text of total
+2:44
+within this paragraph element after my
+2:46
+text of total I will include a span
+2:49
+element that has an ID of total Das
+2:53
+amount this will display a dollar amount
+2:56
+or some other unit of currency of you're
+2:57
+choosing for the time being I'll add a
+3:00
+placeholder of $0 and0 I'm using a span
+3:03
+element just because we're going to
+3:05
+style the dollar amount different from
+3:07
+the text of total all right that is all
+3:10
+the HTML elements we'll need let's head
+3:12
+to our CSS
+3:13
+stylesheet and I will Zoom back to 100%
+CSS
+3:17
+let's select the body of our document
+3:20
+pick a font
+3:21
+family I will pick a son serif font
+3:25
+aerial is pretty good I'll add a backup
+3:27
+of s serif in case we can't display aial
+3:30
+I will change the background color of
+3:32
+our page to be something light gray but
+3:37
+I like using hsl
+3:39
+values let's set the lightness to be
+3:42
+like
+3:43
+95% okay not bad the form itself will be
+3:47
+a different
+3:49
+color let's select our H1
+3:51
+element I will change the font
+3:55
+color pick a
+3:58
+color
+4:01
+I'll set the lightness to be 30% for the
+4:03
+H1
+4:06
+element I'll increase the font
+4:09
+size to be 3
+4:12
+em then text align
+4:17
+Center next I will select the form
+4:19
+element that contains all of our labels
+4:21
+and input
+4:23
+elements I will change the background
+4:27
+color to be white
+4:31
+I will set a Max width of 350
+4:37
+pixels margin Auto to center
+4:41
+it I'll add a little bit of padding 25
+4:46
+pixels add a border radius to smooth the
+4:50
+corners uh let's go with 10
+4:54
+pixels I'll add a box
+4:57
+shadow box- shadow
+5:00
+5 pixels by 5 pixels and a blur of 10
+5:06
+pixels I'm going to lower the alpha on
+5:09
+this box Shadow so to do that you can
+5:11
+select a
+5:13
+color let's use hsl and I'm just going
+5:16
+to lower the alpha to
+5:21
+30% Alpha is very similar to opacity for
+5:25
+the elements within our form I'm going
+5:27
+to use flex box to order them display
+5:31
+Flex I will set the flex direction to be
+5:34
+a
+5:38
+column then align item
+5:44
+Center let's style the labels next that
+5:48
+would be the text of principal amount
+5:49
+interest rate and
+5:51
+years we will select all labels increase
+5:55
+the font size 2
+5:58
+em and I will set the font weight to be
+6:03
+bold let's select the input elements
+6:08
+next
+6:10
+input set the width to be
+6:14
+50% text align
+6:19
+Center that will Center the numbers
+6:21
+within the input
+6:22
+elements I'll increase the font size to
+6:26
+2
+6:28
+em I'll add a
+6:32
+border two pixel
+6:36
+solid but I'll change the
+6:43
+color I'll set the lightness to
+6:47
+90% add a border radius to round the
+6:50
+corners 5
+6:54
+pixels add a little bit of margin to the
+6:58
+top five
+7:00
+pixels then margin bottom 15
+7:06
+pixels all right let's style our button
+7:09
+next we are selecting our
+7:13
+button I will change the background
+7:16
+color to something
+7:21
+green I'll set the lightness to
+7:26
+40% change the font color to be white
+7:31
+increase the font
+7:33
+size 1.5
+7:36
+em remove the
+7:38
+border border
+7:42
+none border radius to smooth the
+7:45
+corners 5
+7:48
+pixels add some
+7:50
+padding 10 pixels by 15
+7:55
+pixels then change our cursor to be be a
+7:59
+pointer if we hover over the
+8:01
+button using the hover pseudo class
+8:04
+let's change the background color when
+8:06
+we hover over the
+8:07
+button we are selecting the button then
+8:11
+select the hover Pudo
+8:13
+class we'll change the background color
+8:16
+to have a lightness that's 10% darker
+8:20
+I'm going to use
+8:21
+30% and that does appear to
+8:23
+work then we need to style the total and
+8:26
+the total amount so these have IDs
+8:30
+we will select the ID of
+8:34
+total #
+8:37
+total I will increase the font size and
+8:40
+that's it to be 2
+8:44
+em then with that span this has an ID of
+8:48
+total
+8:49
+amount select the ID of total amount I
+8:53
+will change the color to be
+8:55
+green color green but I'll pick
+8:59
+something more
+9:02
+specific I will set the lightness to be
+9:05
+like
+9:06
+35% and to make the font weight bold
+9:09
+font weight
+9:12
+bold all right that is not a bad looking
+9:16
+form but now we need to add some
+9:18
+functionality so let's do that so within
+JavaScript
+9:21
+our HTML file the button has an onclick
+9:24
+attribute set equal to this JavaScript
+9:27
+function but we haven't defined that
+9:29
+function yet so let's do that now we
+9:31
+will create a function named
+9:33
+calculate So within our Javascript file
+9:35
+we will create a function to
+9:38
+calculate at the top of this function we
+9:41
+will create some constants for these
+9:42
+input elements and the total amount
+9:46
+we'll have const total amount equals
+9:51
+document. getet element by
+9:55
+ID the ID that we're getting is
+9:59
+total Dash
+10:02
+amount okay let's copy this line paste
+10:06
+it we're going to get the ID of this
+10:08
+input element for the principal amount
+10:11
+that had an ID of
+10:15
+principal this constant will be named
+10:19
+principal
+10:20
+input let's get the interest
+10:23
+rate that had an ID of rate rate in
+10:30
+then
+10:33
+years the ID was
+10:37
+years this constant will be named years
+10:42
+input we're going to get the values
+10:44
+within each of these number text
+10:46
+boxes let principal for the principal
+10:51
+amount equals take our principal input
+10:56
+access its value then store it with the
+10:59
+in this variable so that we can work
+11:00
+with it let rate equals the rate inputs
+11:08
+value but we want this to be a
+11:10
+percentage we'll divide this value by
+11:12
+100 if somebody were to enter in like
+11:14
+two dividing it by 100 would give us 02
+11:18
+meaning
+11:20
+2% and then let years equals our year
+11:24
+input access the
+11:27
+value normally with these input elements
+11:30
+we can only type in numbers right now
+11:32
+I'm trying to type in some text but it's
+11:33
+not letting me there are ways to
+11:35
+circumvent this for example if I were to
+11:38
+rightclick go to
+11:42
+inspect within my form within this first
+11:45
+number input element this input has a
+11:47
+type in number but I can easily change
+11:49
+that to be
+11:51
+text and now I can type in some
+11:55
+text just as an extra precaution I'm
+11:58
+going to to enclose these values with a
+12:00
+number cast so we'll cast them to be
+12:12
+numbers here's the formula to calculate
+12:15
+interest we will have a const result
+12:19
+equals we will take our principal amount
+12:22
+that would be the initial amount use the
+12:25
+power method of
+12:27
+math this will be the base we'll need a
+12:30
+set of
+12:32
+parentheses 1 plus our rate /
+12:37
+1 to the power we'll need a
+12:40
+comma 1 times the amount of
+12:44
+years and that is the formula we'll
+12:47
+need so to test everything let's take
+12:50
+our constant of total amount change the
+12:54
+text
+12:56
+content to equal the
+13:00
+result if I were to deposit $1,000 in
+13:03
+the bank maybe the bank has an interest
+13:05
+rate of 1% after one
+13:08
+year oh that's strange all right one
+13:11
+thing we're going to add to our button
+13:13
+we're going to set the type attribute
+13:15
+equal to be
+13:17
+button and that should fix that okay so
+13:21
+we deposit $1,000 with an interest rate
+13:23
+of one 1% after one year we'll have 1,00
+13:29
+0 but we're going to format this
+13:32
+currency with our result we will use the
+13:34
+built-in to local string
+13:38
+method the first argument is going to be
+13:41
+a location a local depending which
+13:43
+geographic location a user is viewing
+13:45
+this page we format numbers differently
+13:48
+to use the user's default the first
+13:50
+argument will be
+13:52
+undefined the second argument is an
+13:55
+object of options we can set these style
+13:58
+property
+13:59
+and to make this more readable I'm going
+14:00
+to put this on a new line so we can see
+14:03
+it I will set the style to be
+14:08
+currency the next
+14:11
+property that will be the
+14:15
+currency pick a type of currency I'll
+14:18
+use USD for American dollars all right
+14:21
+let's try this again I will deposit
+14:25
+$1,000 with an interest rate of one
+14:27
+meaning 1% after one year I should have
+14:31
+$1,110 with an interest rate of two that
+14:34
+would give me
+14:35
+$20 after 2 years that would give me
+14:40
+$1,404 if I were set the principal
+14:42
+amount to be $10,000
+14:45
+$1 with a 2% interest rate after 2 years
+14:49
+that would give me
+14:51
+$1,454
+14:53
+Cents Only problem with this is that
+14:56
+what if somebody types A negative
+14:57
+numbers
+15:01
+we would like to prevent that or at
+15:03
+least add some sort of check so before
+15:05
+we calculate the result we'll add a few
+15:08
+if statements let's check to
+15:11
+see if if our
+15:14
+principle is less than
+15:18
+zero then we will set the principle to
+15:22
+equal
+15:24
+zero let's do this with the
+15:27
+rate if the rate is less than zero set
+15:30
+the rate equal to zero so we don't get
+15:31
+negative numbers then
+15:34
+years if years is less than zero set
+15:38
+years to equal zero so if I type in
+15:41
+negative numbers like negative $1,000
+15:43
+with a negative 1% interest rate after
+15:46
+-2 Years it'll at least give me zero
+15:49
+instead of some negative number what if
+15:51
+somebody circumvents our precaution
+15:53
+where we only accept numbers for example
+15:56
+I'm going to inspect
+16:00
+go to the type set that equal to be
+16:06
+text I will set the principal amount to
+16:09
+be pizza with a 10% interest rate after
+16:12
+10 years well we end up with not a
+16:15
+number so within our if statements let's
+16:19
+use the or logical
+16:20
+operator or if our principal is not a
+16:24
+number is not a number
+16:30
+we'll set it equal to zero or if rate is
+16:35
+not a
+16:37
+number set the rate equal to
+16:42
+zero or if years is not a
+16:46
+number set it equal to
+16:48
+zero set the principal amount to be a
+16:51
+word like pizza with a 10% interest rate
+16:54
+after 10 years we're at least given zero
+16:57
+instead of not a number even better yet
+17:00
+after submitting if a number is invalid
+17:03
+like the word Pizza let's reset that to
+17:06
+be zero when we're checking our
+17:08
+principle within this if statement let's
+17:11
+set the principal inputs value to equal
+17:15
+zero let's do this with the
+17:18
+rate the value of the rate input will
+17:22
+equal
+17:23
+zero and the same thing with
+17:26
+Years Years input access the value set
+17:30
+it equal to zero let's try this again
+17:33
+going to go to
+17:34
+inspect set the type to be
+17:39
+text I'll do this with rate and years as
+17:46
+well pizza pizza pizza
+17:52
+submit and what am I
+17:55
+missing I just realized I had a typo
+17:57
+here make make sure that the N in N an
+17:59
+is
+18:01
+capital even if I were to enter in some
+18:03
+text like the word
+18:06
+Pizza they'll all at least reset to be
+18:08
+zero and then we'll calculate what the
+18:10
+interest rate is as if they were all
+18:13
+zero instead of getting you know not a
+18:15
+number all right everybody so that was a
+18:18
+compound interest calculator that you
+18:20
+can write using HTML CSS and
+18:26
+JavaScript

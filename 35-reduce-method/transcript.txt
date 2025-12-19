@@ -1,0 +1,222 @@
+0:00
+What's going on everybody? So, in
+0:01
+today's video, I got to explain the
+0:03
+reduce method in JavaScript. The reduce
+0:06
+method reduces the elements of an array
+0:08
+to a single value. In this example,
+0:11
+we'll create an array of prices as if it
+0:13
+was a shopping cart. We'll sum all of
+0:16
+the prices within our shopping cart and
+0:18
+return a total. We'll need an array to
+0:20
+work with. const prices equals an array.
+0:24
+Think of some prices. Type in anything
+0:27
+as long as it's a number. I'll keep this
+0:29
+simple and use whole numbers. I'll add
+0:32
+something that is $5, another that is
+0:34
+30, 10, 25,
+0:37
+15, and 20. We will create a variable
+0:41
+for a total const total equals take our
+0:46
+array of prices. We will use the
+0:48
+built-in reduce method of arrays. But we
+0:51
+do need to pass in a call back to a
+0:53
+function.
+0:55
+We need to create a function that will
+0:56
+sum all of these values.
+0:59
+Let's create a function to sum.
+1:03
+Our sum function will have two
+1:05
+parameters. The first will be an
+1:07
+accumulator.
+1:09
+The second will be the next element.
+1:13
+All we're going to do is return our
+1:16
+accumulator
+1:17
+plus our element. I'll explain how this
+1:20
+works momentarily. I just want to be
+1:22
+sure that everything runs fine first.
+1:24
+Within the reduce method, we'll pass in
+1:26
+a call back to the sum function that
+1:28
+will return a single value, a total in
+1:31
+this case. Let's see what our total is.
+1:34
+console.log.
+1:36
+I'll use a template string. Pick a unit
+1:38
+of currency. I'll pick American dollars.
+1:41
+Add a placeholder. Let's display our
+1:44
+total. So, my total is $15.
+1:48
+If you would like to add cents to the
+1:50
+end of that, you can follow this with
+1:52
+the two fixed method. Then add two
+1:56
+decimal places for cents. All right. So,
+1:59
+how does this work exactly? We have two
+2:02
+parameters, accumulator and element. It
+2:05
+might be easier if I were to rename
+2:06
+these parameters. You can rename
+2:08
+parameters. Let's say accumulator is the
+2:12
+previous element.
+2:14
+Element is the next element. We're
+2:17
+returning the previous element plus the
+2:20
+next element. During the first
+2:22
+iteration, our accumulator is five. The
+2:25
+next element is 30.
+2:28
+Then we are going to return the
+2:30
+accumulator plus 30, which is 35. We'll
+2:35
+return this to the accumulator during
+2:37
+the next iteration. The accumulator is
+2:40
+now 35. The next element is 10.
+2:44
+35 + 10 would give us 45. Return that to
+2:49
+the accumulator and add the next element
+2:52
+25. So you just follow that pattern.
+2:59
+All right, let's go over another
+3:00
+example.
+3:02
+We'll create an array of grades. const
+3:05
+grades equals these will be some number
+3:08
+grades. 75 50 90 80 65 and 95. We'll
+3:17
+find the maximum value from this array.
+3:20
+We'll create a constant to hold the
+3:22
+maximum value. What is the maximum
+3:24
+score? const maximum equals take our
+3:28
+grades array. Use the built-in reduce
+3:30
+method. Then we need to pass in a call
+3:33
+back to the reduce method. We need a
+3:35
+function to get max.
+3:39
+There's two parameters, an accumulator
+3:43
+and the next element. Like I said, feel
+3:46
+free to rename them. We will return the
+3:49
+max method of math. Math domax. Pass in
+3:54
+these two parameters accumulator and the
+3:57
+next element.
+4:00
+Within the reduce method, we'll pass in
+4:02
+a call back to get max.
+4:05
+The value returned will be the maximum
+4:07
+grade from this array. So let's
+4:09
+console.log
+4:12
+whatever the maximum is. The maximum
+4:15
+score from this array is 95.
+4:19
+Let's do this with the minimum.
+4:21
+Let's copy this function. Change any
+4:24
+instance of max to min.
+4:27
+get min math domin.
+4:31
+Let's create a new constant. const
+4:34
+minimum equals our array of grades. Use
+4:38
+the reduce method to return a single
+4:41
+value. Then pass in a call back to get
+4:43
+min. Let's console.log
+4:48
+the minimum.
+4:51
+The minimum score from this array is 50.
+4:54
+All right, everybody. That is the reduce
+4:56
+method. It's a built-in method of arrays
+4:59
+to reduce the elements of an array to a
+5:01
+single value. You can use it to sum the
+5:04
+elements of an array. Another
+5:05
+possibility is to find the minimum or
+5:07
+maximum value from an array. And well
+5:10
+everybody, that is the reduce method in
+5:12
+JavaScript.

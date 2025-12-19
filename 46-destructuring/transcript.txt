@@ -1,0 +1,366 @@
+intro
+0:00
+hey what's good everybody so in today's
+0:02
+video I'm going to give you a lesson in
+0:03
+destructuring in JavaScript
+0:05
+destructuring allows us to extract
+0:08
+values from arrays and objects then
+0:10
+assign them to variables in a convenient
+0:12
+way we can use straight brackets to
+0:14
+perform array destructuring or curly
+0:17
+braces to perform object destructuring
+0:19
+I'll give you five different examples
+swap the values of two variables
+0:21
+example one swap the value of two
+0:24
+variables we'll have let a equal 1 let b
+0:29
+equal
+0:31
+to use array D structuring we need a set
+0:33
+of straight
+0:35
+brackets add the variables a comma B
+0:39
+this will equal we're creating a new
+0:41
+array on the right hand side B comma a
+0:45
+on the left hand side of our equals
+0:47
+we're using destructuring on the right
+0:49
+hand side we're creating an array let's
+0:51
+see what's within variables A and B
+0:54
+console.log variable a then variable
+0:58
+B so if these values are swapped we
+1:02
+should have two then one not one and two
+1:06
+that's example one we can use
+1:07
+destructuring to swap the value of two
+swap two elements in an array
+1:11
+variables example two we can swap two
+1:13
+elements in an array let's create an
+1:16
+array of
+1:17
+colors const colors equals an array pick
+1:22
+some colors I'll go with RGB so that
+1:25
+would be red
+1:28
+green blue
+1:30
+let's add black and
+1:34
+white suppose I would like to swap the
+1:37
+position of the first element and the
+1:39
+last element this first element has an
+1:41
+index of zero this particular last
+1:44
+element has an index of four again we're
+1:46
+going to use array to structuring we
+1:48
+need a set of straight brackets we'll
+1:50
+take our array colors at index of
+1:55
+zero comma array at index of four
+2:00
+we want to swap red with white 0 1 2 3 4
+2:04
+that's the fourth index equals we're
+2:08
+creating a new array by using Straight
+2:10
+brackets colors at index 4 comma colors
+2:15
+at
+2:16
+index0 then let's print our
+2:18
+array
+2:21
+console.log R array of
+2:24
+colors there we go we have white green
+2:27
+blue black red that's how we can use
+2:30
+destructuring to swap two elements in an
+2:33
+array example three we can assign array
+assign array elements to variables
+2:36
+elements to variables we'll declare a
+2:38
+bunch of variables const we'll use
+2:40
+destructuring we're destructuring an
+2:42
+array we need a set of straight brackets
+2:44
+we'll create some variable names first
+2:48
+color Second
+2:51
+Color third
+2:54
+color I will assign this equal to our
+2:58
+array colors
+3:01
+let's print these
+3:02
+variables
+3:04
+console.log our first color we have
+3:08
+red second
+3:10
+color
+3:12
+green third
+3:14
+color blue you could combine a radi
+3:18
+structuring with rest parameters we have
+3:21
+two colors left let's assign that to a
+3:23
+new array we'll use rest parameters I
+3:27
+will name this array EXT ra
+3:31
+colors then we will
+3:35
+console.log extra colors and that should
+3:38
+be a new array that has the remaining
+3:40
+colors black and white that's how to
+3:43
+assign array elements to variables using
+extract values from objects
+3:47
+destructuring example for extract values
+3:50
+from objects we'll create two people
+3:53
+objects const person
+3:57
+one person one will have a few
+3:59
+properties
+4:00
+first name will be
+4:04
+SpongeBob last name will be
+4:10
+SquarePants age will be 30 and a job
+4:14
+meaning
+4:15
+occupation not John
+4:18
+job his job is that he is a fry
+4:21
+cook all right let's copy person one
+4:24
+looks like that n should be capital in
+4:26
+last name all right let's copy person
+4:29
+one
+4:30
+paste it change person one to person two
+4:34
+the first name of person two will be
+4:36
+Patrick last name star age will be
+4:41
+34 person two is not going to have a job
+4:43
+property he's
+4:45
+unemployed using destructuring I can
+4:48
+extract values from these
+4:50
+objects we'll create a few variables
+4:53
+const we'll use object destructuring we
+4:55
+need a set of curly braces this time
+4:58
+we'll create these variables
+5:00
+first
+5:01
+name last name age and
+5:06
+job now this equals let's start with
+5:09
+person
+5:10
+one let's display these variables
+5:16
+console.log first name is
+5:22
+SpongeBob last name
+5:26
+SquarePants age 30
+5:31
+job fry cook let's do this with person
+5:36
+two Patrick Star his ages 34 person two
+5:40
+does not have a job property person one
+5:43
+does though our job variable is
+5:45
+undefined as you can see here you can
+5:48
+set default values when using
+5:50
+destructuring if somebody doesn't have a
+5:52
+job property we'll set job to equal
+5:58
+unemployed let's see if that works yep
+6:01
+Patrick Star age 34 his job is he's
+6:04
+unemployed that's how you can extract
+6:06
+values from objects values extracted can
+6:09
+even have default
+destructuring in function parameters
+6:11
+values all right last example we can
+6:13
+destructure in function parameters we
+6:16
+can pass an object to a function and
+6:19
+destructure it when it's passed in let's
+6:21
+create a function we will create a
+6:24
+function to display a person
+6:30
+with the parameters we'll use
+6:32
+destructuring we're destructuring an
+6:33
+object we need a set of curly braces
+6:36
+we'll receive an object such as this I'm
+6:40
+going to invoke display person we'll
+6:43
+pass in person one as an argument when
+6:47
+we receive person one as an argument
+6:49
+we'll destructure that object right away
+6:51
+we will create a first name parameter
+6:54
+last
+6:55
+name age and
+6:58
+job all we'll do is print a few lines
+7:01
+using
+7:02
+console.log I'll use a template string
+7:05
+let's say Name colon space I'll add a
+7:09
+placeholder first
+7:11
+name and last
+7:15
+name let's add a new
+7:20
+line age call in space add a placeholder
+7:25
+age then lastly
+7:28
+job job colon space add a placeholder
+7:32
+job we're passing in person one and D
+7:35
+structuring it we should display name
+7:38
+SpongeBob SquarePants age 30 job fry
+7:41
+cook let's pass in person two as an
+7:45
+argument name Patrick Star age 34 job is
+7:50
+undefined again we can set a default
+7:52
+value when destructuring if an object
+7:54
+doesn't have a job property we will set
+7:56
+that equal to be unemploy
+8:00
+employed Patrick Star age 34 job
+8:03
+unemployed then if we pass in person one
+8:06
+again his job should not be unemployed
+8:09
+he's a fry cook there is a job property
+8:12
+so we do not use the default value all
+8:14
+right everybody so those are a few
+8:16
+examples of destructuring there's a lot
+8:18
+you can do with destructuring you use a
+8:20
+set of straight brackets to perform
+8:22
+array destructuring or curly braces for
+8:24
+object destructuring they allow you to
+8:27
+extract values from arrays an object
+8:29
+then assign them to variables in a
+8:31
+convenient way and well that is
+8:33
+destructuring in
+8:39
+JavaScript

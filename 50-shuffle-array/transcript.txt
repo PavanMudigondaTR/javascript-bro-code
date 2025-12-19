@@ -1,0 +1,196 @@
+0:00
+hey everybody in today's video I'm going
+0:01
+to show you how we can Shuffle the
+0:03
+elements of an array using JavaScript
+0:05
+this is an optional video you might find
+0:07
+this topic helpful if you're interested
+0:08
+in making a game using JavaScript or any
+0:11
+sort of application where you need some
+0:12
+Randomness in this example we'll create
+0:14
+a deck of cards our deck of cards will
+0:16
+be an array we have an a for Ace the
+0:18
+numbers 2 through 10 let me finish
+0:21
+typing those
+0:22
+in J for Jack Q for Queen k for King I'm
+0:28
+not going to include any suits for these
+0:30
+cards such as Ace of Hearts Ace of clubs
+0:33
+that might be overkill for this example
+0:36
+one method you might see floating around
+0:37
+online to shuffle the elements of an
+0:39
+array is to use the sort method then
+0:42
+pass in an arrow function where you take
+0:44
+math.random minus 0.5 I would not
+0:47
+recommend using this method just because
+0:50
+the results of this method aren't
+0:51
+perfectly uniform let me console.log
+0:54
+cards this array appears shuffled but
+0:57
+it's not that uniform but not only that
+0:59
+the Lar larger the array becomes this
+1:01
+method becomes increasingly more
+1:03
+inefficient I would not recommend using
+1:05
+the sort method to shuffle an array
+1:07
+instead I would recommend using the fer
+1:10
+Yates algorithm we'll create a dedicated
+1:12
+function for
+1:14
+this so we will Define a function to
+1:17
+shuffle there will be one parameter an
+1:21
+array then to invoke this function we'll
+1:24
+type the function name pass an our array
+1:26
+of
+1:27
+cards so what do we want to do exactly
+1:30
+we're first going to Loop through the
+1:32
+elements of this array we'll start at
+1:34
+the end and work our way towards the
+1:36
+beginning we'll use a for Loop to
+1:38
+decrement So within our Shuffle function
+1:40
+we'll create a for Loop we will declare
+1:44
+index of I let I equal R array do
+1:50
+length then minus one that's the first
+1:53
+statement our array has 13 elements but
+1:56
+the last index is 12 because arrays
+1:58
+start with zero if the array's length is
+2:01
+13 we need to subtract 1 to get 12 which
+2:04
+would give us the ending index of 12
+2:06
+we'll continue this loop as long as I is
+2:09
+greater than
+2:10
+zero then iusus to decrement now we have
+2:15
+to generate a random number between the
+2:17
+end and the beginning somewhere within
+2:19
+this range we'll create const random
+2:23
+random will store a random number take
+2:26
+math. random method times
+2:31
+I our index + one we'll need to round
+2:34
+this number we're now going to enclose
+2:37
+this equation with math. floor to round
+2:39
+down math. floor and enclose this
+2:44
+equation all right during the first
+2:47
+iteration of this Loop we should
+2:49
+generate a random number between the end
+2:52
+and the beginning we'll swap our king
+2:55
+with a random element within this array
+2:57
+so to swap two elements of this array we
+2:59
+can use destructuring in this context to
+3:02
+use destructuring we'll take our
+3:04
+original position array at index of I
+3:07
+during our first iteration that will be
+3:09
+the king we'll swap our King with our
+3:12
+array at a random index the one that
+3:15
+will be randomly
+3:16
+generated equals our array at index of
+3:20
+random comma array at index of
+3:24
+I then to finish using destructuring we
+3:27
+need to enclose both sides of this
+3:29
+equation with with an
+3:31
+array there and that will swap two
+3:33
+elements of your
+3:34
+array now if I run this program this
+3:37
+will Shuffle the elements of my array I
+3:40
+would recommend using a dedicated
+3:41
+Shuffle function because in a game it's
+3:44
+likely you're going to shuffle something
+3:46
+more than once throughout that game like
+3:48
+I said this isn't a necessary topic to
+3:50
+continue on with the series but if
+3:52
+you're ever interested in making a game
+3:54
+using JavaScript or need some element of
+3:56
+Randomness well then this function would
+3:58
+work great and that is how to to shuffle
+4:00
+the elements of an array using
+4:03
+JavaScript

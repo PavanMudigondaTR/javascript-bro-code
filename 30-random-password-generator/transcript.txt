@@ -1,0 +1,526 @@
+0:00
+hey what's going on everybody so in
+0:01
+today's lesson we're going to create a
+0:03
+project where we Generate random
+0:05
+passwords this will help us solidify our
+0:07
+understanding of functions and random
+0:09
+numbers this will be an exercise for
+0:11
+beginners by setting different options
+0:14
+we can change the format of the password
+0:16
+and well let's begin everybody all right
+0:18
+let's begin we'll need to let our
+0:20
+program know what the length of our
+0:21
+password is going to be let's create a
+0:23
+constant to store that const password
+0:27
+length set this equal to maybe 12 but we
+0:31
+can adjust that accordingly we'll create
+0:33
+a Boolean to specify if our generated
+0:35
+password is going to contain lowercase
+0:37
+characters we'll create a
+0:39
+constant include
+0:44
+lowercase do we want to include
+0:46
+lowercase characters we can set this to
+0:48
+be true or false we will set this to be
+0:52
+true do we want to include uppercase
+0:55
+characters
+0:56
+include
+0:58
+uppercase I will again set this to be
+1:01
+true do we want to include numbers const
+1:05
+include
+1:07
+numbers I will set that to be true do we
+1:10
+want to include
+1:11
+symbols const include
+1:17
+symbols we'll Define a function at the
+1:19
+top of our
+1:21
+program function to generate password we
+1:26
+have a lot of parameters to set up we're
+1:29
+going to pass all of these constants as
+1:32
+arguments so we have a
+1:35
+length include
+1:37
+lowercase include
+1:40
+uppercase include
+1:43
+numbers and include
+1:45
+symbols when we call this function we
+1:48
+have to pass in all of these arguments
+1:51
+so we will call our generate password
+1:54
+function pass in our password
+1:57
+length include lowercase
+2:00
+include
+2:02
+uppercase include
+2:05
+numbers and include
+2:07
+symbols at the bottom of our function we
+2:10
+will be returning a password but for now
+2:13
+I'm just going to write an empty string
+2:14
+because we still need to determine what
+2:16
+that password is going to be after
+2:18
+finishing the generate password function
+2:20
+this will return a string a string
+2:22
+password we will store that within const
+2:26
+password equals whatever is returned
+2:29
+from the generate password function and
+2:32
+just so that this is more readable
+2:34
+although not necessary I'm going to
+2:36
+place each of these arguments on a new
+2:37
+line because I'm OCD about things being
+2:40
+in
+2:42
+alignment and then at the very end of
+2:44
+this program I will display a template
+2:48
+string of generated
+2:52
+password I'll add a placeholder then
+2:55
+we'll display our password that we
+2:58
+generate so so right now it's not going
+3:01
+to display anything we're returning an
+3:03
+empty string but that is everything we
+3:05
+need outside of this function to
+3:07
+generate our password basically we're
+3:09
+passing in options when we generate our
+3:11
+password do we want to include lowercase
+3:14
+characters uppercase characters numbers
+3:16
+and or symbols we have a
+3:18
+number and a bunch of Boolean values
+3:22
+within our password we're going to
+3:24
+create a few constants within this
+3:25
+generate password function we will
+3:27
+create one long string of all of the
+3:30
+lowercase characters
+3:33
+chars equals I'm going to go through the
+3:36
+alphabet we will have one long string of
+3:39
+alphabetical
+3:46
+characters and I think I got all of them
+3:49
+so there should be 26 now we're going to
+3:51
+do this with uppercase characters const
+3:55
+uppercase chars
+3:58
+equals
+4:00
+I'm going to turn on caps
+4:02
+lock go through the
+4:10
+alphabet we'll create a constant of
+4:13
+number characters number chars
+4:18
+equals 0 through
+4:22
+9 and
+4:25
+symbols const symbol chars
+4:31
+which symbols would you like to include
+4:33
+I'll just add a
+4:38
+bunch that's probably good enough for
+4:40
+now feel free to add more or
+4:43
+less we will create a variable for
+4:47
+allowed chars meaning
+4:52
+characters and an empty
+4:54
+password let password equal an empty
+4:58
+string
+5:02
+if some of these constants are true we
+5:05
+would like to take that corresponding
+5:07
+set of characters and concatenate it to
+5:10
+the allowed Char string so what we'll do
+5:12
+is take our allowed characters variable
+5:15
+you string catenation by using plus
+5:18
+equals we'll check to see if include
+5:21
+lowercase is true or false we can use
+5:25
+the etary operator for that if we would
+5:28
+like to include lower case characters we
+5:31
+will string concatenate our lowercase
+5:33
+chars our lowercase characters otherwise
+5:37
+we'll concatenate an empty
+5:39
+string let's do this with uppercase
+5:42
+characters with our allowed characters
+5:45
+let's string concatenate and check if
+5:47
+we're including uppercase characters
+5:50
+question mark if this is true we will
+5:52
+concatenate all of the uppercase
+5:54
+characters we've declared otherwise
+5:57
+we'll concatenate an empty string so we
+6:00
+don't include them let's do this with
+6:02
+number
+6:04
+chars include numbers are we including
+6:07
+numbers within our password if so we
+6:09
+will return our number Char
+6:13
+string and then
+6:16
+symbols are we including symbols within
+6:19
+our password if so concatenate our
+6:22
+string of symbol characters all right
+6:25
+just to test everything afterwards I'm
+6:28
+going to console. log are allowed
+6:32
+characters so right now I'm going to
+6:34
+switch all of these constants to be
+6:39
+false so right now we're not including
+6:42
+any characters if I were to set include
+6:45
+a lowercase to be true we would include
+6:48
+all of the lowercase characters that's
+6:50
+one long string Let's test uppercase yep
+6:54
+we are including all of the uppercase
+6:56
+characters include numbers yes that
+6:59
+works works and include symbols that
+7:02
+also works at this point in the program
+7:05
+we're going to have one gigantic string
+7:07
+of all of the possible characters before
+7:10
+we move on with the program I do want to
+7:12
+run some checks using some if statements
+7:15
+first let's check to see if the password
+7:17
+length is zero or less than zero right
+7:19
+now it's set to
+7:20
+12 using an if
+7:23
+statement if the length the length of
+7:26
+the password is less than or equal to
+7:29
+zero
+7:30
+we need to let the user know that the
+7:31
+password length must be at least one we
+7:34
+will return a
+7:37
+string password length must be at least
+7:43
+one right now we're not generating a
+7:45
+password we returning an empty string if
+7:48
+I set the password length to be zero we
+7:51
+will generate this message password
+7:54
+length must be at least one or even a
+7:56
+negative number
+7:58
+like1 password length must be at least
+8:01
+one let's set that back to be 12 what if
+8:04
+we don't select any options what if all
+8:07
+of these character options were
+8:13
+false we can check the length of our
+8:16
+alloud characters variable so
+8:19
+if our loud characters length
+8:23
+property is strictly equal to zero this
+8:27
+will only be possible if all of these
+8:29
+options are set to false we will return
+8:33
+a template
+8:35
+string at at least one set of
+8:40
+characters needs to be
+8:44
+selected and let's see if this works yes
+8:47
+it does at least one set of characters
+8:50
+needs to be selected I can select any
+8:52
+options that I would like I will set
+8:55
+these all to be
+8:58
+true
+9:00
+now here's the hard part for as many
+9:02
+iterations as our password is we will
+9:04
+select a random character from all of
+9:07
+the different
+9:08
+possibilities we will use a for
+9:12
+Loop we will let I be our index our
+9:16
+counter we will continue this for loop
+9:18
+as long as I is less than the length the
+9:22
+password length then increment I by One
+9:25
+during each iteration if our password
+9:27
+length is 12 we will execute this for
+9:30
+Loop a total of 12 times now we will
+9:32
+generate a random index const random
+9:36
+index equals we will use the random
+9:40
+method of
+9:42
+math this generates a random number
+9:44
+between 0 and one I can multiply this
+9:47
+number that's randomly generated by the
+9:49
+length of our allowed
+9:52
+characters let's say we're including
+9:54
+only lowercase characters well this is a
+9:56
+total of 26 characters in the alphabet
+9:59
+but if I'm taking math.random * 26 I'll
+10:04
+be given a random number between 0 and
+10:07
+25 but I will need to round it down
+10:09
+let's enclose this equation with the
+10:11
+floor method of math to round down math.
+10:19
+floor we'll use string concatenation
+10:21
+with our password currently our password
+10:23
+is an empty string but we will use
+10:26
+string
+10:27
+concatenation we will string con anate a
+10:30
+randomly chosen character from our
+10:32
+string of allowed characters password
+10:35
+plus equals are allowed characters at
+10:38
+the index of random
+10:41
+index then at the end of this program we
+10:44
+will return our
+10:46
+password and let's see if this works
+10:50
+let's close out of this function we
+10:51
+don't need it
+10:52
+anymore and let's see if this works yeah
+10:56
+there's our password so every time I run
+10:58
+the program I get a new random password
+11:02
+and I can turn these options on and off
+11:04
+let's set all of these options to be
+11:05
+false to begin
+11:09
+with and I will set the length to be
+11:12
+zero let's see what happens password
+11:15
+length must be at least one all right
+11:17
+how about a password of 10 10 characters
+11:19
+long at least one set of characters
+11:22
+needs to be selected let's select only
+11:24
+lowercase
+11:25
+characters yep we only have lowercase
+11:28
+characters let's allow uppercase
+11:30
+characters
+11:31
+now let's allow
+11:34
+numbers I didn't get any of that time
+11:36
+let's do it
+11:37
+again okay there's a number I guess
+11:40
+numbers don't come up very frequently
+11:42
+and let's include
+11:44
+symbols and there's a few symbols in
+11:46
+there all right everybody so that was an
+11:49
+exercise to Generate random passwords it
+11:52
+should give you some practice with
+11:53
+functions and working with random
+11:55
+numbers and well everybody that was a
+11:57
+random password generator
+11:59
+in
+12:03
+JavaScript

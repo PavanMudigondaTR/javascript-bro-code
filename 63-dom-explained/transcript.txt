@@ -1,0 +1,226 @@
+0:00
+all right what's going on people so
+0:01
+today I got to explain what the Dom is
+0:03
+in JavaScript the Dom is the document
+0:06
+object model it's a JavaScript object
+0:09
+that represents the page you see in the
+0:11
+web browser and it provides you with an
+0:13
+API to interact with it the web browser
+0:16
+constructs the Dom when it loads an HTML
+0:18
+document and structures all of the
+0:20
+elements in a tree likee representation
+0:22
+within my HTML document we have our HTML
+0:25
+element as the root element the HTML
+0:28
+element contains a head element and a
+0:30
+body element and many various elements
+0:32
+can be found within each of these
+0:34
+they're arranged in a tree like data
+0:36
+structure but we access this tree like
+0:38
+data structure from the document object
+0:41
+in past lessons in order to select an
+0:43
+element by its ID we would type document
+0:46
+dot then follow it with a method like
+0:49
+get element by ID and then we would
+0:52
+select an element by its ID our document
+0:55
+is an object it contains properties and
+0:57
+methods and other nested objects if I
+1:00
+was to
+1:02
+console.log the
+1:05
+document well then it's going to display
+1:08
+my HTML
+1:10
+document now you can also use dur
+1:12
+meaning directory this will list all of
+1:15
+the properties of this
+1:18
+object so here's my document object and
+1:21
+all of the different properties it
+1:23
+contains it's one gigantic object for
+1:26
+example we have a title the title of the
+1:29
+web page
+1:31
+that would be found right here near the
+1:32
+bottom document but you can change
+1:36
+it I will access our document as if it
+1:39
+was an object because it is access the
+1:42
+title property change it to something
+1:44
+else like my
+1:46
+website now if I display the
+1:50
+title that property has changed it's now
+1:52
+my website dynamically after the page
+1:55
+loads I would like to change the
+1:57
+background color of my document later on
+1:59
+in the series we're going to create a
+2:00
+toggle button to toggle between light
+2:02
+and dark mode just to give you an
+2:04
+example if I need to change my theme to
+2:06
+be dark mode I could access the document
+2:10
+object access the
+2:12
+body access the style then change the
+2:16
+background color property to some color
+2:21
+let's stick with black for
+2:23
+now I'll use
+2:25
+hsl the Hue will be zero saturation will
+2:28
+be 0%
+2:30
+and the lightness will be
+2:33
+15% even though we have no CSS we're
+2:36
+still able to dynamically change the
+2:38
+background color let me give you another
+2:42
+example we'll create an H1
+2:45
+element this H1 element will say
+2:49
+welcome I will give this element an ID
+2:53
+ID
+2:54
+welcome- MSG meaning
+2:58
+message
+3:01
+and I'm just going to zoom in a little I
+3:03
+will create a constant of
+3:06
+username type in your username or your
+3:08
+full
+3:10
+name I'm going to conditionally change
+3:13
+the content of this HTML document I will
+3:17
+get this element by its ID our welcome
+3:20
+message const welcome message I'm using
+3:25
+camel case naming convention for this so
+3:27
+I will access my document use the get
+3:31
+element by ID method that ID was welcom
+3:36
+Das message MSG for short I would like
+3:40
+to update the text content of this
+3:42
+element I'll take my welcome
+3:45
+message access the text content of it
+3:49
+then append some text using string
+3:52
+catenation I'll use the tary operator to
+3:54
+see if my username is strictly equal to
+3:58
+an empty string is our username empty
+4:01
+did somebody not type it
+4:03
+in question mark If username is empty I
+4:07
+will append our welcome message with
+4:10
+guest otherwise our
+4:13
+username my username has a name it's not
+4:16
+empty it will display my name welcome
+4:19
+bro code if it was empty if somebody
+4:21
+didn't type it in it will display
+4:23
+welcome guest so that's an introduction
+4:26
+to the document object model the
+4:28
+document object model is a JavaScript
+4:31
+object that represents the page you see
+4:33
+in the web browser and it provides you
+4:35
+with an API to interact with it the web
+4:37
+browser constructs the Dom when it loads
+4:39
+an HTML document and structures all of
+4:42
+the elements in a tree like
+4:43
+representation by using JavaScript we
+4:45
+can access the Dom dynamically after the
+4:48
+page loads and change the content
+4:50
+structure and style of a web page and
+4:53
+well everybody that is an introduction
+4:55
+to the document object model in
+4:58
+JavaScript

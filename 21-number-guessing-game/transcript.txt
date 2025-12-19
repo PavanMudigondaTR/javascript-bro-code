@@ -1,0 +1,390 @@
+0:00
+hey what's going on everybody in this
+0:01
+video we're going to create a number
+0:03
+guessing game using JavaScript so why
+0:05
+don't you go ahead and sit back relax
+0:07
+and enjoy the show all right let's get
+0:09
+started everybody so the first thing
+0:11
+that we're going to need is to set the
+0:12
+minimum and the maximum numbers in our
+0:14
+number guessing game so we'll create two
+0:17
+constants const minum for the
+0:21
+minimum I will set my minimum to be one
+0:24
+but feel free to pick a different number
+0:25
+if you would like then a maximum const
+0:29
+Maxum
+0:30
+I will set my maximum to be 100 so what
+0:33
+we got to do is generate a random number
+0:35
+between our minimum and our maximum
+0:38
+inclusively so let's create another
+0:40
+constant const answer then we'll
+0:44
+generate a random number between one and
+0:46
+100 our minimum and our maximum to do
+0:49
+that we can type math.
+0:51
+random the random method of math will
+0:54
+generate a random number between zero
+0:56
+and one we will multiply this by within
+0:59
+a set of parentheses the range between
+1:02
+our maximum minus our
+1:05
+minimum then add plus
+1:07
+one let's see what we have so far just
+1:10
+to test everything I'm going to
+1:13
+console.log our
+1:16
+answer okay let's inspect go to console
+1:20
+here's my answer currently 56 point and
+1:23
+then a bunch of decimal places after I
+1:25
+will round our answer by enclosing this
+1:28
+equation with math. to round
+1:31
+down okay let's see what we get again 39
+1:36
+899 20 71 27 17 46 okay that seems like
+1:41
+it's working what if we have a higher
+1:44
+minimum let's say between 50 and
+1:49
+100 well I have 7 22 43 numbers that are
+1:54
+below our minimum so if we have a
+1:56
+minimum besides one I will add to the
+1:59
+the end of this equation our minimum
+2:02
+again okay let's see if that works so if
+2:05
+I need a random number between 50 and
+2:07
+100 this equation should work 97 80 79
+2:12
+52 all right that seems like it's
+2:14
+working so this is the equation you'll
+2:16
+need to generate a random number between
+2:18
+your minimum that you set and your
+2:20
+maximum but let's change our minimum
+2:22
+back to one and make sure our maximum is
+2:25
+100 all right let's move on to step two
+2:28
+we'll create a variable name attempts to
+2:31
+keep track of the attempts it takes a
+2:32
+user I will set attempts to be zero and
+2:36
+let
+2:38
+guess I will declare this variable but
+2:40
+not assign it quite yet we'll take care
+2:42
+of that later I will also create a
+2:44
+Boolean variable named running and I
+2:46
+will set this to be
+2:48
+true the reason that we have the Boolean
+2:50
+variable running is so that we can exit
+2:53
+the game when it's over we'll set
+2:55
+running to equal false so to keep the
+2:57
+game running we'll use a while loop
+3:00
+while running equals true now if this is
+3:04
+a Boolean variable you don't necessarily
+3:06
+need this portion equals true you can
+3:09
+just set this to be while
+3:11
+running while this Boolean is true keep
+3:15
+the game going then when we want to exit
+3:17
+the game we will set running to equal
+3:21
+false so that will be at the
+3:23
+end now we need to accept some user
+3:26
+input I'll do this with the window
+3:28
+prompt we will set our guest to equal
+3:33
+window.
+3:35
+prompt I'll use a template
+3:39
+literal guess a
+3:41
+number
+3:43
+between I'll add a
+3:45
+placeholder our
+3:48
+minimum through add another placeholder
+3:51
+our
+3:53
+maximum all right to test this I'm going
+3:55
+to
+3:58
+console.log
+4:00
+the type of
+4:02
+guess as well as what guess is there's
+4:04
+something I need to show you guess I
+4:06
+number between one and 100 I'll guess
+4:08
+something right in the middle 50 let's
+4:11
+inspect go to console so my user input
+4:14
+of 50 is a string data type we'll need
+4:17
+to convert it to a number for
+4:20
+comparisons so after we get our guess
+4:23
+let's reassign it and typ cast it as a
+4:26
+number
+4:28
+type let's let's try that again guess a
+4:30
+number between 1 and 100 I'll type 50
+4:33
+okay inspect console we have our guess
+4:37
+of 50 and it's a number data type what
+4:39
+if you were to type in something that
+4:41
+wasn't a number like a string of
+4:43
+characters such as
+4:45
+Pizza here's the
+4:48
+result if you type cast some characters
+4:50
+that are non-numeric you know the number
+4:53
+0 through 9 you'll end up with not a
+4:55
+number Pizza can't be converted to a
+4:57
+number unfortunately I will delete this
+5:00
+line of code we no longer need it I'll
+5:02
+add an if statement there's a function
+5:05
+to check to see if something is not a
+5:07
+number is not a number
+5:10
+function if our guess is not a number if
+5:14
+this evaluates to be true let's add an
+5:17
+alert window.
+5:21
+alert please enter a valid
+5:26
+number guess a number between 1 and 100
+5:29
+What if I type
+5:30
+pizza please enter a valid number now
+5:33
+what if somebody types in a guess that's
+5:35
+below our minimum or above our maximum
+5:38
+I'll add an else if
+5:40
+statement else if our guess is below our
+5:46
+minimum or our guess is above our
+5:52
+maximum will window. alert please enter
+5:56
+a valid number again guess a number
+5:58
+between 1 and 100 what if I type in 150
+6:02
+that's above our maximum please enter a
+6:04
+valid
+6:05
+number please enter a number between 1
+6:07
+and
+6:08
+1001 please enter a valid number if the
+6:11
+user's guess is a number and it's
+6:15
+between our range between the minimum
+6:16
+and the
+6:19
+maximum we'll execute an L statement if
+6:22
+they reach the L statement that means
+6:24
+they have a valid number we'll increase
+6:26
+our attempts variable by one attempts
+6:29
+Plus plus to increment
+6:32
+it if the
+6:35
+guess if the guess is less than the
+6:39
+answer then will window.
+6:44
+alert too low try
+6:52
+again else if the guess is greater than
+6:56
+the
+6:58
+answer will window.
+7:01
+alert to high try again if the guess
+7:05
+isn't lower than the answer and the
+7:07
+guess isn't higher than the answer that
+7:09
+means the guess must equal the answer
+7:12
+within an else
+7:14
+statement we'll congratulate the user
+7:17
+they have the right answer
+7:18
+window.
+7:22
+alert
+7:25
+correct the
+7:28
+answer was
+7:30
+and I should probably use a template
+7:32
+literal for this if we're inserting
+7:34
+variables the
+7:38
+answer we'll let the user know how many
+7:40
+attempts it took it took
+7:44
+you the variable
+7:46
+attempts then the word
+7:52
+attempts at the end of our lse statement
+7:54
+we'll move running equals false to
+7:57
+within the lse statement at the end to
+7:59
+ex at the game we no longer want to play
+8:01
+once we have the correct answer all
+8:03
+right and this should work let's try it
+8:06
+guess a number between 1 and 100 I'll
+8:09
+guess something right in the middle 50
+8:11
+too low try again okay so the answer is
+8:14
+between 50 and 100 75 too high so it's
+8:19
+between 50 and
+8:20
+75
+8:22
+62 too
+8:24
+low
+8:26
+68 too high so it's between 62 and
+8:31
+68
+8:33
+65 too
+8:35
+high 63 too
+8:38
+low
+8:40
+64 yeah correct the answer was 64 it
+8:43
+took you seven attempts and we can exit
+8:47
+all right everybody so that is a number
+8:49
+guessing game in
+8:52
+JavaScript

@@ -1,0 +1,220 @@
+0:00
+hey everybody in today's video I'm going
+0:01
+to show you how we can show and hide an
+0:04
+HTML element using JavaScript in this
+0:06
+video you'll need an image to work with
+0:09
+once you find your image add it to your
+0:11
+website folder then we are ready to
+0:13
+begin we're going to create a button and
+0:16
+an image element let's start with the
+0:18
+button the text on the button will be
+0:21
+initially hide to hide an element I will
+0:24
+give this button a unique
+0:26
+ID of my
+0:28
+button I'll add a break then we'll
+0:32
+create an image
+0:33
+element this is a self-closing tag with
+0:36
+this image I will set the source equal
+0:39
+to either the relative file path or the
+0:42
+file
+0:44
+name so my file is car.jpg
+0:48
+it's a little too big I'll set the width
+0:51
+attribute to be like 400 pixels that's a
+0:55
+decent size I will give this image a
+0:57
+unique ID of my image my IMG and just so
+1:03
+we can see this button I'm going to
+1:05
+apply a little bit of CSS to the button
+1:08
+let's select the ID of my button take
+1:11
+the font size I will set it to be 2
+1:15
+RM that's decent enough all right let's
+1:19
+go to our Javascript file I'm going to
+1:22
+create a reference to my button and my
+1:24
+image let's start with the button const
+1:27
+my button equals
+1:30
+document. getet element by ID the ID
+1:35
+that I'm selecting is my
+1:38
+button let's create a reference to my
+1:41
+image as well my IMG the ID was my
+1:47
+IMG when I click on this button I would
+1:50
+like to do something we will take my
+1:52
+button and add an event
+1:55
+listener add event
+1:58
+listener there are two arguments an
+2:01
+event type and a call back to a
+2:04
+function the event type is going to be
+2:06
+click when we click on the button we're
+2:08
+going to do something for the Callback
+2:11
+we'll write an arrow function we are
+2:14
+provided with an event parameter by the
+2:16
+web browser Arrow do this when we click
+2:20
+on the button what code do we want to
+2:22
+perform we're going to take my image
+2:25
+access its style access its display
+2:28
+property set it to be a string of none
+2:32
+so when you click on the button it's
+2:34
+going to hide the image the display
+2:36
+property is set to none not only that
+2:39
+let's change the text on the button
+2:41
+after we hide the element let's take my
+2:45
+button change the text content equal to
+2:49
+be show because now I want to show the
+2:53
+element so hide BEC
+2:56
+show when we click on the button a
+2:58
+second time nothing nothing
+3:00
+happens we would like to toggle between
+3:02
+hiding and displaying this element we'll
+3:05
+write an if statement let's check to see
+3:08
+if the display of my image is strictly
+3:12
+equal to
+3:13
+none is the display of my image
+3:16
+currently none if so we're going to set
+3:18
+the display to block because it's a
+3:20
+block level element take my image access
+3:24
+its style access its display property
+3:28
+set it to be
+3:31
+BL then within an lse
+3:33
+statement place these two lines of
+3:40
+code and we will change the text content
+3:43
+of my button to be
+3:46
+hide now when clicking the button we can
+3:49
+toggle between hiding and showing this
+3:51
+element the
+3:53
+image now let me demonstrate something
+3:56
+if we were to take my button then add it
+3:59
+after the
+4:00
+image here's what would
+4:03
+happen let me add a break
+4:07
+to so by setting the display To None we
+4:11
+don't Reserve any space for that image
+4:13
+my button moves up near the top of the
+4:15
+window until I show it again another
+4:18
+option if we would like to reserve some
+4:20
+space for the image is to toggle the
+4:23
+visibility not the display property
+4:25
+replace display with
+4:28
+visibility
+4:32
+we're going to check if the visibility
+4:35
+is
+4:37
+hidden set the visibility equal to be
+4:41
+hidden if we would like to show the
+4:43
+image the visibility is going to be set
+4:45
+to
+4:47
+visible when we toggle the visibility of
+4:50
+this image we at least reserve the space
+4:52
+for it the elements that come after
+4:54
+aren't going to shift near the top of
+4:56
+the
+4:57
+window you can use visibility or display
+4:59
+depending on the project you're creating
+5:01
+all right everybody so that is how to
+5:03
+show and hide HTML elements using
+5:09
+JavaScript

@@ -1,0 +1,266 @@
+0:00
+hey what's going on everybody so today
+0:01
+I'm going to explain variable scope in
+0:04
+JavaScript variable scope is where a
+0:06
+variable is recognized and accessible in
+0:09
+this beginner's tutorial we'll be
+0:10
+discussing the differences between a
+0:12
+local scope and a global scope suppose
+0:14
+we have a variable let x equals one each
+0:18
+variable name needs to be unique within
+0:21
+that scope I couldn't declare another
+0:23
+variable named X
+0:24
+where I set x t equal to if I were to
+0:27
+run this we have a syntax error
+0:29
+identifier X has already been declared
+0:31
+you can reuse the same variable names in
+0:34
+your program as long as they're within
+0:36
+different scopes
+0:37
+to demonstrate let's create two
+0:39
+functions function Function One within
+0:42
+function one we will declare a variable
+0:44
+x x equals one then we will console.log
+0:49
+whatever X is
+0:51
+then let's create function 2 by copying
+0:54
+function one and then paste it
+0:57
+function 2 x will equal 2. console.log x
+1:03
+if I were to invoke function 1
+1:06
+x equals one
+1:08
+if I were to invoke function 2 well x
+1:11
+equals two
+1:13
+so we have two variables with the same
+1:15
+name in our program
+1:16
+that's legal as long as they have
+1:19
+different scopes
+1:20
+any variable declared inside of a
+1:22
+function has a local scope or anytime
+1:25
+you declare a variable within a set of
+1:27
+curly braces there's no naming conflicts
+1:30
+because they're within different scopes
+1:32
+that way you can declare variables with
+1:34
+the same name which we've done with X
+1:36
+now functions can't see inside of other
+1:39
+functions within function 2 we will
+1:42
+declare variable y equals two
+1:45
+then console.log X within function 1 we
+1:49
+will console.log why
+1:52
+if I were to invoke function 1 we have
+1:55
+an uncaught reference error Y is not
+1:57
+defined at Function One
+2:00
+functions can't see inside of other
+2:01
+functions function one has no idea what
+2:05
+Y is we've declared that within another
+2:07
+function it's kind of like functions are
+2:09
+neighboring houses you can't necessarily
+2:12
+see inside of your neighbor's house
+2:14
+function 1 has no idea what variable Y
+2:17
+is likewise function 2 if I were to
+2:20
+invoke it function 2 has no idea what x
+2:23
+is
+2:23
+each of these variables are declared
+2:26
+inside of a function so they have a
+2:28
+local scope
+2:29
+a global scope for a variable is any
+2:31
+variable declared outside of a function
+2:33
+with function 1 let's get rid of x
+2:38
+and we will console.log X function two
+2:41
+we will get rid of y console.log x
+2:45
+if I were to declare a variable outside
+2:47
+of these functions let x equal 3.
+2:51
+I'll invoke function 1 will display X
+2:54
+is 3 Let's invoke function two axis 3.
+2:58
+any variable declared outside of a
+3:01
+function has a global scope it's
+3:03
+available through the whole program a
+3:06
+global variable is recognized and
+3:08
+accessible from anywhere
+3:09
+hey this is bro from the future I was
+3:12
+editing this video and I thought of a
+3:14
+really good analogy for Global variables
+3:16
+let's say that a function is a house we
+3:19
+live in function one and our neighbor
+3:21
+lives in function two we can see inside
+3:23
+of function one but we can't see inside
+3:26
+of our neighbor's house at function two
+3:28
+anything that's declared in the global
+3:30
+scope isn't found within any houses it's
+3:33
+outside everybody can plainly see it
+3:35
+it's kind of like a creepy stalker
+3:37
+that's under a street light at three in
+3:39
+the morning everybody while inside of
+3:41
+their house can still see everything
+3:42
+outside that's an analogy I thought was
+3:44
+kind of accurate to describe a global
+3:46
+scope however it's not recommended to
+3:48
+declare Global variables in a large
+3:50
+program just because you can have naming
+3:53
+conflicts in a large program I might
+3:55
+accidentally reuse the variable X or
+3:57
+change it somewhere X is a very common
+4:00
+name for a variable so in a large
+4:01
+program I would stick with local
+4:03
+variables but in a small program like
+4:06
+this it's fine when inside of a function
+4:08
+we'll use any a local instance of a
+4:11
+variable first if it's not found we'll
+4:13
+look at the global scope So within
+4:15
+Function One let's declare X to be one
+4:19
+within function 2 will declare X to B2
+4:24
+and then within the global scope we have
+4:26
+x equals three if I were to declare
+4:29
+function one do you think X will equal
+4:31
+one or three
+4:33
+well it's one
+4:35
+if we have two variables with the same
+4:37
+name and they're in different Scopes
+4:39
+we'll use the local version first that's
+4:42
+why X is one and not three if I were to
+4:45
+invoke function two well x equals two
+4:48
+if these local variables weren't
+4:50
+available
+4:52
+we would use the global version instead
+4:54
+where x equals three
+4:57
+all right everybody so that is variable
+4:59
+scope it's where a variable is
+5:01
+recognized and accessible you have a
+5:03
+local scope that's any time a variable
+5:05
+is declared within a set of curly braces
+5:07
+that variable is then only accessible to
+5:11
+anything within that set of curly braces
+5:13
+and a global scope is where a variable
+5:15
+is declared outside of any functions
+5:17
+it's available throughout the whole
+5:19
+program and well everybody that is
+5:21
+variable scope in JavaScript

@@ -1,0 +1,186 @@
+0:00
+hey so we got to talk about this this is
+0:02
+a keyword it's a reference to the object
+0:05
+where this is used the object depends on
+0:08
+the immediate context if we had a person
+0:11
+object and we're accessing their name
+0:13
+property we could replace person with
+0:16
+this as long as we're within the context
+0:18
+of that person object we'll create an
+0:21
+object const person
+0:24
+one let's add a property for name the
+0:28
+name will be SpongeBob
+0:31
+and a favorite food property fave food
+0:35
+SpongeBob likes hamburgers more
+0:38
+specifically crabby
+0:39
+patties I will give SpongeBob a say
+0:42
+hello method this will be a
+0:46
+function all we're going to do is
+0:49
+console.log I'll use a template
+0:52
+string hi I am I'll use a placeholder
+0:57
+let's attempt to use person one's name
+1:00
+let's see what
+1:02
+happens let's take our object of person
+1:05
+one I will invoke their say hello method
+1:09
+let's see what happens hello I am and
+1:13
+there's nothing here for the name inside
+1:15
+of this object of person one if I would
+1:18
+like to access one of these properties
+1:20
+I'm going to precede the property with
+1:23
+this this dot the name of the property
+1:27
+and that should work hi I'm SpongeBob
+1:30
+we're using this within the context of
+1:33
+person one it would be like us saying
+1:36
+person one. name there would be no
+1:39
+difference this is a reference to the
+1:41
+object we within if I said this do
+1:45
+favorite food well fave food for short
+1:48
+hi I am
+1:49
+hamburgers it would be like us saying
+1:52
+person onef food let's add another
+1:56
+method I will add an eat
+1:58
+method
+2:03
+let's
+2:05
+console.log I'll use another template
+2:08
+string add a
+2:10
+placeholder
+2:13
+this.name is eating add another
+2:17
+placeholder this. fave
+2:21
+food let's have person one use their eat
+2:25
+method SpongeBob is eating hamburgers
+2:29
+the cool thing about the this keyword is
+2:31
+that if we create a new object with
+2:33
+these same methods we'll use the second
+2:35
+object's properties let's copy person
+2:39
+one paste change person one to person
+2:42
+two the name for person two will be
+2:45
+Patrick favorite food will be
+2:48
+Pizza let's have person two use their
+2:52
+eat
+2:53
+method SpongeBob is eating hamburgers
+2:56
+Patrick is eating pizza since we're in
+2:58
+the context of person 2 now imagine
+3:01
+we're replacing this with person
+3:04
+two person 2.n name Person 2. fave
+3:08
+food if you were to use this outside of
+3:11
+any objects I'm going to console.log
+3:16
+this what we're returned with is a
+3:18
+window object basically we're returning
+3:21
+the window to see our website
+3:24
+technically we're inside of an object
+3:26
+already our window object and we have
+3:29
+all of these
+3:31
+properties but since we're using the
+3:33
+this keyword inside the context of
+3:35
+person one and person two we'll instead
+3:37
+make a reference to those objects hey
+3:40
+one thing I forgot to mention the this
+3:42
+keyword doesn't work with arrow
+3:44
+functions for example with person two
+3:47
+let's convert this to an arrow
+3:54
+function blank is eating undefined when
+3:57
+you use this within an arrow function
+4:00
+it's making a reference to that window
+4:01
+object still our window object does have
+4:04
+a name that's why it's appearing empty
+4:06
+but fave food is undefined because our
+4:08
+window object doesn't have a favorite
+4:10
+food property all right everybody so
+4:12
+that is the this keyword we will be
+4:14
+using this keyword a lot all it is is a
+4:17
+reference a reference to the object
+4:19
+where this is used and that is the this
+4:22
+keyword in
+4:25
+JavaScript

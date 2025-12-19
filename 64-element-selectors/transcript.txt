@@ -1,0 +1,743 @@
+introduction
+0:00
+hey it's me again so today I got to
+0:02
+explain element selectors in JavaScript
+0:05
+element selectors are methods used to
+0:08
+Target and manipulate HTML Elements by
+0:11
+using these methods they allow you to
+0:13
+select one or more multiple HTML
+0:15
+elements from the Dom the document
+0:17
+object model these methods are built-in
+0:20
+methods of document the Dom we can
+0:23
+select Elements by an ID a Class A tag
+0:26
+name and then there's query selector and
+0:28
+query selector all these methods return
+0:31
+something different either an element an
+0:33
+HTML collection or a node list one
+getElementById()
+0:36
+method you're probably already familiar
+0:38
+with is get element by ID so in this
+0:41
+example within our HTML document we will
+0:43
+create an H1 element I will create a
+0:46
+heading for my sample web page I'm
+0:49
+hungry so I'm going to talk about food
+0:51
+my heading is going to be food are us
+0:55
+it's like Toys R Us but it's with food
+0:58
+I'm going to give this H1 element an ID
+1:01
+of my Dash
+1:05
+heading so going back to our JavaScript
+1:07
+file I can select this element by its ID
+1:11
+I'll store a reference to it const my
+1:15
+heading equals we're accessing the Dom
+1:18
+with
+1:19
+document. get element by ID that ID was
+1:25
+my heading I can access this element
+1:28
+this H1 element using this reference so
+1:32
+let's take my
+1:34
+heading access its
+1:36
+style access its background
+1:41
+color so with CSS properties in
+1:43
+JavaScript if you're accessing them
+1:45
+through the Dom they have a camel case
+1:47
+naming convention if you're selecting
+1:49
+these properties with
+1:51
+CSS they have a hyphenated naming
+1:53
+convention so do pay attention to that
+1:56
+so with the background color I will set
+1:59
+it to be yellow as if we're highlighting
+2:01
+it you could also apply different CSS
+2:04
+properties let's take my heading access
+2:08
+its style access the text align property
+2:13
+and set it to be
+2:15
+Center and it's now centered now if I
+2:18
+was to
+2:20
+console.log this element of my heading
+2:23
+this is what we would
+2:27
+see it displays my h HTML element
+2:31
+including its style if it has style for
+2:34
+some reason if this ID doesn't exist for
+2:37
+example I'll misspell heading as heading
+2:39
+with an extra G well this returns null
+2:44
+if I were to eliminate these two lines
+2:45
+of code you can see that null get
+2:49
+element by ID returns a single element
+2:52
+if it finds it or null if it doesn't the
+getElementsClassName()
+2:56
+next method is get Elements by class
+2:58
+name this returns an HTML collection
+3:01
+it's similar to an array but it's
+3:03
+limited in the built-in methods that it
+3:04
+has So within our HTML document I will
+3:08
+create three separate div
+3:10
+sections this first div element will
+3:13
+have a class of
+3:15
+fruits my first fruit will be Apple so
+3:19
+let's copy this development paste it two
+3:21
+times I'll change the second to be
+3:24
+orange then
+3:27
+banana all right going back to our
+3:29
+Javascript file I will use this method
+3:32
+of get Elements by class name this will
+3:35
+return an HTML collection it's similar
+3:38
+to an array but it's not technically the
+3:40
+same so const fruits this will be the
+3:44
+name of my HTML collection equals
+3:48
+document we're accessing the Dom get
+3:52
+Elements by class
+3:55
+name what is the class name that we're
+3:57
+getting fruits
+4:03
+let's
+4:04
+console.log fruits just to see what it
+4:06
+is what are we working
+4:11
+with so fruits is an HTML collection my
+4:15
+collection contains these three elements
+4:18
+we have three objects within this HTML
+4:20
+collection if I was to take a look at
+4:22
+some of these properties we should have
+4:25
+text content so for the first element we
+4:27
+have text content of Apple
+4:30
+for the next Dev elopment which has an
+4:32
+index of one the text content is orange
+4:36
+we can assume that the next element has
+4:38
+text content of banana to change
+4:40
+something about one of these elements
+4:42
+let's begin with the first element we
+4:44
+have an HTML collection of fruits to
+4:47
+select one of these elements you'll use
+4:49
+an index so let's take our HTML
+4:52
+collection of fruits at index zero
+4:55
+that's going to return the first element
+4:57
+our div element of Apple I will access
+5:00
+its style access its background
+5:04
+color set it equal to be yellow as if
+5:07
+we're highlighting
+5:08
+it there we are Apple it's highlighted
+5:11
+for the next element I will increase the
+5:13
+index to one that will select our orange
+5:16
+and then two would be banana if I would
+5:20
+like to iterate over all of these
+5:21
+elements I can use an enhanced for
+5:25
+Loop we'll say let fruit of
+5:30
+fruits HTML collections are iterable we
+5:34
+can iterate them with an enhanced for
+5:36
+Loop let's take each fruit access its
+5:40
+style access its background
+5:44
+color then set it to be
+5:47
+yellow and that should highlight all of
+5:49
+them now HTML collections don't have a
+5:53
+builtin for each method HTML collections
+5:56
+do allow for live updates but
+5:58
+unfortunately they have a limited amount
+6:00
+of utility
+6:01
+methods if I attempt to use our HTML
+6:04
+collection of fruits then attempt to use
+6:07
+a for each
+6:09
+method here's what
+6:11
+happens we have a type error fruits. 4
+6:15
+each is not a function HTML collections
+6:19
+don't have a for each method we're not
+6:21
+able to use that what we could do is typ
+6:25
+cast our HTML collection as an array
+6:28
+let's access the class of array then use
+6:31
+the from
+6:34
+method this will return a new array of
+6:36
+fruits we'll typ cast our HTML
+6:39
+collection as an array then you could
+6:42
+follow this with the for each method if
+6:44
+you so choose for each element within
+6:46
+our array after typc casting it let's
+6:49
+take each fruit I'll use an arrow
+6:52
+function what would we like to do let's
+6:55
+take each fruit access its style add
+6:59
+access its background
+7:02
+color then set it to be yellow as if
+7:04
+we're highlighting
+7:06
+it and that does work get Elements by
+7:10
+class name will return an HTML
+7:12
+collection of all matching elements that
+7:15
+share this class if you would like to
+7:17
+use array methods with this HTML
+7:19
+collection you would want to typ cast it
+7:21
+to an array all right now we have get
+getElementsByTagName()
+7:24
+Elements by tag name within our HTML
+7:27
+document we'll create create two
+7:29
+unordered lists I will create an H4
+7:33
+heading of
+7:35
+root
+7:38
+vegetables let me scroll
+7:40
+down I will create an unordered
+7:43
+list with a few list items three should
+7:45
+be good for my first list item that will
+7:49
+be beets beets are a root
+7:53
+vegetable
+7:57
+carrots and potatoes
+8:01
+let's copy our unordered list and our H4
+8:03
+heading paste it change the second H4
+8:07
+heading to be nonroot
+8:10
+vegetables my first list item within
+8:12
+this other list will be
+8:16
+broccoli
+8:20
+celery and onions I just picked three
+8:24
+vegetables kind of at
+8:25
+random with our next method of get
+8:27
+Elements by tag name I can select one of
+8:30
+these elements by their tag name H4
+8:33
+unordered list list items take all
+8:36
+matches within our HTML document stick
+8:39
+them all within an HTML collection I
+8:42
+will create const const H4 elements
+8:48
+equals we're accessing the Dom use the
+8:51
+get Elements by tag name
+8:55
+method let's select all H4 elements
+9:00
+then I will
+9:02
+console.log my HTML collection of H4
+9:06
+elements let's see what it
+9:09
+is so it looks like this HTML collection
+9:11
+has two
+9:12
+elements two H4 elements the text
+9:16
+content of the first element is root
+9:18
+vegetables then we can assume that the
+9:20
+other element is non-root vegetables yes
+9:23
+it is non-root
+9:26
+vegetables we can access individual ele
+9:29
+elements of this HTML collection by an
+9:31
+index let's take this reference of H4
+9:34
+elements access the first
+9:37
+index access the style access the
+9:40
+background
+9:42
+color set it to be yellow as if we're
+9:44
+highlighting it and that should
+9:46
+highlight root vegetables the next index
+9:50
+of one would be non-root vegetables to
+9:53
+apply CSS properties to all of the
+9:55
+elements I can use an enhanced for Loop
+9:59
+for let H4 element singular of H4
+10:06
+elements plural take each H4 element
+10:10
+access its style access its background
+10:13
+color set it to be
+10:15
+yellow and that will highlight all of
+10:17
+the H4
+10:19
+elements let's create another HTML
+10:21
+collection of all the list item elements
+10:23
+we'll create another reference to all
+10:25
+list item elements so that'll be Beats
+10:29
+carrots potatoes broccoli celery and
+10:31
+onions const Li elements equals
+10:37
+document. getet Elements by tag
+10:42
+name the tag that we're selecting is all
+10:45
+list item
+10:47
+elements so using a for Loop let's
+10:49
+iterate through
+10:51
+them let Li I element singular of Li I
+10:57
+elements plural for each list item
+11:01
+element access the style access the
+11:04
+background color then set it to be a
+11:07
+different color let's say light
+11:11
+green and now all list item elements
+11:14
+will be a light green color and again
+11:17
+since these are HTML collections not
+11:19
+arrays they don't have any array methods
+11:22
+but we can typ cast them so that they do
+11:25
+if I wanted to change the background
+11:26
+color of these with the for each method
+11:28
+of
+11:29
+arays I'm going to typ cast our HTML
+11:32
+collection of H4 elements as an
+11:34
+array I will access the class of array
+11:38
+use the from
+11:40
+method pass our HTML collection of H4
+11:43
+elements as an argument if I wanted to
+11:45
+use the for each loop I can method chain
+11:48
+follow this with for
+11:50
+each what do we want to do for each of
+11:52
+these elements take each H4 element use
+11:56
+an arrow function do this
+11:59
+take each H4 element access its style
+12:03
+access its background color set it to be
+12:08
+yellow and that does work so let's do
+12:12
+this with our list item elements I'll
+12:14
+just copy this because I'm lazy we'll
+12:16
+typ cast our list item elements HTML
+12:19
+collection for each list item element
+12:23
+take each list item element access its
+12:26
+style access its background color set it
+12:29
+to be light green and that does work too
+12:34
+that is the get Elements by tag name
+12:36
+selector it will select all elements
+12:39
+with a matching tag name throughout your
+12:40
+document it returns an HTML
+12:43
+collection now we're going to talk about
+querySelector()
+12:45
+query selector query selector will
+12:48
+return the first matching element or
+12:51
+null if it doesn't find any matches I
+12:53
+will create a const of element equals
+12:58
+document
+12:59
+do query
+13:02
+selector query selector will return the
+13:04
+first match to select an element by a
+13:07
+class name we'll use dot the name of the
+13:10
+class these three elements have a class
+13:13
+of fruits let's select that dot fruits
+13:18
+if I was to take this element access its
+13:21
+style access its background color set it
+13:25
+to be yellow which element do you think
+13:27
+is going to be selected
+13:29
+the first Apple it's the first matching
+13:32
+element Corey selector only returns a
+13:35
+single element the first match if I
+13:38
+selected a tag name of H4 that would
+13:42
+select root vegetables even though we
+13:44
+have two H4 elements the first match is
+13:47
+selected if I selected the first list
+13:50
+item element that would select beats
+13:54
+that is the first list item element on
+13:56
+my web page if I change this to UL
+13:59
+meaning unordered list it would select
+14:01
+the first unordered list if I attempt to
+14:05
+select something that doesn't exist like
+14:07
+any ordered
+14:09
+lists well they don't exist there's no
+14:11
+matches if I was to
+14:15
+console.log my
+14:19
+element it would return null there's no
+14:22
+matches so query selector selects the
+14:25
+first matching element or null you can
+14:29
+select a class or a tag
+14:32
+name then the last method we'll discuss
+querySelectorAll()
+14:35
+is query selector all this returns a
+14:37
+node list a node list is similar to an
+14:41
+HTML collection except it has built-in
+14:44
+methods similar to arrays however node
+14:47
+lists are static HTML collections are
+14:50
+live since node lists are static they do
+14:53
+not update automatically in the Dom HTML
+14:56
+collections are live they will I'm going
+14:59
+to select all elements that have a class
+15:01
+of fruits I'll create a reference to
+15:04
+this const fruits
+15:07
+equals
+15:09
+document. query selector
+15:13
+all we are getting a class of
+15:18
+fruits I can access this node list by an
+15:20
+index number let's select the first
+15:23
+element access the style access the
+15:26
+background color set it to be
+15:32
+yellow and that will select Apple let's
+15:35
+select to the next element that's orange
+15:39
+the next would be
+15:42
+banana let's select all list item
+15:45
+elements I'm going to rename this though
+15:47
+let's rename fruits as
+15:50
+Foods let's select the first element
+15:53
+that would be
+15:54
+beets the next element would be carrots
+15:57
+then potatoes
+16:00
+broccoli
+16:01
+celery
+16:03
+onions so if I was to
+16:07
+console.log
+16:11
+Foods this would give me a node list
+16:14
+with six
+16:15
+elements node lists do have a built-in
+16:17
+for each method let's use that we don't
+16:20
+need to typ cast it as an
+16:22
+array take our node list of foods use
+16:25
+the built-in for each method what do we
+16:28
+want to do take each food use an arrow
+16:32
+function do this take each food access
+16:36
+its style access its background color
+16:39
+set it to be
+16:42
+yellow this will take all list item
+16:45
+elements change the background color to
+16:47
+Yellow as if we're highlighting them all
+conclusion
+16:50
+right everybody so those are different
+16:51
+element selectors get element by ID get
+16:54
+Elements by class name get Elements by
+16:56
+tag name query selector and query res
+16:58
+select or all there is a lot of overlap
+17:01
+where you could select any number of
+17:02
+these to select something but they each
+17:04
+return something different personally I
+17:06
+like using a combination of get element
+17:09
+by ID and query selector all but that's
+17:12
+just my personal preference in
+17:14
+conclusion element selectors are methods
+17:17
+used to Target and manipulate HTML
+17:19
+elements they allow you to select one or
+17:22
+more multiple HTML elements from the Dom
+17:24
+once you select your element or elements
+17:27
+you can make any sort of changes that
+17:28
+you would like and well everybody those
+17:30
+are element selectors in
+17:36
+JavaScript

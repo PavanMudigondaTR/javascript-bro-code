@@ -1,0 +1,709 @@
+API Key
+0:00
+hey everybody so in today's video we're going to create a weather app that fetches data from an API you can look up
+0:06
+any City and get the weather if that sounds good to you then sit back relax and enjoy the show if you would like to
+0:12
+follow along you will need your own API key the API that we'll be using is
+0:17
+openweathermap.org you do need to sign up for an account though it is free to sign up for an account you can go to
+0:24
+sign in if you're currently not registered you can create an account for free once you're signed in you'll need
+0:32
+an API key go to my API Keys it may take you some time to get an API key
+0:38
+generated for you mine took about 15 minutes and once you get it make sure it's active we will need that API key
+0:46
+about 20 minutes into this topic hopefully for you by then it'll be generated okay let's do this everybody
+HTML PART 1
+0:53
+we will Begin by creating a form element the form element will have a class of
+0:59
+weather form our form element is going to have an input element and a button
+1:05
+within this input element we'll type in the name of the city we would like to retrieve the weather data 4 so the type of this input element is
+1:13
+going to be text for some text the class will be City input so a
+1:20
+user can type in the city and we'll add a placeholder let me zoom in a little so you can see
+1:26
+it the placeholder will equal enter
+1:32
+City then we'll need a button let's create a button element with text of get
+1:40
+weather the type of this button will be submit it's the submit button for our
+1:47
+form after retrieving the weather data we'll display the weather data in a card
+1:52
+format like a Pokemon or Yu-Gi-Oh card so we will create a
+1:58
+develop with a class of card but before applying some CSS we
+2:04
+should at least add some placeholder elements so we can style them and see the changes for the time being let's
+2:10
+create an H1 element we will be deleting these elements later so don't get too attached I will set the class of this
+2:17
+element to be City display We'll add a sample City let's
+2:24
+say Miami or pick a city if you're choosing then I will create a paragraph element the class will be temp display
+2:32
+meaning temperature let's say the temperature is 90° F or pick something
+2:37
+in celsius if you're on Windows to add a degree symbol you can hold alt then type
+2:43
+0176 Miami is going to be 90° F then we'll create a paragraph element
+2:50
+for the humidity class equals
+2:55
+humidity display for the text next let's say
+3:01
+humidity colon space then a percentage 75% then we need a description of the
+3:08
+weather this will be another paragraph element the class will equal description
+3:14
+display desk meaning description for the description let's say clear
+3:20
+skies I'll also display an emoji depending on what the weather is the class will be weather
+3:31
+Emoji I'll use a sun for some reason if we can't display
+3:38
+the weather data such as if we can't locate a city let's add the following paragraph the class of this element will
+3:45
+be error display We'll add the text of please
+3:53
+enter a city that is all the HTML that we need for now we're going going to apply some
+CSS
+4:00
+CSS styling next so now let's head to our CSS style sheet we are going to select the body of our document select a
+4:08
+font family I will pick Ariel with a backup of s
+4:13
+serif I'll change the background color of the body background color pick a
+4:19
+color I'm going to use hsl values I will set the lightness to be
+4:26
+95% so it's a light gray color I will set that all margin around the body to
+4:31
+be zero then I'll use flex box to display the elements display
+4:38
+Flex the flex direction will be a column to arrange all the elements in a
+4:45
+column then align item Center to horizontally align all the elements
+4:51
+align item center now we'll select the class of weather form that'll be this
+4:58
+form that has an input element and a button all we'll do is add a little bit of margin around the entire form 20
+5:06
+pixels then we'll select our city input that's going to be the text box class of City
+5:14
+input I will add some padding of 10
+5:19
+pixels let me zoom out to 100% increase the font
+5:25
+size to 2 RM set the font weight to be
+5:33
+bold I'll add a border two pixel
+5:39
+solid and pick a
+5:46
+color but all lower the alpha so it's transparent to
+5:52
+30% there's our border currently border radius around the
+5:58
+corners let's do 10 pixels add some margin of 10 pixels
+6:06
+that'll separate this element from the button and set a width of 300
+6:12
+pixels okay let's style the button next okay we are going to select all buttons
+6:18
+that have an attribute where the type equals
+6:24
+submit so that's going to be for our submit button that says get weather let
+6:29
+me scroll down okay I'm going to add some padding around the button 10 pixels by 20
+6:37
+pixels I'll set the font weight to be bold I'll increase the font
+6:44
+size to be to RM pick a background color for the
+6:50
+button I'll pick something green but I'll use hsl
+6:58
+values I've already pre-picked a color let's go
+7:03
+with 122 39% and
+7:09
+50% that's a good shade of green I will set the color to be white
+7:15
+for the font color remove the border border
+7:22
+none and Border radius 5 pixels to round the
+7:27
+corners then when we hover our cursor over the button I would like it to be a
+7:32
+pointer and that does work when we hover our cursor over the button we'll use the
+7:38
+hover sudo class to change the background color so let's take our button for the type attribute is
+7:44
+submit access the hover sudo class take our background color make it a little
+7:50
+bit darker I'll bring down the lightness by 10% so it's at 40% so that does in
+7:55
+fact work okay then we're going to select our card class that contains all the weather
+8:02
+data so we will select the class of card for the background we're going to
+8:09
+do something a little bit different we're going to use a linear gradient instead of selecting the background color we will select the
+8:16
+background I will use the linear gradient function there's three arguments think
+8:24
+of a linear gradient as a slow transition between two colors we need an angle in degrees we'll say 180° for now
+8:34
+then a color let's pick something blue and
+8:40
+orange I'm going to pick some colors that look a little bit
+8:45
+better so for blue let's set the Hue to be 210 100% for the saturation and the
+8:53
+lightness will be 75% that's a good shade of blue and for
+8:58
+orange we'll use another hsl value for the Hue I'll say
+9:06
+40% the saturation will be 100% And The lightness will be
+9:12
+75% so I'm hoping with this linear gradient the background color looks kind of like a sunrise or a sunset once we
+9:19
+have our background I will add some padding of 50 pixels I'll add a box Shadow to this
+9:25
+card we'll add a vertical and horizontal offset of 2 pixels each and a blur
+9:31
+effect where the radius is 5 pixels then we'll pick a
+9:37
+color I'm just going to lower the alpha to
+9:42
+50% not bad this gives our card a 3D pop
+9:48
+effect I will set a minimum width of this card to be 300
+9:53
+pixels then we have to align everything within it I'll use flex box because I like Flex box
+9:59
+display Flex Flex direction will be a
+10:07
+column and align items Center to
+10:12
+horizontally align the items there we go then we'll select all
+10:18
+H1 elements that's going to be our city name select all H1
+10:24
+elements increase the font size to be 3 .5
+10:31
+RM I'll remove any margin from the top margin top will be
+10:37
+zero and add margin to the bottom of 25
+10:43
+pixels then we'll select all paragraphs that's going to be everything underneath our
+10:50
+city select all paragraphs increase the font size to 1.5
+10:57
+RM there's a lot of a natural margin between the paragraphs let's set all margin to be
+11:03
+zero to see what it looks like okay let's add a little bit of margin five
+11:08
+pixels on the top and bottom zero margin on the sides that's a lot better we'll
+11:14
+select the city display and the temperature display we're going to be selecting two classes City
+11:21
+display comma our temp display take these two classes apply the
+11:27
+following properties you know what for our font size let's set that to be 3.5
+11:33
+RM we can honestly remove that from H one for the font weight I will set that
+11:40
+to be bold for the color I'll make the color a little transparent I'll set the alpha down to
+11:49
+75% so that our city and our temperature they're both going to be transparent then I'll add some margin to
+11:56
+the bottom margin bottom 25 pixels okay let's select our humidity
+12:03
+display class humidity display set the font weight to be bold
+12:13
+and add some margin to the bottom of 25 pixels then we'll select
+12:19
+our description display which we shortened to desk
+12:24
+display for the font style I will set it to be italic
+12:30
+and the font weight will be bold I'll increase the font
+12:36
+size to 2 RM then we'll select our weather Emoji
+12:43
+so class weather Emoji remove all margin
+12:48
+around the Emoji margin zero then we'll increase the font size of the Emoji the size will be 7.5 RM so it's
+12:57
+kind of big then if for some reason we display an error we'll display this text so this
+13:03
+class is error display I'll set the font size to be 2.5
+13:12
+RM the font weight will be bold I'll set the color to be something
+13:20
+transparent all over the alpha to
+HTML PART 2
+13:25
+75% okay that is all the CSS that we need let's go back to our HTML file we can
+13:32
+delete everything within the card class we just wanted to see what it would look like with the elements
+13:38
+populated with our card element I will set the style attribute to be take the
+13:44
+display property set it to be none we don't want to display the card at all until we get the weather data until it's
+13:51
+returned to us our HTML is done our CSS is done then we're ready to add some JavaScript
+JavaScript
+13:57
+functionality we'll declare our constants that we need const weather
+14:03
+form equals document dot now since we're not
+14:08
+working with IDs we can't get element by ID we're working with classes we can use
+14:14
+Query selector or query selector all so I'm going to use Query selector this
+14:21
+will return the first element in this class we only have one element with this class class WEA form we'll store a
+14:30
+reference to it const City
+14:35
+input equals document. query
+14:41
+selector we are selecting the class of City input that's going to be this text
+14:49
+box const card our card is what contains all the weather
+14:55
+data document. query selector select the class of card and
+15:04
+give me the first element now we'll need that API key
+15:10
+const API key equals now here's my API key please
+15:18
+don't try and use this one specifically I will be deactivating it at the end of this video hopefully by now you should
+15:23
+have that API key given to you first we'll take our weather form we'll add an
+15:29
+event listener this is our
+15:35
+form the text element and the submit button when we click on this button the
+15:41
+event type is going to be submit after we attempt to submit this form we'll do the following code we'll have one
+15:48
+parameter an event that's going to be provided to us Arrow do this we'll fill
+15:54
+this in later we'll declare our functions that we need we will need an async
+16:00
+function to get weather data there will be one parameter a city that's going to
+16:08
+be passed in then we'll need a function to
+16:14
+display weather info there will be one
+16:19
+parameter data the data will be in a Json like format we'll create a
+16:26
+function to get weather Emoji based on what the weather is there
+16:33
+will be one parameter a weather ID then we'll create a function to
+16:38
+display to the screen any errors if there are any function display
+16:45
+error there will be one parameter a message a message to be displayed to the
+16:51
+window within our event listener once we have a submit event
+EventListener PART 1
+16:57
+once we click the button forms do have a default Behavior where they'll refresh the page we would like to prevent that
+17:04
+so let's take our event use the prevent default method to prevent the default
+17:10
+behavior for a form we don't want to refresh the page then we'll have to get the city the value within this text box
+17:19
+const City equals take the city input access the value store it within this
+17:26
+variable it should be a string we'll use an if statement if City if
+17:33
+there's a value within here this will be true we can use it within an if statement if there is a city do
+17:41
+this else we'll call the display error function else we will display an
+17:49
+error we will pass along the message to please enter a
+17:56
+city let's fill in the dis display error function we want to be sure that it works before continuing the display
+displayError()
+18:03
+error function is at the bottom we'll be provided with a message to display we
+18:08
+will create a constant of error display equals document now we'll create
+18:16
+an element create element we will create a paragraph then we'll need to change the
+18:23
+text content of this element error display access the text content
+18:29
+set it equal to be our message then we're going to add the
+18:36
+class of error display we would like these CSS properties take our error display
+18:43
+element access the class list then we will add a class we will add the CSS
+18:50
+class of error display then we will take our card
+18:57
+element which normally displays the weather data take our card reset the
+19:02
+text content if there is something there we'll set it to be an empty string
+19:08
+so normally with our card the display is set to none we'll set the display to be
+19:13
+a block or even Flex access our card access the style
+19:19
+access the display and I will set the display to be Flex to display
+19:25
+it we will take our card we will append a child element append
+19:32
+child we will append this paragraph of error display to the card now if I were
+19:39
+to not type in anything and just press get weather we get this error message
+19:44
+please enter a city to our card I'm just going to round the corners to make it look better
+19:50
+border radius let's do 10 pixels that's better okay moving on
+EventListener PART 2
+19:59
+if we do have a city if there's text within here we will try some code
+20:05
+because it might cause some errors we will catch any errors that happen we have one parameter of error if there's
+20:12
+an error we can console.log or console. error the
+20:19
+error then let's call our display error function we'll pass along the error and
+20:24
+display it now we need to get the weather data within our Tri block we will create a
+20:29
+constant of weather data equals now we
+20:35
+need to await get weather data function and pass
+20:42
+in our city so with the weight we can only use a weight within an async function since we're within an arrow
+20:49
+function we could declare this Arrow function as an a sync function so let's
+20:54
+precede our event parameter with a sync so that we can use a wait we're going to wait for this
+21:01
+function to return the weather data once we receive our weather data we will call
+21:06
+the display weather info function and pass along that data the weather
+21:14
+data okay this function is complete once you've typed everything in I'm going to
+21:19
+close this function and we can close our display error function
+21:24
+too now once we want to get our weather data after we have a city now we actually need to fetch the
+getWeatherData()
+21:31
+weather data we'll have to create a URL we'll create a constant of API
+21:38
+URL this is what we'll pass to the fetch function we will use a template string
+21:43
+be sure to use a pair of back ticks we'll need to get the following URL at this web
+21:50
+page we need to find the API call where we can pass in a city name we can copy
+21:57
+this within our template string we'll paste
+22:04
+it we'll replace the city name with the placeholder and use our city
+22:11
+variable for the API key we'll use a placeholder pass in the API
+22:22
+key this is what we'll pass to the fetch function we will create a response
+22:28
+const response equals a wait we can use a
+22:33
+weight because we're within an async function we will fetch our API URL once we have a
+22:42
+response let's check our response let's console.log our response
+22:47
+just to see what it is okay I will type in the city of Miami
+22:53
+get weather our data should be within console.log
+22:59
+here's our response it has a status of 200 and it's okay we need to check to
+23:05
+see if our response is not okay what if we couldn't retrieve the data I'll make up some gibberish
+23:12
+City let's go to inspect console we have a response status 404
+23:20
+the response is not okay we'll write an if statement if our
+23:26
+response is not okay we will throw a new error and pass
+23:34
+along this message could not fetch weather
+23:41
+data else if our response is okay we will return the response and we will
+23:48
+await our response convert it to a Json format using the Json
+23:54
+method so at the end of this function return an object that's in a Json like
+24:00
+format this data is going to be returned to our event listener after we get our weather data
+24:08
+we need to display it we'll work on the display weather info function next this
+displayWeatherInfo()
+24:13
+one let's console.log the data we
+24:20
+receive I will type in Miami so it looks like that
+24:26
+worked we have a name of Miami for the city we have the weather which is an
+24:33
+array it's an array of objects we have coordinates clouds
+24:38
+pretty much anything you can think of regarding the weather let's get the name within main there is temperature the
+24:45
+temperature will be in kelvin we need to convert it I'll get the humidity within weather it's an array of objects we will
+24:52
+get the description overcast clouds and this ID
+24:58
+eventually we'll use the ID to return an emoji there's different weather codes I'll explain that
+25:04
+later so we're going to use some object destructuring const use object
+25:10
+destructuring with a set of krly brackets we will access the name property and create a variable of city
+25:18
+city will be Miami in this case then we will access main main is a property that
+25:25
+contains an array take main use object destructuring again now we're within a
+25:31
+nested object I would like the temp and the
+25:38
+humidity then let's select our weather so whether it's an array of
+25:47
+objects we'll have to use array destructuring followed by object destructuring give me the
+25:56
+description and the ID we have to set this all equal to data
+26:04
+to use destructuring and let me organize this to make it look
+26:10
+nice our data is one gigantic object that has nested objects and nested
+26:16
+arrays so after destructuring we'll have these variables the city the temperature
+26:23
+the humidity a description of the weather and an ID for the weather code now we can use these like
+26:29
+variables so with our card currently we're not displaying it now I would like to display
+26:35
+it we are going to take our card set the text content to be an empty string if
+26:43
+there's already some text here we would like to reset it such as if there was an error
+26:48
+message take our card access it style set the display
+26:54
+property to be Flex for Flex box just to be sure that this is working I'm
+27:01
+going to get the weather without entering a city after we do type in a city it should
+27:06
+reset that's good that's what we wanted or if we make up some gibberish we have
+27:12
+that error could not fetch weather data but then if we type in something legitimate and get the weather it'll
+27:18
+reset that's what we would like okay now we have to create the
+27:23
+elements the elements that we previously deleted from the div element we need to recreate those we will create a constant
+27:32
+for City display to display the city document. create element our city
+27:41
+display was an H1 element let's copy this line of code and paste it a few
+27:47
+times four additional times we have City display temp display
+27:52
+for the temperature that was a paragraph element humid humidity
+27:59
+display humidity display that was also a paragraph
+28:04
+element a description display which we shortened to desk desk
+28:10
+display that was also a paragraph and a weather Emoji weather
+28:17
+emoji and that was also a paragraph okay now we need to change the
+28:22
+text content of each of these elements but they're empty so to say let's take the text content of our city
+28:29
+display. text content property equals our city variable that we
+28:36
+destructured okay let's see if that works I'll type in a city get weather oh
+28:41
+and then we need to append it take our card append child we will append the
+28:49
+city display element let's try that again type in Miami get the weather that
+28:54
+should display Miami let's try Dallas Texas
+29:01
+Dallas Oh and before displaying it we need to add the class list the CSS class
+29:06
+for the city display after adding the text content we will take our city display access its class list add the
+29:15
+class the CSS class of City display so then when we type in a city we should
+29:23
+have that CSS styling all right now we have to add the temperature following the same
+29:28
+format we will take our temp display access the text content equals I'll use
+29:35
+a template string with a pair of back ticks I'll add a placeholder pass in our
+29:41
+temperature add a degree symbol you can hold alt then type 0176 for a degree
+29:47
+symbol now this is normally in kelvin actually I don't think Kelvin uses the degree symbol but we'll be changing that
+29:54
+momentarily take our temperature display access its class list add the following
+30:01
+class add the CSS class of temp
+30:07
+display then we have to append the element to the card element take our card we will append a child element of
+30:15
+temperature display so now we should see the temperature but it's going to be in
+30:21
+kelvin we have the city and the temperature for the temperature if you would like celsi
+30:27
+let's use de C you have to subtract from the temperature
+30:39
+273.15 okay but now we should probably round it so let's enclose this equation
+30:44
+with a set of parentheses follow this with the two fixed method of numbers to
+30:49
+round it to one decimal place 15.6 de C
+30:57
+if you would like a Fahrenheit temperature this is the formula take our temp in kelvin
+31:04
+minus 273.15 we will multiply this by 9 / 5 +
+31:14
+32 so let's enclose this all within a set of
+31:20
+parentheses so now we should get that temperature but in Fahrenheit oh and then add F to the end
+31:28
+60° F then we'll get the humidity so take our humidity display element that
+31:34
+we created access the text content set
+31:39
+it equal to be a template string using a pair of back ticks let's add the word
+31:46
+humidity col in space add a placeholder display our humidity
+31:52
+variable We'll add the class list of humidity display humidity display access its class list
+32:01
+add the following class of humidity
+32:06
+display then we have to append the element to the card element card. append
+32:13
+child append our humidity display so we should get the
+32:20
+humidity Miami 60° fah humidity 81 let's add
+32:26
+percent 81% yep that does work then we'll add
+32:31
+the description a description of the weather take the element of description display access the text content
+32:41
+equals the
+32:46
+description then add the CSS class to the class list for this element description display access the class
+32:53
+list add the following class of description
+33:00
+display then add the element card. aend
+33:06
+child we will append our description display let's type in Miami get the
+33:13
+weather currently in Miami there's overcast clouds now we have to get an emoji based on the weather with our
+33:20
+element of weather Emoji we will access the text content equals we will call the
+33:27
+get weather Emoji function but we have to pass in a weather
+33:32
+ID so we will pass in the ID variable that we receive from
+33:40
+data once we get our weather Emoji we'll work on that momentarily
+33:45
+we'll take our element of weather Emoji access the class list add the following
+33:51
+CSS class of weather emoji
+33:58
+then append it to the card card. append child we will append our weather
+getWeatherEmoji()
+34:07
+Emoji all right now before we canest it we need to fill in the get weather Emoji
+34:13
+function so with this open Weather AI there are different group codes so our
+34:18
+weather ID is going to be either within the 200 range meaning a thunderstorm the 300 range means drizzle 500 is rain 600
+34:27
+is snow 700 is atmosphere such as Mist smoke or even a tornado 800 exactly is a
+34:35
+clear sky anything greater than 800 means clouds so our weather ID is going to be
+34:41
+one of these codes so we're going to use a switch we will examine the Boolean value
+34:48
+of true does the value of true match one of these cases we'll have a case for
+34:55
+group 200 if our weather ID that we pass in is greater than or equal to
+35:04
+200 and the weather ID is less than
+35:13
+300 that means there's a thunderstorm we will return an emoji a
+35:20
+thunderstorm Emoji thunderstorm I don't like the look back
+35:28
+one that's better okay group 300 is a drizzle so
+35:34
+let's copy this case because I don't feel like retyping it if our weather ID is greater than or
+35:41
+equal to 300 and less than 400 that means we have a
+35:47
+drizzle we'll just add an emoji of a raining Cloud so group 500 is also rain but it's
+35:55
+a heavier rain so let's copy this case paste
+36:01
+it if our weather ID is greater than or equal to 500 and less than 600 will return rain
+36:09
+as well group 600 is
+36:16
+snow if our weather ID is greater than or equal to 600 and less than
+36:24
+700 we will return a snowflake meaning snow then we have group
+36:35
+700 if our weather ID is greater than or equal to 700 and less than
+36:43
+800 we'll return some fog Emoji 800 exactly means a clear sky we
+36:50
+can display the
+36:55
+Sun if our weather ID is strictly equal to 800
+37:02
+exactly we'll return a sun emoji anything within the 800 range means
+37:14
+clouds so if our weather ID is greater than or equal to 801 800
+37:22
+means clear sky so with this group code it only goes up to
+37:28
+809 if our weather ID is less than 810 return a
+37:37
+cloud then let's add a default in case we get a weird weather
+37:42
+code default return I don't know a question
+37:51
+mark we get some unknown weather phenomena UFOs or something I don't know
+37:58
+okay and I think that should be everything let's close out of this close
+38:03
+out of these functions and now if I were to type in Miami and get the weather in Miami it is
+38:10
+60.3 De F humidity 81% there's overcast clouds and we get a cloud Emoji because
+38:17
+it's cloudy let's try Dallas we have a clear sky 45° F
+38:24
+humidity 63% clear sky and we get a sun emoji all
+38:29
+right everybody so that is a weather app that you can make using JavaScript HTML and
+38:38
+CSS

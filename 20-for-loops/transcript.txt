@@ -1,0 +1,276 @@
+introduction
+0:00
+all right what's going on people so
+0:01
+today I'm going to discuss for Loops a
+0:03
+for Loop will repeat some code a limited
+0:06
+amount of times with the while loop a
+0:09
+while loop can repeat some code
+0:10
+infinitely with the for Loop we can do
+0:12
+something a certain or limited amount of
+0:14
+times here's an example let's say we
+increment
+0:17
+would like to display the word hello
+0:18
+three times with the for Loop we can
+0:21
+write something like this now to create
+0:23
+a for Loop Type 4 parentheses curly
+0:25
+braces within the set of parentheses we
+0:28
+have up to three statements the first is
+0:30
+that we can create a temporary counter
+0:32
+much like we're assigning a variable
+0:34
+let's create a counter named I let I I
+0:37
+is a common naming convention for
+0:40
+counters within a loop I'm meaning index
+0:42
+so let I equal what number would we like
+0:46
+to start at let's start at zero then
+0:49
+semicolon this is the first statement
+0:51
+we'll create a counter to keep track of
+0:54
+the number of iterations the next
+0:56
+statement is the condition in which we
+0:58
+continue the for Loop we will continue
+0:59
+this for loop as long as I is less than
+1:02
+or equal to two that's if we're going to
+1:06
+execute this for loop three times zero
+1:09
+one two that would be a total of three
+1:11
+then the third statement we can
+1:13
+increment or decrement our counter I so
+1:16
+let's increment our counter by wandering
+1:18
+each iteration by typing I plus plus and
+1:21
+that's a for loop I is set to zero will
+1:24
+continue as long as I is less than or
+1:26
+equal to 2 then during each iteration we
+1:29
+will increment I by one that means we
+1:31
+will execute this for loop three times
+1:33
+what are we going to do when we execute
+1:35
+each iteration
+1:38
+let's console.log
+1:40
+hello
+1:42
+so this should display the word hello
+1:44
+three times yep hello three
+1:47
+now if I were to instead console.log I
+1:51
+we can see what I is
+1:53
+so during the first iteration I our
+1:55
+counter is zero then one then two if I
+1:59
+wanted to count up to ten I could change
+2:01
+my condition to be this
+2:03
+I is less than
+2:05
+10.
+2:07
+so we begin at zero then we count up to
+2:10
+nine
+2:11
+so if I need 1 through 10
+2:13
+I'll set I in the beginning to be one
+2:16
+then continue as long as I is less than
+2:19
+or equal to ten there so we have numbers
+2:22
+1 through 10 using a for Loop we can
+2:25
+even increment by a different number
+2:26
+instead of incrementing our counter by
+2:29
+one let's increment by two so I plus
+2:33
+equals two so then we should count it by
+2:36
+twos
+2:37
+one three five seven nine
+2:40
+if I want to start at 2 I can change our
+2:42
+counter to start at 2. count from two to
+2:45
+ten but increment by two
+2:48
+four six eight ten if we would like to
+decrement
+2:51
+count down let's start at 10 then count
+2:54
+down to zero
+2:55
+let I equal ten
+2:58
+will continue as long as I is greater
+3:01
+than zero
+3:03
+then I minus minus to decrement
+3:06
+hey for fun after we escape the for Loop
+3:09
+let's console.log Happy New Year
+3:13
+it's as if we're counting down to
+3:14
+midnight on New Year's Eve
+3:17
+ten nine eight seven six five four three
+3:20
+two one Happy New Year
+3:22
+or we could count down by two
+3:24
+I minus equals two
+3:28
+ten eight six four two or three or
+3:31
+whatever number ten seven four one happy
+3:34
+New Year or whatever number you want
+continue
+3:36
+now I'm gonna cover continue and break
+3:40
+this time we will count to twenty
+3:43
+we need a for Loop we'll create a
+3:45
+counter let I equal I'll set I to be one
+3:50
+that's our first statement our condition
+3:52
+is we'll continue as long as I is less
+3:55
+than or equal to twenty then increment I
+3:58
+by One during each iteration
+4:02
+so to test this let's console.log
+4:05
+I
+4:07
+so we have the numbers one through
+4:09
+twenty
+4:11
+so with continue we can skip an
+4:14
+iteration
+4:15
+I'm going to write an if statement
+4:20
+if I is equal to now there is a
+4:24
+Superstition that 13 is an unlucky
+4:26
+number
+4:27
+let's say if I is equal to 13 we will
+4:30
+skip that iteration I know it's a weird
+4:32
+example so if I is equal to 13
+4:36
+let's continue
+4:38
+we'll skip this iteration of the loop
+4:42
+else we will console.log whatever I is
+4:47
+so now when I run this program when I
+4:49
+run this program we skip over 13 we jump
+4:52
+from 12 to 14.
+4:54
+so if you ever need to skip an iteration
+4:56
+you can use the continue keyword
+break
+4:59
+now there's break break will break out
+5:02
+of the loop entirely we've seen this
+5:04
+keyword in switches to break out of the
+5:06
+switch if I equals 13 then just exit the
+5:10
+for Loop entirely so in this example we
+5:13
+count up to 12 but since I it now equals
+5:16
+13 we break out of the loop entirely
+5:19
+we don't continue the rest of the
+5:20
+iterations
+conclusion
+5:22
+all right everybody so those are for
+5:23
+Loops you can repeat some code a limited
+5:26
+amount of times there's up to three
+5:28
+statements we can write we can create a
+5:31
+temporary variable that serves as a
+5:33
+counter a condition in which we should
+5:35
+continue
+5:36
+then we can increment or decrement our
+5:38
+counter and those are four Loops in
+5:41
+JavaScript

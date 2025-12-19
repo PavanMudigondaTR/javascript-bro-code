@@ -1,0 +1,275 @@
+example 1
+0:00
+hey what's going on everybody so today
+0:01
+I'm going to explain switches a switch
+0:03
+can be an efficient replacement to using
+0:06
+many else if statements here's an
+0:08
+example of a program I wrote without
+0:10
+using a switch we have a day day will
+0:13
+normally be the number 1 through 7even
+0:15
+if day equals 1 will console.log it is
+0:18
+Monday which you can see here if day was
+0:21
+two well then it's Tuesday all the way
+0:23
+up to 7 which is Sunday I do have an
+0:26
+else statement that states our day
+0:29
+variable is not a day for example if I
+0:31
+set day to be I don't know like a string
+0:33
+of
+0:34
+pizza well then Pizza is not a day but
+0:37
+it really should be if you find yourself
+0:40
+using a lot of else if statements I
+0:42
+would instead recommend creating a
+0:44
+switch here's how to create one we'll
+0:47
+keep our day variable I'll set that to
+0:50
+be one to create a switch we will type
+0:52
+switch parentheses curly braces within
+0:56
+the parenthesis of the switch we will
+0:58
+place a variable or a value what are we
+1:01
+examining let's examine our day
+1:04
+variable we examine a value against
+1:07
+matching cases to create a case type
+1:10
+case then a value or a condition we will
+1:14
+see if day equals one so day case one
+1:19
+are these two values equal if they are
+1:22
+then we can do something we can execute
+1:24
+some code so add a colon then any code
+1:28
+underneath this case will be ex executed
+1:30
+if there's a match between our value or
+1:32
+variable day and this value so let's
+1:39
+console.log it is
+1:42
+Monday then be sure to add a break I'll
+1:45
+demonstrate why you need break later so
+1:48
+day is
+1:49
+one it is Monday let's add another case
+1:53
+for case 2 in case day equals 2 so let's
+1:57
+copy and paste what we have
+2:00
+case two it is
+2:03
+Tuesday let's change day to B2 it is
+2:06
+Tuesday all right let's do this all the
+2:09
+way up to case
+2:28
+seven
+2:33
+all right we have cases 1 through 7 if I
+2:36
+change day to be S well then it is
+2:40
+Sunday you can also add a default case
+2:43
+in case there are no
+2:45
+matches now what if we set day to be
+2:48
+Pizza which doesn't make sense well
+2:51
+there are no matching cases once we
+2:54
+review all of the cases and there's no
+2:56
+matches we exit the switch you also have
+2:59
+the the capability to add a default case
+3:02
+in case there are no
+3:04
+matches what's the default behavior of
+3:06
+the switch if there's no matching cases
+3:09
+let's
+3:13
+console.log I should probably use a
+3:14
+template literal for this if we're
+3:16
+inserting a
+3:17
+variable our day
+3:20
+variable is not a day so now we should
+3:24
+execute this default case Pizza is not a
+break
+3:28
+day all right now the reason that we
+3:30
+have these break statements is to break
+3:33
+out of the switch once we have a
+3:34
+matching case I'll demonstrate what
+3:36
+happens if we remove
+3:42
+these all right let's set day to be two
+3:46
+as in Tuesday it is Tuesday it is
+3:49
+Wednesday it is Thursday it is Friday it
+3:50
+is Saturday it is Sunday two is not a
+3:52
+day so the reason that we have these
+3:54
+breakes is to break out of the switch if
+3:57
+we don't have them once we have a
+3:58
+matching case
+4:00
+we will execute the code found within
+4:02
+that space then Cascade down and execute
+4:05
+any code that follows after including
+4:07
+code within different cases so that's
+4:10
+why you want these break statements
+4:11
+after each case to break out of the
+4:13
+switch let's go over a more complex
+example 2
+4:17
+example let's say we have a test score
+4:20
+variable between 0 and 100 my score will
+4:24
+be 92
+4:26
+92% I will also create a letter grade
+4:29
+variable
+4:31
+which we will declare but not aign I'm
+4:34
+going to examine our test score so
+4:37
+another way in which you can write a
+4:38
+switch is something like
+4:40
+this I'm going to examine the value of
+4:44
+true against matching cases which
+4:46
+contain a condition so case then I'll
+4:50
+write a
+4:51
+condition is test score greater than or
+4:54
+equal to 90 as in
+4:58
+90% this condition will evaluate to be
+5:01
+true or false if true is equal to true
+5:05
+we will do some code if this is false we
+5:08
+skip over it if our test score is
+5:10
+greater than or equal to 90 let's assign
+5:12
+our letter grade variable to equal an a
+5:17
+then be sure to
+5:19
+break then I'm going to test this with
+5:23
+console.log we will display our letter
+5:27
+grade we have an A let's do this for
+5:30
+anything greater than 80 the user will
+5:32
+receive a
+5:33
+B test score greater than or equal to 80
+5:37
+letter grade will equal
+5:39
+B let's change our test score to be 85
+5:42
+the user receives a
+5:44
+b let's follow this pattern 70 will be a
+5:52
+c yep
+5:54
+C 60 will be a
+5:58
+d
+6:06
+60 is D then for the default
+6:10
+case I will set letter grade to be
+6:14
+F letter grade equals
+6:19
+F if I set my test score to be 33% so
+6:23
+with the test score of 33 the letter
+6:25
+grade is f all right everybody so that's
+6:28
+a switch if if you find you're using a
+6:30
+lot of L if statements I would recommend
+6:32
+using a switch instead it's not bad if
+6:34
+you have a few but if you have many I
+6:37
+would use a switch instead and well
+6:39
+everybody those are switches in
+6:43
+JavaScript

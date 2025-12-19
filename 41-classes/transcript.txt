@@ -1,0 +1,268 @@
+0:00
+all right let's do this thing so I got
+0:02
+to talk about classes and JavaScript
+0:04
+classes are an es6 feature that provides
+0:07
+a more structured and cleaner way to
+0:09
+work with objects compared to the
+0:11
+traditional Constructor functions that
+0:13
+we're normally used to classes are going
+0:16
+to be really helpful when we reach
+0:17
+future topics such as the static keyword
+0:20
+encapsulation and inheritance in this
+0:23
+example I have a Constructor for a
+0:25
+product our product needs a name and a
+0:27
+price for example we have a shirt and
+0:30
+the price is
+0:31
+$19.99 instead of using a Constructor
+0:33
+method we're instead going to use a
+0:35
+class our class will include a
+0:38
+Constructor so let's start from the
+0:40
+beginning to create a class you type
+0:43
+class then the name of the object so our
+0:46
+class is going to serve as a blueprint
+0:48
+our objects will be products then add a
+0:51
+set of curly braces to use a Constructor
+0:55
+we can use the Constructor keyword
+0:57
+within our
+0:58
+class list any par parameters we will
+1:00
+have a name and a price for each product
+1:04
+we will assign the properties of
+1:07
+this.name equals the name parameter that
+1:09
+we
+1:10
+receive this. price equals price I will
+1:15
+also create a
+1:17
+function our function will be display
+1:21
+product now inside of a class you don't
+1:23
+need to use the function
+1:25
+keyword when we would like to display
+1:28
+this product we will console
+1:31
+log product colon space I'll include a
+1:36
+placeholder this.
+1:39
+name let's also output the
+1:42
+price price pick a unit of currency I'll
+1:46
+use American
+1:48
+dollars this do price let's create some
+1:52
+product
+1:53
+objects const product one equals to
+1:58
+create a new object we have to use that
+1:59
+new keyword the name of the class
+2:02
+product the Constructor is going to be
+2:04
+called automatically but we do need to
+2:07
+pass in a name and a price as
+2:09
+arguments we will pass in a shirt the
+2:14
+price will be
+2:16
+$19.99 just to be sure that everything
+2:18
+works let's invoke the display product
+2:21
+method product one do display product
+2:26
+method here are the details of our
+2:28
+product object
+2:30
+product shirt priced
+2:33
+$19.99 let's create a few more so this
+2:35
+class is
+2:38
+reusable product
+2:40
+two will be
+2:44
+pants I'll pick 2250 for the
+2:48
+price let's display product two product
+2:51
+two and we will use the display product
+2:53
+method of our
+2:55
+class product pants the price is
+2:58
+$22.50 uh it looks like I only have one
+3:01
+decimal point I'm going to make one
+3:02
+change after the price I will use the
+3:06
+two fixed method and set this to be two
+3:10
+decimals there
+3:12
+2250 all right product three const
+3:15
+product 3 equals new
+3:19
+product our third product is going to be
+3:23
+underwear this underwear is really
+3:25
+expensive it's $100 it's really good
+3:27
+underwear guys product 3. display
+3:31
+product product underwear price
+3:34
+$100 here's a challenge round I'm going
+3:37
+to add another method this method will
+3:39
+have one parameter sales tax we'll
+3:42
+create a method to calculate a total
+3:44
+including tax so let's create a new
+3:47
+method inside of a class we don't need
+3:49
+the function keyword calculate total
+3:53
+there will be one parameter sales
+3:57
+tax all we're going to do is return
+4:01
+this. Price Plus to calculate the sales
+4:04
+tax we'll take this. price times the
+4:09
+sales tax assuming it's a
+4:12
+percentage okay let's display product
+4:15
+one product one. display product I'm
+4:18
+also going to create a constant for the
+4:19
+sales tax that's not going to change
+4:22
+const sales tax let's say the sales tax
+4:26
+is 5%
+4:28
+0.05
+4:30
+I will create a variable const total
+4:35
+equals let's take product one use the
+4:38
+calculate total method but we have to
+4:41
+pass in sales tax we can either pass in
+4:44
+this number or this
+4:47
+variable once we have our total let's
+4:49
+display it
+4:52
+console.log I'll use a template
+4:55
+string total price in parentheses with t
+5:02
+tax I'll add a
+5:04
+placeholder display the total pick a
+5:07
+unit of currency I'll use American
+5:09
+dollars then I'll add two fixed two to
+5:13
+set it to two decimal
+5:15
+places all right our product is a shirt
+5:18
+price is $1 199.99 total price with tax
+5:21
+is
+5:22
+$20.99 let's do this with product two
+5:25
+product 2. display product product 2.
+5:28
+calculate total
+5:31
+pants 2250 total price
+5:34
+2363 let's check out our really
+5:36
+expensive underwear product 3. display
+5:38
+product product 3. calculate total our
+5:42
+underwear is $100 including sales tax
+5:45
+it's
+5:47
+$15 all right everybody so those are
+5:49
+classes they're an es6 feature that
+5:51
+provide a more structured and cleaner
+5:53
+way to work with objects compared to the
+5:56
+traditional Constructor functions that
+5:58
+we learned about in the last video
+6:00
+classes are going to be really helpful
+6:02
+with a few upcoming topics and well
+6:04
+everybody those are classes in
+6:07
+JavaScript

@@ -1,0 +1,413 @@
+introduction
+0:00
+hey people so in today's video I'm going
+0:02
+to explain error objects in JavaScript
+0:04
+and how to handle them and error is an
+0:06
+object that is created to represent a
+0:09
+problem that occurs errors occur often
+0:12
+usually when we accept user input or
+0:14
+establish a connection it's an object
+0:16
+that's created to represent a problem so
+Errors
+0:19
+for example I am going to
+0:21
+console.log the word hello and then
+0:25
+afterwards I'm going to display a
+0:27
+message to indicate that we have reached
+0:29
+the end of the program
+0:30
+you have reached the end this runs as it
+0:35
+should right let's say I misspell log as
+0:39
+leg well we encounter an uncaught type
+0:42
+error there's many different types of
+0:44
+Errors console. leg is not a function
+0:47
+type errors tend to happen when we try
+0:49
+and access something within an object
+0:51
+that doesn't exist one big issue that we
+0:53
+run into is that we prematurely exit the
+0:57
+program it never finishes executing we
+0:59
+have not reached the end errors when
+1:02
+they're uncaught interrupt the normal
+1:04
+flow of our program another example of
+1:06
+an error would be a reference error I
+1:09
+will console.log X but X isn't defined
+1:13
+we have an uncaught reference error X is
+1:15
+not defined and again it interrupts our
+1:18
+program we never reach the end errors
+1:20
+can be generated for all sorts of issues
+1:23
+such as network issues promise rejection
+1:26
+which we still need to talk about and
+1:28
+security errors when we ENC a problem
+1:30
+when doing one of these things an error
+1:32
+object will be generated and it
+1:34
+interrupts our program there's a
+try/catch
+1:36
+solution though and that is to handle
+1:39
+these errors when they occur we can do
+1:41
+that with try catch and finally blocks
+1:45
+with the try block we can enclose any
+1:47
+code that might potentially cause an
+1:49
+error such as if we're trying to
+1:52
+establish a connection to something if
+1:54
+that connection fails an error can occur
+1:56
+if we don't handle it it's going to
+1:58
+interrupt our program so so all of this
+2:00
+code I will place within a tri block we
+2:03
+will try all of this
+2:07
+code but we need a catch block
+2:10
+too the catch block has one parameter it
+2:13
+will catch an error
+2:16
+object then let's
+2:19
+console.log the error object to see what
+2:21
+it is so let's run this we have a
+2:25
+reference error X is not defined see now
+2:29
+we are reaching the of the program the
+2:31
+program is not being interrupted we have
+2:33
+gracefully handled this error before it
+2:36
+was uncaught but now it's caught for
+console.error()
+2:38
+catching errors I wouldn't recommend
+2:40
+using
+2:41
+console.log rather I would use console.
+2:44
+error this will highlight any errors
+2:46
+that occur and still handle them it's
+2:49
+good for debugging we can clearly see
+2:51
+the error reference error X is not
+2:53
+defined and again it doesn't interrupt
+2:56
+our program we still reach the end now
+finally
+2:59
+optionally you can add a finally block
+3:02
+the finally block always executes
+3:04
+regardless if an error comes up the
+3:06
+finally block is usually used for
+3:09
+closing files closing connections or
+3:11
+releasing resources usually when you
+3:14
+open something or establish a connection
+3:16
+you need to close it afterwards you
+3:18
+don't want to leave it open that's where
+3:20
+the finally block comes in do any
+3:22
+cleanup at the end whether or not an
+3:24
+error occurs so just to test this I'm
+3:27
+going to
+3:28
+console.log
+3:31
+this always
+3:35
+executes I'm going to console.log X we
+3:39
+have a reference error it is caught so
+3:41
+it doesn't interrupt anything we're
+3:43
+still executing the final block and we
+3:46
+reach the end of our program if we don't
+3:48
+run into any errors I'm going to
+3:50
+console.log
+3:52
+hello there are no errors that occur we
+3:55
+don't end up catching anything this
+3:57
+always executes the finally block and we
+3:59
+we reach the end of our program so any
+4:02
+code that is considered dangerous where
+4:04
+it could cause an error you'll want to
+4:05
+surround with a tri block and then catch
+4:07
+them in the future if you ever open any
+4:10
+files or establish a connection you'll
+4:12
+want to finally block to close those
+4:14
+connections but we haven't discussed
+4:15
+that yet errors can also occur when
+throw new Error()
+4:18
+accepting user input because we don't
+4:20
+know what the user is going to type in
+4:21
+in a worst case scenario a user could
+4:24
+type in a malicious script in this next
+4:26
+example I'm going to create a constant
+4:29
+for a a dividend and a diviser const
+4:32
+dividend equals window.
+4:37
+prompt enter a
+4:42
+dividend with division a dividend is the
+4:45
+number that is being divided and we need
+4:48
+a
+4:50
+diviser a divisor is the number we're
+4:52
+dividing by enter a
+4:56
+divisor then I'm going to create a
+4:58
+constant result result equals our
+5:03
+dividend divided by our
+5:07
+diviser
+5:10
+console.log the
+5:12
+result what is 1 / 2
+5:16
+0.5 now mathematically speaking we can't
+5:20
+divide a number by zero if you attempt
+5:22
+to do this in JavaScript I will divide 1
+5:25
+by
+5:26
+0o you end up with infinity we can
+5:29
+intentionally cause errors then handle
+5:32
+them with try catch and optionally
+5:34
+finally blocks so this code is
+5:37
+considered dangerous I'll place it
+5:39
+within a tri
+5:43
+block we need to catch any
+5:46
+errors catch an error object if it
+5:49
+occurs then console.
+5:53
+error the error
+5:55
+object so just to test this instead of
+5:58
+console.log log I'll misspell log as
+6:02
+leg I should probably add a message just
+6:05
+to confirm that we have reached the
+6:07
+end you have reached the
+6:11
+end 1
+6:14
+/0 type error console. leg is not a
+6:16
+function but we still reach the end our
+6:19
+program isn't interrupted within a tri
+6:22
+Block in certain situations we can
+6:25
+intentionally cause an error I'm going
+6:28
+to use an if statement
+6:30
+if our
+6:32
+divisor is equal to
+6:35
+zero then I will throw a new error
+6:40
+object we're calling the error
+6:42
+Constructor to construct a new error
+6:44
+object within the Constructor we have
+6:47
+one argument we can pass in a message
+6:49
+what is the error going to say you can't
+6:53
+divide by
+6:55
+zero okay let's try this enter dividend
+6:59
+1 enter diviser I'll typee in zero then
+7:02
+press
+7:03
+okay we have a caught error you can't
+7:06
+divide by zero our program isn't
+7:09
+interrupted we still reach the end let's
+7:12
+change console. leg back to log cuz I
+7:14
+forgot to do that what if somebody
+7:16
+attempts to type in something that's not
+7:18
+a number enter a dividend one enter a
+7:21
+divisor I'll type in the word
+7:23
+Pizza not a number you have reached the
+7:25
+end I would like to throw a new error
+7:28
+when somebody doesn't type in a number
+7:30
+what I can do is that with our prompt I
+7:33
+will typ cast it as a
+7:37
+number if somebody enters in some
+7:39
+non-numeric characters for either the
+7:41
+dividend or the diviser we will store
+7:44
+within there not a number so let's check
+7:46
+that with an if statement if is not a
+7:52
+number if our dividend is not a number
+7:56
+or our divisor is not a
+8:01
+number let's throw a new error throw new
+8:08
+error values must be a
+8:13
+number I will divide one by the word
+8:16
+Pizza error values must be a number we
+8:20
+still reach the end of our program with
+8:22
+error objects you can even create your
+8:24
+own in certain situations and then you
+8:26
+can handle them however you want all
+conclusion
+8:28
+right everybody body so those are error
+8:30
+objects and how to handle them and error
+8:32
+is an object that is created to
+8:34
+represent a problem that occurs they
+8:37
+occur often with user input or
+8:39
+establishing some sort of connection to
+8:42
+handle them you can use try catch and
+8:44
+optionally finally blocks which are
+8:47
+mostly used for cleanup if there's any
+8:49
+code that can cause an error place it
+8:51
+within a tri block and catch any errors
+8:53
+that happen and well everybody that is
+8:55
+how to handle errors in
+8:58
+JavaScript

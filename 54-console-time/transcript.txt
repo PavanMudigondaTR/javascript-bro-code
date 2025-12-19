@@ -1,0 +1,208 @@
+0:00
+hey what's going on people so in today's
+0:01
+video I'm going to explain the time
+0:03
+method of console the time method is a
+0:05
+tool that allows you to measure the time
+0:07
+it takes for a section of code or
+0:10
+process to execute it's great for
+0:12
+identifying performance bottlenecks to
+0:14
+start the time method you'll want to
+0:16
+pass in a label this will be a unique
+0:18
+identifier to stop keeping track of time
+0:20
+you can follow the time method with the
+0:23
+time end method then pass in that same
+0:25
+label that unique identifier by using a
+0:28
+combination of these two methods you can
+0:30
+to see how long some process takes for
+0:32
+example I will create a for Loop that's
+0:35
+going to Loop 1 million times let I
+0:39
+equals z continue this as long as I is
+0:43
+less than 1
+0:46
+million then i++ it doesn't really
+0:49
+matter what we do here do some code here
+0:53
+we're just going to Loop a million times
+0:55
+so I can see how long this process takes
+0:58
+wherever I would like to start this
+1:00
+timer I will use
+1:03
+console.time I will want to pass in some
+1:05
+sort of label some unique identifier
+1:07
+let's say test wherever I would like to
+1:10
+stop the timer I will again use console
+1:14
+but instead use the time end method and
+1:17
+pass in that same
+1:19
+label within our console it's going to
+1:21
+show us how long this process is going
+1:23
+to take between when we start and when
+1:25
+we end to get from here to here it took
+1:29
+0 9 milliseconds if I were to increase
+1:32
+the amount of iterations this time is
+1:34
+going to go up for me to Loop 10 million
+1:37
+times that took 3.8 milliseconds 100
+1:40
+million is 34 milliseconds let's try a
+1:45
+billion 338
+1:48
+milliseconds using the time method could
+1:50
+be useful within a function we will
+1:53
+create a function to load some
+1:56
+data we're just going to pretend to load
+1:58
+some data but don't actually do it again
+2:01
+I will use a for loop we're just
+2:04
+pretending to load data let I equal Z
+2:08
+we'll iterate this Loop like a billion
+2:12
+times then
+2:15
+i++ pretend to load some data if I would
+2:20
+like to measure how long this function
+2:22
+takes in order to identify any
+2:24
+bottlenecks I will use the time method
+2:26
+of console
+2:28
+console.time I'll need a unique label
+2:32
+I'll use the name of the function within
+2:33
+quotes as a unique
+2:35
+identifier then when this function ends
+2:38
+I will follow this with the time and
+2:41
+method of console and pass in that same
+2:45
+label then we'll need to execute this
+2:48
+function let's pretend that our program
+2:50
+is running really slow for some reason I
+2:53
+can test each part of my program one
+2:55
+function at a time let's see how long
+2:58
+the loaded data function takes
+3:00
+338 milliseconds that could be a little
+3:03
+or a lot depending on what you're doing
+3:06
+but here we're just pretending to load
+3:07
+some
+3:08
+data let's create a function to process
+3:11
+some data function process
+3:17
+data we are just going to pretend to
+3:20
+process some
+3:22
+data let I equals
+3:25
+z let's Loop through I 1 million times
+3:30
+then
+3:33
+i++ pretend to process some data if I
+3:38
+would like to measure how long this
+3:40
+function takes I will use
+3:43
+console.time pass in a unique
+3:45
+label for example the function name as a
+3:49
+string then we will end this timer
+3:53
+console.time and pass in that same label
+3:58
+then we will execute this function
+4:01
+all right let's see how long these
+4:02
+functions
+4:03
+take if I'm looking at both of these
+4:06
+functions and trying to identify any
+4:08
+bottlenecks it looks like the load data
+4:10
+function is taking a lot longer than the
+4:12
+process data function in our make belief
+4:15
+scenario we've noticed that our load
+4:17
+data function is taken quite a bit of
+4:18
+time that's where the time method could
+4:20
+be helpful all right everybody that is
+4:22
+the time method it's a tool that allows
+4:25
+you to measure the time it takes for a
+4:27
+section of code or process to execute
+4:29
+it's great for identifying performance
+4:31
+bottlenecks and well everybody that is
+4:33
+the time method in
+4:38
+JavaScript

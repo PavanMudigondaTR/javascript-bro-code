@@ -1,0 +1,220 @@
+0:00
+hey everybody today I'm going to explain
+0:01
+the spread operator in JavaScript the
+0:04
+spread operator is represented by three
+0:06
+dots the spread operator allows an
+0:08
+iterable such as an array or string to
+0:11
+be expanded in separate elements what
+0:13
+this does is unpack the elements here's
+0:16
+an example let's create an array of
+0:19
+numbers pick some numbers I'll just pick
+0:21
+1 through five 1 2 3 4 5 then just to
+0:27
+test this let's console.log
+0:30
+my array
+0:32
+numbers in this array what if I would
+0:34
+like to find the greatest value well one
+0:37
+way in which I could do that is let's
+0:39
+declare a maximum let maximum this is
+0:42
+going to be a variable equals I will use
+0:46
+the max method of math what would happen
+0:49
+if I place our array within this
+0:51
+method then I will display our
+0:55
+maximum so we have not a number using
+0:58
+the max method we can't place an array
+1:00
+directly within this method however by
+1:02
+utilizing the spread operator we can
+1:04
+spread this array into different
+1:06
+elements so we will preedee this array
+1:09
+with the spread operator we are going to
+1:12
+unpack the elements now if I run this
+1:14
+program again we have our result of five
+1:17
+when you use the spread operator imagine
+1:19
+that you're opening a box and taking out
+1:21
+all the contents inside like you're
+1:23
+unpacking something let's find the
+1:25
+minimum this time let minimum equals
+1:31
+math.min we will pass our array of
+1:35
+numbers then use the spread operator to
+1:38
+spread our array into different elements
+1:40
+what is the minimum value from this
+1:42
+array that would be one you can also do
+1:45
+this with strings too you can separate a
+1:47
+string into different
+1:49
+characters let let's create a username
+1:53
+equals type your name first name and
+1:56
+last name I will create an array name
+1:59
+named letters letters
+2:02
+equals we'll create a new array let's
+2:05
+take our username it's a string and use
+2:08
+the spread
+2:09
+operator then I will display our letters
+2:14
+console.log
+2:17
+letters and here's my name divided into
+2:20
+different characters what we have is an
+2:21
+array of characters with my array of
+2:24
+characters I can join them back together
+2:26
+and insert characters between each
+2:28
+element I will meth chain the join
+2:30
+method after our
+2:32
+array we'll add a dash between each
+2:36
+character so now my username is all one
+2:39
+string but there's a dash between each
+2:42
+character okay now this time we're going
+2:44
+to create an array of fruits we'll make
+2:46
+a shallow copy of an array using the
+2:48
+spread
+2:50
+operator add some fruit I'll add an
+2:53
+apple an
+2:55
+orange and a
+2:57
+banana then I will console
+3:00
+dolog my
+3:03
+fruits I can create a shallow copy of
+3:06
+this array using the spread operator a
+3:08
+shallow copy means it's a different data
+3:10
+structure but it contains identical
+3:13
+values I'll create a copy of fruits
+3:16
+named new fruits
+3:20
+equals an
+3:22
+array let's take our fruits array then
+3:25
+use the spread
+3:27
+operator let's display new fruits and it
+3:30
+should be an identical copy yep there's
+3:33
+no apparent change we have two different
+3:36
+arrays but they contain identical
+3:38
+elements we can combine two or more
+3:41
+arrays using the spread
+3:43
+operator let's create an array of
+3:48
+vegetables let's add some
+3:50
+carrots
+3:53
+celery
+3:56
+potatoes I'll rename new fruits as Foods
+4:00
+let's add our array of fruits we're
+4:03
+spreading
+4:04
+it comma then we will spread our
+4:08
+vegetables
+4:09
+array then we will display our array
+4:12
+Foods this array contains all of the
+4:14
+elements from these two arrays fruits
+4:17
+and vegetables we can use the spread
+4:19
+operator to combine arrays we even have
+4:21
+the capability to append separate
+4:23
+elements along with unpacking these
+4:25
+arrays I will also add eggs and
+4:31
+milk we have all of the elements from
+4:34
+our two arrays plus a few extras eggs
+4:37
+and milk all right everybody so that's
+4:39
+the spread operator it's three dots it
+4:41
+allows an iterable such as an array or
+4:44
+string to be expanded into separate
+4:46
+elements and well everybody that is the
+4:49
+spread operator in
+4:52
+JavaScript

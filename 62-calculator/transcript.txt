@@ -1,0 +1,635 @@
+HTML
+0:00
+hey what's going on everybody in today's
+0:02
+video we're going to create a calculator
+0:04
+program using HTML CSS and JavaScript so
+0:07
+let's get started all right let's do
+0:09
+this thing everybody we have a lot of
+0:11
+buttons to create but we'll need a
+0:13
+container I will create a div element
+0:16
+the div element will have an ID of
+0:20
+calculator within this div element we'll
+0:23
+create an input
+0:25
+element the input element will have an
+0:27
+ID of display
+0:30
+to display the numbers that we type in I
+0:33
+don't want somebody to enter in some
+0:34
+text for the
+0:36
+display I would like this display to be
+0:39
+readon I will add the read only property
+0:43
+so we can't type in anything even though
+0:45
+I'm trying I will create a nested
+0:49
+development that has an ID of keys for
+0:52
+all of the keys we need to add a lot of
+0:55
+buttons we'll begin with the first I
+0:57
+will create a button element
+1:00
+the text on the button will be plus I
+1:03
+will set the onclick attribute of this
+1:07
+button to be a JavaScript function we
+1:09
+still need to Define this function
+1:11
+eventually we'll create a append to
+1:16
+display
+1:17
+function we have one argument to pass
+1:19
+into this JavaScript function a
+1:22
+character of
+1:24
+plus that's our first button let's copy
+1:27
+this button and paste 13 additional
+1:31
+times if I counted
+1:39
+right okay the second button will be
+1:41
+seven the character we're passing in is
+1:45
+seven followed by
+1:47
+8
+1:50
+9
+1:53
+minus
+1:55
+4
+1:57
+5
+1:58
+6
+2:01
+asterisk for
+2:04
+multiplication
+2:06
+1
+2:07
+2
+2:10
+three forward slash for
+2:13
+division then
+2:17
+zero and here are the new buttons I'm
+2:20
+Mis counted we need to add one
+2:22
+more a DOT for a
+2:25
+decimal now we need an equals button
+2:27
+we're going to arrange that a little
+2:29
+different let's create a
+2:31
+button with the text of
+2:34
+equals the onclick attribute of this
+2:37
+specific button is going to be
+2:42
+calculate then we need a button to clear
+2:45
+our
+2:48
+screen the text on this button will be
+2:50
+capital c for clear the on click
+2:54
+attribute of this button is going to be
+2:57
+clear display
+3:00
+and that is all the buttons we'll
+3:02
+need so let's save everything and let's
+3:06
+go to our CSS
+3:07
+stylesheet I'm going to zoom back to
+CSS
+3:11
+100% first let's style all these buttons
+3:14
+I will select all
+3:16
+buttons for each button I will set the
+3:19
+width to be 100
+3:22
+pixels the height to be 100 pixels so
+3:26
+they're
+3:26
+even I would like rounded buttons I will
+3:30
+set the Border radius property to be 50
+3:34
+pixels so they're
+3:36
+circles let's remove the
+3:39
+border border
+3:42
+none I'll change the background color of
+3:44
+the buttons
+3:48
+background-color I'll use hsl values
+3:51
+I'll set the lightness to be 30% so
+3:54
+they're
+3:54
+darker for the text of the button I will
+3:57
+set the color to be white
+4:00
+for the font
+4:02
+size I will set that to be three
+4:07
+RM set the font weight to be
+4:12
+bold then when I hover my cursor over
+4:14
+one of the buttons I would like my
+4:16
+cursor to be a
+4:18
+pointer
+4:20
+cursor
+4:23
+pointer now we have to arrange these
+4:25
+buttons
+4:26
+properly let's select the ID of keys
+4:31
+keys is a development that's containing
+4:33
+all of the
+4:34
+buttons this
+4:36
+element all of the buttons are
+4:40
+within to arrange these buttons in a
+4:42
+grid we can set the display
+4:45
+property to be a
+4:48
+grid for this calculator I would like
+4:51
+four columns to do that I will set the
+4:55
+grid template columns property to be
+5:01
+we'll use the repeat function of CSS I
+5:04
+would like four columns then to arrange
+5:07
+these buttons evenly you can use 1
+5:10
+F FR stands for fractional unit 1 FR
+5:15
+indicates that each column should take
+5:17
+up an even amount of space so now we
+5:20
+have Columns of four if I were to set
+5:22
+this to three we would have Columns of
+5:24
+three but I'm going to use Columns of
+5:26
+four because I would like all of the
+5:28
+operators on the left hand side
+5:30
+I'll set the Gap to be 10
+5:35
+pixels that is the gap between each of
+5:38
+the
+5:38
+rows then I'll add some
+5:40
+padding of 25
+5:44
+pixels that's padding around the
+5:46
+keys let's select the ID of
+5:49
+calculator I'll add that to the top to
+5:52
+keep everything
+5:54
+organized with our calculator I will
+5:57
+select a font family
+6:00
+of Ariel with a backup of s
+6:04
+serif let's pick a background color for
+6:07
+the
+6:08
+calculator I will select something
+6:12
+darker I'll set the lightness to be
+6:16
+15% I'll round the corners of the
+6:20
+calculator border radius 15
+6:26
+pixels the corners of the calculator are
+6:28
+smooth now
+6:30
+then I will set a Max width of the
+6:33
+calculator to be 500
+6:36
+pixels if any elements overflow I will
+6:39
+set that to be
+6:41
+hidden this is mostly for our display if
+6:44
+we have a very long equation all right
+6:47
+next let's select the display right now
+6:49
+it's kind of
+6:51
+small we are selecting our ID of
+6:55
+display let's set the width to be 100%
+7:02
+I'll add some padding of 20
+7:05
+pixels for the text of the display I
+7:07
+will set the font size to
+7:10
+be 5
+7:14
+RM let's text a line
+7:20
+left I'll remove the border border
+7:25
+none and I'll change the background
+7:27
+color I'll just copy this property
+7:29
+because I'm lazy let's increase the
+7:31
+lightness to
+7:36
+20% then we'll select the body of our
+7:43
+document I will remove all margin margin
+7:48
+zero I would like the calculator to be
+7:50
+in the middle of my window right now
+7:52
+it's in the top left corner if you would
+7:54
+prefer it up here you can leave it as
+7:57
+is I will set the display to be Flex for
+8:01
+Flex
+8:03
+box
+8:04
+justify content in the center for a
+8:09
+horizontal alignment for a vertical
+8:12
+alignment we can set
+8:15
+align items to be Center but we do need
+8:19
+to increase the height of the body of
+8:20
+the document so it's
+8:23
+100% I will set the height to be 100 VH
+8:27
+for 100% the viewport height that should
+8:31
+place the calculator in the middle of
+8:32
+the body of our document both
+8:34
+horizontally and vertically for the
+8:37
+background color I'm going to decrease
+8:39
+the lightness
+8:40
+slightly for the background color I will
+8:43
+set the lightness to be like
+8:46
+95% okay let's go to the bottom of our
+8:49
+CSS
+8:50
+stylesheet when I hover over one of
+8:52
+these buttons I would like to increase
+8:54
+the lightness so with all
+8:58
+buttons
+8:59
+with the hover sudo
+9:01
+class change the background color so the
+9:05
+lightness is 40% instead of
+9:08
+30 now these buttons light up when we
+9:10
+hover our cursor over one of the
+9:13
+buttons now when I click on one of the
+9:15
+buttons I'll increase the lightness
+9:17
+further so it
+9:18
+flashes we are selecting the active
+9:21
+studo class
+9:22
+now let's take our background color
+9:25
+property increase the lightness to 50%
+9:29
+when we hover over a button it lights up
+9:31
+when we click on it it flashes
+9:35
+momentarily so with all of these
+9:38
+operators I would like all of these
+9:39
+operator buttons to be a different color
+9:41
+I'll pick orange we're going to give
+9:43
+each of these buttons a new class let's
+9:46
+head back to our HTML file beginning
+9:49
+with the plus button I will set the
+9:52
+class equal
+9:54
+to operator Das BTN for button
+9:59
+so let's copy this class paste it for
+10:03
+our minus
+10:04
+button multiply
+10:06
+button divide button and the clear
+10:13
+button now we will select the class of
+10:17
+operator BTN for
+10:20
+button let's change the background
+10:24
+color I'm going to set the background
+10:26
+color to be
+10:28
+orange
+10:30
+I've already pre-picked a
+10:34
+color when I hover my cursor over one of
+10:37
+the operator buttons I would like the
+10:39
+color to be a lighter orange instead of
+10:42
+gray let's take our operator button
+10:46
+access the hover sudo class I'll
+10:48
+increase the lightness to
+10:53
+65% then when I click on one of these
+10:56
+buttons I would like the lightness to
+10:57
+increase further
+10:59
+with the operator button
+11:01
+class with the active pseudo class
+11:04
+increase the lightness to
+11:07
+75% so when I click on one of the
+11:09
+operator buttons it's going to flash
+11:12
+momentarily all right and that is all
+11:14
+the HTML and CSS that we need now we
+11:17
+just need to add functionality let's go
+11:19
+to our Javascript
+11:20
+file for our Javascript file there's not
+JavaScript
+11:23
+a lot we have to write first we need to
+11:25
+get the display element so what was that
+11:28
+ID
+11:31
+display const display equals document.
+11:36
+getet element by ID get the ID of
+11:42
+display we have three functions to
+11:45
+create a function for append to display
+11:48
+calculate and clear display these three
+11:52
+functions function append
+11:57
+to display
+12:00
+there is one parameter
+12:03
+input because we were passing in a
+12:05
+character when we call this
+12:07
+function then we have a
+12:09
+function to clear
+12:14
+display then a function to
+12:22
+calculate we'll begin with a pen to
+12:24
+display all we're going to do is take
+12:26
+our display this element access its
+12:30
+value append it with plus equals our
+12:35
+input and let's see if this works seven
+12:40
+I forgot to change the font color of the
+12:42
+display so let's do that within our
+12:44
+display element let's set the color to
+12:47
+be white okay that's much
+12:51
+better
+12:56
+7.13 + 5
+12:59
+equals okay we know that that works when
+13:03
+I click on the clear button I would like
+13:04
+to clear this
+13:06
+display let's access our display element
+13:09
+access the value property set it equal
+13:12
+to an empty string
+13:17
+3.14159 when I hit clear it should clear
+13:20
+the
+13:21
+display lastly we have
+13:23
+calculate let's take our display
+13:26
+elements value property set it equal to
+13:30
+now we're going to use the eval
+13:33
+function the eval function takes an
+13:35
+expression such as 1 + 2 + 3 and
+13:39
+evaluates it and gives a result it's
+13:41
+kind of like it's its own built-in
+13:43
+calculator so to say evaluate the value
+13:47
+within our
+13:48
+display display.
+13:51
+value so if I add
+13:55
+3.14 plus 1
+14:00
+01 I'm given a result of
+14:03
+4.15 now for some reason if we get an
+14:05
+error for example 7 +
+14:09
+equals well we have a problem let's go
+14:12
+to our
+14:13
+console we've encountered an uncaught
+14:16
+syntax error because we never finished
+14:18
+our equation in the last lesson we
+14:20
+learned about error handling this is
+14:23
+dangerous code it can cause an error
+14:26
+let's surround this code with a tri
+14:27
+block
+14:29
+we will try this code and catch any
+14:32
+errors that
+14:34
+happen so we need a catch block now
+14:37
+catch any
+14:39
+errors we will change the value of the
+14:42
+display to equal some text of
+14:48
+error all right and that should work
+14:53
+3.14 times equals that results in an
+14:57
+error we clear it and then start over
+15:02
+what's 1 + 2 + 3 + 4 that would be 10
+15:08
+all right everybody so that is a
+15:09
+calculator program you can make using
+15:12
+JavaScript HTML and CSS impress your
+15:18
+friends

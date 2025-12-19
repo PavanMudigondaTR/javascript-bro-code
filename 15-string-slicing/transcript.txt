@@ -1,0 +1,348 @@
+0:00
+hey everybody so today I'm going to
+0:01
+explain string slicing in JavaScript
+0:04
+string slicing is the process of
+0:06
+creating a substring from a portion of
+0:09
+another string this won't alter the
+0:11
+original string just to demonstrate
+0:13
+let's create a constant for our full
+0:16
+name go ahead and type in your full name
+0:20
+or you can copy me I'm going to extract
+0:23
+the first name from my full name and
+0:25
+create a new string out of it so I'll
+0:27
+declare this let first first name equals
+0:32
+Now to create a substring we can follow
+0:34
+this formula we take our string in this
+0:37
+case our full name dot then use the
+0:40
+built-in slice
+0:42
+method
+0:43
+slice then we can list a starting and
+0:46
+ending index where would we like to
+0:49
+begin so the first character has an
+0:51
+index of zero we'll start at the
+0:53
+beginning index0 comma where are we
+0:57
+going to end 0 1 2
+1:00
+this isn't necessarily going to work and
+1:03
+let me demonstrate so let's
+1:06
+console.log our first name so my first
+1:10
+name is BR so the ending index is
+1:13
+actually exclusive in my full name we're
+1:15
+ending at o but we don't include it
+1:17
+within our substring because the ending
+1:20
+index is exclusive I'll increase the
+1:22
+ending index to three that should
+1:24
+include one more character which it does
+1:27
+now let's get the last name let
+1:30
+last name equals again following this
+1:33
+formula take our original string use the
+1:37
+built-in slice method State the
+1:40
+beginning index 0 1 2 3 4 mine will be
+1:44
+four yours may be different depending on
+1:46
+what your name is and the ending index 4
+1:51
+5 6 7 and remember that the last index
+1:54
+is exclusive so I'm going to increase
+1:55
+that to be eight then we'll display our
+1:58
+last name
+2:00
+console.log last
+2:02
+name and there's my last name so the
+2:06
+reason that I set the beginning index to
+2:08
+be four and not three is because we'll
+2:10
+include that space within the result as
+2:13
+you can see here if you're going to be
+2:15
+creating a substring from some position
+2:17
+all the way to the end you don't
+2:19
+necessarily need an ending index I'm
+2:21
+going to remove the ending index and
+2:23
+this should work the
+2:26
+same all right what if I need the first
+2:28
+character in the string
+2:30
+let first Char meaning character equals
+2:36
+take our string we will use the slice
+2:38
+method for the first character you can
+2:40
+use 0 comma
+2:43
+1 then let's display our first
+2:47
+character and in my example mine is B
+2:50
+for the last character let last
+2:56
+character full name do slice
+3:00
+we can use a negative index even if
+3:02
+you're using a negative index you'll
+3:04
+begin at the end then by decreasing the
+3:07
+number you'll work your way towards the
+3:09
+beginning so the last character in my
+3:11
+name is
+3:13
+e -2 would be
+3:17
+de three is OD four is c for code
+3:22
+negative indices work as well with these
+3:25
+specific numbers that I've listed
+3:27
+they're only going to work if my name is
+3:29
+exact this what if I were to change my
+3:31
+first name to be instead of bro broseph
+3:35
+like
+3:36
+Joseph then let's display our first name
+3:39
+then our last
+3:43
+name first name bro last name f which is
+3:48
+not correct to make this program more
+3:51
+Dynamic we can combine string slicing
+3:53
+with the index of method we'll search
+3:56
+the string for the first instance of a
+3:58
+space then depending on where that space
+4:01
+is we'll take the first part of our full
+4:03
+name and create a substring for the
+4:05
+first name anything after the space will
+4:07
+be our last name so let's turn these
+4:10
+lines into comments we don't need them
+4:13
+anymore let first name equals again take
+4:18
+our full
+4:20
+name do
+4:23
+slice we'll begin at the beginning index
+4:26
+zero now where do we end we're not going
+4:28
+to count the number of character this
+4:30
+time we're going to calculate it the
+4:32
+ending index will be take our full
+4:36
+name dot then use the index of
+4:40
+method where's the first index of a
+4:45
+space so that is the ending position
+4:48
+wherever there's a space then we'll
+4:51
+display our first
+4:53
+name uh let me get rid of our last name
+4:56
+there
+4:58
+brosive
+5:00
+now for the last
+5:01
+name let last name
+5:04
+equals let's copy this line of code
+5:08
+paste
+5:09
+it the beginning index will be full
+5:12
+name. index of
+5:15
+space you can list an ending index but
+5:18
+we don't need to we would like to
+5:19
+extract every character that comes after
+5:21
+this position so we don't need an ending
+5:24
+index all right let's see if this
+5:26
+works broi space
+5:30
+code we're including that space so to
+5:33
+remedy this I can add plus one find the
+5:36
+first index of a space then start in the
+5:39
+position after that's why we're adding
+5:41
+plus one then give me every letter that
+5:43
+comes after and that works just fine
+5:46
+broi code all right let's go over an
+5:51
+exercise this time we will list an
+5:54
+email const email equals why don't you
+5:57
+go ahead and type in your email I'll
+5:59
+make one up for me bro 1@gmail.com
+6:04
+I'll extract the first part of my email
+6:08
+to be stored as a
+6:09
+username let username equals again we're
+6:14
+going to take our string email do use
+6:18
+the slice method where are we going to
+6:20
+begin we'll begin at index zero that's
+6:22
+the beginning of a
+6:23
+string where will we end we'll end
+6:26
+wherever the at symbol is but we need to
+6:28
+search for it
+6:30
+we'll use the built-in index of method
+6:32
+of a string email. index of what are we
+6:37
+searching for we are searching for the
+6:39
+at
+6:42
+symbol and let's see if this works
+6:47
+console.log our
+6:50
+username yep bro
+6:52
+one then let's get the
+6:56
+extension let extension
+7:00
+equals we can copy this line of code
+7:03
+paste it make a few
+7:05
+changes this substring will begin where
+7:08
+the last one
+7:11
+ended then again
+7:14
+console.log the
+7:17
+extension at
+7:19
+gmail.com again like I said before I
+7:21
+would like to begin after this
+7:24
+index I will add plus
+7:27
+one my username is B1 my extension is
+7:31
+gmail.com all right everybody so that's
+7:33
+string slicing it's the process of
+7:35
+creating a substring from a portion of
+7:38
+another string when you create a
+7:39
+substring you won't alter the original
+7:43
+and I've proven that by setting this
+7:44
+string to be a constant you can't change
+7:46
+a constant to create a substring you
+7:49
+take the string use the built-in slice
+7:51
+method then you can list starting or
+7:53
+ending indices and well everybody that
+7:55
+is string slicing in
+7:58
+JavaScript

@@ -1,0 +1,604 @@
+introduction
+0:00
+hey welcome back so today I gotta
+0:02
+explain functions in JavaScript a
+0:04
+function is a section of reusable code
+0:07
+you declare that code once and you can
+0:09
+use it whenever you want all you have to
+0:11
+do is call the function to execute that
+0:13
+code here's an example we'll create a
+functions
+0:16
+function to sing Happy Birthday whenever
+0:18
+we call this function it's going to sing
+0:20
+Happy Birthday so to declare a function
+0:22
+you type
+0:24
+function a unique function name let's
+0:27
+name our function happy birthday because
+0:30
+it's well the happy birthday function
+0:33
+then you add a set of parentheses then
+0:34
+you add a set of curly braces any code
+0:37
+we write between this set of curly
+0:38
+braces we can reuse whenever we want
+0:41
+so what do we want to do exactly with
+0:43
+this function
+0:44
+I'll create the lyrics to my own Happy
+0:46
+Birthday song
+0:48
+console.log
+0:52
+happy
+0:54
+birthday to you let's repeat that again
+0:59
+happy birthday dear you
+1:02
+happy birthday to you
+1:05
+trust me I'm going somewhere with this
+1:06
+so we have a function when we run the
+1:09
+program it currently doesn't do anything
+1:11
+to execute this code within the function
+1:13
+we have to call the function by its name
+1:16
+happy birthday then add a set of
+1:19
+parentheses
+1:20
+so now we should execute this code yep
+1:22
+happy birthday to you happy birthday to
+1:24
+you happy birthday dear you happy
+1:26
+birthday to you
+1:27
+so to call a function you type the
+1:29
+function name then you add a set of
+1:30
+parentheses I like to think of the
+1:33
+parentheses as two telephones talking to
+1:35
+each other that's how I remember it so
+1:38
+if I were to call this function again
+1:39
+what do you think is going to happen
+1:42
+well we're going to execute this
+1:44
+function twice
+1:45
+three times
+1:47
+we'll execute it three times as many
+1:49
+times as I want in fact that's what a
+1:51
+function is it's a section of reusable
+1:54
+code reuse it whenever you want you just
+1:56
+have to call it you can send a function
+arguments/parameters
+1:59
+some values or variables let's change
+2:01
+our happy birthday function I will turn
+2:04
+this line into a template literal
+2:06
+let's replace U with the placeholder
+2:09
+then we'll add a username
+2:12
+I'll add one more line
+2:17
+we'll use a template literal
+2:20
+you are insert a placeholder
+2:23
+age
+2:25
+ears old
+2:28
+so when I run this program
+2:30
+we have an uncaught reference error
+2:32
+username is not defined at happy
+2:35
+birthday so our happy birthday function
+2:37
+doesn't know what our username is or the
+2:40
+age so we can send some information to
+2:43
+the function when we call it so within
+2:46
+the set of parentheses what would we
+2:48
+like to send this function let's send
+2:50
+our name
+2:54
+so whatever values you place within the
+2:56
+function be sure to comma separate them
+2:58
+so why don't you go ahead and send the
+3:01
+happy birthday function a name and an
+3:04
+age
+3:05
+but there's one step missing these are
+3:07
+known as arguments their data that you
+3:10
+send a function but you need a matching
+3:13
+set of parameters within the parentheses
+3:15
+of the Declaration in a way we can
+3:18
+Define some temporary variables and
+3:21
+they're all comma separated we will
+3:23
+Define a username parameter as well as
+3:26
+age now this function should work
+3:28
+properly happy birthday dear bro code
+3:31
+you are 25 years old
+3:33
+so these are parameters and what you
+3:36
+send the function are arguments let's
+3:39
+call the function but send different
+3:41
+information
+3:43
+happy birthday
+3:45
+uh how about SpongeBob
+3:48
+will be I don't know how old he is
+3:50
+according to SpongeBob lore but let's
+3:52
+say he's 30 years old
+3:54
+happy birthday dear SpongeBob you are 30
+3:57
+years old
+3:59
+how about Patrick this time it's his
+4:01
+birthday
+4:02
+everybody gets a birthday
+4:06
+Patrick will be 37.
+4:10
+happy birthday dear Patrick you are 37
+4:13
+years old
+4:14
+so that's a benefit of passing arguments
+4:16
+to a function when the function receives
+4:18
+this data it can do something with it
+4:20
+now the order of the parameters does
+4:23
+matter if I were to switch age
+4:26
+and username here's what happens
+4:30
+happy birthday dear37 you are Patrick
+4:33
+years old
+4:34
+with the arguments that you're passing
+4:36
+to your function you'll want to be sure
+4:38
+that the parameters match up
+return
+4:40
+all right now I'm gonna cover the return
+4:42
+keyword we'll create a few other
+4:44
+function examples
+4:45
+we'll create a function to add two
+4:47
+numbers function add
+4:50
+then we'll need two arguments which we
+4:53
+will name X and Y
+4:56
+so when we invoke this function I would
+4:58
+like to add X and Y together
+5:00
+I'll create a temporary variable named
+5:03
+result just to store the result
+5:06
+equals X Plus y
+5:10
+so I'm going to add two numbers together
+5:13
+let's add two and three together and
+5:16
+let's see what happens
+5:18
+well nothing appears to happen well we
+5:21
+can send some data back to the place in
+5:24
+which we call a function
+5:25
+but we need to use this return keyword
+5:27
+let's return the result
+5:30
+so two plus three should be 5. after
+5:33
+this function resolves think of this
+5:36
+function becoming the value 5. so we'll
+5:39
+probably want to do something with that
+5:40
+value
+5:42
+I'll store that within a variable
+5:45
+let answer
+5:47
+equal add two and three
+5:51
+then let's console.log the answer
+5:55
+which should be five
+5:57
+when you return something from a
+5:59
+function after you resolve the function
+6:01
+think of it as becoming whatever is
+6:04
+returned in this case it's our result
+6:07
+or otherwise I can place this function
+6:10
+within console.log if we don't plan to
+6:13
+store it at all
+6:16
+so add two and three then display the
+6:19
+result which is five
+6:21
+there is a shortcut too you don't
+6:22
+necessarily need to declare a variable
+6:24
+within this function
+6:26
+we could shorten this to
+6:28
+return X Plus y
+6:32
+that is also valid so that should return
+6:34
+5.
+example 1
+6:35
+okay let's create a subtract function
+6:39
+function subtract
+6:43
+will return x minus y
+6:47
+well we need a matching set of
+6:49
+parameters because I forgot that
+6:51
+okay let's see what happens when we
+6:53
+subtract three from two that'll give us
+6:56
+negative one let's multiply
+6:59
+function
+7:01
+multiply
+7:03
+we'll multiply X and Y together
+7:06
+return x times y
+7:09
+we will multiply two times three which
+7:12
+is six
+7:13
+divide
+7:19
+we need parameters X and Y
+7:22
+then return x divided by y
+7:25
+then we will invoke the divide function
+7:27
+pass in two and three and the result is
+7:30
+0.66 repeating
+example 2
+7:33
+let's go over a more complex example
+7:35
+we'll create a function to determine if
+7:37
+a number is even or odd
+7:41
+here's the function
+7:44
+function is even
+7:47
+we have one parameter
+7:49
+a number so when we invoke the function
+7:52
+we'll have to pass in a number
+7:54
+so when we receive a number how do we
+7:56
+check to see if this number is even
+7:57
+here's one solution
+8:00
+we'll use an if statement
+8:03
+if our number
+8:06
+modulus 2. modulus gives you the
+8:09
+remainder of any division
+8:11
+if this number divides by two evenly if
+8:14
+this is equal to zero and yes I'm using
+8:18
+the strict equality operator I'm trying
+8:19
+to use that more often if our number is
+8:22
+divisible by 2 then let's return
+8:26
+the Boolean value true
+8:29
+else will return
+8:31
+false okay
+8:34
+let's console.log
+8:37
+let's check to see if a number is even
+8:39
+let's start with 10 is 10 even
+8:43
+that is true
+8:44
+how about 11. that is false 12 12 is
+8:48
+even
+8:50
+so that's kind of cool
+8:51
+if you would like a shortcut for this
+8:53
+you can use the trinary operator that
+8:55
+would look something like this
+8:57
+we are going to return
+8:59
+then a condition what are we checking is
+9:02
+our number
+9:03
+modulus 2.
+9:06
+strictly equal to zero question mark so
+9:09
+that is the ternary operator the
+9:11
+question mark
+9:13
+if it is true then we will return a
+9:16
+Boolean value of true colon false if
+9:19
+it's false
+9:21
+is 12 even that is true
+9:24
+is 13 Even no it's not it's odd how
+9:27
+about 14. that is true
+example 3
+9:30
+all right last example I think we're
+9:32
+probably getting the hang of this now
+9:34
+we'll create a function to see if an
+9:36
+email is valid
+9:38
+function
+9:40
+is valid email
+9:44
+what kind of information are we going to
+9:45
+send we'll set that up as a parameter
+9:48
+we will need an email
+9:50
+will invoke the is valid email function
+9:54
+and pass in an email why don't you type
+9:55
+in your email I'll just make one up bro
+9:58
+at fake.com
+10:01
+so when we invoke this function this
+10:03
+string of text will become our email
+10:06
+we'll check to see if our email contains
+10:09
+the at character
+10:12
+we'll use an if statement
+10:14
+if email and there's a built-in method
+10:17
+for this the includes method
+10:21
+if our email
+10:23
+includes
+10:25
+the at character
+10:27
+then we will return true that is a valid
+10:31
+email they have the at character
+10:34
+else we will return
+10:36
+false
+10:38
+is my email valid
+10:40
+that is true
+10:42
+let's remove the at character
+10:44
+brofick.com maybe it's a website or
+10:47
+something
+10:48
+that is false
+10:50
+let's try another email
+10:52
+again we're going to invoke the function
+10:54
+is valid email
+10:57
+Elon Musk
+11:00
+dot com don't actually go there I don't
+11:03
+know what's gonna pop up uh that is not
+11:05
+a valid email
+11:07
+all right how about
+11:10
+Zuckerberg
+11:12
+at meta.com
+11:15
+that is a valid email it contains a net
+11:17
+character
+11:18
+and for something like this if we're
+11:20
+returning either true or false we can
+11:22
+use the Trenary operator
+11:25
+return
+11:27
+then our condition is we're going to
+11:28
+check if our email includes the at
+11:31
+character
+11:34
+then add the ternary operator
+11:37
+if this is true return true
+11:40
+else we will return false so these
+11:43
+should be the same which they are
+conclusion
+11:45
+all right everybody so that's an
+11:47
+introduction to functions it's a section
+11:49
+of reusable code you declare some code
+11:52
+once and use it whenever you want you
+11:54
+call the function to execute that code
+11:56
+if you need to send your function some
+11:58
+data you'll need a matching set of
+12:00
+arguments and parameters and you can
+12:03
+return something too with the return
+12:04
+keyword we'll have more practice with
+12:06
+this in the future don't worry and that
+12:08
+is an introduction to functions in
+12:10
+JavaScript

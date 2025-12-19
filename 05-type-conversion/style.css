@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #f5576c;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.demo-section {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f093fb22 0%, #f5576c22 100%);
+    border-radius: 10px;
+}
+
+.demo-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.demo-section p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.hint {
+    font-size: 0.9em !important;
+    font-style: italic;
+    color: #f5576c !important;
+}
+
+.examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.example-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-5px);
+}
+
+.example-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.example-card code {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.info {
+    background: #f8f9fa;
+    padding: 25px;
+    border-left: 4px solid #f5576c;
+    border-radius: 8px;
+}
+
+.info h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info ul {
+    list-style-position: inside;
+    color: #555;
+    line-height: 1.8;
+}
+
+.info li {
+    margin-bottom: 8px;
+}
+
+.info code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #d63384;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .examples {
+        grid-template-columns: 1fr;
+    }
+}

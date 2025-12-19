@@ -1,0 +1,302 @@
+introduciton
+0:00
+hey it's me again today I got to explain
+0:02
+the map method in JavaScript the map
+0:04
+method accepts a callback and applies
+0:07
+that function to each element of an
+0:09
+array it's very similar to the for each
+0:11
+method however it returns a new array
+0:14
+that's a key difference for example
+example 1
+0:17
+let's create an array of constants I'm
+0:19
+picking constants just to demonstrate
+0:21
+that we're not changing any elements in
+0:22
+this array we have const numbers I'll
+0:26
+select the numbers 1 through 5 to keep
+0:28
+it simple I will create a function to
+0:31
+square each
+0:32
+number function
+0:35
+Square we have one parameter we have an
+0:38
+element all I'm going to do is return
+0:43
+math.pow this will raise a base to a
+0:46
+given power we are raising our element
+0:49
+to the power of two then returning it
+0:52
+we're going to take our array of numbers
+0:54
+use the built-in map method then pass in
+0:58
+our function as a call back the map
+1:00
+method will return a new array we will
+1:03
+create a new array to store the values
+1:04
+that are returned so I will create
+1:08
+const
+1:10
+squares equals numbers. map and then
+1:14
+let's display our squares I'll use
+1:17
+console.log for now
+1:19
+console.log R squares here are all the
+1:23
+numbers squared 1 4 9 16 25 let's create
+1:27
+a function to cube these numbers now
+1:30
+we'll copy and paste our Square function
+1:33
+but change it to cube we'll raise our
+1:36
+element to the power of
+1:38
+three const cubes equals take our
+1:43
+original array numbers dot use the map
+1:46
+method pass in a call back to the
+1:48
+function we would like to use
+1:50
+Cube then we will console.log rray of
+1:54
+cubes and we have some new numbers 1 8
+1:58
+27 64 125 the map method is very similar
+2:02
+to four each but after completion the
+2:05
+map method returns a new array we still
+2:08
+have our original numbers whereas in
+2:10
+four each will'll change them that's a
+2:12
+key difference let's go over a new
+example 2
+2:14
+example we'll create an array of
+2:17
+students const students
+2:21
+equals for my first student I will pick
+2:25
+SpongeBob then
+2:28
+Patrick
+2:31
+Squidward Sandy that's good enough I
+2:34
+will create a function to make all of
+2:36
+these strings
+2:38
+uppercase
+2:40
+function
+2:42
+uppercase there is a single element
+2:45
+remember the element is going to be
+2:47
+provided for us with the map method
+2:49
+element index and array but we only need
+2:51
+element in this case I will return our
+2:55
+element dot to uppercase method
+3:00
+and that's it we'll create a new
+3:04
+array students what can we name this uh
+3:08
+students upper I suppose we will take
+3:12
+our array of students use the Bap method
+3:16
+pass in the function we would like to
+3:18
+apply as a
+3:19
+callback then I will
+3:23
+console.log students
+3:26
+upper within my array all of the
+3:29
+students names are all uppercase let's
+3:31
+create a function for
+3:34
+lowercase function lowercase to
+3:38
+lowercase I will create a new array
+3:42
+const
+3:43
+students lower equals the name of the
+3:47
+array
+3:48
+students map pass in our function as a
+3:51
+call
+3:51
+back then display the array of students
+3:55
+lower now all of the names are now
+3:57
+lowercase all right third example
+example 3
+4:00
+this one is more practical we'll create
+4:03
+an array of dates const dates
+4:07
+equals certain regions will order their
+4:10
+dates differently for example you might
+4:12
+have the year followed by a month then a
+4:16
+day we're going to rearrange the order
+4:19
+of these dates using the map method so
+4:22
+come up with a few dates I picked 2024
+4:25
+January 10th
+4:28
+2025 February
+4:32
+20th
+4:34
+2026 March 30th feel free to rearrange
+4:39
+these however you want I will create a
+4:41
+function to
+4:43
+format
+4:46
+dates we have one parameter a single
+4:49
+element within this function I will
+4:51
+create a temporary array named Parts
+4:55
+we're going to split each state into
+4:57
+parts and store it within an array
+4:59
+within this function const Parts equals
+5:04
+element. split we are going to split
+5:08
+each element but where we are going to
+5:11
+split at each dash for example with my
+5:14
+first element we'll split this date into
+5:17
+2024 that will be the first element 1
+5:20
+and 10 then we'll reformat these parts I
+5:23
+will return a template string so I'm
+5:27
+going to need some
+5:28
+placeholders
+5:30
+so dollar sign curly braces let's take
+5:33
+our array of parts at index of one that
+5:38
+will be the month I live in the United
+5:40
+States we arrange our dates with month
+5:43
+then day then year I will place my month
+5:47
+first forward slash let's include
+5:50
+another
+5:51
+placeholder Parts at index of two that
+5:55
+will be the day of the month
+5:58
+slash
+6:00
+Parts at
+6:03
+index0 that will be the year we will
+6:06
+create a new
+6:07
+array
+6:09
+const
+6:11
+formatted dates equals take our original
+6:15
+array dates use the map
+6:18
+method then pass the function name as a
+6:21
+callback then after I will
+6:24
+console.log our formatted
+6:27
+dates and here they are for me the dates
+6:30
+are now January 10th 2024 February 2nd
+6:33
+2025 March 30th 2026 feel free to
+6:37
+arrange these however you like all right
+6:40
+everybody that is the map method it's
+6:42
+very similar to the for each method the
+6:44
+math method accepts a callback and
+6:46
+applies that function to each element of
+6:48
+an array however it returns a new array
+6:50
+when it's finished that's nice if you
+6:52
+need to preserve the original array that
+6:54
+the elements came from and well
+6:56
+everybody that is the map method in
+6:58
+JavaScript

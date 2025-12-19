@@ -1,0 +1,695 @@
+HTML
+0:00
+hey what's going on everybody in today's
+0:01
+video we're going to create a
+0:02
+temperature conversion program using
+0:04
+HTML CSS and JavaScript so sit back
+0:08
+relax and enjoy the show all right let's
+0:10
+begin everybody we will begin within our
+0:12
+HTML file make sure you've linked a
+0:15
+script to your Javascript file which
+0:17
+we'll fill in later so within the body
+0:19
+of our document we will create a form
+0:22
+element within our form we will create
+0:25
+an H1 heading for the title of this
+0:27
+program which we will name
+0:32
+temperature conversion is
+0:36
+good after our H1 element we'll create
+0:39
+an input
+0:42
+element this is a self-closing tag it's
+0:44
+a text box since we're going to be
+0:47
+converting temperatures I will set the
+0:49
+type to be number so that should give us
+0:53
+some arrows to increase or decrease the
+0:55
+number or type one in if we need to I'm
+0:57
+going to give this text box an ID of of
+1:02
+textbox we'll be referring to this text
+1:04
+box by its ID later I'm also going to go
+1:07
+ahead and set an initial value of zero
+1:10
+then we can increase or decrease the
+1:11
+number like I said before it is a little
+1:14
+small but with CSS we will increase the
+1:16
+size what I'm going to do now is create
+1:18
+two radio buttons along with
+1:21
+labels so we have input input is a
+1:24
+self-closing tag the type will be
+1:28
+radio and for the
+1:31
+ID this will be a radio button to
+1:33
+convert to
+1:37
+Fahrenheit I can never spell Fahrenheit
+1:40
+we'll want the radio buttons in the same
+1:41
+group I will set the name of the group
+1:43
+to be
+1:45
+unit oh looks like I misspell type there
+1:48
+we go so I'm going to place our radio
+1:50
+button on a new line so within our first
+1:53
+input element I will add a line break
+1:55
+all right so after our first radio
+1:57
+button I'll create a label for it
+2:01
+label this label will be
+2:04
+four 2
+2:07
+Fahrenheit and the text will be Celsius
+2:11
+to
+2:15
+Fahrenheit or if you prefer you could
+2:17
+create like an
+2:19
+arrow I don't really like the look of
+2:21
+that let me use an emoji instead so on
+2:23
+Windows to create an emoji you can hold
+2:24
+windows and
+2:26
+semicolon is there an
+2:28
+arrow
+2:30
+that'll work so when you click on the
+2:32
+label you should also be able to select
+2:34
+the radio button that's because the four
+2:36
+attribute is the same as the ID
+2:38
+attribute of the radio button okay let's
+2:40
+copy both the first radio button and the
+2:43
+label then paste it but change
+2:46
+Fahrenheit to
+2:48
+Celsius let's switch these
+2:52
+around Fahrenheit to
+2:58
+Celsius
+3:00
+to
+3:01
+Celsius I'm also going to add a line
+3:03
+break after our first
+3:05
+label so right
+3:07
+here as well as here Google wants to
+3:11
+translate my web page from German to
+3:13
+English it's probably because of the
+3:14
+word fahrenheit I'm guessing now I'll
+3:16
+create a
+3:21
+button the type will be button the text
+3:25
+will be submit there is an onclick
+3:28
+attribute for buttons
+3:31
+onclick when we click on this button we
+3:34
+can execute a JavaScript
+3:36
+function eventually we'll be creating a
+3:39
+function named convert actually let's
+3:41
+take care of that now before we forget
+3:42
+So within our Javascript file function
+3:45
+convert we'll fill this in
+3:48
+later so when we click on the button we
+3:51
+will execute the convert
+3:53
+function then lastly we're going to
+3:56
+display a result whatever the new
+3:57
+temperature is we'll use a paragraph
+4:01
+element the ID will be result and just
+4:06
+as a placeholder for now I'm going to
+4:08
+type select a
+4:12
+unit all right so far so good let's
+4:15
+style this program with CSS now be sure
+4:17
+to save your HTML file we'll move on to
+CSS
+4:20
+CSS we will first change the body of our
+4:23
+document let's change the font family of
+4:25
+the body of our document I'll pick aial
+4:29
+with a backup of son's
+4:34
+serif I'll change the background color
+4:37
+too
+4:39
+background-color I like using hsl
+4:42
+values let's type a color such as black
+4:45
+we will change the color to be hsl I'll
+4:49
+go with a very light gray color like
+4:53
+95% so the background is going to be
+4:56
+slightly light gray we'll fill in the
+4:58
+form section to be Pure White we will
+5:01
+select our H1 element that's going to be
+5:03
+the header I'll pick a color again I'll
+5:06
+be using hsl
+5:08
+values let's go with I don't know blue
+5:11
+feel free to pick a different color if
+5:13
+you would like that's not
+5:16
+bad then we'll fill in the form our form
+5:19
+contains pretty much all of these
+5:22
+elements so let's select our
+5:25
+form I will change the background color
+5:28
+I'll just copy this sline and paste
+5:30
+it but I'll make this Pure
+5:35
+White I'll text Al line Center
+5:37
+everything within this
+5:39
+form so everything should be
+5:42
+centered I'll set a Max width of the
+5:44
+form because right now it's taking up
+5:46
+100% of the width of the web browser so
+5:50
+max width will be how about 350
+5:55
+pixels we would like this form to be
+5:57
+within the middle aligned horizontally
+6:00
+we can set margin to be
+6:03
+Auto to automatically Center that I'll
+6:06
+add a little bit of padding around the
+6:08
+elements within our
+6:10
+form
+6:11
+padding let's do 25
+6:15
+pixels I'll smooth the corners of the
+6:17
+form using border
+6:18
+radius border
+6:21
+radius 10
+6:23
+pixels then I'll add a box
+6:26
+shadow box shadow
+6:29
+the first value is the horizontal offset
+6:33
+let's set that to be five
+6:35
+pixels then the vertical offset I will
+6:37
+set that to be 5 pixels the third value
+6:41
+is the blur radius because right now
+6:42
+it's fairly concentrated let's stick
+6:45
+with 15 pixels not bad you can also
+6:49
+select a color again I'm going to use
+6:51
+hsl
+6:52
+values you can also change the
+6:56
+transparency I'll set mine to be 30%
+7:00
+or approximately
+7:01
+30%
+7:03
+0.3 not bad so that's my box Shadow now
+7:07
+we're going to change the text box so
+7:10
+this text box does have an ID text box
+7:14
+let's select this element by its
+7:16
+ID I'll set the width to be
+7:19
+50% it's going to take up 50% of the
+7:22
+width
+7:23
+available let's text align
+7:28
+Center the number is going to be right
+7:30
+in the middle let's change the font
+7:33
+size let's do 2 em for
+7:37
+200% I'll add a
+7:40
+border to pixel
+7:44
+solid then I'll pick some hsl values for
+7:47
+the
+7:49
+color I'll make it a little
+7:52
+transparent maybe like
+7:55
+80% let's select a border
+7:58
+radius
+8:00
+for pixels to smooth the
+8:03
+corners I'll add a little bit of margin
+8:06
+below the text
+8:09
+box
+8:12
+margin-bottom 15 pixels is
+8:15
+good that's going to push the radio
+8:17
+buttons down further just to give this
+8:19
+text box more space let's work on the
+8:21
+radio buttons next so we are selecting
+8:24
+the
+8:26
+labels so let's take every label
+8:30
+I'll change the font size so it's a
+8:31
+little bigger 1.5 em for
+8:35
+150% I'll make the font weight to bold
+8:38
+just to bold
+8:40
+it there let's select our
+8:44
+button we are selecting our button I'll
+8:47
+add a little bit of margin above the
+8:49
+button margin-top 15
+8:53
+pixels let's change the background color
+8:55
+of the button pick a color I'll pick red
+8:59
+and again I'm going to use hsl values
+9:01
+because I like
+9:05
+them Ah that's
+9:07
+decent I'll change the font size of the
+9:09
+button 1.5 em for
+9:14
+150% I'll remove the border border
+9:18
+none I'll add some
+9:22
+padding 10 pixels for the top and bottom
+9:25
+of the button 15 for the
+9:27
+sides I'll round the the corners with
+9:29
+border
+9:31
+radius border radius 5
+9:34
+pixels I'm going to change the font
+9:36
+color color
+9:40
+white then when I hover my cursor over
+9:42
+the button I will change the cursor to
+9:45
+be a
+9:46
+pointer and that appears to work
+9:48
+now so when I hover over the button I'll
+9:51
+use the hover pseudo class to change the
+9:54
+background color of the button we are
+9:56
+selecting our button then s select the
+9:59
+hover sudo class we'll make the
+10:01
+background color just a little bit
+10:03
+darker we'll change the lightness of our
+10:06
+hsl value to be like 10% darker so I
+10:09
+have 60% I'll change that to be 50 so
+10:12
+now the background should change when I
+10:14
+hover over the button lastly let's
+10:16
+change the CSS properties of the
+10:19
+result so this should have an ID of
+10:23
+result
+10:25
+result I'll make the font size a little
+10:27
+bit bigger font size 1.75 em is
+10:32
+good and I'll make the font weight bold
+10:36
+font weight bold all right and that is
+10:40
+all the CSS we need be sure to save
+JavaScript
+10:43
+everything and then we will move on to
+10:45
+our Javascript file all right so what I
+10:47
+like to do is at the top of my
+10:49
+JavaScript program I will declare all of
+10:51
+the constants and variables that I'll
+10:53
+need so let's get our text box I'll set
+10:56
+this to be a constant const text text
+10:59
+box equals document. getet element by
+11:06
+ID the ID that we're selecting is our
+11:09
+text
+11:13
+box we'll need the two Fahrenheit radio
+11:16
+button let's copy this line paste it get
+11:20
+the ID of two
+11:22
+Fahrenheit const to Fahrenheit get
+11:26
+element by ID to Fahrenheit
+11:29
+then 2
+11:31
+Celsius 2
+11:33
+Celsius const 2 Celsius the ID is 2
+11:37
+Celsius so that will be this radio
+11:41
+button copy this line paste it then we
+11:44
+need the result to display the
+11:47
+result result get element by ID
+11:51
+result within our HTML file we don't
+11:54
+necessarily need to select a unit
+11:56
+anymore We'll add that later if somebody
+11:59
+presses submit without selecting a radio
+12:01
+button then we need let temp for the
+12:06
+temperature when we click on the submit
+12:08
+button we will execute this function
+12:11
+convert so what are we going to do
+12:13
+within this function we'll begin with an
+12:15
+if statement we'll check to see if our
+12:18
+two Fahrenheit radio button is selected
+12:21
+so take two Fen height we'll use the
+12:25
+checked
+12:26
+property if this radio button is checked
+12:29
+it's going to return true if it's not
+12:31
+it's going to be
+12:32
+false else if 2 Celsius is
+12:38
+checked to celsius. checked we'll
+12:41
+perform some different
+12:43
+actions else let's change the content of
+12:47
+our
+12:48
+result so here result. text content
+12:55
+equals select a
+12:57
+unit let's see if this works be sure to
+13:00
+save
+13:01
+everything I am not going to select a
+13:03
+radio button I'm just going to submit
+13:06
+and that's correct select a unit we
+13:07
+didn't select one let's be sure that
+13:09
+these two radio buttons are working just
+13:11
+temporarily I'm going to change the
+13:13
+result within the if and else if
+13:16
+statement you
+13:19
+selected 2
+13:24
+Fahrenheit and you selected two Celsius
+13:30
+I just want to be sure that these radio
+13:32
+buttons are working so let's convert two
+13:34
+Fahrenheit submit you selected 2
+13:37
+Fahrenheit we'll select the second
+13:39
+radial button you selected 2 Celsius
+13:42
+okay we know that this program is
+13:44
+reading these radio button successfully
+13:46
+so we no longer need these two lines of
+13:49
+code we're going to get the number from
+13:52
+our text box we'll store that within
+13:54
+temp temp for temperature temp equals
+13:59
+take our text
+14:01
+box access the value
+14:04
+within so when we accept user input it's
+14:07
+of the string data type I'm going to typ
+14:10
+cast the value as a number so we can use
+14:12
+it with
+14:14
+math okay then we're going to take our
+14:16
+temperature and convert it to Fahrenheit
+14:19
+here's the formula temp equals
+14:22
+temp * 9 / 5 + 32
+14:29
+then we're going to update the text
+14:31
+content of the
+14:33
+result result. text content equals our
+14:39
+temperature then I'm going to add plus
+14:42
+Fahrenheit so to add the degree symbol
+14:45
+on Windows you can hold alt then type
+14:48
+0176 on the
+14:50
+numpad so this will be
+14:52
+Fahrenheit let's type 100° CI to
+14:57
+Fahrenheit that gives us 212° f 10 would
+15:01
+be 50 1° c would be
+15:06
+33.8 0 is 32° F if you would like to add
+15:11
+some Precision following our temperature
+15:13
+there's a built-in method two
+15:17
+fixed We'll add one point of precision
+15:20
+this will give us one digit past the
+15:21
+decimal place 0° C converted to
+15:24
+Fahrenheit is 32.0 De
+15:27
+fah
+15:29
+10° C is 50° F let's copy these three
+15:35
+lines then paste them within the else if
+15:38
+statement we'll keep this line the same
+15:41
+but we'll change the
+15:43
+formula temp equals within parentheses
+15:47
+temp -
+15:49
+32 * 5 9 then change Fahrenheit to
+15:57
+Celsius so what is 32° fah converted to
+16:01
+Celsius that is
+16:03
+zero 100 is
+16:06
+37.8 all right everybody so that is a
+16:09
+simple temperature conversion program
+16:11
+using JavaScript HTML and
+16:16
+CSS

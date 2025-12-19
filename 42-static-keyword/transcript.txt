@@ -1,0 +1,334 @@
+0:00
+hey people let's do this thing so the
+0:02
+static keyword static is a keyword that
+0:04
+defines Properties or methods that
+0:06
+belong to a class itself rather than the
+0:09
+objects created from that class in
+0:11
+summary a class owns anything static not
+0:15
+the objects so what we're going to do is
+0:17
+create a class for math
+0:19
+utilities class math util for
+0:24
+short we'll create our own version of Pi
+0:27
+we'll use the static keyword the name
+0:30
+will be Pi Pi will equal
+0:33
+3.14159 just the first few
+0:36
+digits I'm going to zoom in a little if
+0:39
+I would like the static property I have
+0:41
+to access it by its class so let's
+0:45
+console.
+0:47
+log the name of the class math util dot
+0:52
+the name of the property Pi our static
+0:55
+property is
+0:57
+3.14159 I don't need to create an object
+0:59
+object in order to use this property I
+1:02
+don't have to type const math UIL 1
+1:07
+equals new math
+1:10
+util I would have to type math util one
+1:13
+that's the name of this object in order
+1:15
+to access Pi all I have to do is type
+1:17
+the name of the
+1:18
+class and that's pretty convenient
+1:21
+anything declared as static belongs to
+1:23
+the class itself and not any object
+1:26
+created from that class so now we're
+1:28
+going to create a static method
+1:31
+we'll use the static keyword we'll get a
+1:34
+diameter once we pass in a radius as an
+1:36
+argument get
+1:39
+diameter we have one parameter a
+1:42
+radius all we're going to do is return
+1:46
+radius time
+1:49
+2 okay let's
+1:52
+console.log again we have to type the
+1:54
+name of the class matthu till dot the
+1:58
+name of the method get
+2:00
+diameter we have to pass in a radius
+2:02
+though let's pass in
+2:04
+10 our diameter is 20 let's create a new
+2:09
+static method for get
+2:11
+circumference get
+2:15
+circumference the formula is going to be
+2:19
+we will be returning 2
+2:23
+* this meaning Matthew
+2:26
+till.
+2:28
+pi
+2:30
+times the radius we
+2:33
+receive let's
+2:37
+console.log let me make the C
+2:39
+Capital the name of the class math util
+2:43
+dot get
+2:45
+circumference pass in a
+2:48
+radius the circumference is
+2:51
+62.83 let's create one more for get
+2:55
+area static get area we need a r
+3:01
+radius we will
+3:05
+return this
+3:08
+Pi time
+3:10
+radius time radius so that's radius
+3:17
+squared
+3:18
+console.log matthu till the name of the
+3:20
+class get area pass in 10 and the area
+3:25
+is
+3:28
+31415 in the next example we'll have a
+3:30
+mix of regular properties and methods
+3:32
+and static properties and methods this
+3:35
+will be example
+3:37
+two we'll create a class of users class
+3:43
+user we'll create a static variable to
+3:46
+keep track of the amount of users we
+3:49
+create user count I will set that equal
+3:52
+to
+3:54
+zero I'll include a
+3:57
+Constructor let me just space this out a
+3:59
+little
+4:01
+our Constructor is going to be
+4:02
+automatically called when we instantiate
+4:05
+a new object we need one argument though
+4:07
+when we create a new user we need a
+4:10
+username once we have our username we
+4:13
+will assign this do username equals
+4:18
+username not only that but when we
+4:20
+create a new user I'm going to increase
+4:22
+our user count by one just so we can
+4:26
+keep track of how many users we create
+4:28
+so inside the constru RoR you can write
+4:30
+additional code it's not only for
+4:32
+assigning
+4:33
+properties let's take
+4:36
+user. user
+4:39
+count Plus+ to increment
+4:42
+it let's create some user
+4:45
+objects const user one equals new user
+4:50
+pass in a username I'll pass in
+4:55
+SpongeBob then let's
+4:58
+console.log user one's
+5:02
+username which is
+5:05
+SpongeBob let's attempt to access user
+5:08
+one's user
+5:10
+count with user one's user count we get
+5:13
+undefined that's because our user
+5:16
+doesn't have user count as a property
+5:18
+it's static that means it belongs to the
+5:21
+class not any objects created from the
+5:23
+class to access user count we have to
+5:26
+type the name of the
+5:27
+class user in this case
+5:30
+we have one
+5:32
+user let's see what happens when I
+5:34
+create a new user
+5:35
+object user 2 will
+5:38
+equal
+5:40
+Patrick our user count is now two let's
+5:44
+display user 2's
+5:45
+name yep we have SpongeBob and Patrick
+5:48
+the total user count is
+5:50
+two let's create a third
+5:52
+user user three will be
+5:57
+Sandy console.log
+6:00
+user 3.
+6:02
+username our user count is now
+6:05
+three we have a static property that's
+6:08
+keeping track of the amount of users we
+6:10
+create let's create a method the first
+6:13
+one will not be static say
+6:16
+hello all we're going to do is
+6:21
+console.log I'll use a template
+6:24
+string hello my
+6:27
+username is add a
+6:30
+placeholder this do
+6:35
+username let's have user one use there
+6:40
+say hello
+6:42
+method same thing with user two and user
+6:48
+three hello my username is
+6:50
+SpongeBob Patrick and Sandy now we'll
+6:54
+create a static method we'll get the
+6:57
+user
+6:58
+count get
+7:00
+user
+7:03
+count
+7:06
+console.log I'll use a template
+7:10
+string there are I'll add a
+7:14
+placeholder
+7:16
+user. user
+7:21
+count users
+7:24
+online now in order to access this
+7:26
+method I have to type the name of the
+7:28
+class
+7:29
+user. getet user
+7:34
+count oops and I can't console. log that
+7:38
+user. getet user
+7:40
+count there are three users online all
+7:44
+right everybody so that is the static
+7:45
+keyword it defines properties and
+7:47
+methods that belong to a class itself
+7:50
+rather than any objects created from
+7:51
+that class in summary the class owns
+7:54
+anything static not the objects and well
+7:58
+that is the static keyword in
+8:01
+JavaScript

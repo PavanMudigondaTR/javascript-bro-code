@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Type Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Type Conversion Demo 💱</h1>
+        
+        <div class="demo-section">
+            <h2>Try It Yourself</h2>
+            <p>Enter your age and see type conversion in action!</p>
+            <p class="hint">Check the browser console (F12) to see all the examples.</p>
+        </div>
+        
+        <div class="examples">
+            <div class="example-card">
+                <h3>String to Number</h3>
+                <p><code>Number("42")</code> → <code>42</code></p>
+            </div>
+            
+            <div class="example-card">
+                <h3>Number to String</h3>
+                <p><code>String(42)</code> → <code>"42"</code></p>
+            </div>
+            
+            <div class="example-card">
+                <h3>String to Boolean</h3>
+                <p><code>Boolean("hello")</code> → <code>true</code></p>
+            </div>
+            
+            <div class="example-card">
+                <h3>Empty to Boolean</h3>
+                <p><code>Boolean("")</code> → <code>false</code></p>
+            </div>
+        </div>
+        
+        <div class="info">
+            <h3>📚 Key Points</h3>
+            <ul>
+                <li><strong>User input is always a string</strong> - convert before math operations</li>
+                <li><strong>NaN</strong> means "Not a Number" (converting "Pizza" to number)</li>
+                <li><strong>Empty strings</strong> convert to <code>0</code> as number, <code>false</code> as boolean</li>
+                <li><strong>Most values are truthy</strong> except: <code>0, "", null, undefined, NaN</code></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

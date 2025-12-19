@@ -1,0 +1,482 @@
+0:00
+hey everybody in today's video I got to
+0:01
+explain Mouse events in JavaScript so
+0:04
+sit back relax and enjoy the show the
+0:07
+first thing I need to discuss is event
+0:08
+listeners an event listener listens for
+0:11
+specific events to create interactive
+0:14
+web pages a few types of events we'll
+0:16
+discuss are click events when we click
+0:18
+on something Mouse over is when we hover
+0:20
+over something and mouse out is when
+0:22
+we're hovering over something and then
+0:24
+leave that element to add an event
+0:25
+listener you'll use the add event
+0:27
+listener method pass in an event type
+0:30
+including but not limited to this could
+0:32
+be clicking on something hovering over
+0:35
+something or leaving the confines of an
+0:36
+element and then a call back to a
+0:38
+function what do you want to do when you
+0:40
+interact with something for example I
+0:43
+could use the click event and then
+0:45
+change the color of something when I
+0:47
+click on it going to our HTML file I
+0:49
+will create a development for a box the
+0:53
+ID of this development will be my box
+0:56
+the text on the box will be click me
+1:00
+then for fun I'll add an emoji because I
+1:03
+like emojis let's apply some CSS styling
+1:06
+cuz it's kind of small let's select the
+1:08
+ID of my box change the background
+1:12
+color to light green or some other color
+1:15
+of you're choosing set a width of 300
+1:20
+pixels a height of 300
+1:23
+pixels I'll increase the font size to
+1:27
+something large like 4 5
+1:30
+RM I'll set the font weight to be
+1:35
+bold I'll use flexbox display
+1:39
+Flex align items in the
+1:43
+center and text align
+1:48
+center that is good enough for now be
+1:50
+sure to save everything we're going to
+1:52
+select the ID of my box we'll store that
+1:55
+as a constant const my box equals we'll
+1:59
+need to select it by accessing the Dom
+2:02
+document. getet element by ID I will
+2:06
+select the ID of my box and then we can
+2:10
+work with it easily we'll take my box
+2:14
+add an event listener that's a built-in
+2:16
+method my box. add event
+2:21
+listener we need to pass in an event
+2:23
+type and a call back to a function I
+2:26
+want to do something when I click on
+2:28
+this box the event type is going to be
+2:31
+click and now we need to call back to a
+2:34
+function we'll Define a function to
+2:36
+change the background
+2:37
+color function change color there's
+2:42
+going to be one parameter an event then
+2:45
+we will pass in a call back to change
+2:47
+color now the event parameter event is
+2:50
+an object it's provided to us
+2:52
+automatically by the web browser when
+2:55
+something happens when an event occurs
+2:57
+like when I click on something event is
+2:59
+an object that contains information
+3:01
+about something that happens that event
+3:04
+for this demonstration temporarily I'm
+3:06
+going to console.log my event so let's
+3:10
+click on the box then go to
+3:13
+inspect console and here's my event when
+3:17
+we clicked on that box the web browser
+3:19
+provided us with an event object it's a
+3:22
+pointer event this object contains
+3:25
+details about what happened
+3:28
+exactly for example we have the target
+3:31
+what did we click on WE clicked on the
+3:33
+div element with an ID of my box and
+3:35
+here are all the properties and methods
+3:36
+of that box that's the target we have a
+3:39
+Tim stamp of when the click occurred the
+3:42
+type of the event click which matches up
+3:45
+with the event type and coordinates of
+3:47
+where we clicked on the
+3:49
+screen event is an object that's going
+3:51
+to be provided to us through the web
+3:53
+browser automatically we don't need to
+3:55
+explicitly pass in an event object with
+3:58
+this call back it's provided to us
+4:00
+behind the
+4:00
+scenes I'm going to change the
+4:02
+background color of our box when we
+4:04
+click on it we will access our event
+4:07
+object that's provided to us access the
+4:09
+target the target is what we clicked on
+4:12
+there's information about our Target
+4:14
+within the event object then I will take
+4:17
+the style of the target set the
+4:19
+background color property to be a
+4:21
+different color I will set it to be red
+4:24
+but I prefer the shade of tomato because
+4:26
+I like that color now when I click on
+4:29
+the butt
+4:30
+the background color
+4:32
+changes but why stop there let's also
+4:34
+change the text content I'll add one
+4:37
+more statement to the change color
+4:38
+function again we will access our event
+4:42
+access its Target access the text
+4:45
+content of the target to be
+4:49
+ouch and then I'll add an
+4:53
+emoji that's a good
+4:56
+one when I click on this box not only
+4:59
+does the color change but the text too
+5:03
+now you don't necessarily need to pass
+5:04
+in a call back you can also pass in an
+5:07
+anonymous function or even an arrow
+5:09
+function so let's copy these two lines
+5:11
+of code we'll reuse it later we no
+5:14
+longer need to define a
+5:16
+function within the event listener
+5:18
+instead of passing in a call back we'll
+5:20
+pass in an anonymous
+5:23
+function we have one parameter an event
+5:27
+that's going to be provided to us when
+5:29
+we click on my box do this change the
+5:32
+background color and the
+5:34
+text now we could even use an arrow
+5:37
+function I have a preference for Arrow
+5:38
+functions because they're concise with
+5:40
+their syntax with an arrow function we
+5:42
+have one parameter an event if you have
+5:45
+a single parameter you don't need to
+5:47
+enclose it within a set of
+5:49
+parentheses we have one parameter of
+5:51
+event then do this do all this code and
+5:55
+that should still work when I click on
+5:57
+the box the color changes as well as the
+6:00
+text so when you add an event listener
+6:03
+you can pass in a call back or an
+6:05
+anonymous
+6:07
+function or an arrow function it depends
+6:11
+on what your preferences are personally
+6:13
+I like Arrow functions we have a few
+6:15
+other Mouse events to discuss Mouse over
+6:18
+and mouse out Mouse over is when you
+6:20
+hover your cursor over something so
+6:23
+let's take my
+6:24
+box add a new event listener an element
+6:27
+can have more than one event listener
+6:30
+add event
+6:32
+listener we have an event and a call
+6:35
+back as arguments the event is going to
+6:38
+be Mouse over for the call back I'll use
+6:43
+an arrow
+6:45
+function we have one parameter of event
+6:48
+Arrow do this let's copy these two lines
+6:52
+of code I'll change the background color
+6:55
+to be yellow like it's a warning and the
+6:58
+text cont content to be don't do
+7:03
+it that's a good face when I hover my
+7:07
+cursor over this element the background
+7:09
+color and the text is going to
+7:10
+change the event that occurred is mouse
+7:13
+over it's when you hover your cursor
+7:15
+over something Mouse out is when you
+7:17
+leave a specified element so when I
+7:19
+leave the box I would like to change
+7:22
+back the background color and the text
+7:24
+content We'll add an additional event
+7:26
+listener my box add
+7:30
+event
+7:32
+listener the event type is going to be
+7:35
+Mouse out then I'll write an arrow
+7:38
+function we're provided with an event
+7:41
+Arrow do this let's change the
+7:44
+background color and the text content I
+7:46
+will revert the background color to be
+7:48
+light
+7:49
+green and the text to be click
+7:53
+me whatever the text content originally
+7:56
+was when I hovered my cursor over this
+7:58
+element
+8:00
+we get that Mouse over event but when I
+8:02
+leave we get the mouse out
+8:04
+event when I click on this box we get
+8:08
+the click event when I leave the Box we
+8:11
+get the mouse out event again to reset
+8:13
+it essentially for the last part of this
+8:15
+demonstration we're going to create a
+8:16
+button when we click or interact with
+8:19
+the button then we'll change a separate
+8:21
+element this box so within our HTML file
+8:24
+let's create a
+8:26
+button with text of click
+8:30
+me I will give this button a unique ID
+8:33
+of my
+8:35
+button and I'll increase the font size
+8:37
+with CSS we will select my
+8:40
+button I will increase the font size to
+8:44
+be three
+8:46
+RM just so it's not so
+8:49
+small let's select the ID of my
+8:53
+button const my button equals document.
+8:57
+getet element by idid
+8:59
+my button I'll add the event listener to
+9:03
+my button not my
+9:06
+box if I was to interact with this
+9:08
+button with the way it is now when I
+9:10
+hover over the button we've created a
+9:13
+mouseover event and the button changes
+9:15
+when I click on the button we're
+9:17
+changing the HTML and CSS of the button
+9:20
+because the button is what has the event
+9:22
+listener we're selecting the target of
+9:24
+the event to change which is the button
+9:26
+that is what we interacted with when we
+9:28
+interact with our box it doesn't do
+9:29
+anything it doesn't have any event
+9:31
+listeners the button does though we're
+9:33
+going to replace the event Target with
+9:35
+my box when we interact with the button
+9:39
+change the background color and the text
+9:41
+content of my
+9:45
+box so then when I hover over the button
+9:48
+the Box changes when I leave it reverts
+9:51
+back to normal when I click on the
+9:53
+button then we've created a click event
+9:56
+all right everybody so that is an
+9:57
+introduction to Mouse related events
+9:59
+you'll need to add an event listener an
+10:01
+event listener listens for specific
+10:03
+events to create interactive web pages a
+10:06
+few events we've covered include click
+10:08
+Mouse over and mouse out to add an event
+10:11
+listener take an element use the
+10:13
+built-in ad event listener method pass
+10:16
+in an event type and a call back
+10:18
+Anonymous function or an arrow function
+10:20
+to do something and well everybody those
+10:22
+are Mouse related events in
+10:28
+JavaScript

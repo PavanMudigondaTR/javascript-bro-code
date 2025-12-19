@@ -1,0 +1,347 @@
+introduction
+0:00
+hey hello there so today I'm going to
+0:02
+explain Arrow functions in JavaScript an
+0:04
+arrow function is a concise way to write
+0:06
+a function expression it's good for
+0:09
+simple functions that you only use once
+0:11
+here's the formula you have your
+0:13
+parameters Arrow then some code you
+0:15
+would like to perform here's an example
+0:18
+suppose I have a function declaration I
+0:21
+have the hello function I'll we're going
+0:24
+to do is
+0:25
+console.log the word hello to use this
+0:29
+function I need to call it by its name
+0:31
+add a set of parentheses this will
+0:33
+display the word hello a concise way to
+example 1
+0:36
+write the same function is to use an
+0:38
+arrow function we'll begin with a
+0:40
+function expression then convert it to
+0:41
+an arrow function just so we understand
+0:43
+the differences this time I will create
+0:46
+a constant hello hello is going to be a
+0:49
+constant that stores our function
+0:52
+expression if I were using a function
+0:54
+expression we would say function
+0:57
+parenthesis curly braces then the code
+0:59
+we want to perform console.log the
+1:04
+word hello this would do the same thing
+1:08
+hello a more concise way to write this
+1:11
+function expression would be to use an
+1:13
+arrow
+1:14
+function following this formula we list
+1:17
+our parameters we don't have any we need
+1:19
+a set of parenthesis Arrow then some
+1:22
+code we would like to perform I'm going
+1:24
+to console.log the word
+1:28
+hello and that
+1:30
+works we're sticking an arrow function
+1:33
+within a variable or named constant to
+1:36
+invoke the arrow function within we just
+1:38
+follow that constant or variable with
+1:39
+the set of parentheses like we're
+1:41
+calling it as if it's a pair of
+1:42
+telephones talking to each other you can
+1:45
+send some arguments to an arrow function
+1:47
+we'll need to set up the parameters I
+1:49
+will have a name parameter within our
+1:52
+code let's console.log I'll use a
+1:55
+template string hello add a placeholder
+1:59
+add my name
+2:00
+parameter now I need to pass in an
+2:02
+argument because right now it's hello
+2:06
+undefined pass in your first name is an
+2:09
+argument hello bro within your code if
+2:12
+you need to include more than one
+2:14
+statement you'll need to enclose all of
+2:16
+that code within a set of curly
+2:18
+braces let's add a new
+2:22
+line
+2:25
+console.log you are
+2:27
+old hello bro you are
+2:30
+old okay let's set up another parameter
+2:33
+this time we will accept an age
+2:37
+argument let's transform our second
+2:39
+console.log to be you are at a
+2:44
+placeholder our parameter
+2:47
+age years
+2:49
+old now we'll pass in a second argument
+2:52
+for age hello bro you are 25 years old
+2:57
+so that's the basics of an arrow
+2:58
+function you have your parameter ERS
+3:00
+Arrow then some code you would like to
+3:02
+perform there's no need to create a
+3:04
+function
+3:04
+declaration let's go over another
+example 2
+3:07
+example we have the set timeout
+3:11
+function this function accepts a call
+3:14
+back then a given amount of time we are
+3:16
+then going to execute this code this
+3:19
+callback after 3 seconds 3,000
+3:22
+milliseconds I will execute whatever
+3:24
+this call back is let's create a
+3:26
+function to say hello again function
+3:31
+hello we will
+3:34
+console.log the word hello I will pass
+3:38
+in a call back after 3 seconds we
+3:42
+say hello in place of a call back I
+3:46
+could use a function expression let's
+3:48
+cut our
+3:52
+function remove this argument then paste
+3:55
+our function expression remember we
+3:57
+don't need the name for a function
+3:58
+expression this works as
+4:02
+well hello or otherwise we can use a
+4:05
+more concise Arrow function we will pass
+4:08
+that as an argument we have our
+4:10
+parameters we don't have any Arrow then
+4:13
+some code
+4:16
+console.log the word hello after 3
+4:20
+seconds we display the
+4:22
+word hello now we'll use Arrow functions
+example 3
+4:25
+with map filter and
+4:27
+reduce we have an array of numbers const
+4:31
+numbers equals the numbers 1 through
+4:37
+six let's start with using the map
+4:40
+filter to square each of these numbers
+4:43
+but we will use Arrow
+4:46
+functions const
+4:50
+squares equals our original array
+4:53
+numbers. map normally we would pass in a
+4:57
+call back as an argument but we're not
+4:59
+going to do that we'll use an arrow
+5:02
+function we have one
+5:05
+parameter an
+5:08
+element
+5:09
+arrow take each element use
+5:13
+math.pow to raise our element to a given
+5:17
+power then let's console.log our
+5:21
+squares console.log squares there they
+5:24
+are here are all the original numbers
+5:26
+squared 1 4 9 16 25
+5:30
+36 let's Cube each
+5:34
+number const
+5:37
+cubes raise our element to the power of
+5:40
+three console.log are
+5:43
+cubes there are all the numbers
+5:46
+cubed we'll use the filter method to
+5:49
+filter out any numbers that are odd
+5:52
+const even nums equals rray
+5:57
+numbers we will use the filter method
+5:59
+method we can pass in a call back but we
+6:01
+don't need to we will pass in an arrow
+6:05
+function we have our element as a
+6:08
+parameter
+6:10
+Arrow we don't necessarily need a return
+6:13
+statement if we have only one line of
+6:16
+code take our element modulus 2 is it
+6:21
+divisible by two and does the strictly
+6:24
+equal zero if it does it's an even
+6:26
+number let's console.log our even number
+6:30
+2
+6:30
+46 let's do this with odd
+6:34
+numbers odd
+6:38
+nums take our element modulus 2 is it
+6:41
+strictly not equal to
+6:44
+zero display our odd nums 1
+6:48
+35 and lastly let's do reduce we will
+6:51
+get a total by summing all of the
+6:53
+elements of this array const total
+6:57
+equals our original array
+7:00
+do reduce pass in a call back or an
+7:03
+arrow function this time we have two
+7:05
+arguments an
+7:08
+accumulator and an
+7:11
+element we have an
+7:13
+Arrow return our accumulator plus our
+7:19
+element then display the
+7:22
+total our total is
+7:24
+21 all right everybody so those are
+conclusion
+7:26
+Arrow functions they're a concise way to
+7:29
+write a function expression they're good
+7:31
+for simple functions that you only use
+7:33
+once you list your parameters within a
+7:36
+set of parentheses an arrow then some
+7:39
+code you would like to perform in this
+7:41
+example we've written a more concise way
+7:43
+to use the map filter and reduce methods
+7:46
+normally we can pass in a call back as
+7:47
+an argument a function expression or an
+7:50
+arrow function and well everybody those
+7:53
+are Arrow functions in
+7:58
+JavaScript

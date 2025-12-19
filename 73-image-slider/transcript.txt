@@ -1,0 +1,712 @@
+
+Search in video
+0:00
+hey what's going on everybody so in
+0:01
+today's video I'm going to show you how
+0:03
+we can create an image slider program
+0:05
+using JavaScript you will need some
+0:07
+images to work with I would recommend
+0:09
+finding three or more somewhat related
+0:11
+images to whatever you would like to
+0:13
+create an image slider for once you find
+0:15
+your images put them within your website
+0:16
+folder and we are ready to begin okay
+0:19
+let's do this thing everybody so we will
+0:21
+create a development to contain
+0:23
+everything this development will have a
+0:25
+class of
+0:27
+slider within this development we will
+0:29
+create another div element this
+0:32
+development will have a class of slides
+0:35
+to contain our images within this inner
+0:37
+div element we will create three image
+0:40
+elements the first image will have a
+0:43
+class of
+0:45
+slide with this image element I will set
+0:47
+the source attribute to be a relative or
+0:50
+absolute file path let's begin with
+0:53
+image one whatever you currently have
+0:55
+I'll copy the name of this image
+0:56
+including the
+0:58
+extension so my my image has a name of
+1:01
+image 1.jpg and for some reason if this
+1:04
+image can't display I'll add some
+1:05
+alternative text with the alt attribute
+1:08
+let's say image number
+1:12
+one and there is my image I will copy
+1:15
+this image element paste it twice or
+1:19
+once for every image that you have then
+1:21
+I have image two and image three let me
+1:24
+change those we have image 2 and image
+1:28
+three so you should have three or more
+1:31
+images depending on what pictures you're
+1:33
+using and how many then we're going to
+1:35
+add some Arrow buttons for the time
+1:37
+being that will be down at the
+1:39
+bottom so we will create a button
+1:42
+element now you could use a left angle
+1:44
+bracket let me zoom in but I think
+1:48
+there's a better option there's a
+1:49
+Unicode character for a left pointing
+1:52
+angle bracket which looks like this we
+1:54
+will use the Unicode character of
+1:57
+Ampersand # 1
+2:00
+094 I think that looks better but you do
+2:03
+you all right then let's create a right
+2:05
+angle bracket with another button the
+2:08
+number is
+2:11
+one95 so that will create a button with
+2:14
+an arrow that points to the right for
+2:16
+the previous button the left one I will
+2:18
+assign a class of prev meaning
+2:22
+previous and the next button will have a
+2:24
+class of
+2:26
+next when we click on these buttons
+2:29
+we'll call A JavaScript function we need
+2:31
+to set the onclick vent Handler equal to
+2:34
+a JavaScript function for the previous
+2:36
+button we'll call a function of prev
+2:39
+slide meaning
+2:41
+previous and for the next button we will
+2:44
+call a function of next slide to go to
+2:48
+the next
+2:50
+slide okay and that is all the HTML that
+2:53
+we need for now let's go to our CSS
+2:56
+stylesheet we will select our class of
+2:59
+slider that contains everything class
+3:02
+slider we're going to use relative
+3:06
+positioning these elements will move
+3:08
+relative to their normal position using
+3:11
+relative so we have position relative I
+3:15
+will set a width of
+3:17
+100% as well as margin Auto to Center
+3:20
+everything
+3:21
+horizontally now just in case if our
+3:23
+images are really big I will set the
+3:25
+Overflow property to be hidden so take
+3:28
+our class of slider
+3:30
+select all the images with these images
+3:33
+I will set their width to be
+3:35
+100% and for now I will set the display
+3:38
+property to be none we don't want to
+3:41
+display all the images right away so
+3:43
+they should
+3:44
+disappear let's add a little bit of
+3:46
+functionality before continuing let's go
+3:48
+to our Javascript file I'm going to
+3:51
+create a node list of all the images
+3:54
+within our class of slides so I will
+3:56
+create a constant of slides which will
+3:59
+will be a node list equals
+4:02
+document. query selector all we will
+4:07
+select all elements within the class of
+4:10
+slides that are images image elements we
+4:14
+will also declare an index of the
+4:15
+current slide let slide index so this
+4:19
+will be zero initially to start at the
+4:22
+first slide we'll be using the set
+4:24
+interval function set interval will
+4:27
+return an ID that we can work with so we
+4:29
+will declare a variable to hold to that
+4:32
+let
+4:34
+interval ID for now I'll set it to be
+4:37
+null meaning no
+4:38
+value okay let's declare our functions
+4:42
+we will have a function to
+4:45
+initialize our
+4:47
+slider this will populate our web
+4:49
+browser with the first image when we
+4:51
+call this function then we need a
+4:53
+function for show Slide there will be
+4:57
+one parameter an index
+5:01
+an index of the next slide we would like
+5:02
+to go
+5:03
+to a function for the previous slide
+5:07
+prev slide and a function for next slide
+5:12
+function next
+5:15
+slide within our function of initialized
+5:18
+slider we will take our node list of
+5:21
+slides at index of our current slide
+5:24
+index which will be zero initially I
+5:27
+will access the class list
+5:30
+and add a
+5:32
+class of display slide which we still
+5:36
+need to work with and then we will call
+5:38
+this function right
+5:41
+away okay we need to build this class
+5:43
+still display
+5:45
+slide we will select all image elements
+5:48
+that have a class within their class
+5:50
+list of display
+5:54
+slide if an image has this class we will
+5:57
+set their display property to display as
+6:00
+a block we should get our first
+6:03
+image if you would like although it's
+6:06
+not necessary we could display this
+6:09
+image after all of the Dom content loads
+6:12
+by using an event listener here's how if
+6:14
+you would prefer to wait for all the Dom
+6:16
+content to load we can take our
+6:19
+document add an event
+6:22
+listener we will wait for the event of
+6:26
+Dom content loaded
+6:30
+once all of the Dom content loads pass
+6:33
+in a call back to initialize slider so
+6:36
+this would work too and I would say it's
+6:37
+the preferred way rather than just
+6:39
+calling this function initially wait for
+6:41
+all the Dom content to load then display
+6:44
+our first image by calling this function
+6:46
+within the initialized slider function
+6:49
+we will use the set interval
+6:52
+function we will call the next slide
+6:55
+function after a given amount of seconds
+6:58
+let's say after 5 seconds I would like
+7:01
+to go to the next slide and display the
+7:02
+next image whatever is next within our
+7:05
+node list in order for us to work with
+7:07
+this interval this function is going to
+7:09
+return an interval ID so we can clear it
+7:12
+later if we need to we will take our
+7:14
+interval ID set it equal to the set
+7:17
+interval
+7:18
+function so I'm going to
+7:22
+console.log my interval ID just to see
+7:24
+what it is so let's save and run
+7:28
+everything go to console so this
+7:31
+interval has an ID of one if I need to
+7:34
+clear this set interval function I can
+7:36
+access it by its ID which is currently
+7:39
+one and we can get rid of this
+7:41
+line to avoid displaying an image if we
+7:44
+don't have one we can wrap these two
+7:46
+lines of code within an if
+7:48
+statement we will check if our node list
+7:52
+of slides its length property is greater
+7:56
+than zero if we do have slides
+8:00
+then display it and use the set interval
+8:02
+function if there's no slides no images
+8:06
+then don't do
+8:08
+this okay then we're going to go to the
+8:10
+next slide
+8:11
+function we're going to increment slide
+8:14
+index by one slide index
+8:17
+Plus+ and then we will call the show
+8:20
+slide function pass in our slide index
+8:23
+after incrementing it and that is all we
+8:25
+need for next slide then we have the
+8:27
+show slide function with in our show
+8:29
+slide function we will access our node
+8:32
+list of
+8:34
+slides use the for each method to
+8:37
+iterate through all of them I would like
+8:39
+to take each slide Arrow do this take
+8:44
+each slide access its class
+8:47
+list then remove a class from the class
+8:50
+list we will remove the class of display
+8:55
+slide if it's time to move to the next
+8:57
+slide we don't want to display the
+8:59
+current slide anymore we'll remove
+9:01
+display slide so that it's no longer
+9:04
+displaying as a block remove these
+9:06
+properties then outside of the for each
+9:09
+method we will add display slide to the
+9:11
+next slide then we will take our slides
+9:15
+at index of slide
+9:18
+index access the class list of the next
+9:22
+slide then we will add a new class add
+9:26
+the class of display slide
+9:29
+so that it displays as a
+9:32
+block and let's see if this works after
+9:36
+5 Seconds we should move to the next
+9:39
+slide and that does in fact work let's
+9:42
+wait again for the next
+9:44
+slide and that has worked
+9:47
+too we need to reset our slide index
+9:50
+because right now we're going out of
+9:51
+bounds we only have three slides in this
+9:53
+example within our show slide function
+9:56
+We'll add an if statement and an an lse
+9:59
+if
+10:03
+statement if we reach the end of our
+10:05
+slides we need to reset the slide index
+10:08
+and set it back to be zero if our index
+10:11
+that's passed
+10:12
+in is greater than or equal to our node
+10:17
+list of slides length property if we
+10:20
+reach the end we need to take our slide
+10:22
+index and reset it to be
+10:24
+zero now if we go backwards with the
+10:27
+previous button if our index is less
+10:30
+than
+10:31
+zero we will take the slide
+10:34
+index set it equal to our slides length
+10:39
+property minus one to set it to the end
+10:42
+if we're on the first slide and we hit
+10:44
+the previous button that will bring us
+10:46
+to the last slide these images should
+10:48
+Loop let's see if that does
+10:56
+work so we're on our green car and we
+10:58
+should go to our blue car car next and
+11:00
+that does work our initialized slider
+11:03
+function is done if we click on the next
+11:05
+button we should be able to go to the
+11:06
+next slide right
+11:10
+away now we have to work on the previous
+11:12
+button and add some functionality to
+11:14
+that within the previous slide function
+11:18
+we will take our slide index and
+11:20
+decrement it with minus minus then call
+11:23
+the show slide function pass in the
+11:25
+current index now we should be able to
+11:28
+move forward and
+11:31
+back now if we hit the previous button
+11:34
+because we want to look at an image the
+11:36
+timer is still going we'll still go to
+11:37
+the next slide if we would like to take
+11:39
+some time to admire one of these images
+11:41
+we can clear the set interval function
+11:44
+by using its interval
+11:45
+ID so if somebody were to hit the
+11:47
+previous button let's clear the timer we
+11:50
+will use the clear interval function we
+11:53
+will pass in that interval
+11:57
+ID our set interval function is still
+11:59
+going to move the slides forward but if
+12:01
+I were to hit the previous
+12:03
+button that interval is going to
+12:06
+stop we are done with all of our
+12:08
+JavaScript functionality we're going to
+12:10
+apply some CSS styling to the buttons
+12:12
+and even add a transition animation to
+12:14
+the next
+12:16
+image we will style our buttons
+12:19
+next within our class of slider select
+12:22
+all
+12:23
+buttons I will set the position property
+12:26
+to be
+12:27
+absolute
+12:30
+positions an element relative to its
+12:32
+parent meaning the slider
+12:36
+element with absolute positioning I will
+12:39
+set the top property to be
+12:42
+50% these buttons will then be
+12:44
+positioned on the Y AIS at 50% meaning
+12:47
+the middle then I will use the transform
+12:52
+property I will translate them on the Y
+12:55
+AIS by minus
+12:57
+50% Translate Y is a function we're
+13:01
+moving these buttons up by 50% of the
+13:04
+element's height that will put this
+13:06
+button right in the middle take 50% of
+13:08
+the height of the button Move It Up by
+13:10
+that amount I'll increase the font size
+13:14
+font size 25 pixels or better yet let's
+13:17
+do like 2
+13:19
+RM okay now for the background
+13:22
+color I'll set it to be black but I'm
+13:25
+going to lower the alpha on it so it's
+13:28
+transparent
+13:30
+I'll set the alpha to be
+13:32
+50% and for the font color color I'll
+13:36
+set that to be
+13:37
+white okay you can see our two buttons
+13:39
+are overlapping currently I'm going to
+13:42
+remove the border around the buttons
+13:44
+border
+13:45
+none and change our cursor to be a
+13:49
+pointer if we hover over one of the
+13:51
+buttons so these buttons each have a
+13:54
+class previous and next let's select the
+13:58
+previous class
+13:59
+CL I will set the left property to be
+14:02
+zero to left align it and with the next
+14:06
+class that's the next button I will set
+14:10
+the right property to be zero to align
+14:12
+it to the
+14:13
+right I'm also going to add a little bit
+14:15
+of padding too around the buttons let's
+14:17
+add some padding
+14:20
+here
+14:22
+padding 10 pixels by 15
+14:25
+pixels that looks pretty good we going
+14:29
+to add an animation at Key frames we
+14:33
+need an animation name we will name this
+14:35
+animation fade for a fade
+14:38
+effect from this property of
+14:43
+opacity I can't spell today 0.5 meaning
+14:47
+50% to this property
+14:52
+opacity one for 100% when a new image is
+14:56
+displayed the opacity is going to be 50%
+14:58
+% so it's transparent then after the
+15:01
+animation is complete set it to be one
+15:03
+for 100% now we just have to utilize
+15:06
+this animation of fade all images that
+15:09
+have the display slide class we will set
+15:12
+their animation name when that image is
+15:15
+displayed to be fade how long do we want
+15:18
+this animation to take we will set the
+15:20
+animation duration to be about 1.5
+15:25
+seconds okay let's see if this works we
+15:28
+should get a fade animation when each
+15:30
+new slide
+15:33
+appears we can move
+15:35
+forward and we can move
+15:38
+back all right everybody so that is an
+15:40
+image slider that you can create using
+15:42
+JavaScript HTML and
+15:47
+CSS

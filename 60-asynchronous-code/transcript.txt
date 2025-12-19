@@ -1,0 +1,222 @@
+0:00
+Yo, what's going on people? So, in
+0:02
+today's video, I got to explain what
+0:04
+asynchronous code is in JavaScript.
+0:06
+Synchronous is code that executes line
+0:09
+by line consecutively in a sequential
+0:12
+manner. Synchronous code waits for an
+0:14
+operation to complete. For example, if I
+0:16
+were to use console.log.
+0:19
+Let's pretend we're performing some
+0:20
+task. It doesn't matter what the task
+0:22
+is. We will pretend that task one is
+0:25
+complete. Then we'll move on to task
+0:27
+two, then task three.
+0:30
+All this code is synchronous. We're
+0:32
+executing this code line by line. We
+0:35
+can't move on to task two until we
+0:37
+complete task one. There is an order of
+0:39
+events that we need to follow. It's code
+0:42
+that waits for an operation to complete.
+0:45
+Now, on the other hand, asynchronous
+0:46
+code allows multiple operations to be
+0:49
+performed concurrently without waiting.
+0:53
+Asynchronous code doesn't block the
+0:55
+execution flow and allows the program to
+0:57
+continue. Imagine that asynchronous code
+1:00
+is kind of like a time traveler. A time
+1:03
+traveler can move out of the flow of
+1:05
+time, but the rest of the world
+1:06
+continues. Time resumes normally.
+1:09
+Asynchronous code doesn't block the
+1:11
+execution flow. Time moves on with or
+1:14
+without it. Asynchronous code is
+1:16
+typically found with input output
+1:18
+operations, network requests, and
+1:20
+fetching data. Anything that could take
+1:22
+an indeterminate amount of time. So for
+1:25
+example, I will use the set timeout
+1:29
+function.
+1:31
+After 3 seconds, I will execute a
+1:33
+function.
+1:35
+Let's console.log.
+1:37
+Let's say task one. We'll change these
+1:41
+three lines to be task two, task three,
+1:44
+task 4. I will finish task one after
+1:48
+3,000 milliseconds. Now check this out.
+1:52
+We've already completed task 2, three,
+1:54
+and four, but task one finished last.
+1:57
+That's because set timeout is one of
+2:00
+many asynchronous functions. The rest of
+2:02
+the program isn't going to wait around
+2:04
+for it to complete. It runs concurrently
+2:06
+with the rest of my code. That's why
+2:09
+task one was completed at the end and
+2:11
+not at the beginning. There's different
+2:13
+ways to handle asynchronous code. We're
+2:15
+already familiar with callbacks, but
+2:17
+there's also promises as well as a sync
+2:20
+and await. We still need to discuss
+2:23
+these topics in the future, but we're
+2:24
+already familiar with callbacks. If it's
+2:27
+crucial that task 2 through 4 finishes
+2:30
+after task one, we can use a callback.
+2:33
+We don't necessarily know how long this
+2:35
+asynchronous function is going to take.
+2:37
+What we could do in this example is
+2:39
+create a function function. Funk one
+2:42
+meaning function one.
+2:45
+I will execute this code within function
+2:47
+one.
+2:49
+Then we will accept a callback as an
+2:52
+argument.
+2:53
+Then we'll have function funk 2 to do
+2:59
+some synchronous code.
+3:02
+Function two will have tasks two through
+3:05
+four.
+3:07
+After task one is complete, I will
+3:09
+invoke my call back to function two. So
+3:12
+with an arrow function, I have more than
+3:14
+one line of code. I need to add a set of
+3:16
+curly braces.
+3:18
+After task one,
+3:21
+I will invoke that call back.
+3:26
+So then if I call function one,
+3:30
+I have to pass a call back to function
+3:33
+two.
+3:35
+So now function one is asynchronous.
+3:38
+But I need this synchronous code to
+3:41
+execute after task one is complete. And
+3:44
+now that should work.
+3:46
+1 2 3. There it is. We have task one
+3:51
+which is asynchronous followed by task
+3:54
+two, task three and task four. So by
+3:57
+using callbacks that's one way in which
+3:59
+we can handle asynchronous code. But we
+4:02
+still need to discuss promises async and
+4:04
+a wait which are future topics. All
+4:07
+right everybody. So that is what
+4:08
+asynchronous code is. Synchronous code
+4:11
+executes line by line consecutively in a
+4:14
+sequential manner. Asynchronous code
+4:17
+allows multiple operations to be
+4:19
+performed concurrently without waiting.
+4:22
+Asynchronous code doesn't block the
+4:25
+execution flow and allows the rest of
+4:27
+the program to continue. Asynchronous
+4:29
+code is commonly found with input output
+4:32
+operations, network requests, and
+4:34
+fetching data. Usually anything that
+4:37
+takes an indeterminate amount of time.
+4:39
+And well everybody, that's what
+4:40
+asynchronous code is in JavaScript.

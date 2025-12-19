@@ -1,0 +1,238 @@
+0:00
+what's up people so today I got to
+0:01
+explain Constructors in JavaScript a
+0:04
+Constructor is a special method for
+0:06
+defining the properties and methods of
+0:09
+objects in Prior videos we've
+0:11
+constructed objects like this we would
+0:13
+declare an object assign it some
+0:15
+properties and some methods you know
+0:17
+this works but what if we have to create
+0:19
+a lot of objects here I'm manually
+0:21
+creating three different car objects
+0:23
+that can be a lot of work what we could
+0:25
+do instead is use a Constructor to
+0:28
+construct these objects automatically Al
+0:30
+all we have to do to construct these
+0:32
+objects is pass in some unique data to
+0:34
+the Constructor to construct these
+0:36
+objects here's an example we are going
+0:38
+to create a function
+0:41
+car do pay attention to the
+0:45
+capitalization we'll need to set up some
+0:47
+parameters what sorts of properties will
+0:49
+we accept when we construct a car object
+0:52
+how about a make model year and
+0:57
+color these are arguments we'll receive
+0:59
+when we construct a car object to assign
+1:02
+these properties we're going to use the
+1:04
+this keyword doake equals the make that
+1:09
+we
+1:09
+receive let's do this with model this do
+1:13
+model equals the model we
+1:16
+receive this doe equals year this do
+1:22
+color equals color that's good enough
+1:25
+for now our car Constructor is a
+1:28
+reusable method where we can define the
+1:30
+properties and methods of objects we
+1:32
+create to use this Constructor I will
+1:34
+create an instance of an
+1:36
+object I will use const car one will be
+1:39
+our first object equals we'll need to
+1:42
+use the new keyword type the name of the
+1:45
+Constructor car car is a special method
+1:48
+we'll need to pass in some arguments
+1:50
+we'll need a make model year and color
+1:53
+in that order my first car feel free to
+1:56
+send some different data to the
+1:57
+Constructor but for me my first car will
+1:59
+be be a
+2:01
+Ford make sure each value is comma
+2:04
+separated Mustang the year will be
+2:08
+2024 and the color will be
+2:11
+red we should now have a car object with
+2:14
+the name of car 1 and I'm going to
+2:18
+console.log car 1's properties car 1.
+2:22
+make Ford let's do this with the other
+2:25
+properties we have
+2:26
+model
+2:28
+Mustang
+2:31
+year
+2:34
+2024 and color red now this method is
+2:39
+reusable we can reuse it to create other
+2:41
+car
+2:42
+objects let's create const Car 2 equals
+2:48
+new car we'll pass in different data
+2:50
+this time the make will be chevr
+2:55
+a I will pick a
+2:58
+Camaro the year
+3:00
+2025 and the color will be blue now I
+3:04
+can display car 2's
+3:06
+properties let's Select Car 2. make car
+3:09
+2. model car 2. year car
+3:11
+2.cor we have a Chevy Camaro year 2025
+3:15
+the color is blue let's create one more
+3:18
+car same process as before const car 3
+3:23
+equals new
+3:26
+car I'll go with a Dodge
+3:30
+charger the year
+3:33
+2026 and the color will be
+3:37
+silver let's access car 3's properties
+3:40
+car 3. make car 3. model car 3. year car
+3:44
+3.or Dodge Charger 2026 the color is
+3:48
+silver another thing with these
+3:49
+parameters too you can name these
+3:51
+parameters anything when we assign these
+3:53
+properties it can be kind of confusing
+3:56
+like this. make equals make really we
+3:58
+write our Constructors this way just for
+4:00
+readability technically this would work
+4:02
+if we renamed our parameters for example
+4:04
+make will be parameter a model will be B
+4:07
+year is C color is D then be sure to
+4:10
+change these when we assign them A B C D
+4:16
+this would still work however this
+4:18
+Constructor isn't as readable like what
+4:20
+the heck is a b c and d it would be good
+4:23
+practice to clearly Define our
+4:25
+parameters for readability purposes all
+4:28
+right now let's add a method
+4:30
+we'll take this.
+4:33
+Drive equals a
+4:39
+function we
+4:42
+console.log I'll use a template string
+4:46
+you drive the I'll add a
+4:49
+placeholder
+4:51
+this.
+4:53
+model with Cars 1 through three let's
+4:56
+use the drive method car 1. drive
+5:01
+you drive the
+5:04
+Mustang car 2. drive you drive the
+5:07
+Camaro and K 3.
+5:10
+drive you drive the charger all right
+5:13
+everybody so that's a Constructor it's a
+5:15
+special method for defining the
+5:17
+properties and methods of objects it
+5:19
+helps with code reusability we can reuse
+5:21
+it to create many objects instead of
+5:23
+having to type them all out manually and
+5:25
+well everybody those are Constructors in
+5:28
+JavaScript

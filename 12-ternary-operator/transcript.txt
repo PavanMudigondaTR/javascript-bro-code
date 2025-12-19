@@ -1,0 +1,297 @@
+intro
+0:00
+hey uh welcome back so today I'm going
+0:02
+to explain the Trenary operator in
+0:04
+JavaScript you write a condition then
+0:07
+add a little question mark kind of like
+0:09
+you're asking a question how is this
+0:10
+useful well it's a shortcut to if and
+0:14
+else statements it helps to assign a
+0:16
+variable based on a condition you write
+0:19
+a condition then use the ternary
+0:21
+operator as if you're asking a question
+0:23
+you can write some code if that
+0:25
+condition is true what would you like to
+0:27
+do then add a colon then some code if
+0:31
+that condition is false here's an
+example 1
+0:33
+example let's say we have a user's age
+0:36
+age equals 21. I would like to check to
+0:40
+see if somebody's age is greater than or
+0:42
+equal to 18. age greater than equal to
+0:47
+18 then I will use the ternary operator
+0:50
+kind of like I'm asking a question
+0:52
+is age greater than or equal to 18 if
+0:56
+this condition is true we can write some
+0:59
+code I'll create a string
+1:01
+you're an adult
+1:05
+then what if the condition is false I'll
+1:07
+add a colon
+1:09
+then I will execute this code if the
+1:11
+condition is false
+1:13
+you're a minor
+1:18
+this is helpful if you need to assign a
+1:20
+variable based on a condition
+1:23
+so I'll create a new variable let
+1:26
+message equals
+1:29
+then we write our condition
+1:31
+so if age is greater than or equal to 18
+1:35
+if that's true we will assign this
+1:37
+string to this variable this message if
+1:40
+it's false instead we will assign this
+1:43
+one it's an alternative to writing
+1:45
+something like this
+1:57
+so with programming we try not to repeat
+1:59
+ourselves if we don't have to
+2:01
+here we're assigning message to be
+2:04
+either this string or this one
+2:07
+our ternary operator is more condensed
+2:09
+and I feel like it's easier to read than
+2:11
+that if else statement
+2:14
+it's a shortcut if you choose to use it
+2:16
+I tend to use it a lot then just to test
+2:19
+it let's console.log our message just to
+2:22
+be sure that it works fine
+2:24
+console.log our message
+2:27
+our age is 21 you're an adult if my age
+2:30
+was 12.
+2:31
+you'll remind her let's go over a few
+2:34
+more exercises
+example 2
+2:37
+this time we will have let time time
+2:40
+will be between 1 and 24 like a 24 hour
+2:43
+clock I will set time to be 16.
+2:48
+16 I think would be 4 P.M
+2:51
+we will assign a greeting
+2:54
+equals then we'll write a condition is
+2:58
+time less than 12.
+3:00
+the enternary operator like we're asking
+3:03
+a question
+3:04
+if the time is less than 12 it's the
+3:06
+morning good morning
+3:10
+we'll use a colon then write some code
+3:12
+if it's false
+3:14
+if it's not the morning it's at least
+3:16
+the afternoon good afternoon
+3:20
+then let's console.log
+3:22
+our greeting
+3:26
+good afternoon because it's 4 P.M what
+3:29
+if it was 9. good morning
+3:31
+all right I have a few more examples
+3:35
+foreign
+example 3
+3:39
+student this will be true or false if
+3:43
+you're a student
+3:45
+let message equals
+3:49
+now with the Boolean variable you can
+3:51
+just write the Boolean variable itself
+3:54
+is student question mark are you a
+3:57
+student if so
+3:59
+you are a student
+4:02
+if not
+4:04
+you are not a student
+4:10
+then let's console.log
+4:14
+our message
+4:17
+we are a student you are a student let's
+4:19
+set this to be false you are not a
+4:22
+student
+4:23
+it's very easy to read with Boolean
+4:25
+variables you write the Boolean variable
+4:28
+then add a question mark
+example 4
+4:30
+here's a challenge round
+4:32
+we will have a purchase amount as if
+4:35
+somebody's buying something if
+4:37
+somebody's purchase amount is over one
+4:39
+hundred dollars they get a 10 discount
+4:42
+so let
+4:44
+purchase amount equal let's say 125
+4:49
+dollars or some other unit of currency
+4:51
+of your choosing
+4:53
+let
+4:55
+discount
+4:57
+equals
+4:59
+then the condition is
+5:01
+we're checking if purchase amount is
+5:03
+greater than or equal to 100 100
+5:07
+question mark
+5:10
+is somebody's purchase amount greater
+5:11
+than one hundred dollars
+5:14
+if so they will get a 10 discount
+5:18
+colon
+5:20
+if that's false they get no discount
+5:22
+zero
+5:25
+so then let's display the total
+5:27
+console.log
+5:30
+I'll use a template literal
+5:33
+your total is I need a dollar sign for
+5:37
+our unit of currency then I need a
+5:39
+placeholder so I need another dollar
+5:40
+sign
+5:42
+the purchase amount
+5:46
+minus
+5:49
+the purchase amount
+5:51
+multiplied by let me scoot over a little
+5:56
+the discount
+5:59
+divided by 100
+6:03
+so the total since we get a discount
+6:06
+is one hundred twelve dollars and fifty
+6:09
+cents if our purchase amount was ninety
+6:12
+nine dollars well we don't get that
+6:14
+discount your total is 99.
+6:17
+all right everybody so that's the
+6:18
+Trenary operator it's a shortcut to an
+6:21
+if else statement it helps to assign a
+6:23
+variable based on a condition you write
+6:25
+a condition add a question mark as if
+6:28
+you're asking a question do this code if
+6:30
+that condition is true else do this code
+6:33
+if that condition is false I'll be using
+6:36
+the ternary operator a lot just because
+6:38
+I feel like it's helpful and well that
+6:40
+is the ternary operator in JavaScript

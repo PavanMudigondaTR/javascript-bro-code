@@ -1,0 +1,595 @@
+fetch
+0:00
+what's going on everybody so in today's
+0:01
+video I'm going to show you how we can
+0:03
+fetch data from an API using JavaScript
+0:06
+and at the end of this video we're going
+0:07
+to create a project where we can fetch
+0:09
+some images of Pokemon depending on what
+0:11
+Pokemon you type in so sit back relax
+0:14
+and enjoy the show all right people so
+0:16
+we got to talk about fetch fetch in
+0:18
+JavaScript is a function it's used for
+0:20
+making HTTP requests to fetch resources
+0:24
+including but not limited to Json styled
+0:27
+data images files resour ources of that
+0:30
+nature the fetch function simplifies
+0:32
+asynchronous data fetching it's used for
+0:35
+interacting with apis to retrieve and
+0:37
+send data asynchronously over the web
+0:41
+fetch has two arguments a URL of the
+0:44
+resource and an object an object of
+0:47
+options I won't be talking about options
+0:49
+in this video that's more advanced
+0:51
+JavaScript one of which you may see is a
+0:53
+method property the default is get to
+0:56
+get a resource you can use post to send
+0:59
+some data put to replace some data and
+1:03
+delete to delete some data so the
+1:05
+default is get but we don't need to
+1:08
+explicitly state that we'll just be
+1:10
+focusing on getting data with only a URL
+1:14
+to fetch something we have to use the
+1:15
+fetch function and pass in a URL what I
+1:19
+thought we could do for this video is
+1:20
+fetch some Pokemon data from the Pokemon
+1:22
+API if you want to follow along you can
+1:24
+go to this URL I would like to fetch
+1:27
+some data on Pikachu
+1:30
+because everybody knows about
+1:34
+Pikachu and here's some of the data on
+1:36
+Pikachu this resource is one gigantic
+1:40
+object Pikachu has a name an ID number a
+1:44
+type Pikachu is an electric type there's
+1:47
+stats such as his attack power HP
+1:51
+there's even image Sprites which we'll
+1:52
+work with later we will copy this
+1:56
+URL and paste it within the fetch
+1:58
+function we will pass in a string
+2:01
+representation of this URL the fetch
+2:04
+function is promise-based it's either
+2:06
+going to resolve or reject so we should
+2:08
+add a
+2:10
+then and a catch method to catch any
+2:13
+errors error Arrow do this let's console
+2:17
+the error if there's an error once the
+2:21
+promise resolves we'll be provided with
+2:23
+an object a response object take our
+2:27
+response object Arrow do this
+2:30
+for the time being let's
+2:33
+console.log our response just to see
+2:35
+what it is
+2:38
+exactly so here's our response
+2:41
+object the body contains the data we're
+2:44
+looking for for Pikachu this response
+2:48
+object has a status code of 200 that
+2:50
+means it's okay here's where you may see
+2:53
+that status code of 404 if you can't
+2:54
+locate a resource it has an okay
+2:57
+property if fetching this resource was
+2:59
+okay okay this is going to be true if
+3:01
+not it's false there's also a URL here
+3:04
+too now our next step is to convert it
+3:06
+to a readable format there's a few
+3:08
+different methods there's array buffer
+3:11
+blob text and Json these are all methods
+3:16
+we're interested in the Json method in
+3:18
+this example so our next step is to take
+3:21
+our response object convert it to Json
+3:24
+using the Json
+3:26
+method this is also promise based once
+3:29
+This Promise resolves let's follow this
+3:31
+with a then method then take the data
+3:34
+our Json data that's going to be
+3:36
+returned to
+3:37
+us Arrow do this let's console.log my
+3:42
+data just to see what it is so after
+3:45
+fetching data on Pikachu convert the
+3:47
+response object to a Json
+3:51
+format and here's my data for Pikachu we
+3:54
+have a name an ID Pikachu stats such as
+3:59
+his HP p and attack and weit and many
+4:02
+more things with this Json data you can
+4:05
+access one of the properties I would
+4:07
+like just Pikachu's name data. name
+4:11
+Pikachu data dot weight how much does
+4:16
+Pikachu weigh 60 60 units of something
+4:20
+whatever unit of measurement they use in
+4:21
+Kanto what is Pikachu's ID 25 near the
+4:25
+end of this video we're going to fetch
+4:27
+the Sprites of the Pokémon now for some
+4:29
+reason if we try and access a Pokemon
+4:31
+that doesn't exist as of the filming of
+4:33
+this video SpongeBob is still not a
+4:39
+Pokemon we get a status code of 404
+4:42
+meaning we could not find this resource
+4:44
+SpongeBob is not a Pokemon unfortunately
+4:47
+so even if we can't locate a resource
+4:49
+our promise is still going to resolve
+4:51
+it's not going to reject we need to
+4:54
+check to see if our response is not okay
+4:56
+let me demonstrate I will console.log my
+5:00
+response
+5:01
+object here's my response object it is
+5:04
+not okay your response will be okay if
+5:07
+the status is within the 200 range since
+5:10
+we have a status of 404 we couldn't
+5:12
+locate this resource okay is false we're
+5:15
+going to throw an error if our property
+5:17
+of okay is false within our first then
+5:21
+method we'll write a few statements we
+5:23
+need a set of angle brackets before
+5:26
+continuing let's check to see if our
+5:30
+response access the okay property then
+5:34
+use the not logical operator if our
+5:37
+response is not okay if it's false we're
+5:40
+going to throw a new
+5:43
+error and then catch it using the catch
+5:46
+method we can write a custom message
+5:48
+let's say something like could not fetch
+5:53
+resource if our resource is okay we
+5:57
+won't execute this code otherwise we
+6:00
+will return our response object in a
+6:04
+Json
+6:06
+format let's try and retrieve Pokemon
+6:08
+data on
+6:09
+SpongeBob okay we have an error but we
+6:12
+have caught this error using the catch
+6:14
+method error could not fetch resource
+6:17
+then let's get data on Pikachu
+6:20
+again and there's Pikachu and his ID
+6:26
+number if you would prefer to use a sync
+6:28
+and a weit here's how let's delete all
+async/await
+6:33
+this we will create an async function so
+6:36
+that we can use a weight within it I
+6:38
+will declare a function to fetch data no
+6:43
+parameters do all
+6:45
+this we will create a try and catch
+6:48
+block try and
+6:52
+catch catch has one parameter an error
+6:56
+if we receive an error let's console. ER
+6:59
+error the
+7:02
+error within our Tri block we will
+7:05
+create a constant of
+7:07
+response the fetch function is going to
+7:09
+return an object a response object we
+7:12
+will
+7:13
+await our promise that's returned by
+7:17
+fetch then we need to get that URL
+7:20
+again let's get data on a different
+7:23
+Pokemon another Pokémon that I like is
+7:26
+tyion honestly I think tyion is my
+7:29
+favorite
+7:31
+Pokémon all right here's the stats for
+7:34
+tyion I'm going to copy this
+7:37
+URL pass it to the fetch function as a
+7:40
+string once the promise for fetch
+7:43
+resolves we have to see if the response
+7:46
+is okay we'll use an if
+7:49
+statement if our response
+7:52
+object is the okay property not okay if
+7:57
+our response is not okay
+8:00
+if we can't locate this
+8:02
+resource then we will throw a new
+8:06
+error let's say could not fetch
+8:11
+resource if our response is okay we will
+8:15
+create a constant for our
+8:17
+data equals await take our response and
+8:22
+convert it to
+8:23
+Json this also returns a promise that's
+8:26
+why we're using a wait then we will
+8:28
+console . log our
+8:32
+data and then we have to call the fetch
+8:34
+data function because I forgot to do
+8:37
+that call fetch
+8:40
+data and here's the stats for tyion Name
+8:45
+tyion ID 157 tyion is a fire
+8:50
+type that's how to use a sync and a
+8:52
+weight to fetch a
+8:54
+resource now that we know what we're
+project
+8:56
+doing we're going to create a text box
+8:58
+and a button to search a Pokémon and
+9:01
+pull up a Sprite of that Pokémon and
+9:03
+display it so going to our HTML file we
+9:07
+will create an input
+9:09
+element with the type attribute of text
+9:12
+because it's a text
+9:14
+box I will set the ID of this input
+9:17
+element to be Pokemon
+9:21
+name it's a little small right now we
+9:24
+haven't applied any
+9:25
+CSS I will add a
+9:27
+placeholder uh of enter Pokemon
+9:32
+name then we need a button I will create
+9:35
+a button
+9:36
+element with text of
+9:39
+fetch
+9:42
+Pokemon I will set the onclick event
+9:45
+handler equal to a JavaScript function
+9:48
+let's call that function a fetch
+9:53
+data then I will add a
+9:56
+break after fetching some Pokémon data
+10:00
+we have an image to work with I will set
+10:02
+the source currently to be an empty
+10:04
+string I will display some alternative
+10:07
+text if we can't display the image of
+10:10
+Pokemon
+10:13
+Sprite and I will give this element an
+10:16
+ID of Pokemon
+10:19
+Sprite to not display the image
+10:22
+currently we can access the style access
+10:25
+the display property and set it to be
+10:28
+none
+10:29
+then if we do want to display it we can
+10:31
+set display to be a block let's go to
+10:34
+our Javascript
+10:36
+file within our Tri block we will create
+10:39
+a constant of Pokemon name
+10:43
+equals
+10:45
+document. getet element by ID the ID
+10:50
+that I'm selecting is Pokemon
+10:55
+name access the value of this input
+10:58
+element
+10:59
+now if somebody types an uppercase
+11:02
+characters I'll take the value make all
+11:05
+the letters lowercase I will method
+11:08
+chain the two lowercase method two
+11:12
+lowercase
+11:17
+method with our fetch function we're
+11:20
+going to use a template string with a
+11:23
+pair of back ticks for the Pokemon's
+11:25
+name we will use a placeholder and pass
+11:28
+in our Pokemon name
+11:31
+variable so now when I type in a
+11:34
+Pokemon's name like
+11:37
+Bulbasaur we should get data on that
+11:39
+Pokemon if it exists so let's go to
+11:42
+inspect console and here's data on
+11:45
+Bulbasaur Bulbasaur's ID is
+11:48
+one Bulbasaur is a grass
+11:51
+type and I think he's a poison type too
+11:54
+if I'm not
+11:55
+mistaken this Json data also has Sprites
+11:59
+images of each Pokemon we're going to
+12:01
+fetch the front
+12:04
+default so we don't need console.log
+12:07
+anymore we'll create a
+12:10
+constant of Pokemon Sprite to get that
+12:13
+image equals take our
+12:16
+data access the Sprites
+12:19
+property get the front default
+12:25
+Sprite then we will get our image
+12:27
+element this one that has an ID of
+12:30
+Pokemon
+12:32
+Sprite const image
+12:35
+element equals document. getet element
+12:40
+by ID the ID that I'm getting is Pokemon
+12:45
+Sprite we will change the CSS of this
+12:48
+element take our image
+12:51
+element access its source attribute
+12:54
+right now it's currently empty our
+12:56
+source is an empty string set the source
+13:00
+equal to our Pokemon Sprite this is a
+13:04
+constant then we will take our image
+13:07
+element access the style attribute
+13:10
+access the display
+13:12
+property and set it equal to be a block
+13:15
+because right now it's
+13:17
+none now when I type in a Pokemon's name
+13:20
+like Charizard and fetch that Pokemon we
+13:24
+get the image of that Pokemon it is a
+13:27
+little small however it is a
+13:30
+Sprite Sprites tend to be very
+13:32
+small or we can get
+13:36
+Mewtwo or whatever other Pokemon you can
+13:38
+think of I think there's like over a
+13:40
+thousand Now where's
+13:43
+tyion there's tyion all right everybody
+13:46
+so that is how to fetch data from an API
+13:49
+you got to use the fetch function it's
+13:51
+used for making HTTP requests to fetch
+13:54
+resources you can fetch Json style data
+13:57
+images files the fetch function
+13:59
+simplifies asynchronous data fetching
+14:02
+it's used for interacting with apis to
+14:04
+retrieve and send data asynchronously
+14:07
+over the web and well everybody that is
+14:09
+how to fetch data from an API using
+14:15
+JavaScript
