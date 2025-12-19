@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML Elements Reference</h1>
+        <p>A comprehensive guide to common HTML elements</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Headings Section -->
+        <section id="headings">
+            <h2>Headings (h1 - h6)</h2>
+            <h1>Heading 1 - Largest</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6 - Smallest</h6>
+        </section>
+
+        <hr>
+
+        <!-- Text Elements Section -->
+        <section id="text">
+            <h2>Text Elements</h2>
+            <p>This is a <strong>paragraph</strong> with <em>different</em> text styles.</p>
+            <p>You can <mark>highlight</mark> important text.</p>
+            <p>This is <small>small text</small> and this is <del>deleted text</del>.</p>
+            <p>Chemical formula: H<sub>2</sub>O</p>
+            <p>Math equation: x<sup>2</sup> + y<sup>2</sup></p>
+            
+            <blockquote>
+                "This is a quote in a blockquote element."
+            </blockquote>
+
+            <pre>
+                This is preformatted text
+                    It preserves    spaces
+                        and line breaks
+            </pre>
+
+            <code>let x = 10; // This is inline code</code>
+        </section>
+
+        <hr>
+
+        <!-- Lists Section -->
+        <section id="lists">
+            <h2>Lists</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+
+            <h3>Description List</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language</dd>
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets</dd>
+                <dt>JS</dt>
+                <dd>JavaScript</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- Links and Media Section -->
+        <section id="media">
+            <h2>Links and Media</h2>
+            
+            <h3>Links</h3>
+            <a href="https://www.example.com" target="_blank">External Link (Opens in new tab)</a>
+            <br><br>
+            <a href="#headings">Internal Link (Jump to Headings section)</a>
+
+            <h3>Image</h3>
+            <img src="https://via.placeholder.com/300x200" alt="Placeholder image" width="300" height="200">
+
+            <h3>Figure with Caption</h3>
+            <figure>
+                <img src="https://via.placeholder.com/400x300" alt="Demo image" width="400" height="300">
+                <figcaption>This is a figure caption</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!-- Containers Section -->
+        <section>
+            <h2>Container Elements</h2>
+            
+            <div class="box">
+                <h3>Div Container</h3>
+                <p>A div is a generic block-level container.</p>
+            </div>
+
+            <article>
+                <h3>Article Element</h3>
+                <p>An article represents independent, self-contained content.</p>
+            </article>
+
+            <aside>
+                <h3>Aside Element</h3>
+                <p>Content tangentially related to the main content.</p>
+            </aside>
+        </section>
+
+        <hr>
+
+        <!-- Interactive Elements -->
+        <section>
+            <h2>Interactive Elements</h2>
+            
+            <details>
+                <summary>Click to expand</summary>
+                <p>This is hidden content that appears when you click the summary.</p>
+            </details>
+
+            <br>
+
+            <progress value="70" max="100">70%</progress>
+            <p>Progress bar: 70%</p>
+
+            <meter value="0.7" min="0" max="1">70%</meter>
+            <p>Meter: 0.7 out of 1.0</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML Elements Guide. All rights reserved.</p>
+        <p><small>Created for learning purposes</small></p>
+    </footer>
+</body>
+</html>

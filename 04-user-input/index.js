@@ -7,32 +7,34 @@
 // Uncomment to try the window prompt method:
 
 
-let username;
-username = window.prompt("What's your username?");
-console.log(username);
-
-document.getElementById("myHeading").textContent = `Hello ${username}`;
-document.getElementById("myParagraph").textContent = `Welcome to the website, ${username}!`;
-
-// Alternative: Combined declaration and assignment
-// let username = window.prompt("What's your username?");
+// let username;
+// username = window.prompt("What's your username?");
 // console.log(username);
 
 
+
+// Alternative: Combined declaration and assignment
+// window.alert("Welcome to the site!");  // Greet user with alert
+// let username = window.prompt("What's your username?");
+// console.log(username);
+
+// document.getElementById("myHeading").textContent = `Hello ${username}`;
+// document.getElementById("myParagraph").textContent = `Welcome to the website, ${username}!`;
+
 // METHOD 2: HTML Text Box (Professional Way)
 // -------------------------------------------
-// let username;
+let username;
 
-// document.getElementById("mySubmit").onclick = function() {
-//     // Get value from text box
-//     username = document.getElementById("myText").value;
+document.getElementById("mySubmit").onclick = function() {
+    // Get value from text box
+    username = document.getElementById("myText").value;
     
-//     // Update H1 element with greeting
-//     document.getElementById("myH1").textContent = `Hello ${username}`;
+    // Update H1 element with greeting
+    document.getElementById("myH1").textContent = `Hello ${username}`;
     
-//     // Also log to console
-//     console.log(`Username entered: ${username}`);
-// };
+    // Also log to console
+    console.log(`Username entered: ${username}`);
+};
 
 
 // ===================================

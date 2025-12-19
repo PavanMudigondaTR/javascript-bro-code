@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .highlight {
+            background-color: yellow;
+            padding: 5px;
+        }
+        
+        .active {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .demo-box {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .output {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation Examples</h1>
+        <p>Learn how to interact with HTML elements using JavaScript</p>
+    </header>
+
+    <main>
+        <!-- Selecting Elements -->
+        <section>
+            <h2>1. Selecting Elements</h2>
+            <p id="demo1">This paragraph has id="demo1"</p>
+            <p class="demo-class">This has class="demo-class"</p>
+            <p class="demo-class">Another element with class="demo-class"</p>
+            
+            <button onclick="selectElements()">Select Elements</button>
+            <div id="output1" class="output"></div>
+        </section>
+
+        <!-- Changing Text Content -->
+        <section>
+            <h2>2. Changing Text Content</h2>
+            <p id="demo2">Original text</p>
+            <button onclick="changeText()">Change Text</button>
+            <button onclick="resetText()">Reset Text</button>
+        </section>
+
+        <!-- Changing HTML Content -->
+        <section>
+            <h2>3. Changing HTML Content</h2>
+            <div id="demo3">Original content</div>
+            <button onclick="changeHTML()">Add HTML</button>
+        </section>
+
+        <!-- Changing Styles -->
+        <section>
+            <h2>4. Changing Styles</h2>
+            <div id="demo4" class="demo-box">Hover and click to see style changes</div>
+            <button onclick="changeColor()">Change Color</button>
+            <button onclick="changeSize()">Change Size</button>
+            <button onclick="resetStyles()">Reset Styles</button>
+        </section>
+
+        <!-- Adding/Removing Classes -->
+        <section>
+            <h2>5. Adding/Removing Classes</h2>
+            <p id="demo5">This text can be highlighted</p>
+            <button onclick="toggleHighlight()">Toggle Highlight</button>
+            <button onclick="toggleActive()">Toggle Active</button>
+        </section>
+
+        <!-- Getting/Setting Values -->
+        <section>
+            <h2>6. Input Values</h2>
+            <input type="text" id="userInput" placeholder="Type something...">
+            <button onclick="getValue()">Get Value</button>
+            <button onclick="setValue()">Set Value</button>
+            <div id="output6" class="output"></div>
+        </section>
+
+        <!-- Creating Elements -->
+        <section>
+            <h2>7. Creating New Elements</h2>
+            <div id="container7"></div>
+            <button onclick="addElement()">Add Paragraph</button>
+            <button onclick="clearElements()">Clear All</button>
+        </section>
+
+        <!-- Event Listeners -->
+        <section>
+            <h2>8. Event Listeners</h2>
+            <button id="clickBtn">Click Me</button>
+            <button id="hoverBtn">Hover Over Me</button>
+            <input type="text" id="typeInput" placeholder="Type here...">
+            <div id="output8" class="output"></div>
+        </section>
+
+        <!-- Show/Hide Elements -->
+        <section>
+            <h2>9. Show/Hide Elements</h2>
+            <div id="demo9" class="demo-box">Now you see me...</div>
+            <button onclick="toggleVisibility()">Toggle Visibility</button>
+        </section>
+
+        <!-- Form Handling -->
+        <section>
+            <h2>10. Form Handling</h2>
+            <form id="myForm" onsubmit="return false;">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" min="1" max="120">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="output10" class="output"></div>
+        </section>
+
+        <!-- Traversing DOM -->
+        <section>
+            <h2>11. DOM Traversal</h2>
+            <div id="parent">
+                <h3>Parent Element</h3>
+                <p>First child</p>
+                <p id="middleChild">Middle child (target)</p>
+                <p>Last child</p>
+            </div>
+            <button onclick="traverseDOM()">Show Relationships</button>
+            <div id="output11" class="output"></div>
+        </section>
+
+        <!-- Multiple Elements -->
+        <section>
+            <h2>12. Working with Multiple Elements</h2>
+            <ul id="itemList">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+            <button onclick="highlightItems()">Highlight All Items</button>
+            <button onclick="changeAllItems()">Change All Text</button>
+        </section>
+    </main>
+
+    <script>
+        // 1. Selecting Elements
+        function selectElements() {
+            const byId = document.getElementById('demo1');
+            const byClass = document.getElementsByClassName('demo-class');
+            const byQuery = document.querySelector('.demo-class');
+            const byQueryAll = document.querySelectorAll('.demo-class');
+            
+            const output = document.getElementById('output1');
+            output.innerHTML = `
+                <p>getElementById: ${byId.textContent}</p>
+                <p>getElementsByClassName count: ${byClass.length}</p>
+                <p>querySelector: ${byQuery.textContent}</p>
+                <p>querySelectorAll count: ${byQueryAll.length}</p>
+            `;
+        }
+
+        // 2. Changing Text Content
+        function changeText() {
+            document.getElementById('demo2').textContent = 'Text changed with JavaScript!';
+        }
+
+        function resetText() {
+            document.getElementById('demo2').textContent = 'Original text';
+        }
+
+        // 3. Changing HTML Content
+        function changeHTML() {
+            document.getElementById('demo3').innerHTML = '<strong>Bold text</strong> and <em>italic text</em>';
+        }
+
+        // 4. Changing Styles
+        function changeColor() {
+            const element = document.getElementById('demo4');
+            element.style.backgroundColor = '#e74c3c';
+        }
+
+        function changeSize() {
+            const element = document.getElementById('demo4');
+            element.style.fontSize = '24px';
+            element.style.padding = '30px';
+        }
+
+        function resetStyles() {
+            const element = document.getElementById('demo4');
+            element.style.backgroundColor = '#3498db';
+            element.style.fontSize = '';
+            element.style.padding = '20px';
+        }
+
+        // 5. Adding/Removing Classes
+        function toggleHighlight() {
+            document.getElementById('demo5').classList.toggle('highlight');
+        }
+
+        function toggleActive() {
+            document.getElementById('demo5').classList.toggle('active');
+        }
+
+        // 6. Getting/Setting Values
+        function getValue() {
+            const value = document.getElementById('userInput').value;
+            document.getElementById('output6').textContent = `You typed: "${value}"`;
+        }
+
+        function setValue() {
+            document.getElementById('userInput').value = 'JavaScript is awesome!';
+        }
+
+        // 7. Creating Elements
+        let counter = 1;
+        function addElement() {
+            const container = document.getElementById('container7');
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = `New paragraph #${counter++}`;
+            newParagraph.style.backgroundColor = '#ecf0f1';
+            newParagraph.style.padding = '10px';
+            newParagraph.style.margin = '5px 0';
+            newParagraph.style.borderRadius = '3px';
+            container.appendChild(newParagraph);
+        }
+
+        function clearElements() {
+            document.getElementById('container7').innerHTML = '';
+            counter = 1;
+        }
+
+        // 8. Event Listeners
+        const output8 = document.getElementById('output8');
+
+        document.getElementById('clickBtn').addEventListener('click', function() {
+            output8.innerHTML = '<p>Button was clicked!</p>';
+        });
+
+        document.getElementById('hoverBtn').addEventListener('mouseover', function() {
+            output8.innerHTML = '<p>Mouse is hovering!</p>';
+        });
+
+        document.getElementById('hoverBtn').addEventListener('mouseout', function() {
+            output8.innerHTML = '<p>Mouse left!</p>';
+        });
+
+        document.getElementById('typeInput').addEventListener('input', function(e) {
+            output8.innerHTML = `<p>You're typing: ${e.target.value}</p>`;
+        });
+
+        // 9. Show/Hide Elements
+        function toggleVisibility() {
+            document.getElementById('demo9').classList.toggle('hidden');
+        }
+
+        // 10. Form Handling
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            
+            document.getElementById('output10').innerHTML = `
+                <p><strong>Form submitted!</strong></p>
+                <p>Name: ${name}</p>
+                <p>Age: ${age || 'Not provided'}</p>
+            `;
+        });
+
+        // 11. DOM Traversal
+        function traverseDOM() {
+            const middle = document.getElementById('middleChild');
+            const parent = middle.parentElement;
+            const prev = middle.previousElementSibling;
+            const next = middle.nextElementSibling;
+            const children = parent.children;
+            
+            document.getElementById('output11').innerHTML = `
+                <p>Parent element: ${parent.tagName}</p>
+                <p>Previous sibling: ${prev.textContent}</p>
+                <p>Next sibling: ${next.textContent}</p>
+                <p>Total children of parent: ${children.length}</p>
+            `;
+        }
+
+        // 12. Multiple Elements
+        function highlightItems() {
+            const items = document.querySelectorAll('#itemList li');
+            items.forEach(function(item) {
+                item.style.backgroundColor = '#f39c12';
+                item.style.padding = '5px';
+                item.style.margin = '3px 0';
+            });
+        }
+
+        function changeAllItems() {
+            const items = document.querySelectorAll('#itemList li');
+            items.forEach(function(item, index) {
+                item.textContent = `Modified Item ${index + 1}`;
+            });
+        }
+
+        console.log('DOM Examples loaded! Open DevTools to see console messages.');
+    </script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Examples</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Text Styling Examples */
+        .text-examples p {
+            margin: 10px 0;
+        }
+
+        .large-text {
+            font-size: 24px;
+        }
+
+        .small-text {
+            font-size: 12px;
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
+        .uppercase-text {
+            text-transform: uppercase;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .colored-text {
+            color: #e74c3c;
+        }
+
+        /* Box Model Examples */
+        .box {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border: 5px solid #2c3e50;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        /* Flexbox Examples */
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .flex-item {
+            background-color: #9b59b6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            border-radius: 5px;
+        }
+
+        .flex-row {
+            flex-direction: row;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        /* Grid Examples */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .grid-item {
+            background-color: #e67e22;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-success {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background-color: #27ae60;
+        }
+
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+
+        /* Card Component */
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .card-content {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Position Examples */
+        .position-relative {
+            position: relative;
+            background-color: #3498db;
+            padding: 40px;
+            margin: 20px 0;
+        }
+
+        .position-absolute {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Animation Example */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Pseudo-classes */
+        .link-examples a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 5px 10px;
+            display: inline-block;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .link-examples a:hover {
+            color: #e74c3c;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .link-examples a:active {
+            transform: scale(0.95);
+        }
+
+        /* Background Examples */
+        .gradient-bg {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .pattern-bg {
+            background-image: repeating-linear-gradient(
+                45deg,
+                #f0f0f0,
+                #f0f0f0 10px,
+                #e0e0e0 10px,
+                #e0e0e0 20px
+            );
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="animated">
+        <h1>CSS Styling Examples</h1>
+        <p>Comprehensive CSS demonstrations</p>
+    </header>
+
+    <main>
+        <!-- Text Styling -->
+        <section class="text-examples">
+            <h2>Text Styling</h2>
+            <p class="large-text">Large text (24px)</p>
+            <p class="small-text">Small text (12px)</p>
+            <p class="bold-text">Bold text</p>
+            <p class="italic-text">Italic text</p>
+            <p class="uppercase-text">Uppercase text</p>
+            <p class="center-text">Center aligned text</p>
+            <p class="colored-text">Colored text</p>
+        </section>
+
+        <!-- Box Model -->
+        <section>
+            <h2>Box Model</h2>
+            <div class="box">
+                This box has padding, margin, border, and border-radius
+            </div>
+        </section>
+
+        <!-- Flexbox -->
+        <section>
+            <h2>Flexbox Layout</h2>
+            <h3>Row Direction</h3>
+            <div class="flex-container flex-row">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+
+            <h3>Column Direction</h3>
+            <div class="flex-container flex-column" style="width: 200px;">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </section>
+
+        <!-- Grid -->
+        <section>
+            <h2>Grid Layout</h2>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section>
+            <h2>Button Styles</h2>
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-success">Success Button</button>
+            <button class="btn btn-danger">Danger Button</button>
+        </section>
+
+        <!-- Cards -->
+        <section>
+            <h2>Card Component</h2>
+            <div class="card">
+                <h3 class="card-title">Card Title</h3>
+                <p class="card-content">
+                    This is a card component with hover effects. Hover over it to see the transformation!
+                </p>
+            </div>
+        </section>
+
+        <!-- Positioning -->
+        <section>
+            <h2>Positioning</h2>
+            <div class="position-relative" style="color: white;">
+                Relative positioned container
+                <div class="position-absolute">Absolute</div>
+            </div>
+        </section>
+
+        <!-- Links -->
+        <section class="link-examples">
+            <h2>Link Hover Effects</h2>
+            <a href="#" onclick="return false;">Hover over me</a>
+            <a href="#" onclick="return false;">And me</a>
+            <a href="#" onclick="return false;">Me too!</a>
+        </section>
+
+        <!-- Backgrounds -->
+        <section>
+            <h2>Background Styles</h2>
+            <div class="gradient-bg">
+                <h3>Gradient Background</h3>
+                <p>Beautiful gradient from purple to pink</p>
+            </div>
+            <div class="pattern-bg">
+                <h3>Pattern Background</h3>
+                <p>Repeating diagonal stripes</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        console.log('CSS Examples loaded successfully!');
+    </script>
+</body>
+</html>

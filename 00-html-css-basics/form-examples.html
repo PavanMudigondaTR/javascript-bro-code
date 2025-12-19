@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements Examples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML Form Elements</h1>
+        <p>Complete reference for all form elements and input types</p>
+    </header>
+
+    <main>
+        <!-- Basic Form -->
+        <section>
+            <h2>Basic Contact Form</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- All Input Types -->
+        <section>
+            <h2>All Input Types</h2>
+            <form>
+                <div class="form-group">
+                    <label for="text">Text Input:</label>
+                    <input type="text" id="text" placeholder="Enter text">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </div>
+
+                <div class="form-group">
+                    <label for="number">Number:</label>
+                    <input type="number" id="number" min="0" max="100" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="range">Range Slider:</label>
+                    <input type="range" id="range" min="0" max="100" value="50">
+                    <span id="rangeValue">50</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time">
+                </div>
+
+                <div class="form-group">
+                    <label for="datetime">DateTime Local:</label>
+                    <input type="datetime-local" id="datetime">
+                </div>
+
+                <div class="form-group">
+                    <label for="month">Month:</label>
+                    <input type="month" id="month">
+                </div>
+
+                <div class="form-group">
+                    <label for="week">Week:</label>
+                    <input type="week" id="week">
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Color Picker:</label>
+                    <input type="color" id="color" value="#ff0000">
+                </div>
+
+                <div class="form-group">
+                    <label for="file">File Upload:</label>
+                    <input type="file" id="file" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" placeholder="Search...">
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Checkboxes and Radio Buttons -->
+        <section>
+            <h2>Checkboxes & Radio Buttons</h2>
+            <form>
+                <h3>Select your interests (checkboxes):</h3>
+                <div class="form-group">
+                    <input type="checkbox" id="coding" name="interest" value="coding">
+                    <label for="coding">Coding</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="music" name="interest" value="music">
+                    <label for="music">Music</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="sports" name="interest" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+
+                <h3>Select your gender (radio buttons):</h3>
+                <div class="form-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Select Dropdown -->
+        <section>
+            <h2>Dropdown Menus</h2>
+            <form>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="">-- Select Country --</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                        <option value="india">India</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars" multiple>
+                        <optgroup label="German Cars">
+                            <option value="bmw">BMW</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </optgroup>
+                        <optgroup label="Japanese Cars">
+                            <option value="toyota">Toyota</option>
+                            <option value="honda">Honda</option>
+                            <option value="nissan">Nissan</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Buttons -->
+        <section>
+            <h2>Button Types</h2>
+            <button type="button" onclick="alert('Button clicked!')">Regular Button</button>
+            <button type="submit">Submit Button</button>
+            <button type="reset">Reset Button</button>
+            <button disabled>Disabled Button</button>
+            
+            <br><br>
+            
+            <input type="button" value="Input Button">
+            <input type="submit" value="Input Submit">
+            <input type="reset" value="Input Reset">
+        </section>
+
+        <hr>
+
+        <!-- Fieldset and Legend -->
+        <section>
+            <h2>Fieldset with Legend</h2>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <div class="form-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to terms and conditions</label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Datalist -->
+        <section>
+            <h2>Datalist (Autocomplete)</h2>
+            <form>
+                <div class="form-group">
+                    <label for="browser">Choose your browser:</label>
+                    <input list="browsers" id="browser" name="browser" placeholder="Type to see suggestions">
+                    <datalist id="browsers">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                        <option value="Opera">
+                    </datalist>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Form Elements Guide</p>
+    </footer>
+
+    <script>
+        // Range slider value display
+        const range = document.getElementById('range');
+        const rangeValue = document.getElementById('rangeValue');
+        
+        range.addEventListener('input', function() {
+            rangeValue.textContent = this.value;
+        });
+
+        // Form submission handler
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted! (This is just a demo)');
+        });
+    </script>
+</body>
+</html>
