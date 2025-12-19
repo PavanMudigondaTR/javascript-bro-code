@@ -2,13 +2,13 @@
 
 ## 📊 Progress Status
 
-![Progress](https://img.shields.io/badge/Progress-0%2F80-blue?style=for-the-badge)
-![Completion](https://img.shields.io/badge/Completion-0%25-green?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-6%2F80-blue?style=for-the-badge)
+![Completion](https://img.shields.io/badge/Completion-7.5%25-green?style=for-the-badge)
 
-**Programs Completed:** 0 out of 80
+**Programs Completed:** 6 out of 80
 
 ```
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  0.0%
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░  7.5%
 ```
 
 ---
