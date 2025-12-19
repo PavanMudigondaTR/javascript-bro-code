@@ -27,10 +27,11 @@ let username;
 
 document.getElementById("mySubmit").onclick = function() {
     // Get value from text box
-    username = document.getElementById("myText").value;
+    username = document.getElementById("userName").value;
+    console.log(username);
     
     // Update H1 element with greeting
-    document.getElementById("myH1").textContent = `Hello ${username}`;
+    document.getElementById("myH1").textContent = `Welcome, ${username}`;
     
     // Also log to console
     console.log(`Username entered: ${username}`);

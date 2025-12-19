@@ -51,15 +51,14 @@ console.log(username);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Input</title>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 id="myH1">Welcome</h1>
-    
-    <label>Username:</label><br>
-    <input type="text" id="myText"><br><br>
+    <label for="userName">User Name</label><br>
+    <input type="text" id="userName" placeholder="Enter your username">
     <button id="mySubmit">Submit</button>
-    
     <script src="index.js"></script>
 </body>
 </html>
@@ -73,10 +72,14 @@ let username;
 // Select the submit button and add click event
 document.getElementById("mySubmit").onclick = function() {
     // Get value from text box
-    username = document.getElementById("myText").value;
+    username = document.getElementById("userName").value;
+    console.log(username);
     
     // Update H1 element with greeting
-    document.getElementById("myH1").textContent = `Hello ${username}`;
+    document.getElementById("myH1").textContent = `Welcome, ${username}`;
+    
+    // Also log to console
+    console.log(`Username entered: ${username}`);
 };
 ```
 
@@ -102,46 +105,66 @@ This creates an anonymous function that executes when the button is clicked.
 
 ### Getting Input Value
 ```javascript
-document.getElementById("myText").value
+document.getElementById("userName").value
 ```
 The `.value` property retrieves the current text in an input field.
 
 ### Template Literals
 ```javascript
-`Hello ${username}`
+`Welcome, ${username}`
 ```
 Use backticks (`) and `${}` to embed variables in strings.
 
 ## 📋 Practice Exercises
 
 ### Exercise 1: Age Calculator
-Create a program that asks for the user's birth year and displays their age.
+```javascript
+let birthYear = window.prompt("What year were you born?");
+birthYear = Number(birthYear);
+let currentYear = new Date().getFullYear();
+let age = currentYear - birthYear;
+console.log(`You are ${age} years old!`);
+```
 
-### Exercise 2: Greeting Generator
-Ask for first name and last name separately, then display a full greeting.
+### Exercise 2: Greeting with First and Last Name
+```javascript
+let firstName = window.prompt("Enter your first name:");
+let lastName = window.prompt("Enter your last name:");
+console.log(`Hello ${firstName} ${lastName}!`);
+```
 
-### Exercise 3: Mad Libs
+### Exercise 3: Form Validation
+```javascript
+document.getElementById("mySubmit").onclick = function() {
+    username = document.getElementById("userName").value;
+    
+    if (username === "" || username === null) {
+        document.getElementById("myH1").textContent = "Please enter a username!";
+    } else {
+        document.getElementById("myH1").textContent = `Welcome, ${username}`;
+    }
+};
+```
+
+### Exercise 4: Mad Libs
 Create a simple Mad Libs game that asks for a noun, verb, and adjective, then creates a funny sentence.
-
-### Exercise 4: Form Validation
-Add a check to ensure the username isn't empty before displaying the greeting.
 
 ## 💡 Common Mistakes
 
 1. **Forgetting to get the value**
    ```javascript
    // ❌ Wrong - gets the element, not the value
-   username = document.getElementById("myText");
+   username = document.getElementById("userName");
    
    // ✅ Correct - gets the actual text
-   username = document.getElementById("myText").value;
+   username = document.getElementById("userName").value;
    ```
 
 2. **Wrong ID**
    ```javascript
    // Make sure IDs match exactly (case-sensitive)
-   <input id="myText">  // HTML
-   document.getElementById("myText")  // JavaScript - must match!
+   <input id="userName">  // HTML
+   document.getElementById("userName")  // JavaScript - must match!
    ```
 
 3. **Script placement**
@@ -160,8 +183,10 @@ Add a check to ensure the username isn't empty before displaying the greeting.
 - Use `getElementById()` to access HTML elements
 - The `.value` property gets text from input fields
 - The `onclick` property assigns functions to button clicks
+- Use `placeholder` attribute for input hints
 - Template literals make string formatting easier
 - Always declare variables before using them
+- Console.log is useful for debugging
 
 ## ⏭️ Next Lesson
 [JavaScript TYPE CONVERSION](../05-type-conversion/) - Learn how to convert user input (strings) to numbers and other data types!
