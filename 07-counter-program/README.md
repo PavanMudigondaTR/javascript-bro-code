@@ -25,53 +25,81 @@ A counter with three buttons:
 ## 🔧 HTML Structure
 
 ```html
-<label id="countLabel">0</label><br>
-<div id="buttonContainer">
-    <button id="decreaseBtn">Decrease</button>
-    <button id="resetBtn">Reset</button>
-    <button id="increaseBtn">Increase</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="calculatorHdg">Calculator</h1>
+    <label id="countLabel">0</label><br>
+    <div id="buttonContainer"">
+        <button type="button" id="decreaseBtn" class="buttons">Decrease</button>
+        <button type="button" id="increaseBtn" class="buttons">Increase</button>
+        <button type="button" id="resetBtn" class="buttons">Reset</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
 ```
 
 ## 💻 JavaScript Logic
 
 ```javascript
+// counter program
+
+const increaseBtn = document.getElementById("increaseBtn");
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const countLabel = document.getElementById("countLabel");
 let count = 0;
 
-document.getElementById("decreaseBtn").onclick = function() {
-    count--;
-    document.getElementById("countLabel").textContent = count;
-};
-
-document.getElementById("resetBtn").onclick = function() {
-    count = 0;
-    document.getElementById("countLabel").textContent = count;
-};
-
-document.getElementById("increaseBtn").onclick = function() {
+increaseBtn.onclick = function() {
     count++;
-    document.getElementById("countLabel").textContent = count;
-};
+    countLabel.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLabel.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count = 0;
+    countLabel.textContent = count;
+}
 ```
 
 ## 🎨 CSS Styling
 
 ```css
-#countLabel {
+#calculatorHdg{
+    text-align: center;
+}
+#countLabel{
     display: block;
     text-align: center;
-    font-size: 10em;
+    font-size: xx-large;
     font-family: Helvetica;
 }
 
-#buttonContainer {
+#buttonContainer{
     text-align: center;
 }
-
-button {
-    font-size: 2em;
-    margin: 10px;
+.buttons{
     padding: 10px 20px;
+    font-size: large;
+    color: white;
+    background-color: hsl(214, 100%, 74%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.buttons:hover{
+    background-color: hsl(214, 100%, 56%);
 }
 ```
 
@@ -84,11 +112,14 @@ button {
 
 ## 🎯 Key Takeaways
 
-- Event handlers make buttons interactive
-- Variables store application state
-- DOM manipulation updates the display
+- Use `const` to store DOM element references that won't change
+- Event handlers (onclick) make buttons interactive
+- Variables (`let`) store application state
+- DOM manipulation (textContent) updates the display
 - Increment (++) and decrement (--) operators
-- Combining HTML, CSS, and JavaScript
+- CSS classes for styling multiple elements
+- Hover effects and transitions enhance user experience
+- Combining HTML, CSS, and JavaScript creates interactive applications
 
 ## ⏭️ Next Lesson
 [JavaScript MATH OBJECT](../08-math-object/)

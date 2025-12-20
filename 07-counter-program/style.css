@@ -1,0 +1,25 @@
+#calculatorHdg{
+    text-align: center;
+}
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: xx-large;
+    font-family: Helvetica;
+}
+
+#buttonContainer{
+    text-align: center;
+}
+.buttons{
+    padding: 10px 20px;
+    font-size: large;
+    color: white;
+    background-color: hsl(214, 100%, 74%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.buttons:hover{
+    background-color: hsl(214, 100%, 56%);
+}
