@@ -5,7 +5,7 @@
 ![Progress](https://img.shields.io/badge/Progress-6%2F80-blue?style=for-the-badge)
 ![Completion](https://img.shields.io/badge/Completion-7.5%25-green?style=for-the-badge)
 
-**Programs Completed:** 6 out of 80
+**Programs Completed:** 8 out of 80
 
 ```
 ██░░░░░░░░░░░░░░░░░░░░░░░░░░░  7.5%
@@ -31,8 +31,8 @@ Full JavaScript playlist 📃: [JavaScript tutorial for beginners](https://www.y
 - [x] 4. How to accept JavaScript USER INPUT in 5 minutes 💬 (5:22)
 - [x] 5. Learn JavaScript TYPE CONVERSION in 5 minutes! 💱 (5:40)
 - [x] 6. JavaScript CONSTANTS are easy 🚫 (7:42)
-- [ ] 7. JavaScript COUNTER PROGRAM 🔢 (9:17)
-- [ ] 8. Why the Math object in JavaScript is useful 🧮 (5:37)
+- [x] 7. JavaScript COUNTER PROGRAM 🔢 (9:17)
+- [x] 8. Why the Math object in JavaScript is useful 🧮 (5:37)
 - [ ] 9. Random number generator in JavaScript ⁉ (8:37)
 - [ ] 10. If statements in JavaScript are easy 🤔 (15:58)
 - [ ] 11. The JavaScript checked property is easy ✅ (10:07)
