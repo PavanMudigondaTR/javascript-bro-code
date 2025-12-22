@@ -13,90 +13,164 @@ Learn how to make decisions in your code using if statements. Execute different 
 - else if for multiple conditions
 - Nested if statements
 - Working with boolean variables
-- Comparison operators
+- Comparison operators (==, >=, <=, <, >)
 - Creating conditional logic
+- Order of conditions matters
+
+## 🔧 HTML Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="ageInput">Enter your age:</label>
+    <input type="text" id="ageInput">
+    <button type"button" id="submitBtn">Submit</button>
+    <p id="resultElement"></p>
+    <script src="index.js"></script>
+</body>
+</html>
+```
+
+## 🎨 CSS Styling
+
+```css
+#ageLabel{
+    font-size: x-large;
+}
+```
 
 ## 💻 Code Examples
 
-### Basic If Statement
+### Example 1: Basic If Statement
 
 ```javascript
 let age = 25;
 
 if (age >= 18) {
-    console.log("You are old enough to enter this site");
+    console.log("you are old enough to enter this site");
 }
 ```
+**Explanation:** If condition is true, execute code inside curly braces. If not true, skip over it entirely.
 
-### If-Else Statement
-
-```javascript
-let age = 13;
-
-if (age >= 18) {
-    console.log("You are old enough to enter this site");
-} else {
-    console.log("You must be 18+ to enter this site");
-}
-```
-
-### Else If (Multiple Conditions)
+### Example 2: If-Else Statement (Time Greeting)
 
 ```javascript
-let time = 14;  // 24-hour format
+let time = 14;  // Military time (24-hour format)
 
 if (time < 12) {
-    console.log("Good morning!");
-} else if (time < 18) {
-    console.log("Good afternoon!");
+    console.log("Good Morning!");
 } else {
-    console.log("Good evening!");
+    console.log("Good Afternoon!");
 }
 ```
+**Explanation:** Like a fork in the road - which path are we going to take? If condition is true, do this. Else if not, do this instead.
 
-### Boolean Conditions
+### Example 3: Boolean Conditions
 
 ```javascript
-let isStudent = true;
+let isStudent = false;
 
 if (isStudent) {
-    console.log("You are a student");
+    console.log("you are a student");
 } else {
-    console.log("You are not a student");
+    console.log("you are not a student");
 }
 ```
+**Explanation:** With Boolean variables, place the variable directly in the condition. It evaluates to true or false.
 
-### Nested If Statements
+### Example 4: Nested If Statements
 
 ```javascript
-let age = 20;
-let hasLicense = true;
+let age = 25;
+let hasLicense = false;
 
 if (age >= 16) {
-    console.log("You are old enough to drive");
+    console.log("you are old enough to drive");
     
     if (hasLicense) {
-        console.log("You have your license!");
+        console.log("you have a license");
     } else {
-        console.log("You do not have your license yet");
+        console.log("you don't have a license");
     }
 } else {
-    console.log("You must be at least 16 years old");
+    console.log("you must be 16 plus to have a license");
 }
 ```
+**Explanation:** Pay attention to indentation! If outer condition is false, skip everything inside entirely. If true, enter and check the nested if statement.
+
+### Example 5: Complete Interactive Age Verification
+
+```javascript
+const ageInput = document.getElementById("ageInput");
+const submitBtn = document.getElementById("submitBtn");
+const resultElement = document.getElementById("resultElement");
+
+submitBtn.onclick = function() {
+    let age = Number(ageInput.value);
+
+    if (age >= 100) {
+        resultElement.textContent = "you are too old to enter this site";
+    } else if (age == 0) {
+        resultElement.textContent = "your can not enter, you are just born";
+    } else if (age < 0) {
+        resultElement.textContent = "your age can't be below 0";
+    } else if (age >= 18) {
+        resultElement.textContent = "you are old enough to enter this site";
+    } else {
+        resultElement.textContent = "you must be 18+ to enter this site";
+    }
+}
+```
+
+**How it works:**
+1. Get references to input, button, and result paragraph
+2. When button is clicked, execute function
+3. Get value from text box (it's a string)
+4. Use `Number()` to typecast it to a number
+5. Check conditions from most specific to least specific
+
+## ⚠️ Important: Order of Conditions Matters!
+
+```javascript
+// ❌ BAD - Wrong order
+if (age >= 18) {  // This executes first for age 101!
+    console.log("old enough");
+} else if (age >= 100) {  // This never executes!
+    console.log("too old");
+}
+
+// ✅ GOOD - Correct order
+if (age >= 100) {  // Check most specific first
+    console.log("too old");
+} else if (age >= 18) {  // Then less specific
+    console.log("old enough");
+}
+```
+
+**Why?** We start at the top and work our way down. Once a condition is true, we execute that clause and skip everything else that comes after, even if other conditions are also true!
 
 ## 🔍 Comparison Operators
 
 ```javascript
+// Two equal signs (==) for comparison
+age == 18   // Equal to (comparison operator)
+age = 18    // Assignment operator (NOT for comparison!)
+
 age >= 18   // Greater than or equal to
 age > 18    // Greater than
 age <= 18   // Less than or equal to
 age < 18    // Less than
-age == 18   // Equal to (loose comparison)
-age === 18  // Equal to (strict comparison)
-age != 18   // Not equal to (loose)
-age !== 18  // Not equal to (strict)
+age != 18   // Not equal to
 ```
+
+**Important:** Use `==` (two equal signs) to check if two values are equal. One equal sign `=` is for assignment only!
 
 ## 📊 Control Flow Diagram
 
@@ -193,11 +267,16 @@ if (day === "Saturday" || day === "Sunday") {
 
 ## 🎯 Key Takeaways
 
-- If statements execute code **only if condition is true**
-- Else provides **alternative code** when condition is false
-- Else if allows **multiple conditions** to be checked
-- Conditions evaluate to **true or false**
-- **Boolean variables** can be used directly in conditions
+- **If statement:** If condition is true, execute code. If not true, skip over it entirely
+- **Else clause:** Provides alternative code when if condition is false ("fork in the road")
+- **Else if:** Allows multiple conditions before reaching else statement
+- **Order matters:** Start at top, work down. Once a condition is true, skip everything after
+- **Check most specific conditions first**, then less specific ones
+- **Boolean variables** can be used directly in conditions (evaluates to true/false)
+- **Use `==` for comparison**, not `=` (which is assignment)
+- **Nested if statements:** Pay attention to indentation and curly braces
+- **Text box values** come as strings - use `Number()` to convert to numbers
+- Once one clause executes, it's not necessary to check remaining conditions
 - **Nested if statements** allow complex decision-making
 - Use **comparison operators** to create conditions
 - Proper **indentation** makes code readable
