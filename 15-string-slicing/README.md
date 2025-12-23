@@ -15,6 +15,58 @@ String slicing is the process of creating a substring from a portion of another 
 - Using negative indices
 - Creating first name, last name from full name
 - Extracting first and last characters
+- Combining slice() with indexOf()
+- Extracting username and extension from email
+
+## 🔧 HTML Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+```
+
+**Note:** This chapter focuses on JavaScript console examples. There is no interactive UI.
+
+## 💻 Complete Code Example (from index.js)
+
+```javascript
+// string slicing = creating a substring
+//                  from a portion of another string
+//                  string.slice(start,end)
+
+// Example 1: Full Name (commented out examples)
+// const fullName = "Bro Code"
+
+// firstName = fullName.slice(0, fullName.indexOf(" "))
+// console.log(firstName)  // "Bro"
+
+// lastName = fullName.slice(fullName.indexOf(" ")+1,)
+// console.log(lastName)  // "Code"
+
+// let firstChar = fullName.slice(0,1)
+// console.log(firstChar)  // "B"
+
+// let lastChar = fullName.slice(-1)
+// console.log(lastChar)  // "e"
+
+// Example 2: Email (active code)
+const email = "Bro1@gmail.com"
+
+let username = email.slice(0,email.indexOf("@"))
+let extension = email.slice(email.indexOf("@")+1,)
+console.log(username)   // "Bro1"
+console.log(extension)  // "gmail.com"
+```
 
 ## 💻 Basic Syntax
 
@@ -23,14 +75,23 @@ string.slice(startIndex, endIndex)
 ```
 
 - **startIndex** - Where to begin extraction (inclusive)
-- **endIndex** - Where to end extraction (exclusive)
+- **endIndex** - Where to end extraction (**exclusive**)
 - **Returns** - A new substring
-- **Original string** remains unchanged
+- **Original string** remains unchanged (won't alter the original string)
+
+**From transcript:** "The ending index is actually exclusive. In my full name we're ending at 'o' but we don't include it within our substring because the ending index is exclusive."
+
+```javascript
+const text = "Bro";
+text.slice(0, 2);  // "Br" (indices 0, 1 - NOT 2)
+text.slice(0, 3);  // "Bro" (indices 0, 1, 2 - NOT 3)
+```
 
 ## 📝 Core Examples
 
 ### Extract First Name
 
+**Method 1: Using exact indices**
 ```javascript
 const fullName = "Bro Code";
 let firstName = fullName.slice(0, 3);
@@ -38,6 +99,15 @@ console.log(firstName);  // "Bro"
 
 // Note: Index 3 is exclusive, so we get indices 0, 1, 2
 ```
+
+**Method 2: Using indexOf() - More Dynamic (from transcript)**
+```javascript
+const fullName = "Broseph Code";  // Works with any name!
+let firstName = fullName.slice(0, fullName.indexOf(" "));
+console.log(firstName);  // "Broseph"
+```
+
+**From transcript:** "To make this program more dynamic we can combine string slicing with the indexOf method. We'll search the string for the first instance of a space, then depending on where that space is we'll take the first part of our full name and create a substring."
 
 ### Extract Last Name
 
@@ -55,6 +125,15 @@ let lastName = fullName.slice(4);
 console.log(lastName);  // "Code"
 ```
 
+**Method 3: Using indexOf() + 1 (from transcript)**
+```javascript
+const fullName = "Bro Code";
+let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+console.log(lastName);  // "Code" (no space!)
+```
+
+**From transcript:** "Find the first index of a space then start in the position after. That's why we're adding plus one, then give me every letter that comes after."
+
 ### Extract First Character
 
 ```javascript
@@ -69,6 +148,16 @@ console.log(firstChar);  // "B"
 const fullName = "Bro Code";
 let lastChar = fullName.slice(-1);
 console.log(lastChar);  // "e"
+```
+
+**From transcript:** "For the last character we can use a negative index. Even if you're using a negative index you'll begin at the end, then by decreasing the number you'll work your way towards the beginning."
+
+```javascript
+const fullName = "Bro Code";
+fullName.slice(-1);  // "e" (last character)
+fullName.slice(-2);  // "de" (last 2 characters)  
+fullName.slice(-3);  // "ode"
+fullName.slice(-4);  // "Code"
 ```
 
 ## 🔢 Understanding Indices
@@ -95,13 +184,27 @@ name.slice(-8, -5); // "Bro" (from -8 to -5)
 
 ## 💡 Practical Examples
 
-### Extract Email Username
+### Extract Email Username and Extension (from actual code)
 
 ```javascript
-const email = "bro@gmail.com";
+const email = "Bro1@gmail.com";
+
+// Extract username (everything before @)
 let username = email.slice(0, email.indexOf("@"));
-console.log(username);  // "bro"
+console.log(username);  // "Bro1"
+
+// Extract extension (everything after @)
+let extension = email.slice(email.indexOf("@") + 1);
+console.log(extension);  // "gmail.com"
 ```
+
+**How it works:**
+1. `email.indexOf("@")` finds the position of the @ symbol
+2. First slice: from beginning (0) to @ position (exclusive)
+3. Second slice: from position after @ to the end (no ending index needed)
+4. Adding `+ 1` skips the @ symbol itself
+
+**From transcript:** "I'll extract the first part of my email to be stored as a username... we'll end wherever the at symbol is... I would like to begin after this index, I will add plus one."
 
 ### Extract File Extension
 
@@ -181,6 +284,8 @@ const text = "Hello";
 text.slice(0, 3);  // "Hel" (indices 0, 1, 2 - NOT 3)
 ```
 
+**From transcript:** "The ending index is actually exclusive. In my full name we're ending at 'o' but we don't include it within our substring because the ending index is exclusive."
+
 ### Original String Unchanged
 
 ```javascript
@@ -190,6 +295,8 @@ const sliced = original.slice(0, 4);
 console.log(sliced);     // "Java"
 console.log(original);   // "JavaScript" (unchanged!)
 ```
+
+**From transcript:** "This won't alter the original string... I've proven that by setting this string to be a constant. You can't change a constant."
 
 ### Omitting End Index
 
@@ -220,14 +327,18 @@ str.substr(0, 4);      // "Java" (second param is length, not end index)
 
 ## 🎯 Key Takeaways
 
-- **slice()** extracts a portion of a string
+- **String slicing** = creating a substring from a portion of another string
+- **slice()** extracts a portion of a string without altering the original
 - **startIndex** is inclusive, **endIndex** is exclusive
-- **Negative indices** count from the end
-- **Original string** is never modified
+- **Negative indices** count from the end (begin at the end, work towards beginning)
+- **Original string** is never modified (can use const)
 - Omit **endIndex** to slice to end of string
-- Works great with **indexOf()** to find positions
+- **Combine with indexOf()** for dynamic slicing (more flexible than hardcoded indices)
+- Add **+ 1** to start position to skip delimiter characters (like spaces or @)
 - **slice()** is the recommended method (over substring/substr)
 - Returns **empty string** if startIndex >= endIndex
+
+**From transcript:** "String slicing is the process of creating a substring from a portion of another string. When you create a substring you won't alter the original."
 
 ## ⏭️ Next Lesson
 [JavaScript METHOD CHAINING](../16-method-chaining/)
