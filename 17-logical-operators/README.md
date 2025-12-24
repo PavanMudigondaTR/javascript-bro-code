@@ -8,55 +8,137 @@ Logical operators are used to combine or manipulate boolean values (true/false).
 
 ## 🎯 What You'll Learn
 
-- Three logical operators: AND, OR, NOT
+- Three logical operators: AND (&&), OR (||), NOT (!)
 - Combining multiple conditions
-- Truth tables for each operator
-- Short-circuit evaluation
-- Practical examples with ranges and validation
+- Checking ranges with AND
+- Checking alternatives with OR
+- Reversing boolean values with NOT
+- Practical temperature and weather examples
+
+## 🔧 HTML Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+```
+
+**Note:** This chapter focuses on JavaScript console examples. There is no interactive UI.
+
+## 💻 Complete Code Example (from index.js)
+
+```javascript
+// logical operators = used to combine or manipulate boolean (true/false) values
+//                    &&  (AND) both conditions must be true
+//                    ||  (OR)  at least one condition must be true
+//                    !   (NOT) reverses boolean value of condition
+
+// Example 1: AND operator (commented out)
+// const temp = 20;
+// if(temp > 0 && temp <= 30){
+//     console.log("The weather is good!")
+// }
+// else{
+//     console.log("The weather is bad!")    
+// }
+
+// Example 2: OR operator (commented out)
+// if(temp <= 0 || temp > 30){
+//     console.log("The weather is bad!")
+// }
+// else{
+//     console.log("The weather is good!")    
+// }
+
+// Example 3: NOT operator (active code)
+const isSunny = true;
+
+if(!isSunny){
+    console.log("It is CLOUDY")
+}
+else{
+    console.log("It is SUNNY!")    
+}
+// Output with isSunny = true: "It is SUNNY!"
+// Output with isSunny = false: "It is CLOUDY"
+```
 
 ## 💻 The Three Logical Operators
+
+**From transcript:** "Logical operators are used to combine or manipulate Boolean values. Boolean values if you remember are true or false."
 
 ### 1. AND Operator (&&)
 **Both conditions must be true**
 
+**From transcript:** "In order for us to execute this if statement, both these conditions need to be true - this one AND this one."
+
 ```javascript
 const temp = 25;
 
+// Check if temperature falls within range (0 to 30)
 if (temp > 0 && temp <= 30) {
-    console.log("The weather is GOOD");
+    console.log("The weather is good!");
 } else {
-    console.log("The weather is BAD");
+    console.log("The weather is bad!");
 }
-// Output: "The weather is GOOD"
+// Output: "The weather is good!"
+
+// Test with temp = -100: "The weather is bad!"
+// Test with temp = 200: "The weather is bad!"
 ```
+
+**How it works:** To join two conditions you use double ampersand (`&&`) meaning AND. If one of these is false, we don't execute it at all - we'll skip over it.
 
 ### 2. OR Operator (||)
 **At least one condition must be true**
 
-```javascript
-const temp = -5;
+**From transcript:** "With the OR logical operator at least one of these conditions needs to be true. This has to be true OR that has to be true."
 
+```javascript
+const temp = 250;
+
+// Check if temperature is outside acceptable range
 if (temp <= 0 || temp > 30) {
-    console.log("The weather is BAD");
+    console.log("The weather is bad!");
 } else {
-    console.log("The weather is GOOD");
+    console.log("The weather is good!");
 }
-// Output: "The weather is BAD"
+// Output: "The weather is bad!"
+
+// Test with temp = -250: "The weather is bad!"
+// Test with temp = 20: "The weather is good!"
 ```
+
+**How it works:** Double straight bars (`||`) represent OR. Is this true? Yes, 250 is greater than 30. Or is the other condition true? Since at least one of these is true, we will execute this code.
 
 ### 3. NOT Operator (!)
 **Reverses the boolean value**
 
-```javascript
-const isSunny = false;
+**From transcript:** "Using the NOT logical operator we can flip a Boolean from true to false or false to true."
 
+```javascript
+const isSunny = true;
+
+// Check if it's NOT sunny
 if (!isSunny) {
     console.log("It is CLOUDY");
 } else {
-    console.log("It is SUNNY");
+    console.log("It is SUNNY!");
 }
-// Output: "It is CLOUDY"
+// Output with isSunny = true: "It is SUNNY!"
+// Output with isSunny = false: "It is CLOUDY"
 ```
+
+**How it works:** The NOT logical operator (exclamation point `!`) will change true to be false and false to be true. We're checking "if it's NOT sunny".
 
 ## 📊 AND (&&) Truth Table
 
@@ -66,6 +148,8 @@ if (!isSunny) {
 | true | false | false |
 | false | true | false |
 | false | false | false |
+
+**From transcript:** "Both these conditions need to be true. This is true AND this is true, so we will execute this code. If one of these was false, we don't execute it at all - we'll skip over it."
 
 **All conditions must be true for AND to return true**
 
@@ -78,6 +162,8 @@ if (!isSunny) {
 | false | true | **true** |
 | false | false | false |
 
+**From transcript:** "With the OR logical operator we're checking more than one condition. Is this true? Yes it is, negative 250 is less than zero. Or is this condition true? This one is false. But since at least one of these is true, we will execute this code."
+
 **At least one condition must be true for OR to return true**
 
 ## 📊 NOT (!) Truth Table
@@ -87,18 +173,56 @@ if (!isSunny) {
 | true | **false** |
 | false | **true** |
 
+**From transcript:** "The NOT logical operator - it'll change true to be false and false to be true."
+
 **NOT reverses the boolean value**
 
 ## 💡 Practical Examples
 
-### Example 1: Temperature Range
+### Example 1: Temperature Range (from transcript)
+
+**The Problem:** "I would like to output 'the weather is good' only if my temperature falls between the range of 0 and 30."
+
 ```javascript
 const temp = 20;
 
-// Good weather: between 0 and 30
+// Good weather: between 0 and 30 (Celsius)
 if (temp > 0 && temp <= 30) {
-    console.log("The weather is GOOD");
+    console.log("The weather is good!");
+} else {
+    console.log("The weather is bad!");
 }
+
+// Test cases from transcript:
+// temp = -100: "The weather is bad!" (maybe the sun disappeared)
+// temp = 200: "The weather is bad!" (Earth probably got hit by an asteroid)
+// temp = 25: "The weather is good!"
+```
+
+### Example 2: Bad Weather Detection (OR example)
+
+```javascript
+const temp = -250;
+
+if (temp <= 0 || temp > 30) {
+    console.log("The weather is bad!");
+} else {
+    console.log("The weather is good!");
+}
+// Output: "The weather is bad!"
+```
+
+### Example 3: Sunny Weather Check (NOT example from actual code)
+
+```javascript
+const isSunny = true;
+
+if (!isSunny) {
+    console.log("It is CLOUDY");
+} else {
+    console.log("It is SUNNY!");
+}
+// Output with isSunny = true: "It is SUNNY!"
 ```
 
 ### Example 2: Age Verification
@@ -319,13 +443,27 @@ if (!(color === "red" || color === "blue")) { }
 
 ## 🎯 Key Takeaways
 
-- **&&** (AND) - All conditions must be true
-- **||** (OR) - At least one condition must be true
-- **!** (NOT) - Reverses boolean value
+**From transcript:** "Logical operators - they're used to combine or manipulate Boolean values."
+
+- **&&** (AND) - "Use AND to check to see if at least two conditions are true" (from transcript)
+  - Both conditions must be true
+  - Double ampersand
+  - If one is false, entire condition is false
+  
+- **||** (OR) - "At least one condition needs to be true" (from transcript)
+  - At least one condition must be true
+  - Double straight bars
+  - Only false when all conditions are false
+  
+- **!** (NOT) - "NOT will do the opposite" (from transcript)
+  - Reverses boolean value
+  - Exclamation point
+  - Changes true to false and false to true
+  
+- Use **AND** for range checking (e.g., temp > 0 && temp <= 30)
+- Use **OR** for multiple acceptable options
+- Use **NOT** to flip a boolean condition
 - Use **parentheses** for complex conditions
-- **Short-circuit evaluation** stops early when result is known
-- **Range checking** requires AND operator
-- **Multiple options** use OR operator
 - Test each condition **individually** when debugging
 
 ## ⏭️ Next Lesson
