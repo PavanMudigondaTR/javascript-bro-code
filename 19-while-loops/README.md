@@ -57,16 +57,16 @@ console.log(`Hello ${username}`);
 
 ## 💡 Practical Examples
 
-### Example 1: Username Input Validation
+### Example 1: Basic Username Input Validation
 
 ```javascript
-let username = "";
+let userName = "";
 
-while (username === "" || username === null) {
-    username = window.prompt("Enter your name:");
+while (userName === "" || userName === null) {
+    userName = window.prompt("Enter your name:");
 }
 
-console.log(`Hello ${username}`);
+console.log(`Hello ${userName}!`);
 ```
 
 **How it works:**
@@ -74,40 +74,64 @@ console.log(`Hello ${username}`);
 - Keeps prompting until valid input
 - Prevents empty submissions
 
-### Example 2: Password Validation
+### Example 2: Do-While Alternative
 
 ```javascript
-let password = "";
+let userName = "";
 
-while (password.length < 8) {
-    password = window.prompt("Enter a password (min 8 characters):");
-    
-    if (password.length < 8) {
-        alert("Password too short!");
-    }
-}
+do {
+    userName = window.prompt("Enter your name:");
+} while (userName === "" || userName === null);
 
-console.log("Password accepted!");
+console.log(`Hello ${userName}!`);
 ```
 
-### Example 3: Number Guessing Game
+**Difference:**
+- **While loop**: Checks condition first, may not run at all
+- **Do-while loop**: Runs at least once, then checks condition
+- Both achieve same result for input validation
+
+### Example 3: Login System with Continue Statement
 
 ```javascript
-const secretNumber = 5;
-let guess = 0;
+let loggedIn = false;
+let username;
+let password;
 
-while (guess !== secretNumber) {
-    guess = Number(window.prompt("Guess a number (1-10):"));
+while (!loggedIn) {
+    username = window.prompt("Enter your username:");
+    password = window.prompt("Enter your password:");
     
-    if (guess < secretNumber) {
-        console.log("Too low!");
-    } else if (guess > secretNumber) {
-        console.log("Too high!");
+    // Check for empty or cancelled input
+    if (username === null || username === "") {
+        console.log("Username cannot be empty.");
+        continue;  // Skip to next iteration
+    }
+    
+    if (password === null || password === "") {
+        console.log("Password cannot be empty.");
+        continue;  // Skip to next iteration
+    }
+    
+    // Validate credentials
+    if (username === "myUsername" && password === "myPassword") {
+        loggedIn = true;
+        console.log("Login successful!");
     } else {
-        console.log("Correct!");
+        console.log("Incorrect username or password. Try again.");
     }
 }
+
+console.log("You are now logged in!");
 ```
+
+**How it works:**
+- Loop runs while `!loggedIn` is true
+- **Continue statement** skips rest of iteration and starts next one
+- Validates for empty inputs first
+- Then checks credentials
+- Only sets `loggedIn = true` on successful match
+- Provides clear feedback for each error type
 
 ### Example 4: Countdown
 
@@ -123,7 +147,49 @@ console.log("Happy New Year!");
 // Output: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, Happy New Year!
 ```
 
-### Example 5: Login Attempts
+## 🔑 Understanding the Continue Statement
+
+The **continue** statement is crucial in the login example above:
+
+```javascript
+if (username === null || username === "") {
+    console.log("Username cannot be empty.");
+    continue;  // Jumps back to while condition check
+}
+// Code here is skipped when continue executes
+```
+
+**What continue does:**
+1. Immediately stops current iteration
+2. Jumps back to the while condition check
+3. If condition is still true, starts next iteration
+4. Skips any code below it in the loop
+
+**Without continue:**
+```javascript
+// Would need nested if statements
+if (username !== null && username !== "") {
+    if (password !== null && password !== "") {
+        // Validate credentials
+    }
+}
+```
+
+**With continue:**
+```javascript
+// Cleaner, easier to read
+if (username === null || username === "") {
+    console.log("Error");
+    continue;
+}
+if (password === null || password === "") {
+    console.log("Error");
+    continue;
+}
+// Validate credentials
+```
+
+### Example 5: Login Attempts (Extended)
 
 ```javascript
 const correctPassword = "password123";

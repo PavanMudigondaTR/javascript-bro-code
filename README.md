@@ -3,12 +3,12 @@
 ## 📊 Progress Status
 
 ![Progress](https://img.shields.io/badge/Progress-6%2F80-blue?style=for-the-badge)
-![Completion](https://img.shields.io/badge/Completion-25%25-green?style=for-the-badge)
+![Completion](https://img.shields.io/badge/Completion-37.5%25-green?style=for-the-badge)
 
-**Programs Completed:** 16 out of 80
+**Programs Completed:** 30 out of 80
 
 ```
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░  25%
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░  37.5%
 ```
 
 ---
@@ -33,28 +33,28 @@ Full JavaScript playlist 📃: [JavaScript tutorial for beginners](https://www.y
 - [x] 6. JavaScript CONSTANTS are easy 🚫 (7:42)
 - [x] 7. JavaScript COUNTER PROGRAM 🔢 (9:17)
 - [x] 8. Why the Math object in JavaScript is useful 🧮 (5:37)
-- [ ] 9. Random number generator in JavaScript ⁉ (8:37)
-- [ ] 10. If statements in JavaScript are easy 🤔 (15:58)
-- [ ] 11. The JavaScript checked property is easy ✅ (10:07)
-- [ ] 12. JavaScript TERNARY OPERATOR in 6 minutes! ❓ (6:46)
-- [ ] 13. Learn JavaScript SWITCHES in 6 minutes! 💡 (6:45)
-- [ ] 14. Useful JavaScript STRING METHODS 🧵 (8:03)
-- [ ] 15. Learn JavaScript STRING SLICING in 8 minutes! ✂️ (8:02)
-- [ ] 16. Learn JS METHOD CHAINING in 5 minutes! ⛓ (5:27)
-- [ ] 17. Learn JavaScript LOGICAL OPERATORS in 5 minutes ❗ (5:42)
-- [ ] 18. Learn JavaScript STRICT EQUALITY in 3 minutes! 🟰 (3:58)
-- [ ] 19. Learn JavaScript WHILE LOOPS in 8 minutes! 🔁 (8:12)
-- [ ] 20. Learn JavaScript FOR LOOPS in 5 minutes! 🔂 (5:45)
-- [ ] 21. JavaScript NUMBER GUESSING GAME ↕ (8:54)
-- [ ] 22. JavaScript FUNCTIONS are easy! 📞 (12:14)
-- [ ] 23. Learn JavaScript VARIABLE SCOPE in 5 minutes! 🏠 (5:26)
-- [ ] 24. JavaScript TEMPERATURE CONVERSION PROGRAM 🌡️ (16:18)
-- [ ] 25. Learn JavaScript ARRAYS in 8 minutes! 🗃 (8:06)
-- [ ] 26. Learn 2D ARRAYS in JavaScript in 6 minutes! ⬜ (6:31)
-- [ ] 27. JavaScript SPREAD OPERATOR in 4 minutes! 📖 (4:55)
-- [ ] 28. JavaScript REST PARAMETERS in 8 minutes! 🗄 (8:06)
-- [ ] 29. Build this dice roller program with JavaScript 🎲 (14:12)
-- [ ] 30. Build this JavaScript random password generator 🔑 (12:05)
+- [x] 9. Random number generator in JavaScript ⁉ (8:37)
+- [x] 10. If statements in JavaScript are easy 🤔 (15:58)
+- [x] 11. The JavaScript checked property is easy ✅ (10:07)
+- [x] 12. JavaScript TERNARY OPERATOR in 6 minutes! ❓ (6:46)
+- [x] 13. Learn JavaScript SWITCHES in 6 minutes! 💡 (6:45)
+- [x] 14. Useful JavaScript STRING METHODS 🧵 (8:03)
+- [x] 15. Learn JavaScript STRING SLICING in 8 minutes! ✂️ (8:02)
+- [x] 16. Learn JS METHOD CHAINING in 5 minutes! ⛓ (5:27)
+- [x] 17. Learn JavaScript LOGICAL OPERATORS in 5 minutes ❗ (5:42)
+- [x] 18. Learn JavaScript STRICT EQUALITY in 3 minutes! 🟰 (3:58)
+- [x] 19. Learn JavaScript WHILE LOOPS in 8 minutes! 🔁 (8:12)
+- [x] 20. Learn JavaScript FOR LOOPS in 5 minutes! 🔂 (5:45)
+- [x] 21. JavaScript NUMBER GUESSING GAME ↕ (8:54)
+- [x] 22. JavaScript FUNCTIONS are easy! 📞 (12:14)
+- [x] 23. Learn JavaScript VARIABLE SCOPE in 5 minutes! 🏠 (5:26)
+- [x] 24. JavaScript TEMPERATURE CONVERSION PROGRAM 🌡️ (16:18)
+- [x] 25. Learn JavaScript ARRAYS in 8 minutes! 🗃 (8:06)
+- [x] 26. Learn 2D ARRAYS in JavaScript in 6 minutes! ⬜ (6:31)
+- [x] 27. JavaScript SPREAD OPERATOR in 4 minutes! 📖 (4:55)
+- [x] 28. JavaScript REST PARAMETERS in 8 minutes! 🗄 (8:06)
+- [x] 29. Build this dice roller program with JavaScript 🎲 (14:12)
+- [x] 30. Build this JavaScript random password generator 🔑 (12:05)
 - [ ] 31. Learn JavaScript CALLBACKS in 7 minutes! 🤙 (7:17)
 - [ ] 32. JavaScript forEach() method in 8 minutes! ➿ (8:02)
 - [ ] 33. JavaScript map() method in 7 minutes! 🗺️ (7:02)

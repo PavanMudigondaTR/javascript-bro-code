@@ -15,41 +15,111 @@ Learn the difference between comparison operators and strict equality operators 
 - Strict inequality operator (!==)
 - Why strict equality matters
 - Type coercion issues
+- When to use strict vs loose equality
+
+## 🔧 HTML Structure
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css"><>
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+```
+
+**Note:** This chapter focuses on JavaScript console examples. There is no interactive UI.
+
+## 💻 Complete Code Example (from index.js)
+
+```javascript
+//      =  assignment operator
+//     ==  comparison operator (compare if values are equal)
+//    === strict equality operator (compare if values & datatype are equal)
+//   !=   inequality operator
+//   !=== strict inequality operator
+
+const PI = 3.14; // number
+
+// Example 1: Comparison operator (==) - doesn't validate data type
+if(PI == "3.14"){ // "3.14" is string here
+    console.log("That is Pi");
+}
+else{
+    console.log("That is NOT Pi")
+}
+// Output: "That is Pi" (even though types are different!)
+
+// Example 2: Strict equality operator (===) - validates data type
+if(PI === "3.14"){ // "3.14" is string here
+    console.log("That is Pi");
+}
+else{
+    console.log("That is NOT Pi")
+}
+// Output: "That is NOT Pi" (types are different)
+
+// Example 3: Strict inequality operator (!==)
+if(PI !== "3.14"){ // "3.14" is string here
+    console.log("That is NOT Pi");
+}
+else{
+    console.log("That is Pi")
+}
+// Output: "That is NOT Pi" (types are different)
+```
 
 ## 🔤 The Three Types of Equality
+
+**From transcript:** "Let me make a few important distinctions: a single equal sign is the assignment operator you usually see it when you assign a value to a variable. The comparison operator (two equal signs) is used to compare two values to see if they're equal. Now the strict equality operator has a whopping three equal signs - it not only compares if two values are equal but if they have the same data type as well."
 
 ### 1. Assignment Operator (=)
 **Assigns a value to a variable**
 
 ```javascript
 let pi = 3.14;  // Assigns 3.14 to pi
+const PI = 3.14; // Assigns 3.14 to PI (from actual code)
 ```
 
 ### 2. Comparison Operator (==)
 **Compares values only (ignores data type)**
 
-```javascript
-const pi = 3.14;  // number
+**From transcript:** "We don't care about the data type, we only care about the value. Are the values equal?"
 
-if (pi == "3.14") {  // Comparing number to string
-    console.log("That is pi");  // This prints!
+```javascript
+const PI = 3.14;  // number
+
+if (PI == "3.14") {  // Comparing number to string
+    console.log("That is Pi");  // This prints!
 }
 // true - values are equal, types ignored
 ```
 
+**From actual code:** Data type is NOT validated with `==`. Even though PI is a number and "3.14" is a string, JavaScript says they're equal.
+
 ### 3. Strict Equality Operator (===)
 **Compares values AND data types**
 
-```javascript
-const pi = 3.14;  // number
+**From transcript:** "With the strict equality operator not only do we compare the values but we also compare the data types as well. These values are both 3.14 but this one is a number data type and we're comparing it to a string so they don't match technically."
 
-if (pi === "3.14") {  // Comparing number to string
-    console.log("That is pi");
+```javascript
+const PI = 3.14;  // number
+
+if (PI === "3.14") {  // Comparing number to string
+    console.log("That is Pi");
 } else {
-    console.log("That is NOT pi");  // This prints!
+    console.log("That is NOT Pi");  // This prints!
 }
 // false - values equal but types different
 ```
+
+**From actual code:** Data type IS validated with `===`. The number 3.14 does not strictly equal the string "3.14".
 
 ## 📊 Comparison Table
 
@@ -64,25 +134,39 @@ if (pi === "3.14") {  // Comparing number to string
 
 ## 💻 Code Examples
 
-### Example 1: Number vs String
+### Example 1: Number vs String (from actual code)
+
+**From transcript:** "Is the number 3.14 equal to the string 3.14? Well according to JavaScript that is Pi. That's because we're using the comparison operator."
 
 ```javascript
-const PI = 3.14;
+const PI = 3.14; // number
 
-// Comparison operator (==)
+// Comparison operator (==) - doesn't validate data type
 if (PI == "3.14") {
-    console.log("That is pi");  // Prints!
+    console.log("That is Pi");  // Prints! (even though types differ)
 }
 
-// Strict equality operator (===)
+// Strict equality operator (===) - validates data type
 if (PI === "3.14") {
-    console.log("That is pi");
+    console.log("That is Pi");
 } else {
-    console.log("That is NOT pi");  // Prints!
+    console.log("That is NOT Pi");  // Prints! (types are different)
+}
+```
+
+**From transcript:** "If we were strictly comparing the number 3.14 to the number 3.14 well then we have a match - that is Pi."
+
+```javascript
+const PI = 3.14; // number
+
+if (PI === 3.14) {  // Comparing number to number
+    console.log("That is Pi");  // Prints! (same value AND type)
 }
 ```
 
 ### Example 2: User Input Validation
+
+**From transcript:** "One case where this is pretty helpful is when you accept user input because user input tends to be a string data type and then just as an extra measure you can use the strict equality operator and then be sure that the value is a number data type."
 
 ```javascript
 // User input is always a string!
@@ -124,28 +208,50 @@ console.log(null === undefined); // false (different types)
 ### Inequality Operator (!=)
 **Values are not equal (ignores type)**
 
-```javascript
-const PI = 3.14;
+**From transcript:** "There's also the inequality operator. It will return true if two values are not equal."
 
-if (PI != "3.14") {
-    console.log("That is NOT pi");
+```javascript
+const PI = 3.14; // number
+
+if (PI != "3.14") {  // Is number 3.14 not equal to string "3.14"?
+    console.log("That is NOT Pi");
 } else {
-    console.log("That is pi");  // Prints! (values are equal)
+    console.log("That is Pi");  // Prints! (values are equal)
 }
 ```
+
+**From transcript:** "Using the inequality operator these values are still the same. The inequality operator will return false."
 
 ### Strict Inequality Operator (!==)
 **Values OR types are different**
 
-```javascript
-const PI = 3.14;
+**From transcript:** "An exclamation point and two equal signs. Are the values or the data type different?"
 
-if (PI !== "3.14") {
-    console.log("That is NOT pi");  // Prints! (types different)
+```javascript
+const PI = 3.14; // number
+
+if (PI !== "3.14") {  // Comparing number to string
+    console.log("That is NOT Pi");  // Prints! (types different)
 } else {
-    console.log("That is pi");
+    console.log("That is Pi");
 }
 ```
+
+**From transcript:** "That is NOT Pi. They have the same values but the data type is different."
+
+**Testing with matching types:**
+
+```javascript
+const PI = "3.14"; // string (from transcript example)
+
+if (PI !== "3.14") {
+    console.log("That is NOT Pi");
+} else {
+    console.log("That is Pi");  // Prints! (same value AND type)
+}
+```
+
+**From transcript:** "If I turned my variable Pi into a string, well that is Pi now. The string 3.14 stored within Pi does equal the string 3.14 so this condition turns out to be false so we execute the else statement."
 
 ## 🔍 Complete Comparison
 
@@ -280,16 +386,19 @@ if (count !== 0) { }
 
 ## 🎯 Key Takeaways
 
+**From transcript:** "It might take you a little bit of time to get used to this and that's okay, it is a little odd. But just in case you see these in the future you'll at least be familiar with them. From now on we will try and use the strict equality operator if we can."
+
 - **=** assigns values (assignment operator)
-- **==** compares values only (loose equality)
-- **===** compares values AND types (strict equality)
+- **==** compares values only ("we don't care about the data type" - transcript)
+- **===** compares values AND types ("compares if two values are equal but if they have the same data type as well" - transcript)
 - **!=** checks if values are not equal (loose)
 - **!==** checks if values OR types differ (strict)
 - **Always use ===** unless you specifically need type coercion
-- **User input is always strings** - convert before comparing
+- **User input is always strings** - "user input tends to be a string data type" (transcript)
 - **Strict equality prevents bugs** from unexpected type coercion
 - **Type coercion** can cause unexpected results with ==
-- **Explicit is better than implicit** - be clear about types
+- **Explicit is better than implicit** - convert types, then compare strictly
+- **From now on, try to use strict equality operator** (transcript recommendation)
 
 ## ⏭️ Next Lesson
 [JavaScript WHILE LOOPS](../19-while-loops/)
