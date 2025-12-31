@@ -32,41 +32,29 @@ const maxNum = 60;     // Maximum possible number
 
 const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-// Game state variables
-let attempts = 0;        // Track number of guesses
-let guess;               // Store current guess
-let running = true;      // Control game loop
+let attempts = 0;
+let guess;
 
-// Main game loop - continues until player guesses correctly
+let running = true;
+
 while(running){
-    // Prompt user for input and convert to number
-    guess = Number(window.prompt(`Guess a number between ${minNum} and ${maxNum}`));
+    guess = Number(window.prompt(`Guess a number between ${minNum} and ${maxNum}`))
 
-    // Validate input: Check if input is a valid number
     if(isNaN(guess)){
-        window.alert("Please enter a valid number");
+        window.alert("enter a valid number")
     }
-    // Validate range: Check if guess is within allowed range
-    // NOTE: Logic issue - should be OR (||) not AND (&&)
-    else if (guess < minNum || guess > maxNum) {
-        window.alert(`Please enter a number between ${minNum} and ${maxNum}`);
+    else if (guess < minNum && guess > maxNum) {
+        window.alert(`enter your guess number between ${minNum} and ${maxNum}`)
     }
-    // Valid guess - process the attempt
     else{
-        attempts++;  // Increment attempt counter
-        
-        // Check if guess is too low
-        if (guess < answer){
-            window.alert("Too Low! Try again!");
+        attempts++
+        if (guess < minNum){
+            window.alert("Guess Too Low !! Please try again !!")
         }
-        // Check if guess is too high
-        else if (guess > answer){
-            window.alert("Too High! Try again!");
-        }
-        // Guess is correct!
-        else {
-            window.alert(`Correct! The answer was ${answer}. It took you ${attempts} attempts.`);
-            running = false;  // End game loop
-        }
+        if (guess > maxNum){
+            window.alert("Guess Too High !! Please try again !!")
+        }        
     }
+    running = false;
+
 }
