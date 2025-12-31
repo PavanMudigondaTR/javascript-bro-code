@@ -2,13 +2,13 @@
 
 ## 📊 Progress Status
 
-![Progress](https://img.shields.io/badge/Progress-6%2F80-blue?style=for-the-badge)
-![Completion](https://img.shields.io/badge/Completion-37.5%25-green?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-6%2F85-blue?style=for-the-badge)
+![Completion](https://img.shields.io/badge/Completion-35.3%25-green?style=for-the-badge)
 
-**Programs Completed:** 30 out of 80
+**Programs Completed:** 30 out of 85
 
 ```
-██░░░░░░░░░░░░░░░░░░░░░░░░░░░  37.5%
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░  35.3%
 ```
 
 ---
@@ -105,3 +105,8 @@ Full JavaScript playlist 📃: [JavaScript tutorial for beginners](https://www.y
 - [ ] 78. Learn how JavaScript COOKIES work! 🍪 (14:15)
 - [ ] 79. How to FETCH data from an API using JavaScript ↩️ (14:17)
 - [ ] 80. Create a weather app with JavaScript! ☀️ (38:40)
+- [ ] 81. JavaScript canvas API 🎨
+- [ ] 82. JavaScript window object 🪟
+- [ ] 83. A game of TicTacToe written in JavaScript ⭕
+- [ ] 84. A game of Snake written in JavaScript 🐍
+- [ ] 85. A game of Pong written in JavaScript 🏓
