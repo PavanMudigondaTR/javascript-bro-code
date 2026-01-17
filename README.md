@@ -2,7 +2,7 @@
 
 ## 📊 Progress Status
 
-![Progress](https://img.shields.io/badge/Progress-6%2F85-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-30%2F85-blue?style=for-the-badge)
 ![Completion](https://img.shields.io/badge/Completion-35.3%25-green?style=for-the-badge)
 
 **Programs Completed:** 30 out of 85
